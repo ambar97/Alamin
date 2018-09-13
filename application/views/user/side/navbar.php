@@ -1,5 +1,5 @@
 <header>
-      <div class="container ">
+      <div class="container-fluid" style="background-color: #10ac84" >
         <!-- hidden top area toggle link -->
         <div id="header-hidden-link">
           <a href="#" class="toggle-link" title="Click me you'll get a surprise" data-target=".hidden-top"><i></i>Open</a>
