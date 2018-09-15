@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 
-    <title>Porto - Responsive HTML5 Template 6.2.1</title>  
+    <title>SD Baitul Amien 2 </title>  
 
     <meta name="keywords" content="HTML5 Template" />
     <meta name="description" content="Porto - Responsive HTML5 Template">

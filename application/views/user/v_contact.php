@@ -22,8 +22,8 @@
 				</section>
 
 				<!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
-				<div id="googlemaps" class="google-map"></div>
-
+				<!-- <div id="googlemaps" class="google-map"></div> -->
+				<div class="google-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.1646665316903!2d113.6738553142896!3d-8.186161684342467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd696a9a5636a87%3A0xc69a678b4561752!2sSD+AL+BAITUL+AMIEN+02+JEMBER!5e0!3m2!1sid!2sid!4v1537019134454" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 				<div class="container">
 
 					<div class="row">

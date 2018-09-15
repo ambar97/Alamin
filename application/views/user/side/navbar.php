@@ -49,7 +49,7 @@
                           </li>
                           <li class="dropdown dropdown-mega">
                             <a class="dropdown-item dropdown-toggle" href="#">
-                              Elements
+                              Profile 
                             </a>
                             <ul class="dropdown-menu">
                               <li>
@@ -114,7 +114,7 @@
                           </li>
                           <li class="dropdown">
                             <a class="dropdown-item dropdown-toggle" href="#">
-                              Features
+                              Prestasi
                             </a>
                           
                             <ul class="dropdown-menu">
@@ -266,7 +266,7 @@
                           </li>
                           <li class="dropdown">
                             <a class="dropdown-item dropdown-toggle" href="#">
-                              Pages
+                              Berita
                             </a>
                             <ul class="dropdown-menu">
                               <li class="dropdown-submenu">
@@ -330,7 +330,12 @@
                           </li>
                           <li class="dropdown">
                             <a class="" href="#">
-                              Galery Kegiatan
+                              Galery 
+                            </a>
+                          </li>
+                          <li class="">
+                            <a class="<?php if($this->uri->segment('1')==""){ echo "active";}?>" href="<?php echo base_url() ?>">
+                              Agenda
                             </a>
                           </li>
                           <li class="dropdown">
