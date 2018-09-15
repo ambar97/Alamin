@@ -1,85 +1,78 @@
-<footer>
-      <div class="container">
-        <div class="row">
-          <div class="span3">
-            <div class="widget">
-              <h5 class="widgetheading">Browse pages</h5>
-              <ul class="link-list">
-                <li><a href="#">About BEM</a></li>
-                <li><a href="#">Galery Kegiatan</a></li>
-                <li><a href="#">Berita</a></li>
-                <li><a href="#">Kalendar Kegiatan</a></li>
-                <li><a href="#"></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="span3">
-            <div class="widget">
-              <h5 class="widgetheading">Important stuff</h5>
-              <ul class="link-list">
-                <li><a href="#">Press release</a></li>
-                <li><a href="#">Terms and conditions</a></li>
-                <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Career center</a></li>
-                <li><a href="#">Flattern forum</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="span3">
-            <div class="widget">
-              <h5 class="widgetheading">Flickr photostream</h5>
-              <div class="flickr_badge">
-                <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8&amp;display=random&amp;size=s&amp;layout=x&amp;source=user&amp;user=34178660@N03"></script>
-              </div>
-              <div class="clear">
-              </div>
-            </div>
-          </div>
-          <div class="span3">
-            <div class="widget">
-              <h5 class="widgetheading">Hubungi Kami</h5>
-              <address>
-								<strong>Kominfo Badan Eksekutif Mahasiswa POLIJE</strong><br>
-								 Jalan Mastrip PO BOX 164 Jember 16425 Indonesia
-					 		</address>
-              <p>
-                <i class="icon-phone"></i> (123) <br>
-                <i class="icon-envelope-alt"></i> bempolije@gmail.com <br>
-                <i class="icon-instagram-alt"></i> bempolije
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="sub-footer">
-        <div class="container">
-          <div class="row">
-            <div class="span6">
-              <div class="copyright">
-                <p>
-                  <span>&copy; 2018 - Kabinet Harmoni Kolaborasi.</span>
-                </p>
-                <div class="credits">
-                  <!--
-                    All the links in the footer should remain intact.
-                    You can delete the links only if you purchased the pro version.
-                    Licensing information: https://bootstrapmade.com/license/
-                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Flattern
-                  -->
-                  Designed by <a href="">Kominfo 2018</a> powered by <a href="">Jemberkita</a> 
+<footer id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-ribbon">
+                            <span>Get in Touch</span>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="newsletter">
+                                <h4>Newsletter</h4>
+                                <p>Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.</p>
+            
+                                <div class="alert alert-success d-none" id="newsletterSuccess">
+                                    <strong>Success!</strong> You've been added to our email list.
+                                </div>
+            
+                                <div class="alert alert-danger d-none" id="newsletterError"></div>
+            
+                                <form id="newsletterForm" action="https://preview.oklerthemes.com/porto/6.2.1/php/newsletter-subscribe.php" method="POST">
+                                    <div class="input-group">
+                                        <input class="form-control form-control-sm" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+                                        <span class="input-group-append">
+                                            <button class="btn btn-light" type="submit">Go!</button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>Latest Tweets</h4>
+                            <div id="tweet" class="twitter" data-plugin-tweets data-plugin-options="{'username': 'oklerthemes', 'count': 2}">
+                                <p>Please wait...</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="contact-details">
+                                <h4>Contact Us</h4>
+                                <ul class="contact">
+                                    <li><p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</p></li>
+                                    <li><p><i class="fas fa-phone"></i> <strong>Phone:</strong> (123) 456-789</p></li>
+                                    <li><p><i class="far fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <h4>Follow Us</h4>
+                            <ul class="social-icons" >
+                                <li class="social-icons-facebook" ><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i style="padding-top: 8px" class="fab fa-facebook-f"></i></a></li>
+                                <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i style="padding-top: 8px" class="fab fa-twitter"></i></a></li>
+                                <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i style="padding-top: 8px" class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="span6">
-              <ul class="social-network">
-                <li><a href="#" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-square"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Twitter"><i class="icon-twitter icon-square"></i></a></li>
-                <!-- <li><a href="#" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square"></i></a></li> -->
-                <!-- <li><a href="#" data-placement="bottom" title="Pinterest"><i class="icon-pinterest icon-square"></i></a></li> -->
-                <li><a href="#" data-placement="bottom" title="Google plus"><i class="icon-google-plus icon-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <a href="index.html" class="logo">
+                                    <img alt="Porto Website Template" class="img-fluid" src="<?php echo base_url() ?>master/client/img/logo-footer.png">
+                                </a>
+                            </div>
+                            <div class="col-lg-7">
+                                <p>© Copyright 2018. All Rights Reserved    <a href="">,</a>   Powered by <a href="http://jemberkita.online"><em>Jemberkita</em></a></p>
+                                <p></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <nav id="sub-menu">
+                                    <ul>
+                                        <li><a href="page-faq.html">FAQ's</a></li>
+                                        <li><a href="sitemap.html">Sitemap</a></li>
+                                        <li><a href="<?php echo base_url('ContactUs') ?>">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
