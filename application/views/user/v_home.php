@@ -1,6 +1,6 @@
  <?php $this->load->view("user/side/head"); ?>
  <?php $this->load->view("user/side/navbar"); ?>
- <div class="body"></div>
+<div class="body"></div>
 <div role="main" class="main">
         <div class="slider-container rev_slider_wrapper">
           <div id="revolutionSlider" class="slider rev_slider" data-version="5.4.7" data-plugin-revolution-slider data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 500, 'disableProgressBar': 'on', 'responsiveLevels': [4096,1200,992,500]}">
@@ -172,12 +172,10 @@
                 </div>
               </div>
             </div>
-        
           </div>
         </div>
-        
+        <!-- #Alur Pendaftaran -->
         <div class="container">
-        
           <div class="row text-center">
             <div class="col">
               <h1 class="mb-2 word-rotator-title">
@@ -197,12 +195,10 @@
               </p>
             </div>
           </div>
-        
         </div>
-        
+        <!-- #Alur Pendaftaran  -->
         <div class="home-concept mt-5">
           <div class="container">
-        
             <div class="row text-center">
               <span class="sun"></span>
               <span class="cloud"></span>
@@ -237,7 +233,6 @@
                 </div>
               </div>
             </div>
-        
           </div>
         </div>
         
