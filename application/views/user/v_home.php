@@ -161,7 +161,7 @@
             <div class="row align-items-center">
               <div class="col-lg-8">
                 <p>
-                  Cara Mudah Mendaftar di <em>Al Baitul Amien 02</em>
+                  Cara Mudah Mendaftar di <em>SD Al Baitul Amien 02</em>
                   <span>Pelajari dan daftarkan segera</span>
                 </p>
               </div>
@@ -181,17 +181,16 @@
           <div class="row text-center">
             <div class="col">
               <h1 class="mb-2 word-rotator-title">
-                Porto is
+                Alur tata cara pendaftaran
                 <strong class="inverted">
                   <span class="word-rotator" data-plugin-options="{'delay': 2000, 'animDelay': 300}">
                     <span class="word-rotator-items">
-                      <span>incredibly</span>
-                      <span>especially</span>
-                      <span>extremely</span>
+                      <span>Sekolah</span>
+                      <span>Al Baitul Amien 2 </span>
+                      <span>Jember</span>
                     </span>
                   </span>
                 </strong>
-                beautiful and fully responsive.
               </h1>
               <p class="lead">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendrerit arcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.
@@ -251,7 +250,7 @@
           </div>
         
           <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-9">
               <h2>Our <strong>Features</strong></h2>
               <div class="row">
                 <div class="col-sm-6">
@@ -332,22 +331,177 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
-              <h2>and more...</h2>
-        
+
+          <!-- berita -->
+            <div class="tabs col-lg-3">
+              <h2><strong>Berita</strong></h2>
+              <hr>
+              <ul class="nav nav-tabs">
+                <li class="nav-item active"><a class="nav-link" href="#popularPosts" data-toggle="tab"><i class="fas fa-star"></i> Popular</a></li>
+                <li class="nav-item"><a class="nav-link" href="#recentPosts" data-toggle="tab">Recent</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="popularPosts">
+                  <ul class="simple-post-list">
+                    <li>
+                      <div class="post-image">
+                        <div class="img-thumbnail d-block">
+                          <a href="blog-post.html">
+                            <img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-1.jpg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="post-info">
+                        <a href="blog-post.html">Nullam Vitae Nibh Un Odiosters</a>
+                        <div class="post-meta">
+                           Jan 10, 2017
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="post-image">
+                        <div class="img-thumbnail d-block">
+                          <a href="blog-post.html">
+                            <img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-2.jpg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="post-info">
+                        <a href="blog-post.html">Vitae Nibh Un Odiosters</a>
+                        <div class="post-meta">
+                           Jan 10, 2017
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="post-image">
+                        <div class="img-thumbnail d-block">
+                          <a href="blog-post.html">
+                            <img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-3.jpg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="post-info">
+                        <a href="blog-post.html">Odiosters Nullam Vitae</a>
+                        <div class="post-meta">
+                           Jan 10, 2017
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-pane" id="recentPosts">
+                  <ul class="simple-post-list">
+                    <li>
+                      <div class="post-image">
+                        <div class="img-thumbnail d-block">
+                          <a href="blog-post.html">
+                            <img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-2.jpg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="post-info">
+                        <a href="blog-post.html">Vitae Nibh Un Odiosters</a>
+                        <div class="post-meta">
+                           Jan 10, 2017
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="post-image">
+                        <div class="img-thumbnail d-block">
+                          <a href="blog-post.html">
+                            <img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-3.jpg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="post-info">
+                        <a href="blog-post.html">Odiosters Nullam Vitae</a>
+                        <div class="post-meta">
+                           Jan 10, 2017
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="post-image">
+                        <div class="img-thumbnail d-block">
+                          <a href="blog-post.html">
+                            <img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-1.jpg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="post-info">
+                        <a href="blog-post.html">Nullam Vitae Nibh Un Odiosters</a>
+                        <div class="post-meta">
+                           Jan 10, 2017
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <br>
+              <!-- Polling -->
+              <div>
+                <h2><strong>Polling</strong></h2>
+                <hr>
+                <p>Bagaimana tanggapan anda mengenai desain website kami?</p>
+                <input type=checkbox name=c1 checked>Sangat baik<br>
+                <input type=checkbox name=c2 >Baik<br>
+                <input type=checkbox name=c3 >Cukup baik<br><br>
+                <a href="#" class="btn btn-lg btn-primary">Vote</a>
+                <a href="#" class="btn btn-lg btn-primary">View result</a><br>
+              </div>
+              <br>
+              <div>
+                <h2><strong>Kritik & Saran</strong></h2>
+                <hr>
+                <form class="form-horizontal form-bordered" method="get">
+                    <div class="form-group row">
+                      <div class="col-lg-12">
+                        <input type="text" class="form-control" id="inputDefault" placeholder="Nama">
+                      </div>
+                      <br>
+                      <br>
+                      <div class="col-lg-12">
+                        <input type="text" class="form-control" id="inputDefault" placeholder="Email">
+                      </div>
+                      <br>
+                      <br>
+                      <div class="col-lg-12">
+                        <textarea class="form-control" rows="3" id="textareaDefault" placeholder="Kritik & Saran"></textarea><br>
+                        <a href="#" class="btn btn-lg btn-primary">Kirim</a>  
+                      </div>
+                      
+
+                    </div>
+                </form>
+
+              </div>
+            </div>
+            <!-- <div class="col-lg-4">
+              <h2>Berita</h2>
+              <hr>
               <div class="accordion" id="accordion">
                 <div class="card card-default">
                   <div class="card-header">
                     <h4 class="card-title m-0">
                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                        <i class="fas fa-dollar-sign"></i>
-                        Pricing Tables
+                        <i class="fa fa-th-list"></i>
+                        Judul berita 1
                       </a>
                     </h4>
                   </div>
                   <div id="collapseOne" class="collapse show">
                     <div class="card-body">
-                      Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor.
+                      <div>
+                        <center>
+                          <img style="width: 100px; height: 70px" src="<?php echo base_url() ?>master/client/img/home-concept-item-1.png">
+                        </center>  
+                      </div>
+                      <div>
+                        <p>Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor.</p>
+                      </div> 
                     </div>
                   </div>
                 </div>
@@ -355,14 +509,21 @@
                   <div class="card-header">
                     <h4 class="card-title m-0">
                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                        <i class="fas fa-comment"></i>
-                        Contact Forms
+                        <i class="fa fa-th-list"></i>
+                        Judul berita 2
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseTwo" class="collapse">
+                  <div id="collapseTwo" class="collapse show">
                     <div class="card-body">
-                      Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                      <div>
+                        <center>
+                          <img style="width: 100px; height: 70px" src="<?php echo base_url() ?>master/client/img/home-concept-item-1.png">
+                        </center>  
+                      </div>
+                      <div>
+                        <p>Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor.</p>
+                      </div> 
                     </div>
                   </div>
                 </div>
@@ -370,19 +531,26 @@
                   <div class="card-header">
                     <h4 class="card-title m-0">
                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                        <i class="fas fa-laptop"></i>
-                        Portfolio Pages
+                        <i class="fa fa-th-list"></i>
+                        Judul berita 3
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseThree" class="collapse">
+                  <div id="collapseThree" class="collapse show">
                     <div class="card-body">
-                      Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                      <div>
+                        <center>
+                          <img style="width: 100px; height: 70px" src="<?php echo base_url() ?>master/client/img/home-concept-item-1.png">
+                        </center>  
+                      </div>
+                      <div>
+                        <p>Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor.</p>
+                      </div> 
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         
           <hr class="tall">
