@@ -48,7 +48,7 @@
                             </a>
                           </li>
                           <li class="dropdown dropdown-mega">
-                            <a class="dropdown-item dropdown-toggle" href="#">
+                            <a class="dropdown-item dropdown-toggle" href="<?php echo base_url('Profile') ?>">
                               Profile 
                             </a>
                             <ul class="dropdown-menu">
@@ -329,12 +329,12 @@
                             </ul>
                           </li>
                           <li class="dropdown">
-                            <a class="" href="#">
+                            <a class="<?php if($this->uri->segment('1')=="Galery"){ echo "active";}?>" href="<?php echo base_url("Galery") ?>">
                               Galery 
                             </a>
                           </li>
                           <li class="">
-                            <a class="<?php if($this->uri->segment('1')==""){ echo "active";}?>" href="<?php echo base_url() ?>">
+                            <a class="<?php if($this->uri->segment('1')=="Agenda"){ echo "active";}?>" href="<?php echo base_url("Agenda") ?>">
                               Agenda
                             </a>
                           </li>
