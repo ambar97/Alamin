@@ -1482,7 +1482,7 @@ html .inverted-light {
 }
 .owl-carousel .owl-dots .owl-dot.active span,
 .owl-carousel .owl-dots .owl-dot:hover span {
-  background-color: #0074ad;
+  background-color: #10ac84;
 }
 .owl-carousel.show-nav-title .owl-nav button[class*="owl-"] {
   color: #10ac84;
@@ -3236,10 +3236,10 @@ html #header .header-top.header-top-light .dropdown-menu a:focus {
   border-top-color: #0099e6;
 }
 html .testimonial-primary blockquote {
-  background: #0099e6;
+  background: #10ac84;
 }
 html .testimonial-primary .testimonial-arrow-down {
-  border-top-color: #0099e6;
+  border-top-color: #10ac84;
 }
 html .testimonial-secondary blockquote {
   background: #e7766f;
@@ -4169,8 +4169,8 @@ html .slider-container .tp-caption-overlay-opacity-light {
   background: #10ac84;
 }
 #footer .footer-ribbon:before {
-  border-right-color: #005580;
-  border-left-color: #005580;
+  border-right-color: #1dd1a1;
+  border-left-color: #1dd1a1;
 }
 #footer.light h1,
 #footer.light h2,
