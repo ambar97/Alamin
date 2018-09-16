@@ -168,7 +168,6 @@
               <div class="col-lg-4">
                 <div class="get-started text-left text-lg-right">
                   <a href="#" class="btn btn-lg btn-primary">Mulai!</a>
-                  <div class="learn-more">or <a href="index.html">learn more.</a></div>
                 </div>
               </div>
             </div>
@@ -191,7 +190,7 @@
                 </strong>
               </h1>
               <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendrerit arcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.
+                Di bawah ini adalah contoh gambar alur pendaftaran siswa siswi baru di sekolah dasar Al Baitul Amien 2 Jember
               </p>
             </div>
           </div>
@@ -243,12 +242,42 @@
               <hr class="tall mt-4">
             </div>
           </div>
-        
+
+        <!-- Berita Terbaru  -->
           <div class="row">
             <div class="col-lg-9">
-              <h2>Our <strong>Features</strong></h2>
+              <h2>Berita <strong>Terbaru</strong></h2>
               <div class="row">
-                <div class="col-sm-6">
+                <div class="col-lg-9">
+                  <div class="blog-posts single-post">
+                    <article class="post post-large blog-single-post">
+                      <div class="post-image">
+                        <div class="owl-carousel owl-theme" data-plugin-options="{'items':1}">
+                          <div>
+                            <div class="img-thumbnail d-block">
+                              <img class="img-fluid" src="<?php echo base_url() ?>master/client/img/blog/blog-image-1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div>
+                            <div class="img-thumbnail d-block">
+                              <img class="img-fluid" src="<?php echo base_url() ?>master/client/img/blog/blog-image-2.jpg" alt="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="post-date">
+                        <span class="day">10</span>
+                        <span class="month">Jan</span>
+                      </div>
+                      <div class="post-content">
+                        <h2>Class aptent taciti sociosqu ad litora torquent</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris. Duis molestie, purus eget placerat viverra, nisi odio gravida sapien, congue tincidunt nisl ante nec tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, massa fringilla consequat blandit, mauris ligula porta nisi, non tristique enim sapien vel nisl. Suspendisse vestibulum lobortis dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent nec tempus nibh. Donec mollis commodo metus et fringilla. Etiam venenatis, diam id adipiscing convallis, nisi eros lobortis tellus, feugiat adipiscing ante ante sit amet dolor. Vestibulum vehicula scelerisque facilisis. Sed faucibus placerat bibendum. Maecenas sollicitudin commodo justo, quis hendrerit leo consequat ac. Proin sit amet risus sapien, eget interdum dui. Proin justo sapien, varius sit amet hendrerit id, egestas quis mauris.</p>
+                      </div>
+                    </article>
+
+              </div>
+                </div>
+                <!-- <div class="col-sm-6">
                   <div class="feature-box">
                     <div class="feature-box-icon">
                       <i class="fas fa-users"></i>
@@ -323,7 +352,7 @@
                       <p class="mb-4">Lorem sit amet, consectetur.</p>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
 
@@ -553,22 +582,22 @@
           <div class="row text-center pt-4">
             <div class="col">
               <h2 class="mb-2 word-rotator-title">
-                We're not the only ones
+               Pengumuman seputar info kegiatan
                 <strong>
                   <span class="word-rotator" data-plugin-options="{'delay': 3500, 'animDelay': 400}">
                     <span class="word-rotator-items">
-                      <span>excited</span>
-                      <span>happy</span>
+                      <span>Sekolah</span>
+                      <span>SD Al Baitul Amien 2</span>
                     </span>
                   </span>
                 </strong>
-                about Porto Template...
+                  Jember
               </h2>
-              <h4 class="heading-primary lead tall">30,000 customers in 100 countries use Porto Template. Meet our customers.</h4>
+              <h4 class="heading-primary lead tall">Berikut ini adalah pengumuman macam-macam info kegiatan di SD Al Baitul Amien 2 Jember</h4>
             </div>
           </div>
         
-          <div class="row text-center">
+         <!--  <div class="row text-center">
             <div class="owl-carousel owl-theme" data-plugin-options="{'items': 6, 'autoplay': true, 'autoplayTimeout': 3000}">
               <div>
                 <img class="img-fluid" src="<?php echo base_url() ?>master/client/img/logos/logo-1.png" alt="">
@@ -595,7 +624,7 @@
                 <img class="img-fluid" src="<?php echo base_url() ?>master/client/img/logos/logo-2.png" alt="">
               </div>
             </div>
-          </div>
+          </div> -->
         
         </div>
         
@@ -605,7 +634,7 @@
               <div class="row">
                 <div class="col-lg-6">
                   <div class="recent-posts mb-5">
-                    <h2>Latest <strong>Blog</strong> Posts</h2>
+                    <h2><strong>Info</strong> kegiatan</h2>
                     <div class="owl-carousel owl-theme mb-0" data-plugin-options="{'items': 1}">
                       <div class="row">
                         <div class="col-lg-6">
@@ -677,7 +706,7 @@
                   </div>
                 </div>
                 <div class="col-lg-6">
-                  <h2><strong>What</strong> Client’s Say</h2>
+                  <h2><strong>Quotes</strong> of the day</h2>
                   <div class="row">
                     <div class="owl-carousel owl-theme mb-0" data-plugin-options="{'items': 1}">
                       <div>

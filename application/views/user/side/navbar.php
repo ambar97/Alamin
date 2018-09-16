@@ -16,17 +16,17 @@
                   <nav class="header-nav-top">
                     <ul class="nav nav-pills">
                       <li class="nav-item d-none d-sm-block">
-                        <a class="nav-link" href="about-us.html"><i class="fas fa-angle-right"></i> About Us</a>
+                        <a class="nav-link" href="about-us.html"><i class="fas fa-angle-right"></i> Tentang kami</a>
                       </li>
                       <li class="nav-item d-none d-sm-block">
-                        <a class="nav-link" href="contact-us.html"><i class="fas fa-angle-right"></i> Contact Us</a>
+                        <a class="nav-link" href="contact-us.html"><i class="fas fa-angle-right"></i> Contact</a>
                       </li>
                       <li class="nav-item">
                         <span class="ws-nowrap"><i class="fas fa-phone"></i> (123) 456-789</span>
                       </li>
                     </ul>
                   </nav>
-                  <div class="header-search d-none d-md-block">
+                  <!-- <div class="header-search d-none d-md-block">
                     <form id="searchForm" action="https://preview.oklerthemes.com/porto/6.2.1/page-search-results.html" method="get">
                       <div class="input-group">
                         <input type="text" class="form-control" name="q" id="q" placeholder="Search..." required>
@@ -35,7 +35,7 @@
                         </span>
                       </div>
                     </form>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="header-row">
                   <div class="header-nav">
@@ -49,7 +49,7 @@
                           </li>
                           <li class="dropdown dropdown-mega">
                             <a class="dropdown-item dropdown-toggle" href="<?php echo base_url('Profile') ?>">
-                              Profile 
+                              Profil 
                             </a>
                             <ul class="dropdown-menu">
                               <li>
