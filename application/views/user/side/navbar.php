@@ -47,99 +47,71 @@
                           Home
                         </a>
                       </li>
-                      <!-- <li class="dropdown dropdown-mega">
-                        <a class="dropdown-item dropdown-toggle" href="<?php echo base_url('Profile') ?>">
-                          Profil 
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <div class="dropdown-mega-content">
-                              <div class="row">
-                                <div class="col-lg-3">
-                                  <span class="dropdown-mega-sub-title">Elements 1</span>
-                                  <ul class="dropdown-mega-sub-nav">
-                                    <li><a class="dropdown-item" href="elements-accordions.html">Accordions</a></li>
-                                    <li><a class="dropdown-item" href="elements-toggles.html">Toggles</a></li>
-                                    <li><a class="dropdown-item" href="elements-tabs.html">Tabs</a></li>
-                                    <li><a class="dropdown-item" href="elements-icons.html">Icons</a></li>
-                                    <li><a class="dropdown-item" href="elements-icon-boxes.html">Icon Boxes</a></li>
-                                    <li><a class="dropdown-item" href="elements-carousels.html">Carousels</a></li>
-                                    <li><a class="dropdown-item" href="elements-modals.html">Modals</a></li>
-                                    <li><a class="dropdown-item" href="elements-lightboxes.html">Lightboxes</a></li>
-                                  </ul>
-                                </div>
-                                <div class="col-lg-3">
-                                  <span class="dropdown-mega-sub-title">Elements 2</span>
-                                  <ul class="dropdown-mega-sub-nav">
-                                    <li><a class="dropdown-item" href="elements-buttons.html">Buttons</a></li>
-                                    <li><a class="dropdown-item" href="elements-badges.html">Badges</a></li>
-                                    <li><a class="dropdown-item" href="elements-lists.html">Lists</a></li>
-                                    <li><a class="dropdown-item" href="elements-image-gallery.html">Image Gallery</a></li>
-                                    <li><a class="dropdown-item" href="elements-image-frames.html">Image Frames</a></li>
-                                    <li><a class="dropdown-item" href="elements-testimonials.html">Testimonials</a></li>
-                                    <li><a class="dropdown-item" href="elements-blockquotes.html">Blockquotes</a></li>
-                                    <li><a class="dropdown-item" href="elements-word-rotator.html">Word Rotator</a></li>
-                                  </ul>
-                                </div>
-                                <div class="col-lg-3">
-                                  <span class="dropdown-mega-sub-title">Elements 3</span>
-                                  <ul class="dropdown-mega-sub-nav">
-                                    <li><a class="dropdown-item" href="elements-call-to-action.html">Call to Action</a></li>
-                                    <li><a class="dropdown-item" href="elements-pricing-tables.html">Pricing Tables</a></li>
-                                    <li><a class="dropdown-item" href="elements-tables.html">Tables</a></li>
-                                    <li><a class="dropdown-item" href="elements-progressbars.html">Progress Bars</a></li>
-                                    <li><a class="dropdown-item" href="elements-counters.html">Counters</a></li>
-                                    <li><a class="dropdown-item" href="elements-sections-parallax.html">Sections &amp; Parallax</a></li>
-                                    <li><a class="dropdown-item" href="elements-tooltips-popovers.html">Tooltips &amp; Popovers</a></li>
-                                    <li><a class="dropdown-item" href="elements-sticky-elements.html">Sticky Elements</a></li>
-                                  </ul>
-                                </div>
-                                <div class="col-lg-3">
-                                  <span class="dropdown-mega-sub-title">Elements 4</span>
-                                  <ul class="dropdown-mega-sub-nav">
-                                    <li><a class="dropdown-item" href="elements-headings.html">Headings</a></li>
-                                    <li><a class="dropdown-item" href="elements-dividers.html">Dividers</a></li>
-                                    <li><a class="dropdown-item" href="elements-animations.html">Animations</a></li>
-                                    <li><a class="dropdown-item" href="elements-medias.html">Medias</a></li>
-                                    <li><a class="dropdown-item" href="elements-maps.html">Maps</a></li>
-                                    <li><a class="dropdown-item" href="elements-arrows.html">Arrows</a></li>
-                                    <li><a class="dropdown-item" href="elements-alerts.html">Alerts</a></li>
-                                    <li><a class="dropdown-item" href="elements-posts.html">Posts</a></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </li> -->
                       <li class="dropdown">
                         <a class="dropdown-item dropdown-toggle" href="#">
                           Profil
                         </a>
                         <ul class="dropdown-menu">
                           <li>
-                            <a class="dropdown-item" href="#">Visi & Misi</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Profile/VisiMisi') ?>">Visi & Misi</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#">Sejarah Sekolah</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Profile/SejarahSek') ?>">Sejarah Sekolah</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#">Sarana & Prasarana</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Profile/SarPrasarana') ?>">Sarana & Prasarana</a>
+                          </li>
+                          <li class="dropdown-submenu">
+                            <a class="dropdown-item" href="#">Struktur & Personalia</a>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Kepala Sekolah</a>
+                              </li>
+                              <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="#">Bagian TU</a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Kepala TU</a></li>
+                                  <li><a class="dropdown-item" href="#">Bagian Administrasi</a></li>
+                                  <li><a class="dropdown-item" href="#">Bagian Keuangan</a></li>
+                                  <li><a class="dropdown-item" href="#">Bagian RT dan Badan Usaha</a></li>
+                                </ul>
+                              </li>
+                              <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="#">Waka Kesiswaan</a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">BP</a></li>
+                                  <li><a class="dropdown-item" href="#">Extrakulikuler</a></li>
+                                  <li><a class="dropdown-item" href="#">Perpustakaan</a></li>
+                                  <li><a class="dropdown-item" href="#">UKS</a></li>
+                                </ul>
+                              </li>
+                              <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="#">Waka Kurikulum</a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Ketua KKG</a></li>
+                                  <li><a class="dropdown-item" href="#">Koord. Al-Qur'an & Ibadah</a></li>
+                                  <li><a class="dropdown-item" href="#">Wali Kelas</a></li>
+                                </ul>
+                              </li>
+                              <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="#">Waka Sapras & Humas</a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Satpam</a></li>
+                                  <li><a class="dropdown-item" href="#">Cleaning Service</a></li>
+                                  <li><a class="dropdown-item" href="#">Laboratorium</a></li>
+                                </ul>
+                              </li>
+                              <li><a class="dropdown-item" href="index-header-narrow.html">Wali Kelas</a></li>
+                            </ul>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#">Kepala Sekolah</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Profile/BagSekolah') ?>">Bagan Sekolah</a>
                           </li>
-                          <li>
-                            <a class="dropdown-item" href="#">Kesiswaan</a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="#">Struktur Bagan Sekloah</a>
-                          </li>
-                          <li>
+                         <!--  <li>
                             <a class="dropdown-item" href="#">Komite Sekolah</a>
-                          </li>
+                          </li> -->
                           <li>
-                            <a class="dropdown-item" href="#">Program Kerja</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Profile/ProgKerja') ?>">Program Kerja</a>
                           </li>
                         </ul>
                       </li>
@@ -149,7 +121,7 @@
                         </a> 
                         <ul class="dropdown-menu">
                           <li>
-                            <a class="dropdown-item" href="#">Sekolah</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Prestasi/Sekolah') ?>">Sekolah</a>
                             <!-- <ul class="dropdown-menu">
                               <li class="dropdown-submenu">
                                 <a class="dropdown-item" href="#">Default</a>
@@ -203,7 +175,7 @@
                             </ul> -->
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#">Siswa & Siswi</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Prestasi/Siswa_Siswi') ?>">Siswa & Siswi</a>
                             <!-- <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="index-classic.html">Default</a></li>
                               <li><a class="dropdown-item" href="index-navigation-stripe.html">Stripe</a></li>
