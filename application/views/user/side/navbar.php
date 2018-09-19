@@ -42,7 +42,7 @@
                 <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1">
                   <nav class="collapse">
                     <ul class="nav nav-pills" id="mainNav">
-                      <li class="">
+                      <li>
                         <a class="<?php if($this->uri->segment('1')==""){ echo "active";}?>" href="<?php echo base_url() ?>">
                           Home
                         </a>
@@ -192,7 +192,7 @@
                         </a>
                         <ul class="dropdown-menu">
                           <li class="dropdown-submenu">
-                            <a class="dropdown-item" href="#">Berita</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Informasi/Berita') ?>">Berita</a>
                             <!-- <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
                               <li><a class="dropdown-item" href="about-us-basic.html">About Us - Basic</a></li>
@@ -200,7 +200,7 @@
                             </ul> -->
                           </li>
                           <li class="dropdown-submenu">
-                            <a class="dropdown-item" href="#">Pengumuman</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Informasi/Pengumuman') ?>">Pengumuman</a>
                             <!-- <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="shop-full-width.html">Shop - Full Width</a></li>
                               <li><a class="dropdown-item" href="shop-sidebar.html">Shop - Sidebar</a></li>
@@ -212,7 +212,7 @@
                             </ul> -->
                           </li>
                           <li class="dropdown-submenu">
-                            <a class="dropdown-item" href="#">Info Kegiatan</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Informasi/InfoKeg') ?>">Info Kegiatan</a>
                             <!-- <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="blog-full-width.html">Blog Full Width</a></li>
                               <li><a class="dropdown-item" href="blog-large-image.html">Blog Large Image</a></li>
@@ -251,7 +251,7 @@
                       </li>
                       <li class="dropdown">
                         <a class="<?php if($this->uri->segment('1')=="ContactUs"){ echo "active";}?>" href="<?php echo base_url("ContactUs") ?>">
-                          Contact 
+                          Kontak
                         </a>
                       </li>
                     </ul>

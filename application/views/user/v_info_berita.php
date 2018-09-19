@@ -7,13 +7,13 @@
 			<div class="col">
 				<ul class="breadcrumb">
 					<li><a style="color: #10ac84" href="<?php echo base_url('./') ?>">Home</a></li>
-					<li class="active">Visi & Misi</li>
+					<li class="active">Berita</li>
 				</ul>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col">
-				<h1>Visi & Misi</h1>
+				<h1>Berita Sekolah</h1>
 			</div>
 		</div>
 	</div>
@@ -33,92 +33,18 @@
 					<hr>
 					<ul>
 						<li>
-							<a href="<?php echo base_url('Profile/VisiMisi') ?>">Visi & Misi</a>
-						</li>
-						<li>
-							<a href="<?php echo base_url('Profile/SejarahSek') ?>">Sejarah Sekolah</a>
-						</li>
-						<li>
-							<a href="<?php echo base_url('Profile/SarPrasarana') ?>">Sarana & Prasarana</a>
-						</li>
-						<li>
-							<a href="">Struktur & Personalia</a>
+							<a style="font-weight: bold; font-size: 18px;">Informasi</a>
 							<ul>
 								<li>
-									<a href="">Kepala Sekolah</a>
+									<a href="<?php echo base_url('Informasi/Berita') ?>">Berita</a>
 								</li>
 								<li>
-									<a href="#">Bagian TU</a>
-									<ul>
-										<li>
-											<a href="">Kepala TU</a>
-										</li>
-										<li>
-											<a href="">Bagian Administrasi</a>
-										</li>
-										<li>
-											<a href="">Bagian Keuangan</a>
-										</li>
-										<li>
-											<a href="">Bagian RT & Badan Usaha</a>
-										</li>
-									</ul>
+									<a href="<?php echo base_url('Informasi/Pengumuman') ?>">Pengumuman</a>
 								</li>
 								<li>
-									<a href="#">Waka Kesiswaan</a>
-									<ul>
-										<li>
-											<a href="">BP</a>
-										</li>
-										<li>
-											<a href="">Ekstrakulilkuler</a>
-										</li>
-										<li>
-											<a href="">Perpustakaan</a>
-										</li>
-										<li>
-											<a href="">UKS</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Waka Kurikulum</a>
-									<ul>
-										<li>
-											<a href="">Ketua KKG</a>
-										</li>
-										<li>
-											<a href="">Koord. Al-Qur'an & Ibadah</a>
-										</li>
-										<li>
-											<a href="">Wali Kelas</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Waka Sapras & Humas</a>
-									<ul>
-										<li>
-											<a href="">Satpam</a>
-										</li>
-										<li>
-											<a href="">Cleaning Service</a>
-										</li>
-										<li>
-											<a href="">Laboratorium</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="">Wali Kelas</a>
+									<a href="<?php echo base_url('Informasi/InfoKeg') ?>">Info Kegiatan</a>
 								</li>
 							</ul>
-						</li>
-						<li>
-							<a href="<?php echo base_url('Profile/BagSekolah') ?>">Bagan Sekolah</a>
-						</li>
-						<li>
-							<a href="<?php echo base_url('Profile/ProgKerja') ?>">Program Kerja</a>
 						</li>
 					</ul>
 					<div>

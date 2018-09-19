@@ -235,14 +235,12 @@
           </div>
         </div>
         
-        <div class="container">
-        
-          <div class="row">
-            <div class="col">
-              <hr class="tall mt-4">
-            </div>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <hr class="tall mt-4">
           </div>
-
+        </div>
         <!-- Berita Terbaru  -->
           <div class="row">
             <div class="col-lg-9">
@@ -274,85 +272,8 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris. Duis molestie, purus eget placerat viverra, nisi odio gravida sapien, congue tincidunt nisl ante nec tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, massa fringilla consequat blandit, mauris ligula porta nisi, non tristique enim sapien vel nisl. Suspendisse vestibulum lobortis dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent nec tempus nibh. Donec mollis commodo metus et fringilla. Etiam venenatis, diam id adipiscing convallis, nisi eros lobortis tellus, feugiat adipiscing ante ante sit amet dolor. Vestibulum vehicula scelerisque facilisis. Sed faucibus placerat bibendum. Maecenas sollicitudin commodo justo, quis hendrerit leo consequat ac. Proin sit amet risus sapien, eget interdum dui. Proin justo sapien, varius sit amet hendrerit id, egestas quis mauris.</p>
                       </div>
                     </article>
-
-              </div>
-                </div>
-                <!-- <div class="col-sm-6">
-                  <div class="feature-box">
-                    <div class="feature-box-icon">
-                      <i class="fas fa-users"></i>
-                    </div>
-                    <div class="feature-box-info">
-                      <h4 class="heading-primary mb-0">Customer Support</h4>
-                      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                  </div>
-                  <div class="feature-box">
-                    <div class="feature-box-icon">
-                      <i class="fas fa-file"></i>
-                    </div>
-                    <div class="feature-box-info">
-                      <h4 class="heading-primary mb-0">HTML5 / CSS3 / JS</h4>
-                      <p class="mb-4">Lorem ipsum dolor sit amet,.</p>
-                    </div>
-                  </div>
-                  <div class="feature-box">
-                    <div class="feature-box-icon">
-                      <i class="fab fa-google-plus-g"></i>
-                    </div>
-                    <div class="feature-box-info">
-                      <h4 class="heading-primary mb-0">500+ Google Fonts</h4>
-                      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                  </div>
-                  <div class="feature-box">
-                    <div class="feature-box-icon">
-                      <i class="fas fa-adjust"></i>
-                    </div>
-                    <div class="feature-box-info">
-                      <h4 class="heading-primary mb-0">Colors</h4>
-                      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
                   </div>
                 </div>
-                <div class="col-sm-6">
-                  <div class="feature-box">
-                    <div class="feature-box-icon">
-                      <i class="fas fa-film"></i>
-                    </div>
-                    <div class="feature-box-info">
-                      <h4 class="heading-primary mb-0">Sliders</h4>
-                      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                  </div>
-                  <div class="feature-box">
-                    <div class="feature-box-icon">
-                      <i class="fas fa-user"></i>
-                    </div>
-                    <div class="feature-box-info">
-                      <h4 class="heading-primary mb-0">Icons</h4>
-                      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                  </div>
-                  <div class="feature-box">
-                    <div class="feature-box-icon">
-                      <i class="fas fa-bars"></i>
-                    </div>
-                    <div class="feature-box-info">
-                      <h4 class="heading-primary mb-0">Buttons</h4>
-                      <p class="mb-4">Lorem ipsum dolor sit, consectetur.</p>
-                    </div>
-                  </div>
-                  <div class="feature-box">
-                    <div class="feature-box-icon">
-                      <i class="fas fa-desktop"></i>
-                    </div>
-                    <div class="feature-box-info">
-                      <h4 class="heading-primary mb-0">Lightbox</h4>
-                      <p class="mb-4">Lorem sit amet, consectetur.</p>
-                    </div>
-                  </div>
-                </div> -->
               </div>
             </div>
 
@@ -495,90 +416,13 @@
                       <div class="col-lg-12">
                         <textarea class="form-control" rows="3" id="textareaDefault" placeholder="Kritik & Saran"></textarea><br>
                         <a href="#" class="btn btn-lg btn-primary">Kirim</a>  
-                      </div>
-                      
-
+                      </div> 
                     </div>
                 </form>
-
               </div>
             </div>
-            <!-- <div class="col-lg-4">
-              <h2>Berita</h2>
-              <hr>
-              <div class="accordion" id="accordion">
-                <div class="card card-default">
-                  <div class="card-header">
-                    <h4 class="card-title m-0">
-                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                        <i class="fa fa-th-list"></i>
-                        Judul berita 1
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="collapseOne" class="collapse show">
-                    <div class="card-body">
-                      <div>
-                        <center>
-                          <img style="width: 100px; height: 70px" src="<?php echo base_url() ?>master/client/img/home-concept-item-1.png">
-                        </center>  
-                      </div>
-                      <div>
-                        <p>Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor.</p>
-                      </div> 
-                    </div>
-                  </div>
-                </div>
-                <div class="card card-default">
-                  <div class="card-header">
-                    <h4 class="card-title m-0">
-                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                        <i class="fa fa-th-list"></i>
-                        Judul berita 2
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="collapseTwo" class="collapse show">
-                    <div class="card-body">
-                      <div>
-                        <center>
-                          <img style="width: 100px; height: 70px" src="<?php echo base_url() ?>master/client/img/home-concept-item-1.png">
-                        </center>  
-                      </div>
-                      <div>
-                        <p>Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor.</p>
-                      </div> 
-                    </div>
-                  </div>
-                </div>
-                <div class="card card-default">
-                  <div class="card-header">
-                    <h4 class="card-title m-0">
-                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                        <i class="fa fa-th-list"></i>
-                        Judul berita 3
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="collapseThree" class="collapse show">
-                    <div class="card-body">
-                      <div>
-                        <center>
-                          <img style="width: 100px; height: 70px" src="<?php echo base_url() ?>master/client/img/home-concept-item-1.png">
-                        </center>  
-                      </div>
-                      <div>
-                        <p>Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor.</p>
-                      </div> 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
-        
           <hr class="tall">
-        
           <div class="row text-center pt-4">
             <div class="col">
               <h2 class="mb-2 word-rotator-title">
@@ -595,38 +439,8 @@
               </h2>
               <h4 class="heading-primary lead tall">Berikut ini adalah pengumuman macam-macam info kegiatan di SD Al Baitul Amien 2 Jember</h4>
             </div>
-          </div>
-        
-         <!--  <div class="row text-center">
-            <div class="owl-carousel owl-theme" data-plugin-options="{'items': 6, 'autoplay': true, 'autoplayTimeout': 3000}">
-              <div>
-                <img class="img-fluid" src="<?php echo base_url() ?>master/client/img/logos/logo-1.png" alt="">
-              </div>
-              <div>
-                <img class="img-fluid" src="<?php echo base_url() ?>master/client/img/logos/logo-2.png" alt="">
-              </div>
-              <div>
-                <img class="img-fluid" src="<?php echo base_url() ?>master/client/img/logos/logo-3.png" alt="">
-              </div>
-              <div>
-                <img class="img-fluid" src="<?php echo base_url() ?>master/client/img/logos/logo-4.png" alt="">
-              </div>
-              <div>
-                <img class="img-fluid" src="<?php echo base_url() ?>master/client/img/logos/logo-5.png" alt="">
-              </div>
-              <div>
-                <img class="img-fluid" src="<?php echo base_url() ?>master/client/img/logos/logo-6.png" alt="">
-              </div>
-              <div>
-                <img class="img-fluid" src="<?php echo base_url() ?>master/client/img/logos/logo-4.png" alt="">
-              </div>
-              <div>
-                <img class="img-fluid" src="<?php echo base_url() ?>master/client/img/logos/logo-2.png" alt="">
-              </div>
-            </div>
-          </div> -->
-        
-        </div>
+          </div>  
+    </div>
         
         <section class="section section-custom-map">
           <section class="section section-default section-footer">
@@ -748,7 +562,7 @@
             </div>
           </section>
         </section>
-      </div>
+</div>
 
 <?php $this->load->view("user/side/footer"); ?>
 <?php $this->load->view("user/side/js"); ?>

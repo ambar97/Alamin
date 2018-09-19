@@ -8,13 +8,13 @@
 				<div class="col">
 					<ul class="breadcrumb">
 						<li><a style="color: #10ac84" href="#">Home</a></li>
-						<li class="active">Contact</li>
+						<li class="active">Kontak</li>
 					</ul>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col">
-					<h1>Contact Us</h1>
+					<h1>Kontak Kami</h1>
 				</div>
 			</div>
 		</div>
