@@ -33,9 +33,9 @@
 					<div class="col-sm-6 col-lg-3 isotope-item websites mb-4 mb-lg-0">
 						<div class="image-gallery-item">
 							<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="lightbox-portfolio">
-								<span class="thumb-info">
-									<span class="thumb-info-wrapper">
-										<img src="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="img-fluid" alt="">
+								<span class="thumb-info" style="max-height: 459px;">
+									<span class="thumb-info-wrapper" >
+										<img  src="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="img-fluid" alt="">
 										<span class="thumb-info-title">
 											<span class="thumb-info-inner">Project Title</span>
 											<span class="thumb-info-type">Project Type</span>
