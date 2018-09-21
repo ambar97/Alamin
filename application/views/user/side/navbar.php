@@ -16,10 +16,10 @@
               <nav class="header-nav-top" >
                 <ul class="nav nav-pills">
                   <li class="nav-item d-none d-sm-block">
-                    <a class="nav-link" href="about-us.html"><i class="fas fa-angle-right"></i> Tentang kami</a>
+                    <a class="nav-link" href="about-us.html"><i class="fas fa-angle-right"></i> Tentang Kami</a>
                   </li>
                   <li class="nav-item d-none d-sm-block">
-                    <a class="nav-link" href="contact-us.html"><i class="fas fa-angle-right"></i> Contact</a>
+                    <a class="nav-link" href="<?php echo base_url("ContactUs") ?>"><i class="fas fa-angle-right"></i> Kontak</a>
                   </li>
                   <li class="nav-item">
                     <span class="ws-nowrap"><i class="fas fa-phone"></i> (123) 456-789</span>
@@ -48,7 +48,7 @@
                         </a>
                       </li>
                       <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#">
+                        <a class="dropdown-item dropdown-toggle <?php if($this->uri->segment('1')=="Profile"){ echo "active";}?>" href="#">
                           Profil
                         </a>
                         <ul class="dropdown-menu">
@@ -116,7 +116,7 @@
                         </ul>
                       </li>
                       <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#">
+                        <a class="dropdown-item dropdown-toggle <?php if($this->uri->segment('1')=="Prestasi"){ echo "active";}?>" href="#">
                           Prestasi
                         </a> 
                         <ul class="dropdown-menu">
@@ -187,7 +187,7 @@
                         </ul>
                       </li>
                       <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#">
+                        <a class="dropdown-item dropdown-toggle <?php if($this->uri->segment('1')=="Informasi"){ echo "active";}?>" href="#">
                           Informasi
                         </a>
                         <ul class="dropdown-menu">

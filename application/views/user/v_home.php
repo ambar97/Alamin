@@ -6,7 +6,7 @@
           <div id="revolutionSlider" class="slider rev_slider" data-version="5.4.7" data-plugin-revolution-slider data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 500, 'disableProgressBar': 'on', 'responsiveLevels': [4096,1200,992,500]}">
             <ul>
               <li data-transition="fade">
-                <img src="<?php echo base_url() ?>master/client/img/slides/slide-bg.jpg"  
+                <img src="<?php echo base_url() ?>master/client/img/slides/majid_jami.jpg"  
                   alt=""
                   data-bgposition="center center" 
                   data-bgfit="cover" 
@@ -14,40 +14,40 @@
                   class="rev-slidebg">
         
                 <div class="tp-caption"
-                  data-x="177"
+                  data-x="137"
                   data-y="188"
                   data-start="1000"
                   data-transform_in="x:[-300%];opacity:0;s:500;"><img src="<?php echo base_url() ?>master/client/img/slides/slide-title-border.png" alt=""></div>
         
                 <div class="tp-caption top-label"
-                  data-x="227"
+                  data-x="180"
                   data-y="180"
                   data-start="500"
-                  data-transform_in="y:[-300%];opacity:0;s:500;">DO YOU NEED A NEW</div>
+                  data-transform_in="y:[-300%];opacity:0;s:500;">SELAMAT DATANG DI WEBSITE</div>
         
                 <div class="tp-caption"
-                  data-x="480"
+                  data-x="515"
                   data-y="188"
                   data-start="1000"
                   data-transform_in="x:[300%];opacity:0;s:500;"><img src="<?php echo base_url() ?>master/client/img/slides/slide-title-border.png" alt=""></div>
         
                 <div class="tp-caption main-label"
-                  data-x="135"
+                  data-x="70"
                   data-y="210"
                   data-start="1500"
                   data-whitespace="nowrap"             
                   data-transform_in="y:[100%];s:500;"
                   data-transform_out="opacity:0;s:500;"
-                  data-mask_in="x:0px;y:0px;">WEB DESIGN?</div>
+                  data-mask_in="x:0px;y:0px;">SD AL-BAITUL AMIEN 2</div>
         
                 <div class="tp-caption bottom-label"
                   data-x="['185','185','185','95']"
                   data-y="280"
                   data-start="2000"
                   data-fontsize="['20','20','20','30']"
-                  data-transform_in="y:[100%];opacity:0;s:500;">Check out our options and features.</div>
+                  data-transform_in="y:[100%];opacity:0;s:500;"></div>
         
-                <div class="tp-caption"
+                <!-- <div class="tp-caption"
                   data-x="['910','910','910','930']"
                   data-y="248"
                   data-start="2500"
@@ -75,71 +75,77 @@
                   data-x="['610','610','610','630']"
                   data-y="80"
                   data-start="3950"
-                  data-transform_in="y:[300%];opacity:0;s:300;"><img src="<?php echo base_url() ?>master/client/img/slides/slide-concept-2-5.png" alt=""></div>
-        
-                <div class="tp-caption blackboard-text"
-                  data-x="['640','640','640','660']"
-                  data-y="300"
-                  data-start="3950"
-                  data-fontsize="['37','37','37','47']"
-                  data-transform_in="y:[300%];opacity:0;s:300;">Think</div>
+                  data-transform_in="y:[300%];opacity:0;s:300;"><img src="<?php echo base_url() ?>master/client/img/slides/slide-concept-2-5.png" alt=""></div> -->
         
                 <div class="tp-caption blackboard-text"
                   data-x="['665','665','665','685']"
-                  data-y="350"
-                  data-start="4150"
-                  data-fontsize="['47','47','47','57']"
-                  data-transform_in="y:[300%];opacity:0;s:300;">Outside</div>
+                  data-y="300"
+                  data-start="2500"
+                  data-fontsize="['37','37','37','47']"
+                  data-transform_in="y:[300%];opacity:0;s:300;"
+                  style="color: #fff">Terdepan</div>
         
                 <div class="tp-caption blackboard-text"
                   data-x="['690','690','690','710']"
+                  data-y="350"
+                  data-start="2650"
+                  data-fontsize="['47','47','47','57']"
+                  data-transform_in="y:[300%];opacity:0;s:300;"
+                  style="color: #fff">Dalam</div>
+        
+                <div class="tp-caption blackboard-text"
+                  data-x="['720','720','720','745']"
                   data-y="400"
-                  data-start="4350"
+                  data-start="2750"
                   data-fontsize="['32','32','32','42']"
-                  data-transform_in="y:[300%];opacity:0;s:300;">The box :)</div>
+                  data-transform_in="y:[300%];opacity:0;s:300;"
+                  style="color: #fff">Prestasi :)</div>
               </li>
               <li data-transition="fade">
-                <img src="<?php echo base_url() ?>master/client/img/slides/slide-bg.jpg"  
+                <img src="<?php echo base_url() ?>master/client/img/slides/masjid-jami2.jpg"  
                   alt=""
                   data-bgposition="center center" 
                   data-bgfit="cover" 
                   data-bgrepeat="no-repeat" 
                   class="rev-slidebg" data-no-retina>
         
-                <div class="tp-caption top-label"
+              <!--   <div class="tp-caption top-label"
                   data-x="['155','155','155','110']"
                   data-y="['100','100','100','150']"
                   data-start="500"
-                  data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"><img src="<?php echo base_url() ?>master/client/img/slides/slide-concept.png" alt=""></div>
+                  data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;">
+                  <img src="<?php echo base_url() ?>master/client/img/slides/slide-concept.png" alt=""></div>
         
                 <div class="tp-caption blackboard-text"
                   data-x="['285','285','285','225']"
                   data-y="['180','180','180','230']"
                   data-start="1000"
                   data-fontsize="['30','30','30','40']"
-                  data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;">easy to</div>
+                  data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"
+                  style="color: #fff">easy to</div>
         
                 <div class="tp-caption blackboard-text"
                   data-x="['285','285','285','225']"
                   data-y="['220','220','220','270']"
                   data-start="1200"
                   data-fontsize="['40','40','40','50']"
-                  data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;">customize!</div>
+                  data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"
+                  style="color: #fff">customize!</div> -->
         
                 <div class="tp-caption main-label"
-                  data-x="['685','685','685','630']"
-                  data-y="['190','190','190','220']"
-                  data-start="1800"
+                  data-x="['385','385','385','330']"
+                  data-y="['290','290','290','320']"
+                  data-start="1200"
                   data-whitespace="nowrap"  
                   data-fontsize="['62','62','62','82']"          
                   data-transform_in="y:[100%];s:500;"
                   data-transform_out="opacity:0;s:500;"
-                  data-mask_in="x:0px;y:0px;">DESIGN IT!</div>
+                  data-mask_in="x:0px;y:0px;">SD AL-BAITUL AMIEN 2 </div>
         
                 <div class="tp-caption bottom-label"
-                  data-x="['685','685','685','595']"
-                  data-y="['250','250','250','300']"
-                  data-start="2000"
+                  data-x="['385','385','385','295']"
+                  data-y="['360','360','360','400']"
+                  data-start="1800"
                   data-fontsize="['20','20','20','30']"
                   data-lineheight="['20','20','20','30']"
                   data-transform_idle="o:1;"
@@ -149,7 +155,7 @@
                   data-splitin="chars" 
                   data-splitout="none" 
                   data-responsive_offset="on" 
-                  data-elementdelay="0.05">Create slides with brushes and fonts</div>
+                  data-elementdelay="0.05">Sekolah Dasar Islam Berbasis Sistem Fullday School</div>
         
               </li> 
             </ul>
