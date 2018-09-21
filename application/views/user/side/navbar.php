@@ -6,7 +6,7 @@
             <div class="header-row">
               <div class="header-logo">
                 <a href="<?php echo base_url() ?>">
-                  <img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="<?php echo base_url() ?>master/client/img/logo.png">
+                  <img alt="Porto" width="280" height="65" data-sticky-width="200" data-sticky-height="45" data-sticky-top="33" src="<?php echo base_url() ?>master/client/img/logo2.png">
                 </a>
               </div>
             </div>
