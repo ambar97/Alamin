@@ -26,16 +26,16 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                <h4>Latest Tweets</h4>
+                <h4>Tentang Kami</h4>
                 <div id="tweet" class="twitter" data-plugin-tweets data-plugin-options="{'username': 'oklerthemes', 'count': 2}">
-                    <p>Please wait...</p>
+                    <p>Kami adalah salah satu sekolah dasar islam Al-Baitul Amien 2 yang berada dalam satu naungan yayasan swasta Baitul Amien, Jember. </p>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="contact-details">
-                    <h4>Contact Us</h4>
+                    <h4>Kontak Kami</h4>
                     <ul class="contact">
-                        <li><p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</p></li>
+                        <li><p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Jalan Imam Bonjol No.45A,Kaliwates, Kabupaten Jember, Jawa Timur 68133</p></li>
                         <li><p><i class="fas fa-phone"></i> <strong>Phone:</strong> (123) 456-789</p></li>
                         <li><p><i class="far fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
                     </ul>
@@ -54,13 +54,13 @@
     <div class="footer-copyright" style="border-top: 4px solid #10ac84;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-1">
+                <!-- <div class="col-lg-1">
                     <a href="index.html" class="logo">
                         <img alt="Porto Website Template" class="img-fluid" src="<?php echo base_url() ?>master/client/img/logo-footer.png">
                     </a>
-                </div>
-                <div class="col-lg-7">
-                    <p>© Copyright 2018. All Rights Reserved    <a href="">,</a>   Powered by <a href="http://jemberkita.online"><em>Jemberkita</em></a></p>
+                </div> -->
+                <div class="col-lg-8">
+                    <p>© Copyright 2018. All Rights Reserved    <a href="">,</a>   Developed by <a href="http://jemberkita.online"><em>Jemberkita</em></a></p>
                     <p></p>
                 </div>
                 <div class="col-lg-4">

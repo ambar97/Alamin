@@ -437,7 +437,9 @@
                   <span class="word-rotator" data-plugin-options="{'delay': 3500, 'animDelay': 400}">
                     <span class="word-rotator-items">
                       <span>Sekolah</span>
-                      <span>SD Al Baitul Amien 2</span>
+                      <span>Dasar</span>
+                      <span>Islam</span>
+                      <span>Al-Baitul Amien 2</span>
                     </span>
                   </span>
                 </strong>
