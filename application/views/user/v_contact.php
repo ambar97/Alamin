@@ -35,55 +35,55 @@
 					<span class="text-1 mt-2 d-block" id="mailErrorMessage"></span>
 				</div>
 
-				<h2 class="mb-3 mt-2"><strong>Contact</strong> Us</h2>
+				<h2 class="mb-3 mt-2"><strong>Kritik & Saran</strong></h2>
 
 				<form id="contactForm" action="https://preview.oklerthemes.com/porto/6.2.1/php/contact-form.php" method="POST">
 					<div class="form-row">
 						<div class="form-group col-lg-6">
-							<label>Your name *</label>
+							<label>Nama</label> <label style="color: #e74c3c">*</label>
 							<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required>
 						</div>
 						<div class="form-group col-lg-6">
-							<label>Your email address *</label>
+							<label>Email</label> <label style="color: #e74c3c">*</label>
 							<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
 						</div>
 					</div>
-					<div class="form-row">
+					<!-- <div class="form-row">
 						<div class="form-group col">
-							<label>Subject</label>
+							<label>Judul</label>
 							<input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject" id="subject" required>
 						</div>
-					</div>
+					</div> -->
 					<div class="form-row">
 						<div class="form-group col">
-							<label>Message *</label>
+							<label> Isi Kritik & Saran</label>
 							<textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message" required></textarea>
 						</div>
 					</div>
 					<div class="form-row">
 						<div class="form-group col">
-							<input type="submit" value="Send Message" class="btn btn-primary btn-lg" data-loading-text="Loading...">
+							<a href="" class="btn btn-lg btn-primary">Kirim</a>
 						</div>
 					</div>
 				</form>
 			</div>
 			<div class="col-lg-6">
 
-				<h4 class="heading-primary mt-4">Get in <strong>Touch</strong></h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<h4 class="heading-primary mt-4"><strong>Hubungi</strong> Kami</h4>
+				<p>Untuk mendapatkan informasi lebih lanjut, anda dapat langsung datang ke kantor kami atau dapat langsung menghubungi kami di kontak yang telah kami sediakan dibawah, juga anda dapat mengirimkan kritik dan saran melalui formulir yang telah kami sediakan, terimakasih.</p>
 
 				<hr>
 
-				<h4 class="heading-primary">The <strong>Office</strong></h4>
+				<h4 class="heading-primary">Info <strong>Kantor</strong></h4>
 				<ul class="list list-icons list-icons-style-3 mt-4">
-					<li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</li>
+					<li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Jalan Imam Bonjol No.45A, Kaliwates, Kabupaten Jember, Jawa Timur 68133</li>
 					<li><i class="fas fa-phone"></i> <strong>Phone:</strong> (123) 456-789</li>
 					<li><i class="far fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
 				</ul>
 
 				<hr>
 
-				<h4 class="heading-primary">Business <strong>Hours</strong></h4>
+				<h4 class="heading-primary">Jam <strong>Kerja</strong></h4>
 				<ul class="list list-icons list-dark mt-4">
 					<li><i class="far fa-clock"></i> Monday - Friday - 9am to 5pm</li>
 					<li><i class="far fa-clock"></i> Saturday - 9am to 2pm</li>

@@ -7,13 +7,13 @@
 			<div class="col">
 				<ul class="breadcrumb">
 					<li><a style="color: #10ac84" href="<?php echo base_url('./') ?>">Home</a></li>
-					<li class="active">Program Kerja</li>
+					<li class="active">Bagian TU</li>
 				</ul>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col">
-				<h1>Program Kerja</h1>
+				<h1>Bagian TU Sekolah</h1>
 			</div>
 		</div>
 	</div>

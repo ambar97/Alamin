@@ -167,13 +167,13 @@
             <div class="row align-items-center">
               <div class="col-lg-8">
                 <p>
-                  Cara Mudah Mendaftar di <em>SD Al Baitul Amien 02</em>
-                  <span>Pelajari dan daftarkan segera</span>
+                  Kenali sejarah sedikit tentang <em>SD Al Baitul Amien 02</em>
+                  <span>Silahkan ketahui dan kunjungi segera</span>
                 </p>
               </div>
               <div class="col-lg-4">
                 <div class="get-started text-left text-lg-right">
-                  <a href="#" class="btn btn-lg btn-primary">Mulai!</a>
+                  <a href="<?php echo base_url('Profile/SejarahSek') ?>" class="btn btn-lg btn-primary">Mulai !</a>
                 </div>
               </div>
             </div>
@@ -184,19 +184,22 @@
           <div class="row text-center">
             <div class="col">
               <h1 class="mb-2 word-rotator-title">
-                Alur tata cara pendaftaran
+                SD Al-Baitul Amien adalah
                 <strong class="inverted">
                   <span class="word-rotator" data-plugin-options="{'delay': 2000, 'animDelay': 300}">
                     <span class="word-rotator-items">
                       <span>Sekolah</span>
-                      <span>Al Baitul Amien 2 </span>
-                      <span>Jember</span>
+                      <span>Dasar </span>
+                      <span>Islam</span>
+                      <span>Berbasis</span>
+                      <span>Sistem</span>
+                      <span>Fullday School</span>
                     </span>
                   </span>
                 </strong>
               </h1>
               <p class="lead">
-                Di bawah ini adalah contoh gambar alur pendaftaran siswa siswi baru di sekolah dasar Al Baitul Amien 2 Jember
+                Di bawah ini adalah gambar mengenai all of about SD Al-Baitul Amien 2 Jember
               </p>
             </div>
           </div>
@@ -210,10 +213,10 @@
               <div class="col-lg-2 ml-lg-auto">
                 <div class="process-image">
                   <img src="<?php echo base_url() ?>master/client/img/home-concept-item-1.png" alt="" />
-                  <strong>Strategy</strong>
+                  <a href=""><strong>Kepala Sekolah</strong></a>
                 </div>
               </div>
-              <div class="col-lg-2">
+              <!-- <div class="col-lg-2">
                 <div class="process-image">
                   <img src="<?php echo base_url() ?>master/client/img/home-concept-item-2.png" alt="" />
                   <strong>Planning</strong>
@@ -224,7 +227,7 @@
                   <img src="<?php echo base_url() ?>master/client/img/home-concept-item-3.png" alt="" />
                   <strong>Build</strong>
                 </div>
-              </div>
+              </div> -->
               <div class="col-lg-4 ml-lg-auto">
                 <div class="project-image">
                   <div id="fcSlideshow" class="fc-slideshow">
@@ -420,7 +423,7 @@
                       <br>
                       <br>
                       <div class="col-lg-12">
-                        <textarea class="form-control" rows="3" id="textareaDefault" placeholder="Kritik & Saran"></textarea><br>
+                        <textarea class="form-control" rows="4" id="textareaDefault" placeholder="Kritik & Saran"></textarea><br>
                         <a href="#" class="btn btn-lg btn-primary">Kirim</a>  
                       </div> 
                     </div>

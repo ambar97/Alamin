@@ -7,13 +7,13 @@
 			<div class="col">
 				<ul class="breadcrumb">
 					<li><a style="color: #10ac84" href="<?php echo base_url('./') ?>">Home</a></li>
-					<li class="active">Pengumuman</li>
+					<li class="active">Waka Kurikulum</li>
 				</ul>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col">
-				<h1>Pengumuman Sekolah</h1>
+				<h1>Waka Kurikulum Sekolah</h1>
 			</div>
 		</div>
 	</div>
@@ -33,18 +33,45 @@
 					<hr>
 					<ul>
 						<li>
-							<a style="font-weight: bold; font-size: 18px;">Informasi</a>
+							<a href="<?php echo base_url('Profile/VisiMisi') ?>">Visi & Misi</a>
+						</li>
+						<li>
+							<a href="<?php echo base_url('Profile/SejarahSek') ?>">Sejarah Sekolah</a>
+						</li>
+						<li>
+							<a href="<?php echo base_url('Profile/SarPrasarana') ?>">Sarana & Prasarana</a>
+						</li>
+						<li>
+							<a href="">Struktur & Personalia</a>
 							<ul>
 								<li>
-									<a href="<?php echo base_url('Informasi/Berita') ?>">Berita</a>
+									<a href="<?php echo base_url('Profile/KepSek') ?>">Kepala Sekolah</a>
 								</li>
 								<li>
-									<a href="<?php echo base_url('Informasi/Pengumuman') ?>">Pengumuman</a>
+									<a href="<?php echo base_url('Profile/BagTu') ?>">Bagian TU</a>
 								</li>
 								<li>
-									<a href="<?php echo base_url('Informasi/InfoKeg') ?>">Info Kegiatan</a>
+									<a href="<?php echo base_url('Profile/WakaKes') ?>">Waka Kesiswaan</a>
+								</li>
+								<li>
+									<a href="<?php echo base_url('Profile/WakaKur') ?>">Waka Kurikulum</a>
+								</li>
+								<li>
+									<a href="<?php echo base_url('Profile/WakaSap') ?>">Waka Sapras & Humas</a>
+								</li>
+								<li>
+									<a href="<?php echo base_url('Profile/Guru') ?>">Guru</a>
 								</li>
 							</ul>
+						</li>
+						<li>
+							<a href="<?php echo base_url('Profile/BagSekolah') ?>">Bagan Sekolah</a>
+						</li>
+						<li>
+							<a href="<?php echo base_url('Profile/ProgKerja') ?>">Program Kerja</a>
+						</li>
+						<li>
+							<a href="<?php echo base_url('Profile/Extra') ?>">Extrakulikuler</a>
 						</li>
 					</ul>
 					<div>

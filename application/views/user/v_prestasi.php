@@ -7,13 +7,13 @@
 			<div class="col">
 				<ul class="breadcrumb">
 					<li><a style="color: #10ac84" href="<?php echo base_url('./') ?>">Home</a></li>
-					<li class="active">Berita</li>
+					<li class="active">Prestasi</li>
 				</ul>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col">
-				<h1>Berita Sekolah</h1>
+				<h1>Seputar Prestasi Sekolah</h1>
 			</div>
 		</div>
 	</div>
@@ -33,16 +33,13 @@
 					<hr>
 					<ul>
 						<li>
-							<a style="font-weight: bold; font-size: 18px;">Informasi</a>
+							<a style="font-weight: bold; font-size: 18px;">Prestasi</a>
 							<ul>
 								<li>
-									<a href="<?php echo base_url('Informasi/Berita') ?>">Berita</a>
+									<a href="<?php echo base_url('Prestasi/Sekolah') ?>">Sekolah</a>
 								</li>
 								<li>
-									<a href="<?php echo base_url('Informasi/Pengumuman') ?>">Pengumuman</a>
-								</li>
-								<li>
-									<a href="<?php echo base_url('Informasi/InfoKeg') ?>">Info Kegiatan</a>
+									<a href="<?php echo base_url('Prestasi/Siswa_Siswi') ?>">Siswa & Siswi</a>
 								</li>
 							</ul>
 						</li>

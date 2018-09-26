@@ -54,16 +54,11 @@
     <div class="footer-copyright" style="border-top: 4px solid #10ac84;">
         <div class="container">
             <div class="row">
-                <!-- <div class="col-lg-1">
-                    <a href="index.html" class="logo">
-                        <img alt="Porto Website Template" class="img-fluid" src="<?php echo base_url() ?>master/client/img/logo-footer.png">
-                    </a>
-                </div> -->
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <p>© Copyright 2018. All Rights Reserved    <a href="">,</a>   Developed by <a href="http://jemberkita.online"><em>Jemberkita</em></a></p>
                     <p></p>
                 </div>
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4">
                     <nav id="sub-menu">
                         <ul>
                             <li><a href="page-faq.html">FAQ's</a></li>
@@ -71,7 +66,7 @@
                             <li><a href="<?php echo base_url('ContactUs') ?>">Contact</a></li>
                         </ul>
                     </nav>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

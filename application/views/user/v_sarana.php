@@ -13,7 +13,7 @@
 		</div>
 		<div class="row">
 			<div class="col">
-				<h1>Sarana & Prasarana (Denah)</h1>
+				<h1>Sarana & Prasarana Sekolah</h1>
 			</div>
 		</div>
 	</div>
@@ -45,72 +45,22 @@
 							<a href="">Struktur & Personalia</a>
 							<ul>
 								<li>
-									<a href="">Kepala Sekolah</a>
+									<a href="<?php echo base_url('Profile/KepSek') ?>">Kepala Sekolah</a>
 								</li>
 								<li>
-									<a href="#">Bagian TU</a>
-									<ul>
-										<li>
-											<a href="">Kepala TU</a>
-										</li>
-										<li>
-											<a href="">Bagian Administrasi</a>
-										</li>
-										<li>
-											<a href="">Bagian Keuangan</a>
-										</li>
-										<li>
-											<a href="">Bagian RT & Badan Usaha</a>
-										</li>
-									</ul>
+									<a href="<?php echo base_url('Profile/BagTu') ?>">Bagian TU</a>
 								</li>
 								<li>
-									<a href="#">Waka Kesiswaan</a>
-									<ul>
-										<li>
-											<a href="">BP</a>
-										</li>
-										<li>
-											<a href="">Ekstrakulilkuler</a>
-										</li>
-										<li>
-											<a href="">Perpustakaan</a>
-										</li>
-										<li>
-											<a href="">UKS</a>
-										</li>
-									</ul>
+									<a href="<?php echo base_url('Profile/WakaKes') ?>">Waka Kesiswaan</a>
 								</li>
 								<li>
-									<a href="#">Waka Kurikulum</a>
-									<ul>
-										<li>
-											<a href="">Ketua KKG</a>
-										</li>
-										<li>
-											<a href="">Koord. Al-Qur'an & Ibadah</a>
-										</li>
-										<li>
-											<a href="">Wali Kelas</a>
-										</li>
-									</ul>
+									<a href="<?php echo base_url('Profile/WakaKur') ?>">Waka Kurikulum</a>
 								</li>
 								<li>
-									<a href="#">Waka Sapras & Humas</a>
-									<ul>
-										<li>
-											<a href="">Satpam</a>
-										</li>
-										<li>
-											<a href="">Cleaning Service</a>
-										</li>
-										<li>
-											<a href="">Laboratorium</a>
-										</li>
-									</ul>
+									<a href="<?php echo base_url('Profile/WakaSap') ?>">Waka Sapras & Humas</a>
 								</li>
 								<li>
-									<a href="">Wali Kelas</a>
+									<a href="<?php echo base_url('Profile/Guru') ?>">Guru</a>
 								</li>
 							</ul>
 						</li>
@@ -119,6 +69,9 @@
 						</li>
 						<li>
 							<a href="<?php echo base_url('Profile/ProgKerja') ?>">Program Kerja</a>
+						</li>
+						<li>
+							<a href="<?php echo base_url('Profile/Extra') ?>">Extrakulikuler</a>
 						</li>
 					</ul>
 					<div>
