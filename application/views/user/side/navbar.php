@@ -75,20 +75,17 @@
                             </ul>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="<?php echo base_url('Profile/BagSekolah') ?>">Bagan Sekolah</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Profile/BagSekolah') ?>">Denah Sekolah</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="<?php echo base_url('Profile/ProgKerja') ?>">Program Kerja</a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="<?php echo base_url('Profile/Extra') ?>">Extrakuliler siswa</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Profile/Extra') ?>">Extrakuliler Siswa</a>
                           </li>
                         </ul>
                       </li>
                       <li>
                         <a class="<?php if($this->uri->segment('1')=="Prestasi"){ echo "active";}?>" href="<?php echo base_url('Prestasi/Sekolah') ?>">
                           Prestasi
-                        </a> 
+                        </a>
                         <!-- <ul class="dropdown-menu">
                           <li>
                             <a class="dropdown-item" href="<?php echo base_url('Prestasi/Sekolah') ?>">Sekolah</a>

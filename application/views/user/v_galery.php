@@ -22,7 +22,7 @@
 		<div class="col">
 			<ul class="nav nav-pills sort-source" data-sort-id="portfolio" data-option-key="filter">
 				<li class="nav-item" data-option-value="*"><a class="nav-link active" href="#">Show All</a></li>
-				<li class="nav-item" data-option-value=".websites"><a class="nav-link" href="#">Websites</a></li>
+				<li class="nav-item" data-option-value=".website"><a class="nav-link" href="#">Websites</a></li>
 				<li class="nav-item" data-option-value=".logos"><a class="nav-link" href="#">Logos</a></li>
 				<li class="nav-item" data-option-value=".brands"><a class="nav-link" href="#">Brands</a></li>
 				<li class="nav-item" data-option-value=".medias"><a class="nav-link" href="#">Medias</a></li>
@@ -30,7 +30,7 @@
 			<hr>
 			<div class="sort-destination-loader sort-destination-loader-showing">
 				<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio" data-plugin-options="{'delegate': 'a.lightbox-portfolio', 'type': 'image', 'gallery': {'enabled': true}}">
-					<div class="col-sm-6 col-lg-3 isotope-item websites mb-4 mb-lg-0">
+					<div class="col-sm-6 col-lg-3 isotope-item website mb-4 mb-lg-0">
 						<div class="image-gallery-item">
 							<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="lightbox-portfolio">
 								<span class="thumb-info" style="max-height: 459px;">

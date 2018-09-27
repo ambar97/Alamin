@@ -23,26 +23,67 @@
 		<div class="col-lg-12">
 			<div class="row">
 				<div class="col-lg-9">
-					<div class="post-content">
-                        <h2>Class aptent taciti sociosqu ad litora torquent</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris. Duis molestie, purus eget placerat viverra, nisi odio gravida sapien, congue tincidunt nisl ante nec tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, massa fringilla consequat blandit, mauris ligula porta nisi, non tristique enim sapien vel nisl. Suspendisse vestibulum lobortis dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent nec tempus nibh. Donec mollis commodo metus et fringilla. Etiam venenatis, diam id adipiscing convallis, nisi eros lobortis tellus, feugiat adipiscing ante ante sit amet dolor. Vestibulum vehicula scelerisque facilisis. Sed faucibus placerat bibendum. Maecenas sollicitudin commodo justo, quis hendrerit leo consequat ac. Proin sit amet risus sapien, eget interdum dui. Proin justo sapien, varius sit amet hendrerit id, egestas quis mauris.</p>
-                      </div>
+						<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio" data-plugin-options="{'delegate': 'a.lightbox-portfolio', 'type': 'image', 'gallery': {'enabled': true}}">
+							<div class="col-sm-6 col-lg-3 isotope-item website mb-4 mb-lg-0">
+								<div class="image-gallery-item">
+									<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="lightbox-portfolio">
+										<span class="thumb-info" style="max-height: 459px;">
+											<span class="thumb-info-wrapper" >
+												<img  src="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="img-fluid" alt="">
+												<span class="thumb-info-title">
+													<span class="thumb-info-inner">Project Title</span>
+													<span class="thumb-info-type">Project Type</span>
+												</span>
+												<span class="thumb-info-action">
+													<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
+												</span>
+											</span>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-3 isotope-item logos mb-4 mb-lg-0">
+								<div class="image-gallery-item">
+									<a href="<?php echo base_url() ?>master/client/img/projects/project-2.jpg" class="lightbox-portfolio">
+										<span class="thumb-info">
+											<span class="thumb-info-wrapper">
+												<img src="<?php echo base_url() ?>master/client/img/projects/project-2.jpg" class="img-fluid" alt="">
+												<span class="thumb-info-title">
+													<span class="thumb-info-inner">Project Title</span>
+													<span class="thumb-info-type">Project Type</span>
+												</span>
+												<span class="thumb-info-action">
+													<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
+												</span>
+											</span>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-3 isotope-item brands mb-4 mb-sm-0">
+								<div class="image-gallery-item">
+									<a href="<?php echo base_url() ?>master/client/img/projects/project-4.jpg" class="lightbox-portfolio">
+										<span class="thumb-info">
+											<span class="thumb-info-wrapper">
+												<img src="<?php echo base_url() ?>master/client/img/projects/project-4.jpg" class="img-fluid" alt="">
+												<span class="thumb-info-title">
+													<span class="thumb-info-inner">Project Title</span>
+													<span class="thumb-info-type">Project Type</span>
+												</span>
+												<span class="thumb-info-action">
+													<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
+												</span>
+											</span>
+										</span>
+									</a>
+								</div>
+							</div>
+					</div>
 				</div>
 				<div class="col-lg-3">
-					<h2 style="font-weight: bold;">Detail Lainnya</h2>
+					<h2 style="font-weight: bold; padding-bottom: -10px;">Detail Prestasi</h2>
 					<hr>
-					<ul>
-						<li>
-							<a style="font-weight: bold; font-size: 18px;">Prestasi</a>
-							<ul>
-								<li>
-									<a href="<?php echo base_url('Prestasi/Sekolah') ?>">Sekolah</a>
-								</li>
-								<li>
-									<a href="<?php echo base_url('Prestasi/Siswa_Siswi') ?>">Siswa & Siswi</a>
-								</li>
-							</ul>
-						</li>
+					<p style="margin-top: -20px;">dcghvhkgvtgrf</p>
 					</ul>
 					<div>
 		                <h2><strong>Polling</strong></h2>
