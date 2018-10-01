@@ -16,8 +16,8 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <!-- <li class="nav-small-cap">PERSONAL</li> -->
-                        <li class="<?php if($this->uri->segment('2')=="Dashboard"){ echo "active";}?>"> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Dashboard") ?>" ><span >Dashboard </span></a>
+                        <li class="nav-small-cap">Main</li>
+                        <li class="<?php if($this->uri->segment('2')=="Dashboard"){ echo "active";}?>"> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Dashboard") ?>" ><i class="mdi mdi-view-dashboard"></i><span >Dashboard </span></a>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">Prestasi</span></a>
                             <ul aria-expanded="false" class="collapse">
