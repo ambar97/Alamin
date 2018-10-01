@@ -36,8 +36,8 @@
                     <h4>Kontak Kami</h4>
                     <ul class="contact">
                         <li><p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Jalan Imam Bonjol No.45A,Kaliwates, Kabupaten Jember, Jawa Timur 68133</p></li>
-                        <li><p><i class="fas fa-phone"></i> <strong>Phone:</strong> (123) 456-789</p></li>
-                        <li><p><i class="far fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
+                        <li><p><i class="fas fa-phone"></i> <strong>Phone:</strong> (0331) 485-416</p></li>
+                        <li><p><i class="far fa-envelope"></i> <strong>Email:</strong> <a href="mailto:sdaba02@gmail.com">sdaba02@gmail.com</a></p></li>
                     </ul>
                 </div>
             </div>
@@ -58,15 +58,6 @@
                     <p>© Copyright 2018. All Rights Reserved    <a href="">,</a>   Developed by <a href="http://jemberkita.online"><em>Jemberkita</em></a></p>
                     <p></p>
                 </div>
-                <!-- <div class="col-lg-4">
-                    <nav id="sub-menu">
-                        <ul>
-                            <li><a href="page-faq.html">FAQ's</a></li>
-                            <li><a href="sitemap.html">Sitemap</a></li>
-                            <li><a href="<?php echo base_url('ContactUs') ?>">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div> -->
             </div>
         </div>
     </div>

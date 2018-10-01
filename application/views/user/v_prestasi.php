@@ -23,67 +23,62 @@
 		<div class="col-lg-12">
 			<div class="row">
 				<div class="col-lg-9">
-						<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio" data-plugin-options="{'delegate': 'a.lightbox-portfolio', 'type': 'image', 'gallery': {'enabled': true}}">
-							<div class="col-sm-6 col-lg-3 isotope-item website mb-4 mb-lg-0">
-								<div class="image-gallery-item">
-									<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="lightbox-portfolio">
-										<span class="thumb-info" style="max-height: 459px;">
-											<span class="thumb-info-wrapper" >
-												<img  src="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="img-fluid" alt="">
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">Project Title</span>
-													<span class="thumb-info-type">Project Type</span>
-												</span>
-												<span class="thumb-info-action">
-													<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
-												</span>
+					<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio">
+						<div class="col-sm-9 col-lg-4 isotope-item website mb-4 mb-lg-0">
+							<div class="image-gallery-item">
+								<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" data-toggle="modal" data-target="#exampleModal">
+									<span class="thumb-info">
+										<span class="thumb-info-wrapper" >
+											<img  src="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="img-fluid" alt="">
+											<span class="thumb-info-title">
+												<span class="thumb-info-inner">Juara 1</span>
+												<span class="thumb-info-type">Christopher Nanda Jonathan</span>
+											</span>
+											<span class="thumb-info-action">
+												<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
 											</span>
 										</span>
-									</a>
-								</div>
+									</span>
+								</a>
 							</div>
-							<div class="col-sm-6 col-lg-3 isotope-item logos mb-4 mb-lg-0">
-								<div class="image-gallery-item">
-									<a href="<?php echo base_url() ?>master/client/img/projects/project-2.jpg" class="lightbox-portfolio">
-										<span class="thumb-info">
-											<span class="thumb-info-wrapper">
-												<img src="<?php echo base_url() ?>master/client/img/projects/project-2.jpg" class="img-fluid" alt="">
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">Project Title</span>
-													<span class="thumb-info-type">Project Type</span>
-												</span>
-												<span class="thumb-info-action">
-													<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
-												</span>
-											</span>
-										</span>
-									</a>
-								</div>
-							</div>
-							<div class="col-sm-6 col-lg-3 isotope-item brands mb-4 mb-sm-0">
-								<div class="image-gallery-item">
-									<a href="<?php echo base_url() ?>master/client/img/projects/project-4.jpg" class="lightbox-portfolio">
-										<span class="thumb-info">
-											<span class="thumb-info-wrapper">
-												<img src="<?php echo base_url() ?>master/client/img/projects/project-4.jpg" class="img-fluid" alt="">
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">Project Title</span>
-													<span class="thumb-info-type">Project Type</span>
-												</span>
-												<span class="thumb-info-action">
-													<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
-												</span>
-											</span>
-										</span>
-									</a>
-								</div>
-							</div>
+						</div>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+								    <div class="modal-content">
+									      <div class="modal-header">
+									        <h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Detail Prestasi</h5>
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									          <span aria-hidden="true">&times;</span>
+									        </button>
+									      </div>
+									      <div class="modal-body">
+										       <div>
+										       	<center>
+										       		<img style="width: 50%" src="<?php echo base_url() ?>master/client/img/projects/project.jpg">
+										       	</center>
+										       	<hr>
+										       </div>
+										       <div class="container">
+										       		<div class="col-md-12">
+										       			<p><strong>Nama : </strong><strong>Christopher Nanda Jonathan</strong></p>
+										       			<p><strong>Juara : </strong><strong>Juara 1</strong></p>
+										       			<p><strong>Jenis Kejuaraan : </strong><strong>Kejuaraan Lomba Coli Sedunia</strong></p>
+										       			<p><strong>Tingkat Kejuaraan : </strong><strong>Sedunia Asia Tenggara</strong></p>
+										       			<p><strong>Nama Pembimbing : </strong><strong>Joni Nanda Jonathan</strong></p>
+										       		</div>
+										       </div>
+									      </div>
+								    </div>
+							  </div>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-3">
-					<h2 style="font-weight: bold; padding-bottom: -10px;">Detail Prestasi</h2>
+					<h2 style="font-weight: bold;">Detail Prestasi</h2>
 					<hr>
-					<p style="margin-top: -20px;">dcghvhkgvtgrf</p>
+					<p>dcghvhkgvtgrf</p>
 					</ul>
 					<div>
 		                <h2><strong>Polling</strong></h2>
