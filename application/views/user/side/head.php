@@ -11,7 +11,7 @@
     <meta name="author" content="okler.net">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo base_url() ?>master/client/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="<?php echo base_url() ?>master/client/img/favicon.png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="<?php echo base_url() ?>master/client/img/apple-touch-icon.png">
 
     <!-- Mobile Metas -->
