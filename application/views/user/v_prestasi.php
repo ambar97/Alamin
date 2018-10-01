@@ -23,26 +23,62 @@
 		<div class="col-lg-12">
 			<div class="row">
 				<div class="col-lg-9">
-					<div class="post-content">
-                        <h2>Class aptent taciti sociosqu ad litora torquent</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris. Duis molestie, purus eget placerat viverra, nisi odio gravida sapien, congue tincidunt nisl ante nec tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, massa fringilla consequat blandit, mauris ligula porta nisi, non tristique enim sapien vel nisl. Suspendisse vestibulum lobortis dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent nec tempus nibh. Donec mollis commodo metus et fringilla. Etiam venenatis, diam id adipiscing convallis, nisi eros lobortis tellus, feugiat adipiscing ante ante sit amet dolor. Vestibulum vehicula scelerisque facilisis. Sed faucibus placerat bibendum. Maecenas sollicitudin commodo justo, quis hendrerit leo consequat ac. Proin sit amet risus sapien, eget interdum dui. Proin justo sapien, varius sit amet hendrerit id, egestas quis mauris.</p>
-                      </div>
+					<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio">
+						<div class="col-sm-9 col-lg-4 isotope-item website mb-4 mb-lg-0">
+							<div class="image-gallery-item">
+								<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" data-toggle="modal" data-target="#exampleModal">
+									<span class="thumb-info">
+										<span class="thumb-info-wrapper" >
+											<img  src="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="img-fluid" alt="">
+											<span class="thumb-info-title">
+												<span class="thumb-info-inner">Juara 1</span>
+												<span class="thumb-info-type">Christopher Nanda Jonathan</span>
+											</span>
+											<span class="thumb-info-action">
+												<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
+											</span>
+										</span>
+									</span>
+								</a>
+							</div>
+						</div>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+								    <div class="modal-content">
+									      <div class="modal-header">
+									        <h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Detail Prestasi</h5>
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									          <span aria-hidden="true">&times;</span>
+									        </button>
+									      </div>
+									      <div class="modal-body">
+										       <div>
+										       	<center>
+										       		<img style="width: 50%" src="<?php echo base_url() ?>master/client/img/projects/project.jpg">
+										       	</center>
+										       	<hr>
+										       </div>
+										       <div class="container">
+										       		<div class="col-md-12">
+										       			<p><strong>Nama : </strong><strong>Christopher Nanda Jonathan</strong></p>
+										       			<p><strong>Juara : </strong><strong>Juara 1</strong></p>
+										       			<p><strong>Jenis Kejuaraan : </strong><strong>Kejuaraan Lomba Coli Sedunia</strong></p>
+										       			<p><strong>Tingkat Kejuaraan : </strong><strong>Sedunia Asia Tenggara</strong></p>
+										       			<p><strong>Nama Pembimbing : </strong><strong>Joni Nanda Jonathan</strong></p>
+										       		</div>
+										       </div>
+									      </div>
+								    </div>
+							  </div>
+						</div>
+					</div>
 				</div>
 				<div class="col-lg-3">
-					<h2 style="font-weight: bold;">Detail Lainnya</h2>
+					<h2 style="font-weight: bold;">Detail Prestasi</h2>
 					<hr>
-					<ul>
-						<li>
-							<a style="font-weight: bold; font-size: 18px;">Prestasi</a>
-							<ul>
-								<li>
-									<a href="<?php echo base_url('Prestasi/Sekolah') ?>">Sekolah</a>
-								</li>
-								<li>
-									<a href="<?php echo base_url('Prestasi/Siswa_Siswi') ?>">Siswa & Siswi</a>
-								</li>
-							</ul>
-						</li>
+					<p>dcghvhkgvtgrf</p>
 					</ul>
 					<div>
 		                <h2><strong>Polling</strong></h2>

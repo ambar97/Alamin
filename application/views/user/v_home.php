@@ -83,7 +83,7 @@
                   data-start="2500"
                   data-fontsize="['37','37','37','47']"
                   data-transform_in="y:[300%];opacity:0;s:300;"
-                  style="color: #fff">Terdepan</div>
+                  style="color: #fff">Berakhlak Mulia</div>
         
                 <div class="tp-caption blackboard-text"
                   data-x="['690','690','690','710']"
@@ -91,7 +91,7 @@
                   data-start="2650"
                   data-fontsize="['47','47','47','57']"
                   data-transform_in="y:[300%];opacity:0;s:300;"
-                  style="color: #fff">Dalam</div>
+                  style="color: #fff">Dan</div>
         
                 <div class="tp-caption blackboard-text"
                   data-x="['720','720','720','745']"
@@ -99,7 +99,7 @@
                   data-start="2750"
                   data-fontsize="['32','32','32','42']"
                   data-transform_in="y:[300%];opacity:0;s:300;"
-                  style="color: #fff">Prestasi :)</div>
+                  style="color: #fff">Berprestasi Optimal :)</div>
               </li>
               <li data-transition="fade">
                 <img src="<?php echo base_url() ?>master/client/img/slides/masjid-jami2.jpg"  
@@ -184,16 +184,14 @@
           <div class="row text-center">
             <div class="col">
               <h1 class="mb-2 word-rotator-title">
-                SD Al-Baitul Amien adalah
+               Motto SD Al-Baitul Amien adalah
                 <strong class="inverted">
                   <span class="word-rotator" data-plugin-options="{'delay': 2000, 'animDelay': 300}">
                     <span class="word-rotator-items">
-                      <span>Sekolah</span>
-                      <span>Dasar </span>
-                      <span>Islam</span>
-                      <span>Berbasis</span>
-                      <span>Sistem</span>
-                      <span>Fullday School</span>
+                      <span>Bangga</span>
+                      <span>Belajar Di</span>
+                      <span>SD Al-Baitul Amien 02</span>
+                      <span>Jember</span>
                     </span>
                   </span>
                 </strong>
@@ -210,7 +208,7 @@
             <div class="row text-center">
               <span class="sun"></span>
               <span class="cloud"></span>
-              <div class="col-lg-2 ml-lg-auto">
+              <div class="col-lg-4 ml-lg-auto">
                 <div class="process-image">
                   <img src="<?php echo base_url() ?>master/client/img/home-concept-item-1.png" alt="" />
                   <a href=""><strong>Kepala Sekolah</strong></a>

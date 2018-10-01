@@ -36,8 +36,8 @@
                     <h4>Kontak Kami</h4>
                     <ul class="contact">
                         <li><p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Jalan Imam Bonjol No.45A,Kaliwates, Kabupaten Jember, Jawa Timur 68133</p></li>
-                        <li><p><i class="fas fa-phone"></i> <strong>Phone:</strong> (123) 456-789</p></li>
-                        <li><p><i class="far fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
+                        <li><p><i class="fas fa-phone"></i> <strong>Phone:</strong> (0331) 485-416</p></li>
+                        <li><p><i class="far fa-envelope"></i> <strong>Email:</strong> <a href="mailto:sdaba02@gmail.com">sdaba02@gmail.com</a></p></li>
                     </ul>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                 <h4>Follow Us</h4>
                 <ul class="social-icons" >
                     <li class="social-icons-facebook" ><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i style="padding-top: 8px" class="fab fa-facebook-f"></i></a></li>
-                    <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i style="padding-top: 8px" class="fab fa-twitter"></i></a></li>
+                    <li class="social-icons-twitter"><a href="http://www.Youtube.com/" target="_blank" title="Youtube"><i style="padding-top: 8px" class="fab fa-youtube"></i></a></li>
                     <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i style="padding-top: 8px" class="fab fa-linkedin-in"></i></a></li>
                 </ul>
             </div>
@@ -58,15 +58,6 @@
                     <p>© Copyright 2018. All Rights Reserved    <a href="">,</a>   Developed by <a href="http://jemberkita.online"><em>Jemberkita</em></a></p>
                     <p></p>
                 </div>
-                <!-- <div class="col-lg-4">
-                    <nav id="sub-menu">
-                        <ul>
-                            <li><a href="page-faq.html">FAQ's</a></li>
-                            <li><a href="sitemap.html">Sitemap</a></li>
-                            <li><a href="<?php echo base_url('ContactUs') ?>">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div> -->
             </div>
         </div>
     </div>

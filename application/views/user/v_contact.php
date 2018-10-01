@@ -77,8 +77,8 @@
 				<h4 class="heading-primary">Info <strong>Kantor</strong></h4>
 				<ul class="list list-icons list-icons-style-3 mt-4">
 					<li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Jalan Imam Bonjol No.45A, Kaliwates, Kabupaten Jember, Jawa Timur 68133</li>
-					<li><i class="fas fa-phone"></i> <strong>Phone:</strong> (123) 456-789</li>
-					<li><i class="far fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
+					<li><i class="fas fa-phone"></i> <strong>Phone:</strong> (0331) 485-416</li>
+					<li><i class="far fa-envelope"></i> <strong>Email:</strong> <a href="mailto:sdaba02@gmail.com">sdaba02@gmail.com</a></li>
 				</ul>
 
 				<hr>
