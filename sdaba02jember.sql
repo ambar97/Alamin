@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2018 at 03:50 AM
+-- Generation Time: Oct 02, 2018 at 07:07 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -33,6 +33,28 @@ CREATE TABLE `agenda` (
   `tanggal_ageda` varchar(255) NOT NULL,
   `nama_kegiatan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bidang`
+--
+
+CREATE TABLE `bidang` (
+  `id_bidang` int(9) NOT NULL,
+  `nama_bidang` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bidang`
+--
+
+INSERT INTO `bidang` (`id_bidang`, `nama_bidang`) VALUES
+(1, 'Tata Usaha (TU)'),
+(2, 'Waka Kesiswaan '),
+(3, 'Waka Kurikulum'),
+(4, 'Waka Sapras & Humas'),
+(5, 'Guru');
 
 -- --------------------------------------------------------
 
@@ -86,20 +108,6 @@ CREATE TABLE `gambar` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `guru`
---
-
-CREATE TABLE `guru` (
-  `id_guru` int(9) NOT NULL,
-  `nama_guru` varchar(255) NOT NULL,
-  `NIPA` int(30) NOT NULL,
-  `id_jabatan_guru` int(9) NOT NULL,
-  `id_gambar` int(9) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `informasi`
 --
 
@@ -115,12 +123,29 @@ CREATE TABLE `informasi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jabatan_guru`
+-- Table structure for table `jabatan_karyawan`
 --
 
-CREATE TABLE `jabatan_guru` (
+CREATE TABLE `jabatan_karyawan` (
   `id_jabatan` int(9) NOT NULL,
   `nama_jabatan` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `karyawan`
+--
+
+CREATE TABLE `karyawan` (
+  `id_karyawan` int(9) NOT NULL,
+  `nama_karyawan` varchar(255) NOT NULL,
+  `NIPA` int(30) NOT NULL,
+  `id_jabatan` int(9) NOT NULL,
+  `id_gambar` int(9) NOT NULL,
+  `id_bidang` int(9) NOT NULL,
+  `alamat` varchar(255) NOT NULL,
+  `tanggal_lahir_karyawan` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -248,60 +273,12 @@ CREATE TABLE `status_dibaca` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tu_sekolah`
---
-
-CREATE TABLE `tu_sekolah` (
-  `id_tu` int(9) NOT NULL,
-  `nama_tu` varchar(255) NOT NULL,
-  `program_kerja_tu` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `visi_misi`
 --
 
 CREATE TABLE `visi_misi` (
   `visi` varchar(255) NOT NULL,
   `misi` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `waka_kesiswaan_sekolah`
---
-
-CREATE TABLE `waka_kesiswaan_sekolah` (
-  `id_waka_kesiswaan_sekolah` int(9) NOT NULL,
-  `nama_waka_kesiswaan_sekolah` varchar(255) NOT NULL,
-  `program_kerja_waka_kesiswaan_sekolah` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `waka_kurikulum_sekolah`
---
-
-CREATE TABLE `waka_kurikulum_sekolah` (
-  `id_waka_kurikulum_sekolah` int(9) NOT NULL,
-  `nama_waka_kurikulum_sekolah` varchar(255) NOT NULL,
-  `program_kerja_waka_kurikulum_sekolah` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `waka_sapras_humas_sekolah`
---
-
-CREATE TABLE `waka_sapras_humas_sekolah` (
-  `id_waka_sapras_humas_sekolah` int(9) NOT NULL,
-  `nama_waka_sapras_humas_sekolah` varchar(255) NOT NULL,
-  `program_waka_sapras_humas_sekolah` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -313,6 +290,12 @@ CREATE TABLE `waka_sapras_humas_sekolah` (
 --
 ALTER TABLE `agenda`
   ADD PRIMARY KEY (`id_agenda`);
+
+--
+-- Indexes for table `bidang`
+--
+ALTER TABLE `bidang`
+  ADD PRIMARY KEY (`id_bidang`);
 
 --
 -- Indexes for table `denah_sekolah`
@@ -341,14 +324,6 @@ ALTER TABLE `gambar`
   ADD PRIMARY KEY (`id_gambar`);
 
 --
--- Indexes for table `guru`
---
-ALTER TABLE `guru`
-  ADD PRIMARY KEY (`id_guru`),
-  ADD KEY `id_jabatan_guru` (`id_jabatan_guru`),
-  ADD KEY `id_gambar_guru` (`id_gambar`);
-
---
 -- Indexes for table `informasi`
 --
 ALTER TABLE `informasi`
@@ -356,10 +331,19 @@ ALTER TABLE `informasi`
   ADD KEY `id_gambar_informasi` (`id_gambar`) USING BTREE;
 
 --
--- Indexes for table `jabatan_guru`
+-- Indexes for table `jabatan_karyawan`
 --
-ALTER TABLE `jabatan_guru`
+ALTER TABLE `jabatan_karyawan`
   ADD PRIMARY KEY (`id_jabatan`);
+
+--
+-- Indexes for table `karyawan`
+--
+ALTER TABLE `karyawan`
+  ADD PRIMARY KEY (`id_karyawan`),
+  ADD KEY `id_jabatan_guru` (`id_jabatan`),
+  ADD KEY `id_gambar_guru` (`id_gambar`),
+  ADD KEY `id_bidang_karyawan` (`id_bidang`);
 
 --
 -- Indexes for table `kategori_juara`
@@ -408,30 +392,6 @@ ALTER TABLE `status_dibaca`
   ADD PRIMARY KEY (`id_status_dibaca`);
 
 --
--- Indexes for table `tu_sekolah`
---
-ALTER TABLE `tu_sekolah`
-  ADD PRIMARY KEY (`id_tu`);
-
---
--- Indexes for table `waka_kesiswaan_sekolah`
---
-ALTER TABLE `waka_kesiswaan_sekolah`
-  ADD PRIMARY KEY (`id_waka_kesiswaan_sekolah`);
-
---
--- Indexes for table `waka_kurikulum_sekolah`
---
-ALTER TABLE `waka_kurikulum_sekolah`
-  ADD PRIMARY KEY (`id_waka_kurikulum_sekolah`);
-
---
--- Indexes for table `waka_sapras_humas_sekolah`
---
-ALTER TABLE `waka_sapras_humas_sekolah`
-  ADD PRIMARY KEY (`id_waka_sapras_humas_sekolah`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -440,6 +400,12 @@ ALTER TABLE `waka_sapras_humas_sekolah`
 --
 ALTER TABLE `agenda`
   MODIFY `id_agenda` int(9) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `bidang`
+--
+ALTER TABLE `bidang`
+  MODIFY `id_bidang` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ekstrakurikuler`
@@ -460,22 +426,22 @@ ALTER TABLE `gambar`
   MODIFY `id_gambar` int(9) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `guru`
---
-ALTER TABLE `guru`
-  MODIFY `id_guru` int(9) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `informasi`
 --
 ALTER TABLE `informasi`
   MODIFY `id_informasi` int(9) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `jabatan_guru`
+-- AUTO_INCREMENT for table `jabatan_karyawan`
 --
-ALTER TABLE `jabatan_guru`
+ALTER TABLE `jabatan_karyawan`
   MODIFY `id_jabatan` int(9) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `karyawan`
+--
+ALTER TABLE `karyawan`
+  MODIFY `id_karyawan` int(9) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `kategori_juara`
@@ -512,30 +478,6 @@ ALTER TABLE `sarana_prasarana`
 --
 ALTER TABLE `status_dibaca`
   MODIFY `id_status_dibaca` int(9) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tu_sekolah`
---
-ALTER TABLE `tu_sekolah`
-  MODIFY `id_tu` int(9) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `waka_kesiswaan_sekolah`
---
-ALTER TABLE `waka_kesiswaan_sekolah`
-  MODIFY `id_waka_kesiswaan_sekolah` int(9) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `waka_kurikulum_sekolah`
---
-ALTER TABLE `waka_kurikulum_sekolah`
-  MODIFY `id_waka_kurikulum_sekolah` int(9) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `waka_sapras_humas_sekolah`
---
-ALTER TABLE `waka_sapras_humas_sekolah`
-  MODIFY `id_waka_sapras_humas_sekolah` int(9) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
