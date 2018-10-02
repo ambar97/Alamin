@@ -246,21 +246,24 @@
                     </div>
                     <!-- Column -->
                 </div>
-                <!-- Row -->
-                <!-- Row -->
-                
+<!-- Denah Sekolah -->
+                <hr>
+                <div class="col-lg-12 col-xlg-12 col-md-12">
+                    <h4 class="m-b-20">Denah Sekolah</h4>
+                        <hr>
+                        <div class="card blog-widget">
+                            <div class="card-body">
+                                <div class="blog-image"><img src="<?php echo base_url() ?>master/adm/assets/images/big/img1.jpg" alt="img" class="img-responsive" /></div>
+                                <div class="d-flex">
+                                    <div class="col-lg-12">  <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit</a></div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer"> © 2018 Material Pro Admin by wrappixel.com </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
  </div>
+
 
  <?php $this->load->view("admin/side/footer"); ?>
 
