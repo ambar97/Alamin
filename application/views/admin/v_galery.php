@@ -1,9 +1,7 @@
-<?php $this->load->view("admin/side/head"); ?>
+ <?php $this->load->view("admin/side/head"); ?>
  <?php $this->load->view("admin/side/loader"); ?>
  <?php $this->load->view("admin/side/header"); ?>
  <?php $this->load->view("admin/side/sidebar"); ?>
-  <!-- dropfy -->
-    <script src="<?php echo base_url() ?>master/adm/css/dropfy.min.css"></script>
 
 <div class="page-wrapper">
             <!-- ============================================================== -->
@@ -96,16 +94,10 @@
                                         </div>
                                         <div class="message-widget contact-widget">
                                             <!-- Message -->
-                                            <a href="#">
-                                                <div class="user-img"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                                <div class="mail-contnet">
-                                                    <h5>Klik tomobol Tambah (+) untuk Menambahkan foto galery</h5>
-                                                </div>
-                                            </a>
-                                            <div class="col-lg-6 col-md-6">
+                                            <div class="col-lg-12 col-md-12">
                                                 <div class="card">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">File Upload1</h4>
+                                                        <h4 class="card-title">Upload Gambar Galery (+)</h4>
                                                         <label for="input-file-now">Your so fresh input file — Default version</label>
                                                         <input type="file" id="input-file-now" class="dropify" />
                                                     </div>
@@ -183,5 +175,48 @@
 </div>
   <?php $this->load->view("admin/side/footer"); ?>
  <?php $this->load->view("admin/side/js"); ?>
- <!-- dropfy -->
-    <script src="<?php echo base_url() ?>master/adm/js/dropfy.min.js"></script>
+
+ <!-- jQuery file upload -->
+    <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/js/dropify.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Basic
+        $('.dropify').dropify();
+
+        // Translated
+        $('.dropify-fr').dropify({
+            messages: {
+                default: 'Glissez-déposez un fichier ici ou cliquez',
+                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                remove: 'Supprimer',
+                error: 'Désolé, le fichier trop volumineux'
+            }
+        });
+
+        // Used events
+        var drEvent = $('#input-file-events').dropify();
+
+        drEvent.on('dropify.beforeClear', function(event, element) {
+            return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+        });
+
+        drEvent.on('dropify.afterClear', function(event, element) {
+            alert('File deleted');
+        });
+
+        drEvent.on('dropify.errors', function(event, element) {
+            console.log('Has Errors');
+        });
+
+        var drDestroy = $('#input-file-to-destroy').dropify();
+        drDestroy = drDestroy.data('dropify')
+        $('#toggleDropify').on('click', function(e) {
+            e.preventDefault();
+            if (drDestroy.isDropified()) {
+                drDestroy.destroy();
+            } else {
+                drDestroy.init();
+            }
+        })
+    });
+    </script>

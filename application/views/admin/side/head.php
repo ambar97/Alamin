@@ -10,6 +10,7 @@
     <title>SDABA02</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url() ?>master/adm/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/css/dropify.min.css">
     <!-- chartist CSS -->
     <link href="<?php echo base_url() ?>master/adm/assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>master/adm/assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
@@ -26,7 +27,4 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-    <!-- dropfy -->
-    <script src="<?php echo base_url() ?>master/adm/css/dropfy.min.css"></script>
 </head>
