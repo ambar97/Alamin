@@ -456,73 +456,23 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-6">
-                  <div class="recent-posts mb-5">
-                    <h2><strong>Info</strong> kegiatan</h2>
+                  <h2><strong>Pengumuman</strong> </h2>
+                  <div class="row">
                     <div class="owl-carousel owl-theme mb-0" data-plugin-options="{'items': 1}">
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <article>
-                            <div class="date">
-                              <span class="day">15</span>
-                              <span class="month">Jan</span>
+                      <div>
+                        <div class="col">
+                          <div class="testimonial testimonial-primary">
+                            <blockquote>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.  Donec hendrerit vehicula est, in consequat.  Donec hendrerit vehicula est, in consequat.</p>
+                            </blockquote>
+                            <div class="testimonial-arrow-down"></div>
+                            <div class="testimonial-author">
+                              <div class="testimonial-author-thumbnail img-thumbnail">
+                                <img src="<?php echo base_url() ?>master/client/img/clients/client-1.jpg" alt="">
+                              </div>
+                              <p><strong>John Smith</strong><span>CEO & Founder - Okler</span></p>
                             </div>
-                            <h4 class="heading-primary"><a href="blog-post.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat libero. <a href="https://preview.oklerthemes.com/" class="read-more">read more <i class="fas fa-angle-right"></i></a></p>
-                          </article>
-                        </div>
-                        <div class="col-lg-6">
-                          <article>
-                            <div class="date">
-                              <span class="day">15</span>
-                              <span class="month">Jan</span>
-                            </div>
-                            <h4 class="heading-primary"><a href="blog-post.html">Lorem ipsum dolor</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. <a href="https://preview.oklerthemes.com/" class="read-more">read more <i class="fas fa-angle-right"></i></a></p>
-                          </article>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <article>
-                            <div class="date">
-                              <span class="day">12</span>
-                              <span class="month">Jan</span>
-                            </div>
-                            <h4 class="heading-primary"><a href="blog-post.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat libero. <a href="https://preview.oklerthemes.com/" class="read-more">read more <i class="fas fa-angle-right"></i></a></p>
-                          </article>
-                        </div>
-                        <div class="col-lg-6">
-                          <article>
-                            <div class="date">
-                              <span class="day">11</span>
-                              <span class="month">Jan</span>
-                            </div>
-                            <h4 class="heading-primary"><a href="blog-post.html">Lorem ipsum dolor</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="https://preview.oklerthemes.com/" class="read-more">read more <i class="fas fa-angle-right"></i></a></p>
-                          </article>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <article>
-                            <div class="date">
-                              <span class="day">15</span>
-                              <span class="month">Jan</span>
-                            </div>
-                            <h4 class="heading-primary"><a href="blog-post.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat libero. <a href="https://preview.oklerthemes.com/" class="read-more">read more <i class="fas fa-angle-right"></i></a></p>
-                          </article>
-                        </div>
-                        <div class="col-lg-6">
-                          <article>
-                            <div class="date">
-                              <span class="day">15</span>
-                              <span class="month">Jan</span>
-                            </div>
-                            <h4 class="heading-primary"><a href="blog-post.html">Lorem ipsum dolor</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. <a href="https://preview.oklerthemes.com/" class="read-more">read more <i class="fas fa-angle-right"></i></a></p>
-                          </article>
+                          </div>
                         </div>
                       </div>
                     </div>
