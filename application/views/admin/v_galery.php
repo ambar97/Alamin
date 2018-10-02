@@ -98,8 +98,15 @@
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <h4 class="card-title">Upload Gambar Galery (+)</h4>
-                                                        <label for="input-file-now">Your so fresh input file — Default version</label>
+                                                        <small>Maksimal ukuran upload 5 Mb.</small>
                                                         <input type="file" id="input-file-now" class="dropify" />
+                                                        <br>
+                                                        <form>
+                                                          <div class="form-group">
+                                                            <label for="exampleInputEmail1">Judul Galery</label>
+                                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan judul">
+                                                          </div>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>
