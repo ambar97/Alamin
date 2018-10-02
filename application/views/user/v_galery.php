@@ -17,94 +17,79 @@
 		</div>
 	</div>
 </section>
-<div class="container">
-	<div class="row">
-		<div class="col">
-			<ul class="nav nav-pills sort-source" data-sort-id="portfolio" data-option-key="filter">
-				<li class="nav-item" data-option-value="*"><a class="nav-link active" href="#">Show All</a></li>
-				<li class="nav-item" data-option-value=".website"><a class="nav-link" href="#">Websites</a></li>
-				<li class="nav-item" data-option-value=".logos"><a class="nav-link" href="#">Logos</a></li>
-				<li class="nav-item" data-option-value=".brands"><a class="nav-link" href="#">Brands</a></li>
-				<li class="nav-item" data-option-value=".medias"><a class="nav-link" href="#">Medias</a></li>
-			</ul>
-			<hr>
-			<div class="sort-destination-loader sort-destination-loader-showing">
-				<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio" data-plugin-options="{'delegate': 'a.lightbox-portfolio', 'type': 'image', 'gallery': {'enabled': true}}">
-					<div class="col-sm-6 col-lg-3 isotope-item website mb-4 mb-lg-0">
-						<div class="image-gallery-item">
-							<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="lightbox-portfolio">
-								<span class="thumb-info" style="max-height: 459px;">
-									<span class="thumb-info-wrapper" >
-										<img  src="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="img-fluid" alt="">
-										<span class="thumb-info-title">
-											<span class="thumb-info-inner">Project Title</span>
-											<span class="thumb-info-type">Project Type</span>
-										</span>
-										<span class="thumb-info-action">
-											<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
-										</span>
-									</span>
-								</span>
-							</a>
-						</div>
-					</div>
-					<div class="col-sm-6 col-lg-3 isotope-item logos mb-4 mb-lg-0">
-						<div class="image-gallery-item">
-							<a href="<?php echo base_url() ?>master/client/img/projects/project-2.jpg" class="lightbox-portfolio">
-								<span class="thumb-info">
-									<span class="thumb-info-wrapper">
-										<img src="<?php echo base_url() ?>master/client/img/projects/project-2.jpg" class="img-fluid" alt="">
-										<span class="thumb-info-title">
-											<span class="thumb-info-inner">Project Title</span>
-											<span class="thumb-info-type">Project Type</span>
-										</span>
-										<span class="thumb-info-action">
-											<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
-										</span>
-									</span>
-								</span>
-							</a>
-						</div>
-					</div>
-					<div class="col-sm-6 col-lg-3 isotope-item brands mb-4 mb-sm-0">
-						<div class="image-gallery-item">
-							<a href="<?php echo base_url() ?>master/client/img/projects/project-4.jpg" class="lightbox-portfolio">
-								<span class="thumb-info">
-									<span class="thumb-info-wrapper">
-										<img src="<?php echo base_url() ?>master/client/img/projects/project-4.jpg" class="img-fluid" alt="">
-										<span class="thumb-info-title">
-											<span class="thumb-info-inner">Project Title</span>
-											<span class="thumb-info-type">Project Type</span>
-										</span>
-										<span class="thumb-info-action">
-											<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
-										</span>
-									</span>
-								</span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- <section class="call-to-action call-to-action-default with-button-arrow content-align-center call-to-action-in-footer">
+<section>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-9 col-lg-9">
-				<div class="call-to-action-content">
-					<h3>Porto is <strong>everything</strong> you need to create an <strong>awesome</strong> website!</h3>
-					<p class="mb-0">The <strong>#1 Selling</strong> HTML Site Template on ThemeForest</p>
+		<div class="col-lg-12">
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio">
+						<div class="col-sm-9 col-lg-4 isotope-item website mb-4 mb-lg-0">
+							<div class="image-gallery-item">
+								<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" data-toggle="modal" data-target="#exampleModal">
+									<span class="thumb-info">
+										<span class="thumb-info-wrapper" >
+											<img  src="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="img-fluid" alt="">
+											<span class="thumb-info-title">
+												<span class="thumb-info-inner">Foto Pembelajaran</span>
+												<span class="thumb-info-type">Pembelajaran pagi yang asik sekali</span>
+											</span>
+											<span class="thumb-info-action">
+												<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
+											</span>
+										</span>
+									</span>
+								</a>
+							</div>
+						</div>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+								    <div class="modal-content">
+									      <div class="modal-header">
+									        <h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Detail Foto/Video</h5>
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									          <span aria-hidden="true">&times;</span>
+									        </button>
+									      </div>
+									      <div class="modal-body">
+										       <div>
+										       	<center>
+										       		<img style="width: 50%" src="<?php echo base_url() ?>master/client/img/projects/project.jpg">
+										       	</center>
+										       	<hr>
+										       </div>
+										       <div class="container">
+										       		<div class="col-md-12">
+										       			<p>deskripsi foto disini gan</p>
+										       		</div>
+										       </div>
+									      </div>
+								    </div>
+							  </div>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="col-md-3 col-lg-3">
-				<div class="call-to-action-btn">
-					<a href="http://themeforest.net/item/porto-responsive-html5-template/4106987" target="_blank" class="btn btn-lg btn-primary">Buy Now!</a><span class="arrow hlb d-none d-md-block" data-appear-animation="rotateInUpLeft" style="top: -40px; left: 70%;"></span>
+				<div class="col-lg-3">
+					<h2 style="font-weight: bold;">Definisi Galeri</h2>
+					<hr>
+					<p>Galeri ini berisikan foto dan video segala kegiatan yang berada di SDABA 02 Jember.</p>
+					</ul>
+					<div>
+		                <h2><strong>Polling</strong></h2>
+		                <hr>
+		                <p>Bagaimana tanggapan anda mengenai desain website kami?</p>
+		                <input type=checkbox name=c1 checked>Sangat baik<br>
+		                <input type=checkbox name=c2 >Baik<br>
+		                <input type=checkbox name=c3 >Cukup baik<br><br>
+		                <a href="#" class="btn btn-lg btn-primary">Vote</a>
+		                <a href="#" class="btn btn-lg btn-primary">View result</a><br>
+		            </div>
 				</div>
 			</div>
 		</div>
 	</div>
-</section> -->
+</section>
+
 <?php $this->load->view("user/side/footer"); ?>
 <?php $this->load->view("user/side/js"); ?>
