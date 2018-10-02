@@ -261,11 +261,8 @@
                             </div>
                         </div>
                     </div>
-            </div>
+    </div>
  </div>
-
-
  <?php $this->load->view("admin/side/footer"); ?>
-
  <?php $this->load->view("admin/side/js"); ?>
 </html>
