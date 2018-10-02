@@ -19,12 +19,7 @@
                         <li class="nav-small-cap">Main</li>
                         <li class="<?php if($this->uri->segment('2')=="Dashboard"){ echo "active";}?>"> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Dashboard") ?>" ><i class="mdi mdi-view-dashboard"></i><span >Dashboard </span></a>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">Prestasi</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="app-email.html">Mailbox</a></li>
-                                <li><a href="app-email-detail.html">Mailbox Detail</a></li>
-                                <li><a href="app-compose.html">Compose Mail</a></li>
-                            </ul>
+                        <li class="<?php if($this->uri->segment('2')=="Prestasi"){ echo "active";}?>"> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Prestasi") ?>" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">Prestasi</span></a>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-file-image"></i><span class="hide-menu">Galery</span></a>
                             
