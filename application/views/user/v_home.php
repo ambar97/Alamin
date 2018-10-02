@@ -211,7 +211,7 @@
               <div class="col-lg-4 ml-lg-auto">
                 <div class="process-image">
                   <img src="<?php echo base_url() ?>master/client/img/home-concept-item-1.png" alt="" />
-                  <a href=""><strong>Kepala Sekolah</strong></a>
+                  <a href="<?php echo base_url('Profile/KepSek') ?>"><strong>Kepala Sekolah</strong></a>
                 </div>
               </div>
               <!-- <div class="col-lg-2">
@@ -235,7 +235,7 @@
                       <li><a href="portfolio-single-small-slider.html"><img class="img-responsive" src="<?php echo base_url() ?>master/client/img/projects/project-home-3.jpg" alt="" /></a></li>
                     </ul>
                   </div>
-                  <strong class="our-work">Our Work</strong>
+                  <strong class="our-work">Dokumentasi Lainnya</strong>
                 </div>
               </div>
             </div>
