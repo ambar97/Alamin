@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2018 at 09:17 AM
+-- Generation Time: Oct 03, 2018 at 09:42 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -31,7 +31,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `id_admin` int(255) NOT NULL,
   `username_admin` varchar(900) NOT NULL,
-  `password_admin` varchar(900) NOT NULL
+  `password_admin` varchar(900) NOT NULL,
+  `NIPA_karyawan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -322,7 +323,8 @@ CREATE TABLE `visi_misi` (
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id_admin`);
+  ADD PRIMARY KEY (`id_admin`),
+  ADD KEY `NIPA_karyawan_admin` (`NIPA_karyawan`);
 
 --
 -- Indexes for table `agenda`
@@ -545,6 +547,12 @@ ALTER TABLE `status_dibaca`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `admin`
+--
+ALTER TABLE `admin`
+  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`NIPA_karyawan`) REFERENCES `karyawan` (`NIPA_karyawan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `denah_sekolah`

@@ -6,7 +6,7 @@
                     <!-- User profile image -->
                     <div class="profile-img"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/profile.png" alt="user" /> </div>
                     <!-- User profile text-->
-                    <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Markarn Doe</a>
+                    <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">cnjonathan</a>
                         <div class="dropdown-menu animated flipInY"> <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a> <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a> <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
                             <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
                             <div class="dropdown-divider"></div> <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a> </div>
@@ -22,7 +22,7 @@
                         <li class="<?php if($this->uri->segment('2')=="Prestasi"){ echo "active";}?>"> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Prestasi") ?>" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">Prestasi</span></a>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Galery") ?>" aria-expanded="false"><i class="mdi mdi-file-image"></i><span class="hide-menu">Galery</span></a>
-                            
+
                         </li>
                         <li class="<?php if($this->uri->segment('2')=="Berita"){ echo "active";}?>"> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Berita") ?>" aria-expanded="false"><i class="mdi mdi-newspaper"></i><span class="hide-menu">Berita</span></a>
                         </li>
