@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2018 at 08:44 AM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Generation Time: Oct 03, 2018 at 09:17 AM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 5.6.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -150,9 +150,8 @@ CREATE TABLE `jabatan_karyawan` (
 --
 
 CREATE TABLE `karyawan` (
-  `id_karyawan` int(9) NOT NULL,
+  `NIPA_karyawan` varchar(255) NOT NULL,
   `nama_karyawan` varchar(255) NOT NULL,
-  `NIPA` int(30) NOT NULL,
   `id_jabatan` int(9) NOT NULL,
   `id_gambar` int(9) NOT NULL,
   `id_bidang` int(9) NOT NULL,
@@ -380,7 +379,7 @@ ALTER TABLE `jabatan_karyawan`
 -- Indexes for table `karyawan`
 --
 ALTER TABLE `karyawan`
-  ADD PRIMARY KEY (`id_karyawan`),
+  ADD PRIMARY KEY (`NIPA_karyawan`),
   ADD KEY `id_jabatan_guru` (`id_jabatan`),
   ADD KEY `id_gambar_guru` (`id_gambar`),
   ADD KEY `id_bidang_karyawan` (`id_bidang`);
@@ -496,12 +495,6 @@ ALTER TABLE `jabatan_karyawan`
   MODIFY `id_jabatan` int(9) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `karyawan`
---
-ALTER TABLE `karyawan`
-  MODIFY `id_karyawan` int(9) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `kategori_juara`
 --
 ALTER TABLE `kategori_juara`
@@ -548,6 +541,67 @@ ALTER TABLE `sarana_prasarana`
 --
 ALTER TABLE `status_dibaca`
   MODIFY `id_status_dibaca` int(9) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `denah_sekolah`
+--
+ALTER TABLE `denah_sekolah`
+  ADD CONSTRAINT `denah_sekolah_ibfk_1` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `ekstrakurikuler`
+--
+ALTER TABLE `ekstrakurikuler`
+  ADD CONSTRAINT `ekstrakurikuler_ibfk_1` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `galeri`
+--
+ALTER TABLE `galeri`
+  ADD CONSTRAINT `galeri_ibfk_1` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `informasi`
+--
+ALTER TABLE `informasi`
+  ADD CONSTRAINT `informasi_ibfk_1` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `karyawan`
+--
+ALTER TABLE `karyawan`
+  ADD CONSTRAINT `karyawan_ibfk_1` FOREIGN KEY (`id_jabatan`) REFERENCES `jabatan_karyawan` (`id_jabatan`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `karyawan_ibfk_2` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `karyawan_ibfk_3` FOREIGN KEY (`id_bidang`) REFERENCES `bidang` (`id_bidang`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `kritik_saran`
+--
+ALTER TABLE `kritik_saran`
+  ADD CONSTRAINT `kritik_saran_ibfk_1` FOREIGN KEY (`id_status_dibaca`) REFERENCES `status_dibaca` (`id_status_dibaca`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `prestasi`
+--
+ALTER TABLE `prestasi`
+  ADD CONSTRAINT `prestasi_ibfk_1` FOREIGN KEY (`id_juara`) REFERENCES `kategori_juara` (`id_juara`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `prestasi_ibfk_2` FOREIGN KEY (`id_lingkup_prestasi`) REFERENCES `lingkup_prestasi` (`id_lingkup_prestasi`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `sarana_prasarana`
+--
+ALTER TABLE `sarana_prasarana`
+  ADD CONSTRAINT `sarana_prasarana_ibfk_1` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `sejarah`
+--
+ALTER TABLE `sejarah`
+  ADD CONSTRAINT `sejarah_ibfk_1` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
