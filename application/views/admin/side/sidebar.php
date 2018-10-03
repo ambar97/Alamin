@@ -9,7 +9,7 @@
                     <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">cnjonathan</a>
                         <div class="dropdown-menu animated flipInY"> <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a> <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a> <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
                             <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
-                            <div class="dropdown-divider"></div> <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a> </div>
+                            <div class="dropdown-divider"></div> <a href="<?php echo base_url('Admin/LoginAdmin') ?>" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a> </div>
                     </div>
                 </div>
                 <!-- End User profile text-->
@@ -33,7 +33,7 @@
                         </li>
                         <li class="nav-devider"></li>
                         <li class="nav-small-cap">Profile</li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Sarpras</span></a>
+                        <li> <a class="" href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Sarpras</span></a>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Struktur & Personalia</span></a>
                             <ul aria-expanded="false" class="collapse">
@@ -44,12 +44,12 @@
                                 <li><a href="table-jsgrid.html">Sapras & Humas</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Ekstrakurikuler</span></a>
+                        <li> <a class="" href="#" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Ekstrakurikuler</span></a>
                         </li>
 
                         <li class="nav-devider"></li>
                         <li class="nav-small-cap">Lain-Lain</li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Quotes</span></a>
+                        <li> <a class="" href="#" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Quotes</span></a>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Sample Pages</span></a>
                         </li>

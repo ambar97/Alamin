@@ -11,8 +11,6 @@
     <!--stickey kit -->
     <script src="<?php echo base_url() ?>master/adm/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <script src="<?php echo base_url() ?>master/adm/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <!-- dropfy -->
-    <script src="<?php echo base_url() ?>master/adm/js/dropfy.min.js"></script>
     <!--Custom JavaScript -->
     <script src="<?php echo base_url() ?>master/adm/js/custom.min.js"></script>
     <!-- ============================================================== -->
