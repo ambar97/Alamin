@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2018 at 07:07 AM
+-- Generation Time: Oct 03, 2018 at 09:42 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -21,6 +21,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `sdaba02jember`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id_admin` int(255) NOT NULL,
+  `username_admin` varchar(900) NOT NULL,
+  `password_admin` varchar(900) NOT NULL,
+  `NIPA_karyawan` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -138,9 +151,8 @@ CREATE TABLE `jabatan_karyawan` (
 --
 
 CREATE TABLE `karyawan` (
-  `id_karyawan` int(9) NOT NULL,
+  `NIPA_karyawan` varchar(255) NOT NULL,
   `nama_karyawan` varchar(255) NOT NULL,
-  `NIPA` int(30) NOT NULL,
   `id_jabatan` int(9) NOT NULL,
   `id_gambar` int(9) NOT NULL,
   `id_bidang` int(9) NOT NULL,
@@ -223,6 +235,17 @@ INSERT INTO `lingkup_prestasi` (`id_lingkup_prestasi`, `nama_lingkup_prestasi`) 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `poling`
+--
+
+CREATE TABLE `poling` (
+  `id_poling` int(255) NOT NULL,
+  `keterangan_poling` varchar(99) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `prestasi`
 --
 
@@ -233,6 +256,17 @@ CREATE TABLE `prestasi` (
   `id_lingkup_prestasi` int(9) NOT NULL,
   `nama_lomba` varchar(255) NOT NULL,
   `nama_pembimbing_lomba` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quotes`
+--
+
+CREATE TABLE `quotes` (
+  `id_quotes` int(255) NOT NULL,
+  `isi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -284,6 +318,13 @@ CREATE TABLE `visi_misi` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`),
+  ADD KEY `NIPA_karyawan_admin` (`NIPA_karyawan`);
 
 --
 -- Indexes for table `agenda`
@@ -340,7 +381,7 @@ ALTER TABLE `jabatan_karyawan`
 -- Indexes for table `karyawan`
 --
 ALTER TABLE `karyawan`
-  ADD PRIMARY KEY (`id_karyawan`),
+  ADD PRIMARY KEY (`NIPA_karyawan`),
   ADD KEY `id_jabatan_guru` (`id_jabatan`),
   ADD KEY `id_gambar_guru` (`id_gambar`),
   ADD KEY `id_bidang_karyawan` (`id_bidang`);
@@ -365,12 +406,24 @@ ALTER TABLE `lingkup_prestasi`
   ADD PRIMARY KEY (`id_lingkup_prestasi`);
 
 --
+-- Indexes for table `poling`
+--
+ALTER TABLE `poling`
+  ADD PRIMARY KEY (`id_poling`);
+
+--
 -- Indexes for table `prestasi`
 --
 ALTER TABLE `prestasi`
   ADD PRIMARY KEY (`id_prestasi`),
   ADD KEY `id_juara_prestasi` (`id_juara`),
   ADD KEY `id_lingkup_prestasi` (`id_lingkup_prestasi`);
+
+--
+-- Indexes for table `quotes`
+--
+ALTER TABLE `quotes`
+  ADD PRIMARY KEY (`id_quotes`);
 
 --
 -- Indexes for table `sarana_prasarana`
@@ -394,6 +447,12 @@ ALTER TABLE `status_dibaca`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `agenda`
@@ -438,12 +497,6 @@ ALTER TABLE `jabatan_karyawan`
   MODIFY `id_jabatan` int(9) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `karyawan`
---
-ALTER TABLE `karyawan`
-  MODIFY `id_karyawan` int(9) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `kategori_juara`
 --
 ALTER TABLE `kategori_juara`
@@ -462,10 +515,22 @@ ALTER TABLE `lingkup_prestasi`
   MODIFY `id_lingkup_prestasi` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `poling`
+--
+ALTER TABLE `poling`
+  MODIFY `id_poling` int(255) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `prestasi`
 --
 ALTER TABLE `prestasi`
   MODIFY `id_prestasi` int(9) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `quotes`
+--
+ALTER TABLE `quotes`
+  MODIFY `id_quotes` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sarana_prasarana`
@@ -478,6 +543,73 @@ ALTER TABLE `sarana_prasarana`
 --
 ALTER TABLE `status_dibaca`
   MODIFY `id_status_dibaca` int(9) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `admin`
+--
+ALTER TABLE `admin`
+  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`NIPA_karyawan`) REFERENCES `karyawan` (`NIPA_karyawan`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `denah_sekolah`
+--
+ALTER TABLE `denah_sekolah`
+  ADD CONSTRAINT `denah_sekolah_ibfk_1` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `ekstrakurikuler`
+--
+ALTER TABLE `ekstrakurikuler`
+  ADD CONSTRAINT `ekstrakurikuler_ibfk_1` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `galeri`
+--
+ALTER TABLE `galeri`
+  ADD CONSTRAINT `galeri_ibfk_1` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `informasi`
+--
+ALTER TABLE `informasi`
+  ADD CONSTRAINT `informasi_ibfk_1` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `karyawan`
+--
+ALTER TABLE `karyawan`
+  ADD CONSTRAINT `karyawan_ibfk_1` FOREIGN KEY (`id_jabatan`) REFERENCES `jabatan_karyawan` (`id_jabatan`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `karyawan_ibfk_2` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `karyawan_ibfk_3` FOREIGN KEY (`id_bidang`) REFERENCES `bidang` (`id_bidang`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `kritik_saran`
+--
+ALTER TABLE `kritik_saran`
+  ADD CONSTRAINT `kritik_saran_ibfk_1` FOREIGN KEY (`id_status_dibaca`) REFERENCES `status_dibaca` (`id_status_dibaca`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `prestasi`
+--
+ALTER TABLE `prestasi`
+  ADD CONSTRAINT `prestasi_ibfk_1` FOREIGN KEY (`id_juara`) REFERENCES `kategori_juara` (`id_juara`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `prestasi_ibfk_2` FOREIGN KEY (`id_lingkup_prestasi`) REFERENCES `lingkup_prestasi` (`id_lingkup_prestasi`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `sarana_prasarana`
+--
+ALTER TABLE `sarana_prasarana`
+  ADD CONSTRAINT `sarana_prasarana_ibfk_1` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `sejarah`
+--
+ALTER TABLE `sejarah`
+  ADD CONSTRAINT `sejarah_ibfk_1` FOREIGN KEY (`id_gambar`) REFERENCES `gambar` (`id_gambar`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

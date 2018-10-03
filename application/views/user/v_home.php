@@ -184,14 +184,14 @@
           <div class="row text-center">
             <div class="col">
               <h1 class="mb-2 word-rotator-title">
-               Motto SD Al-Baitul Amien adalah
+               SD Al-Baitul Amien adalah
                 <strong class="inverted">
                   <span class="word-rotator" data-plugin-options="{'delay': 2000, 'animDelay': 300}">
                     <span class="word-rotator-items">
-                      <span>Bangga</span>
-                      <span>Belajar Di</span>
-                      <span>SD Al-Baitul Amien 02</span>
-                      <span>Jember</span>
+                      <span>Berakhlak</span>
+                      <span>Mulia</span>
+                      <span>Berprestasi</span>
+                      <span>Optimal</span>
                     </span>
                   </span>
                 </strong>
@@ -208,11 +208,14 @@
             <div class="row text-center">
               <span class="sun"></span>
               <span class="cloud"></span>
-              <div class="col-lg-4 ml-lg-auto">
+              <div class="col-lg-8 ml-lg-auto">
                 <div class="process-image">
                   <img src="<?php echo base_url() ?>master/client/img/home-concept-item-1.png" alt="" />
                   <a href="<?php echo base_url('Profile/KepSek') ?>"><strong>Kepala Sekolah</strong></a>
+                  <br>
+                  <strong>Motto :</strong>
                 </div>
+                <p style="font-size: 24px; margin-top: -40px;" >"Bangga Belajar di SD Al-Baitul Amien 02 Jember"</p>
               </div>
               <!-- <div class="col-lg-2">
                 <div class="process-image">
@@ -455,79 +458,7 @@
           <section class="section section-default section-footer">
             <div class="container">
               <div class="row">
-                <div class="col-lg-6">
-                  <div class="recent-posts mb-5">
-                    <h2><strong>Info</strong> kegiatan</h2>
-                    <div class="owl-carousel owl-theme mb-0" data-plugin-options="{'items': 1}">
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <article>
-                            <div class="date">
-                              <span class="day">15</span>
-                              <span class="month">Jan</span>
-                            </div>
-                            <h4 class="heading-primary"><a href="blog-post.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat libero. <a href="https://preview.oklerthemes.com/" class="read-more">read more <i class="fas fa-angle-right"></i></a></p>
-                          </article>
-                        </div>
-                        <div class="col-lg-6">
-                          <article>
-                            <div class="date">
-                              <span class="day">15</span>
-                              <span class="month">Jan</span>
-                            </div>
-                            <h4 class="heading-primary"><a href="blog-post.html">Lorem ipsum dolor</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. <a href="https://preview.oklerthemes.com/" class="read-more">read more <i class="fas fa-angle-right"></i></a></p>
-                          </article>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <article>
-                            <div class="date">
-                              <span class="day">12</span>
-                              <span class="month">Jan</span>
-                            </div>
-                            <h4 class="heading-primary"><a href="blog-post.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat libero. <a href="https://preview.oklerthemes.com/" class="read-more">read more <i class="fas fa-angle-right"></i></a></p>
-                          </article>
-                        </div>
-                        <div class="col-lg-6">
-                          <article>
-                            <div class="date">
-                              <span class="day">11</span>
-                              <span class="month">Jan</span>
-                            </div>
-                            <h4 class="heading-primary"><a href="blog-post.html">Lorem ipsum dolor</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="https://preview.oklerthemes.com/" class="read-more">read more <i class="fas fa-angle-right"></i></a></p>
-                          </article>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <article>
-                            <div class="date">
-                              <span class="day">15</span>
-                              <span class="month">Jan</span>
-                            </div>
-                            <h4 class="heading-primary"><a href="blog-post.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat libero. <a href="https://preview.oklerthemes.com/" class="read-more">read more <i class="fas fa-angle-right"></i></a></p>
-                          </article>
-                        </div>
-                        <div class="col-lg-6">
-                          <article>
-                            <div class="date">
-                              <span class="day">15</span>
-                              <span class="month">Jan</span>
-                            </div>
-                            <h4 class="heading-primary"><a href="blog-post.html">Lorem ipsum dolor</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. <a href="https://preview.oklerthemes.com/" class="read-more">read more <i class="fas fa-angle-right"></i></a></p>
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                
                 <div class="col-lg-6">
                   <h2><strong>Quotes</strong> of the day</h2>
                   <div class="row">
