@@ -22,7 +22,7 @@
                         <li class="<?php if($this->uri->segment('2')=="Prestasi"){ echo "active";}?>"> <a class="" href="<?php echo base_url("admin/Prestasi") ?>" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">Prestasi</span></a>
                         </li>
 
-                        <li> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Galery") ?>" aria-expanded="false"><i class="mdi mdi-file-image"></i><span class="hide-menu">Galery</span></a>
+                        <li> <a class="" href="<?php echo base_url("admin/Galery") ?>" aria-expanded="false"><i class="mdi mdi-file-image"></i><span class="hide-menu">Galery</span></a>
 
                         </li>
                         <li class="<?php if($this->uri->segment('2')=="Berita"){ echo "active";}?>"> <a class="" href="<?php echo base_url("admin/Berita") ?>" aria-expanded="false"><i class="mdi mdi-newspaper"></i><span class="hide-menu">Berita</span></a>
