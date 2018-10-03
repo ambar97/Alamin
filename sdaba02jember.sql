@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2018 at 07:07 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 5.6.33
+-- Generation Time: Oct 03, 2018 at 08:44 AM
+-- Server version: 10.1.33-MariaDB
+-- PHP Version: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `sdaba02jember`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id_admin` int(255) NOT NULL,
+  `username_admin` varchar(900) NOT NULL,
+  `password_admin` varchar(900) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -223,6 +235,17 @@ INSERT INTO `lingkup_prestasi` (`id_lingkup_prestasi`, `nama_lingkup_prestasi`) 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `poling`
+--
+
+CREATE TABLE `poling` (
+  `id_poling` int(255) NOT NULL,
+  `keterangan_poling` varchar(99) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `prestasi`
 --
 
@@ -233,6 +256,17 @@ CREATE TABLE `prestasi` (
   `id_lingkup_prestasi` int(9) NOT NULL,
   `nama_lomba` varchar(255) NOT NULL,
   `nama_pembimbing_lomba` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quotes`
+--
+
+CREATE TABLE `quotes` (
+  `id_quotes` int(255) NOT NULL,
+  `isi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -284,6 +318,12 @@ CREATE TABLE `visi_misi` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Indexes for table `agenda`
@@ -365,12 +405,24 @@ ALTER TABLE `lingkup_prestasi`
   ADD PRIMARY KEY (`id_lingkup_prestasi`);
 
 --
+-- Indexes for table `poling`
+--
+ALTER TABLE `poling`
+  ADD PRIMARY KEY (`id_poling`);
+
+--
 -- Indexes for table `prestasi`
 --
 ALTER TABLE `prestasi`
   ADD PRIMARY KEY (`id_prestasi`),
   ADD KEY `id_juara_prestasi` (`id_juara`),
   ADD KEY `id_lingkup_prestasi` (`id_lingkup_prestasi`);
+
+--
+-- Indexes for table `quotes`
+--
+ALTER TABLE `quotes`
+  ADD PRIMARY KEY (`id_quotes`);
 
 --
 -- Indexes for table `sarana_prasarana`
@@ -394,6 +446,12 @@ ALTER TABLE `status_dibaca`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `agenda`
@@ -462,10 +520,22 @@ ALTER TABLE `lingkup_prestasi`
   MODIFY `id_lingkup_prestasi` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `poling`
+--
+ALTER TABLE `poling`
+  MODIFY `id_poling` int(255) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `prestasi`
 --
 ALTER TABLE `prestasi`
   MODIFY `id_prestasi` int(9) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `quotes`
+--
+ALTER TABLE `quotes`
+  MODIFY `id_quotes` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sarana_prasarana`
