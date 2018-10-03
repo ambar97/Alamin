@@ -17,30 +17,30 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="nav-small-cap">Main</li>
-                        <li class="<?php if($this->uri->segment('2')=="Dashboard"){ echo "active";}?>"> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Dashboard") ?>" ><i class="mdi mdi-view-dashboard"></i><span >Dashboard </span></a>
+                        <li class="<?php if($this->uri->segment('2')=="Dashboard"){ echo "active";}?>"> <a class="" href="<?php echo base_url("admin/Dashboard") ?>" ><i class="mdi mdi-view-dashboard"></i><span >Dashboard </span></a>
                         </li>
-                        <li class="<?php if($this->uri->segment('2')=="Prestasi"){ echo "active";}?>"> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Prestasi") ?>" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">Prestasi</span></a>
+                        <li class="<?php if($this->uri->segment('2')=="Prestasi"){ echo "active";}?>"> <a class="" href="<?php echo base_url("admin/Prestasi") ?>" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">Prestasi</span></a>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Galery") ?>" aria-expanded="false"><i class="mdi mdi-file-image"></i><span class="hide-menu">Galery</span></a>
+                        <li> <a class="" href="<?php echo base_url("admin/Galery") ?>" aria-expanded="false"><i class="mdi mdi-file-image"></i><span class="hide-menu">Galery</span></a>
                             
                         </li>
-                        <li class="<?php if($this->uri->segment('2')=="Berita"){ echo "active";}?>"> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Berita") ?>" aria-expanded="false"><i class="mdi mdi-newspaper"></i><span class="hide-menu">Berita</span></a>
+                        <li class="<?php if($this->uri->segment('2')=="Berita"){ echo "active";}?>"> <a class="" href="<?php echo base_url("admin/Berita") ?>" aria-expanded="false"><i class="mdi mdi-newspaper"></i><span class="hide-menu">Berita</span></a>
                         </li>
-                        <li class="<?php if($this->uri->segment('2')=="Karyawan"){ echo "active";}?>"> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Karyawan") ?>" aria-expanded="false"><i class="mdi mdi-face"></i><span class="hide-menu">Karyawan</span></a>
+                        <li class="<?php if($this->uri->segment('2')=="Karyawan"){ echo "active";}?>"> <a class="" href="<?php echo base_url("admin/Karyawan") ?>" aria-expanded="false"><i class="mdi mdi-face"></i><span class="hide-menu">Karyawan</span></a>
                         </li>
-                        <li class="<?php if($this->uri->segment('2')=="Kalendar"){ echo "active";}?>"> <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url("admin/Kalendar") ?>" aria-expanded="false"><i class="mdi mdi-calendar-range"></i><span class="hide-menu">Kalendar Akademik</span></a>
+                        <li class="<?php if($this->uri->segment('2')=="Kalendar"){ echo "active";}?>"> <a class="" href="<?php echo base_url("admin/Kalendar") ?>" aria-expanded="false"><i class="mdi mdi-calendar-range"></i><span class="hide-menu">Kalendar Akademik</span></a>
                         </li>
                         <li class="nav-devider"></li>
                         <li class="nav-small-cap">Profile</li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Sarpras</span></a>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Struktur &amp; Personalia</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Struktur & Personalia</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="table-basic.html">Kepala Sekolah</a></li>
                                 <li><a href="table-layout.html">Tata Usaha</a></li>
                                 <li><a href="table-data-table.html">Kesiswaan</a></li>
                                 <li><a href="table-footable.html">Kurukulum</a></li>
-                                <li><a href="table-jsgrid.html">Sapras &amp; Humas</a></li>
+                                <li><a href="table-jsgrid.html">Sapras & Humas</a></li>
                             </ul>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Ekstrakurikuler</span></a>
