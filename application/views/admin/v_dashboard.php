@@ -139,6 +139,30 @@
                                                         <a style="float: right; margin-bottom: 30px;" href="" class="btn btn-success" data-toggle="modal" data-target="#tambah_galeri"> Edit</a>
                                                     </div>
                                                 </div>
+                                                <div class="modal-body">
+                                            <from class="form-horizontal form-material">
+                                                <div class="form-group">
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Type name"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Email"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Phone"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Designation"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Age"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Date of joining"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Salary"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light"><span><i class="ion-upload m-r-5"></i>Upload Contact Image</span>
+                                                            <input type="file" class="upload"> </div>
+                                                    </div>
+                                                </div>
+                                            </from>
+                                        </div>
                                             </div>
                                         </div>
                                     </div>
