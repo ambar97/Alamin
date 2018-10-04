@@ -42,24 +42,24 @@
                 </div>
 
 <!-- Tambah Prestasi -->
-							<div class="card">
-	                            <div class="card-body bg-info">
-	                                <h4 class="text-white card-title">Tambah Prestasi </h4>
-	                            </div>
-	                            <div class="card-body">
-	                                <div class="message-box contact-box">
-	                                    <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark">+</button></h2>
-	                                    <div class="message-widget contact-widget">
-	                                        <!-- Message -->
-	                                        <a href="#">
-	                                            <div class="user-img"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-	                                            <div class="mail-contnet">
-	                                                <h5>Klik tomobol Tambah (+) untuk Menambahkan prestasi </h5></div>
-	                                        </a>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
+				<div class="card">
+                    <div class="card-body bg-info">
+                        <h4 class="text-white card-title">Tambah Prestasi </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="message-box contact-box">
+                            <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark">+</button></h2>
+                            <div class="message-widget contact-widget">
+                                <!-- Message -->
+                                <a href="#">
+                                    <div class="user-img"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                    <div class="mail-contnet">
+                                        <h5>Klik tomobol Tambah (+) untuk Menambahkan prestasi </h5></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 <!-- List Prestasi -->
  				<div class="row">

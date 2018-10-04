@@ -136,7 +136,7 @@
                                                         <blockquote class="m-t-10">
                                                             inilah isi dari visi sekolah
                                                         </blockquote>
-                                                        <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit</a>
+                                                        <a style="float: right; margin-bottom: 30px;" href="" class="btn btn-success" data-toggle="modal" data-target="#tambah_galeri"> Edit</a>
                                                     </div>
                                                 </div>
                                             </div>
