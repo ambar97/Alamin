@@ -119,54 +119,14 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="card">
                             <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/1.jpg" alt="user" />
-                                    <div class="el-overlay">
-                                        
-                                    </div>
-                                </div>
-                                <div class="el-card-content">
-                                 <small>Managing Director</small>
-                                    <br/> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
                                 <div class="el-card-avatar el-overlay-1"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/2.jpg" alt="user" />
                                     <div class="el-overlay">
                                         
                                     </div>
                                 </div>
                                 <div class="el-card-content">
-                                 <small>Managing Director</small>
-                                    <br/> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/3.jpg" alt="user" />
-                                    <div class="el-overlay">
-                                        
-                                    </div>
-                                </div>
-                                <div class="el-card-content">
-                                 <small>Managing Director</small>
-                                    <br/> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/4.jpg" alt="user" />
-                                    <div class="el-overlay">
-                                    </div>
-                                </div>
-                                <div class="el-card-content">
-                                    <small>Managing Director</small>
+                                 <small>Managing Director</small> 
+                                 <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
                                     <br/> </div>
                             </div>
                         </div>
