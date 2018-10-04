@@ -33,10 +33,10 @@
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <section id="wrapper">
-        <div class="login-register" style="background-image:url(../assets/images/background/login-register.jpg);">        
+        <div class="login-register" style="background-image:url(<?php echo base_url(); ?>master/adm/assets/images/alam.png);">        
             <div class="login-box card">
             <div class="card-body">
-                <form class="form-horizontal form-material" id="loginform" action="https://wrappixel.com/demos/admin-templates/material-pro/material/index.html">
+                <form class="form-horizontal form-material" id="loginform" action="<?php echo base_url('RegisterAdmin/buat') ?>" method="post">
                 	<div>
                 		<center>
                 			<h3 class="box-title m-b-20"><strong>Register</strong></h3>
@@ -44,17 +44,17 @@
                 	</div>
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" type="text" required="" placeholder="Name">
+                            <input class="form-control" type="text" required="" placeholder="NIPA" name="nipa">
                         </div>
                     </div>
                     <div class="form-group ">
                         <div class="col-xs-12">
-                            <input class="form-control" type="text" required="" placeholder="Email">
+                            <input class="form-control" type="text" required="" placeholder="Username" name="username">
                         </div>
                     </div>
                     <div class="form-group ">
                         <div class="col-xs-12">
-                            <input class="form-control" type="password" required="" placeholder="Password">
+                            <input class="form-control" type="password" required="" placeholder="Password" name="password">
                         </div>
                     </div>
                     <div class="form-group">
@@ -64,12 +64,12 @@
                     </div>
                     <div class="form-group text-center m-t-20">
                         <div class="col-xs-12">
-                            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit"><strong>Register</strong></button>
+                            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit" name="btnSimpan"><strong>Register</strong></button>
                         </div>
                     </div>
                     <div class="form-group m-b-0">
                         <div class="col-sm-12 text-center">
-                            <p>Already have an account? <a href="<?php echo base_url('Admin/LoginAdmin') ?>" class="text-info m-l-5"><b>Log In</b></a></p>
+                            <p>Already have an account? <a href="<?php echo base_url('LoginAdmin') ?>" class="text-info m-l-5"><b>Log In</b></a></p>
                         </div>
                     </div>
                 </form>
@@ -79,12 +79,6 @@
         </div>
         
     </section>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
     <script src="<?php echo base_url() ?>master/adm/assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="<?php echo base_url() ?>master/adm/assets/plugins/popper/popper.min.js"></script>
@@ -104,6 +98,10 @@
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="<?php echo base_url() ?>master/adm/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+
+    <?php if ($this->session->flashdata()) { ?>
+                        <?php echo $this->session->flashdata('Pesan'); ?></div>                    
+                    <?php } ?>
 </body>
 
 
