@@ -3,6 +3,9 @@
  <?php $this->load->view("admin/side/header"); ?>
  <?php $this->load->view("admin/side/sidebar"); ?>
 
+ <!-- Dropzone css -->
+<link href="<?php echo base_url() ?>master/adm/assets/plugins/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css" />
+
 <div class="page-wrapper">
             <!-- ============================================================== -->
             <!-- Container fluid  -->
@@ -95,7 +98,7 @@
                                         <div class="message-widget contact-widget">
                                             <!-- Message -->
                                             <div class="col-lg-12 col-md-12">
-                                                <div class="card">
+                                                <!-- <div class="card">
                                                     <div class="card-body">
                                                         <h4 class="card-title">Upload Gambar Galery (+)</h4>
                                                         <small>Maksimal ukuran upload 5 Mb.</small>
@@ -106,6 +109,17 @@
                                                             <label for="exampleInputEmail1">Judul Galery</label>
                                                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan judul">
                                                           </div>
+                                                        </form>
+                                                    </div>
+                                                </div> -->
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Upload Gambar</h4>
+                                                        <h6 class="card-subtitle">Untuk menggunggah beberapa banyak file gambar ke dalam form</h6>
+                                                        <form action="#" class="dropzone">
+                                                            <div class="fallback">
+                                                                <input name="file" type="file" multiple />
+                                                            </div>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -183,9 +197,12 @@
   <?php $this->load->view("admin/side/footer"); ?>
  <?php $this->load->view("admin/side/js"); ?>
 
+ <!-- Dropzone Plugin JavaScript -->
+    <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropzone-master/dist/dropzone.js"></script>
+
  <!-- jQuery file upload -->
-    <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/js/dropify.min.js"></script>
-    <script>
+    <!-- <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/js/dropify.min.js"></script> -->
+    <!-- <script>
     $(document).ready(function() {
         // Basic
         $('.dropify').dropify();
@@ -226,4 +243,4 @@
             }
         })
     });
-    </script>
+    </script> -->
