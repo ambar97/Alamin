@@ -21,15 +21,9 @@
     </div>
     <section id="wrapper">
         <div class="login-register" style="background-image:url(<?php echo base_url(); ?>master/adm/assets/images/alam.png);">
-<<<<<<< HEAD
-            <div class="login-box card">
-                <div class="card-body">
-                    <form class="form-horizontal form-material" id="loginform" action="<?php echo base_url('LoginAdmin/aksi_login') ?>" method="post">
-=======
             <div style="border-radius: 8%" class="login-box card">
                 <div  class="card-body">
-                    <form class="form-horizontal form-material" id="loginform" action="<?php echo base_url('LoginAdmin/aksi_login') ?>">
->>>>>>> c22aa2afd73b88a49be5f1ea1d529976416966ea
+                    <form class="form-horizontal form-material" id="loginform" action="<?php echo base_url('LoginAdmin/aksi_login') ?>" method="post">
                         <div>
                             <center>
                                 <img src="<?php echo base_url() ?>master/adm/assets/images/favicon.png">

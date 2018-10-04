@@ -1,5 +1,5 @@
 <?php $this->load->view("admin/side/head"); ?>
- <?php $this->load->view("admin/side/loader"); ?>
+ <!-- <?php $this->load->view("admin/side/loader"); ?> -->
  <?php $this->load->view("admin/side/header"); ?>
  <?php $this->load->view("admin/side/sidebar"); ?>
 
@@ -107,14 +107,13 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Contact Emplyee list</h4>
+                                <h4 class="card-title">Daftar Karyawan</h4>
                                 <h6 class="card-subtitle"></h6>
                                 <div class="table-responsive">
                                     <table id="demo-foo-addrow" class="table m-t-30 table-hover contact-list" data-page-size="10">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Foto</th>
                                                 <th>Nama</th>
                                                 <th>TTL</th>
                                                 <th>NIPA</th>
@@ -125,38 +124,24 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+
+                                            <?php 
+                                            $no = 1;
+                                            foreach ($karyaw->result() as $key) { ?>
                                             <tr>
-                                                <td>1</td>
-                                                <td>
-                                                    <a href=""><img style="height: 60px; width: 60px;" src="<?php echo base_url() ?>master/adm/assets/images/users/4.jpg" alt="user" width="100" class="img-circle" /></a>
-                                                </td>
-                                                <td>Aprian Si anak Coli</td>
-                                                <td>23 January 1999</td>
-                                                <td>E411565675677</td>
-                                                <td>Gigolo</td>
-                                                <td>Pemasaran</td>
-                                                <td>Gg.Doly Surabaya</td>
+                                                <td><?php echo $no++?></td>
+                                                <td><?php echo $key->nama_karyawan; ?></td>
+                                                <td><?php echo $key->tempat_lahir_karyawan; ?>,<?php echo $key->tanggal_lahir_karyawan; ?></td>
+                                                <td><?php echo $key->NIPA_karyawan; ?></td>
+                                                <td><?php echo $key->nama_jabatan; ?></td>
+                                                <td><?php echo $key->nama_bidang; ?></td>
+                                                <td><?php echo $key->alamat; ?></td>
                                                 <td>
                                                     <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
                                                     <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline edit-row-btn" data-toggle="tooltip" data-original-title="Edit"><i class="ti-close" aria-hidden="true"></i></button>
-
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>
-                                                    <a href=""><img style="height: 60px; width: 60px;" src="<?php echo base_url() ?>master/adm/assets/images/users/4.jpg" alt="user" width="100" class="img-circle" /></a>
-                                                </td>
-                                                <td>arijit@gmail.com</td>
-                                                <td>+234 456 789</td>
-                                                <td><span class="label label-info">Developer</span> </td>
-                                                <td>26</td>
-                                                <td>10-09-2014</td>
-                                                <td>$1800</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
-                                                </td>
-                                            
+                                            <?php } ?>
                                         </tbody>
                                         <tfoot>
                                             <tr>

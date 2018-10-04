@@ -36,6 +36,14 @@ class M_alamin extends CI_Model {
     $query = $this->db->query('SELECT * FROM automobil ORDER BY id_automobile ASC');
     return $query->result();
   }
-  
+  function select_multy(){
+    $this->db->select('karyawan.*, jabatan_karyawan.*, bidang.*');
+          $this->db->join('jabatan_karyawan', 'jabatan_karyawan.id_jabatan = karyawan.id_jabatan');
+          $this->db->join('bidang', 'bidang.id_bidang= karyawan.id_bidang');
+          $this->db->from('karyawan');
+          // $this->db->where('harga.id_harga', '1');
+          $data=$this->db->get();
+          return $data;
+  }
 
 }
