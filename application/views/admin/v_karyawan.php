@@ -64,19 +64,19 @@
                                                         <from class="form-horizontal form-material">
                                                             <div class="form-group">
                                                                 <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Type name"> </div>
+                                                                    <input type="text" class="form-control" placeholder="Nama"> </div>
                                                                 <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Email"> </div>
+                                                                    <input type="text" class="form-control" placeholder="Tempat Lahir"> </div>
                                                                 <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Phone"> </div>
+                                                                    <input type="text" class="form-control" placeholder="Tanggal Lahir"> </div>
                                                                 <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Designation"> </div>
+                                                                    <input type="text" class="form-control" placeholder="NIPA"> </div>
                                                                 <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Age"> </div>
+                                                                    <input type="text" class="form-control" placeholder="Jabatan"> </div>
                                                                 <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Date of joining"> </div>
+                                                                    <input type="text" class="form-control" placeholder="Bidang"> </div>
                                                                 <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Salary"> </div>
+                                                                    <input type="text" class="form-control" placeholder="Alamat"> </div>
                                                                 <div class="col-md-12 m-b-20">
                                                                     <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light"><span><i class="ion-upload m-r-5"></i>Upload Contact Image</span>
                                                                         <input type="file" class="upload"> </div>
