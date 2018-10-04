@@ -138,36 +138,36 @@
                                                         </blockquote>
                                                         <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success" data-toggle="modal" data-target="#edit_visimisi"> Edit</a>
                                                         <div id="edit_visimisi" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                                        <div class="modal-dialog modal-lg">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h4 class="modal-title" id="myModalLabel">Edit Visi, Misi dan Tujuan(+)</h4> 
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <from class="form-horizontal form-material">
-                                                                        <div class="form-group">
-                                                                            <div class="col-md-12 m-b-20">
-                                                                                <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Visi"></textarea>
+                                                            <div class="modal-dialog modal-lg">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title" id="myModalLabel">Edit Visi, Misi dan Tujuan(+)</h4> 
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <from class="form-horizontal form-material">
+                                                                            <div class="form-group">
+                                                                                <div class="col-md-12 m-b-20">
+                                                                                    <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Visi"></textarea>
+                                                                                </div>
+                                                                                <div class="col-md-12 m-b-20">
+                                                                                    <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Misi"></textarea>
+                                                                                </div>
+                                                                                <div class="col-md-12 m-b-20">
+                                                                                    <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"></textarea> 
+                                                                                </div>
                                                                             </div>
-                                                                            <div class="col-md-12 m-b-20">
-                                                                                <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Misi"></textarea>
-                                                                            </div>
-                                                                            <div class="col-md-12 m-b-20">
-                                                                                <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"></textarea> 
-                                                                            </div>
-                                                                        </div>
-                                                                    </from>
+                                                                        </from>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
-                                                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                                                                </div>
+                                                                <!-- /.modal-content -->
                                                             </div>
-                                                            <!-- /.modal-content -->
-                                                        </div>
                                                                 <!-- /.modal-dialog -->
-                                                    </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -225,7 +225,40 @@
                                     Lorem ipsum dolor sit amet, this is a consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                                 </p>
                                 <div class="d-flex">
-                                    <div class="col-lg-12">  <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit</a></div>
+                                    <div class="col-lg-12">  
+                                        <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success" data-toggle="modal" data-target="#edit_sejarah"> Edit</a>
+                                        <div id="edit_sejarah" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="myModalLabel">Edit Sejarah Sekolah(+)</h4> 
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <from class="form-horizontal form-material">
+                                                            <div class="form-group">
+                                                                <div class="col-md-12 m-b-20">
+                                                                    <input type="text" class="form-control" id="exampleInputname1" placeholder="Judul">
+                                                                </div>
+                                                                <div class="col-md-12 m-b-20">
+                                                                    <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Isi Sejarah"></textarea>
+                                                                </div>
+                                                                <div class="col-md-12 m-b-20">
+                                                                    <input style="width: 5%" type="file" id="input-file-now" class="dropify" />
+                                                                </div>
+                                                            </div>
+                                                        </from>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                                <!-- /.modal-dialog -->
+                                        </div>
+                                    </div>
                                     
                                 </div>
                             </div>
@@ -278,4 +311,49 @@
  </div>
  <?php $this->load->view("admin/side/footer"); ?>
  <?php $this->load->view("admin/side/js"); ?>
+
+ <!-- jQuery file upload -->
+    <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/js/dropify.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Basic
+        $('.dropify').dropify();
+
+        // Translated
+        $('.dropify-fr').dropify({
+            messages: {
+                default: 'Glissez-déposez un fichier ici ou cliquez',
+                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                remove: 'Supprimer',
+                error: 'Désolé, le fichier trop volumineux'
+            }
+        });
+
+        // Used events
+        var drEvent = $('#input-file-events').dropify();
+
+        drEvent.on('dropify.beforeClear', function(event, element) {
+            return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+        });
+
+        drEvent.on('dropify.afterClear', function(event, element) {
+            alert('File deleted');
+        });
+
+        drEvent.on('dropify.errors', function(event, element) {
+            console.log('Has Errors');
+        });
+
+        var drDestroy = $('#input-file-to-destroy').dropify();
+        drDestroy = drDestroy.data('dropify')
+        $('#toggleDropify').on('click', function(e) {
+            e.preventDefault();
+            if (drDestroy.isDropified()) {
+                drDestroy.destroy();
+            } else {
+                drDestroy.init();
+            }
+        })
+    });
+    </script>
 </html>

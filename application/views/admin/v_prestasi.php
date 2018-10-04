@@ -70,7 +70,7 @@
                                                     <div class="col-md-12 m-b-20">
                                                         <input type="text" class="form-control" placeholder="Nama Pembimbing"> </div>
                                                     <div class="col-md-12 m-b-20">
-                                                         <input type="file" id="input-file-now" class="dropify" />
+                                                         <input style="width: 5%" type="file" id="input-file-now" class="dropify" />
                                                     </div>
                                                 </div>
                                             </from>
