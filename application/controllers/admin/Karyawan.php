@@ -5,6 +5,7 @@ class Karyawan extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('admin/v_karyawan');
+		$data['karyaw']=$this->M_alamin->select_multy();
+		$this->load->view('admin/v_karyawan',$data);
 	}
 }
