@@ -21,8 +21,8 @@
     </div>
     <section id="wrapper">
         <div class="login-register" style="background-image:url(<?php echo base_url(); ?>master/adm/assets/images/alam.png);">
-            <div class="login-box card">
-                <div class="card-body">
+            <div style="border-radius: 8%" class="login-box card">
+                <div  class="card-body">
                     <form class="form-horizontal form-material" id="loginform" action="<?php echo base_url('LoginAdmin/aksi_login') ?>">
                         <div>
                             <center>
