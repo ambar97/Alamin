@@ -136,33 +136,40 @@
                                                         <blockquote class="m-t-10">
                                                             inilah isi dari visi sekolah
                                                         </blockquote>
-                                                        <a style="float: right; margin-bottom: 30px;" href="" class="btn btn-success" data-toggle="modal" data-target="#tambah_galeri"> Edit</a>
+                                                        <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success" data-toggle="modal" data-target="#edit_visimisi"> Edit</a>
+                                                        <div id="edit_visimisi" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h4 class="modal-title" id="myModalLabel">Edit Visi, Misi dan Tujuan(+)</h4> 
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <from class="form-horizontal form-material">
+                                                                        <div class="form-group">
+                                                                            <div class="col-md-12 m-b-20">
+                                                                                <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Visi"></textarea>
+                                                                            </div>
+                                                                            <div class="col-md-12 m-b-20">
+                                                                                <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Misi"></textarea>
+                                                                            </div>
+                                                                            <div class="col-md-12 m-b-20">
+                                                                                <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"></textarea> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </from>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.modal-content -->
+                                                        </div>
+                                                                <!-- /.modal-dialog -->
+                                                    </div>
                                                     </div>
                                                 </div>
-                                                <div class="modal-body">
-                                            <from class="form-horizontal form-material">
-                                                <div class="form-group">
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Type name"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Email"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Phone"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Designation"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Age"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Date of joining"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Salary"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light"><span><i class="ion-upload m-r-5"></i>Upload Contact Image</span>
-                                                            <input type="file" class="upload"> </div>
-                                                    </div>
-                                                </div>
-                                            </from>
-                                        </div>
                                             </div>
                                         </div>
                                     </div>

@@ -48,13 +48,48 @@
                     </div>
                     <div class="card-body">
                         <div class="message-box contact-box">
-                            <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark">+</button></h2>
+                            <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark" data-toggle="modal" data-target="#tambah_prestasi">+</button></h2>
+                            <div id="tambah_prestasi" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">Tambah prestasi (+)</h4> 
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <from class="form-horizontal form-material">
+                                                <div class="form-group">
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Nama Siswa"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Juara"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Jenis Kejuaraan"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Tingkat Kejuaraan"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Nama Pembimbing"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                         <input type="file" id="input-file-now" class="dropify" />
+                                                    </div>
+                                                </div>
+                                            </from>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                        <!-- /.modal-dialog -->
+                            </div>
                             <div class="message-widget contact-widget">
                                 <!-- Message -->
-                                <a href="#">
+                                <a>
                                     <div class="user-img"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
                                     <div class="mail-contnet">
-                                        <h5>Klik tomobol Tambah (+) untuk Menambahkan prestasi </h5></div>
+                                        <h5>Klik tombol Tambah (+) untuk Menambahkan prestasi </h5></div>
                                 </a>
                             </div>
                         </div>
@@ -144,3 +179,48 @@
  <?php $this->load->view("admin/side/js"); ?>
  <!-- ============================================================== -->
     <script src="<?php echo base_url() ?>master/adm/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+
+    <!-- jQuery file upload -->
+    <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/js/dropify.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Basic
+        $('.dropify').dropify();
+
+        // Translated
+        $('.dropify-fr').dropify({
+            messages: {
+                default: 'Glissez-déposez un fichier ici ou cliquez',
+                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                remove: 'Supprimer',
+                error: 'Désolé, le fichier trop volumineux'
+            }
+        });
+
+        // Used events
+        var drEvent = $('#input-file-events').dropify();
+
+        drEvent.on('dropify.beforeClear', function(event, element) {
+            return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+        });
+
+        drEvent.on('dropify.afterClear', function(event, element) {
+            alert('File deleted');
+        });
+
+        drEvent.on('dropify.errors', function(event, element) {
+            console.log('Has Errors');
+        });
+
+        var drDestroy = $('#input-file-to-destroy').dropify();
+        drDestroy = drDestroy.data('dropify')
+        $('#toggleDropify').on('click', function(e) {
+            e.preventDefault();
+            if (drDestroy.isDropified()) {
+                drDestroy.destroy();
+            } else {
+                drDestroy.init();
+            }
+        })
+    });
+    </script>
