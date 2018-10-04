@@ -3,9 +3,6 @@
  <?php $this->load->view("admin/side/header"); ?>
  <?php $this->load->view("admin/side/sidebar"); ?>
 
- <!-- Dropzone css -->
-<link href="<?php echo base_url() ?>master/adm/assets/plugins/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css" />
-
 <div class="page-wrapper">
             <!-- ============================================================== -->
             <!-- Container fluid  -->
@@ -45,86 +42,75 @@
                 </div>
 
 <!-- Tambah Galery -->
-                            <div class="card">
-                                <div class="card-body bg-info">
-                                    <h4 class="text-white card-title">Tambah Galery Kegiatan</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="message-box contact-box">
-                                        <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark" data-toggle="modal" data-target="#tambah_galeri">+</button></h2>
-                                        <div id="tambah_galeri" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h4 class="modal-title" id="myModalLabel">Tambah galery (+)</h4> 
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <from class="form-horizontal form-material">
-                                                            <div class="form-group">
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Type name"> </div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Email"> </div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Phone"> </div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Designation"> </div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Age"> </div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Date of joining"> </div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control" placeholder="Salary"> </div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light"><span><i class="ion-upload m-r-5"></i>Upload Contact Image</span>
-                                                                        <input type="file" class="upload"> </div>
-                                                                </div>
-                                                            </div>
-                                                        </from>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
-                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                                                    </div>
-                                                </div>
-                                                <!-- /.modal-content -->
-                                            </div>
-                                                    <!-- /.modal-dialog -->
+                <div class="card">
+                    <div class="card-body bg-info">
+                        <h4 class="text-white card-title">Tambah Galery Kegiatan</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="message-box contact-box">
+                            <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark" data-toggle="modal" data-target="#tambah_galeri">+</button></h2>
+                            <div id="tambah_galeri" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">Tambah galery (+)</h4> 
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                         </div>
-                                        <div class="message-widget contact-widget">
-                                            <!-- Message -->
-                                            <div class="col-lg-12 col-md-12">
-                                                <!-- <div class="card">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Upload Gambar Galery (+)</h4>
-                                                        <small>Maksimal ukuran upload 5 Mb.</small>
-                                                        <input type="file" id="input-file-now" class="dropify" />
-                                                        <br>
-                                                        <form>
-                                                          <div class="form-group">
-                                                            <label for="exampleInputEmail1">Judul Galery</label>
-                                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan judul">
-                                                          </div>
-                                                        </form>
-                                                    </div>
-                                                </div> -->
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Upload Gambar</h4>
-                                                        <h6 class="card-subtitle">Untuk menggunggah beberapa banyak file gambar ke dalam form</h6>
-                                                        <form action="#" class="dropzone">
-                                                            <div class="fallback">
-                                                                <input name="file" type="file" multiple />
-                                                            </div>
-                                                        </form>
+                                        <div class="modal-body">
+                                            <from class="form-horizontal form-material">
+                                                <div class="form-group">
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Type name"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Email"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Phone"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Designation"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Age"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Date of joining"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <input type="text" class="form-control" placeholder="Salary"> </div>
+                                                    <div class="col-md-12 m-b-20">
+                                                        <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light"><span><i class="ion-upload m-r-5"></i>Upload Contact Image</span>
+                                                            <input type="file" class="upload"> </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </from>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                        <!-- /.modal-dialog -->
+                            </div>
+                            <div class="message-widget contact-widget">
+                                <!-- Message -->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Upload Gambar Galery (+)</h4>
+                                            <small>Maksimal ukuran upload 5 Mb.</small>
+                                            <input type="file" id="input-file-now" class="dropify" />
+                                            <br>
+                                            <form>
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1">Judul Galery</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan judul">
+                                              </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
 <!-- List Galery -->
                 <div class="row el-element-overlay">
                     <div class="col-md-12">
@@ -194,12 +180,10 @@
   <?php $this->load->view("admin/side/footer"); ?>
  <?php $this->load->view("admin/side/js"); ?>
 
- <!-- Dropzone Plugin JavaScript -->
-    <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropzone-master/dist/dropzone.js"></script>
 
  <!-- jQuery file upload -->
-    <!-- <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/js/dropify.min.js"></script> -->
-    <!-- <script>
+    <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/js/dropify.min.js"></script>
+    <script>
     $(document).ready(function() {
         // Basic
         $('.dropify').dropify();
@@ -240,4 +224,4 @@
             }
         })
     });
-    </script> -->
+    </script>
