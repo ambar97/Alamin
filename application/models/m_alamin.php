@@ -36,5 +36,6 @@ class M_alamin extends CI_Model {
     $query = $this->db->query('SELECT * FROM automobil ORDER BY id_automobile ASC');
     return $query->result();
   }
+  
 
 }

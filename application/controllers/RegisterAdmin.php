@@ -19,7 +19,7 @@ class RegisterAdmin extends CI_Controller {
        	$username = $this -> input -> post ('username');
         $pass = $this -> input -> post ('pass');
         $data = array(
-        'NIPA_karyawan'=>$NIPA,
+        'karyawan_NIPA_karyawan'=>$NIPA,
         'username_admin'=>$username,
         'password_admin'=>md5($pass)
         );

@@ -44,13 +44,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- ============================================================== -->
-                <!-- End Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <!-- Row -->
             <div class="col-lg-12">
                 <div class="row">
                     <div class="col-lg-4 col-md-4">
@@ -74,8 +67,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Column -->
-                    <!-- Column -->
                     <div class="col-lg-4 col-md-4">
                         <div class="card card-inverse card-success">
                             <div class="card-body">
@@ -97,8 +88,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Column -->
-                    <!-- Column -->
                     <div class="col-lg-4 col-md-4">
                         <div class="card">
                             <img class="" src="<?php echo base_url() ?>master/adm/assets/images/background/weatherbg.jpg" alt="Card image cap">
@@ -173,7 +162,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="settings" role="tabpanel">
