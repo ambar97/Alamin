@@ -133,11 +133,12 @@
                                                 <div class="sl-left"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/4.jpg" alt="user" class="img-circle"> </div>
                                                 <div class="sl-right">
                                                     <div><a href="" class="link">Visi Sekolah Sdaba02</a><!--  <span class="sl-date">5 minutes ago</span> -->
+                                                        <?php foreach ($vmt->result() as $key) { ?>
                                                         <blockquote class="m-t-10">
-                                                            inilah isi dari visi sekolah
+                                                            <?php echo $key->visi; ?>
                                                         </blockquote>
                                                         <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success" data-toggle="modal" data-target="#edit_visimisi"> Edit</a>
-                                                        <div id="edit_visimisi" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                        <div id="edit_visimisi" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" method="post">
                                                             <div class="modal-dialog modal-lg">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
@@ -145,29 +146,34 @@
                                                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                        <from class="form-horizontal form-material">
+                                                                        <from class="form-horizontal form-material" method="post" action="<?php echo base_url('admin/Dashboard/e_visi') ?>">
                                                                             <div class="form-group">
                                                                                 <div class="col-md-12 m-b-20">
-                                                                                    <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Visi"></textarea>
+                                                                                    <p>Visi</p>
+                                                                                    <textarea name="visi" class="form-control" id="exampleTextarea" rows="4" placeholder="Visi"><?php echo $key->visi; ?></textarea>
                                                                                 </div>
                                                                                 <div class="col-md-12 m-b-20">
-                                                                                    <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Misi"></textarea>
+                                                                                    <p>Misi</p>
+                                                                                    <textarea name="misi" class="form-control" id="exampleTextarea" rows="4" placeholder="Misi"><?php echo $key->misi; ?></textarea>
                                                                                 </div>
                                                                                 <div class="col-md-12 m-b-20">
-                                                                                    <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"></textarea> 
+                                                                                    <p>Tujuan</p>
+                                                                                    <textarea name="tujuan" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->tujuan; ?></textarea> 
                                                                                 </div>
+                                                                            </div>
+                                                                            <div style="float: right;">
+                                                                        <button type="submit" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
                                                                             </div>
                                                                         </from>
                                                                     </div>
-                                                                    <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
-                                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                                 <!-- /.modal-content -->
                                                             </div>
                                                                 <!-- /.modal-dialog -->
                                                         </div>
+                                                    <?php }?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -182,10 +188,12 @@
                                                 <div class="sl-left"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/4.jpg" alt="user" class="img-circle"> </div>
                                                 <div class="sl-right">
                                                     <div><a href="" class="link">Misi Sekolah Sdaba02</a><!--  <span class="sl-date">5 minutes ago</span> -->
+                                                        <?php foreach ($vmt->result() as $key) { ?>
                                                         <blockquote class="m-t-10">
-                                                            inilah isi dari visi sekolah
+                                                            <?php echo $key->misi; ?>
                                                         </blockquote>
                                                         <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit</a>
+                                                    <?php } ?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -199,10 +207,12 @@
                                                 <div class="sl-left"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/4.jpg" alt="user" class="img-circle"> </div>
                                                 <div class="sl-right">
                                                     <div><a href="" class="link">Tujuan Sekolah Sdaba02</a><!--  <span class="sl-date">5 minutes ago</span> -->
+                                                        <?php foreach ($vmt->result() as $key) { ?>
                                                         <blockquote class="m-t-10">
-                                                            inilah isi dari visi sekolah
+                                                            <?php echo $key->tujuan; ?>
                                                         </blockquote>
                                                         <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit</a>
+                                                    <?php } ?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -356,4 +366,7 @@
         })
     });
     </script>
+     <?php if ($this->session->flashdata()) { ?>
+                        <?php echo $this->session->flashdata('Pesan'); ?></div>                    
+                    <?php } ?>
 </html>

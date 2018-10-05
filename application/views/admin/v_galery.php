@@ -115,7 +115,7 @@
                 <div class="row el-element-overlay">
                     <div class="col-md-12">
                         <h4 class="card-title">Galery</h4>
-                        <h6 class="card-subtitle m-b-20 text-muted">You can use by default </h6> </div>
+                        <h6 class="card-subtitle m-b-20 text-muted">Klik tanda (x) untuk menghapus </h6> </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="card">
                             <div class="el-card-item">
