@@ -33,6 +33,40 @@
 						</span>
 					</span>
 					<br>
+					<div class="col-12 col-sm-6 col-lg-12 product">
+						<br>
+						<h1>Program Kerja</h1>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Penanggung Jawab</th>
+									<th>Program Kerja</th>
+									<th>asdasd</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>asdasd</td>
+									<td>asdasd</td>
+									<td>asdasd</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>asdasd</td>
+									<td>asdasd</td>
+									<td>asdasd</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>asdasd</td>
+									<td>asdasd</td>
+									<td>asdasd</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 				<div class="col-lg-3">
 					<h2 style="font-weight: bold;">Detail Lainnya</h2>
@@ -90,72 +124,40 @@
 		                <a href="#" class="btn btn-lg btn-primary">Vote</a>
 		                <a href="#" class="btn btn-lg btn-primary">View result</a><br>
 		            </div>
-				</div>
-				<div class="col-12 col-sm-6 col-lg-12 product">
-					<br>
-					<h1>Program Kerja</h1>
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th>
-									#
-								</th>
-								<th>
-									Penanggung Jawab
-								</th>
-								<th>
-									Program Kerja
-								</th>
-								<th>
-									asdasd
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									1
-								</td>
-								<td>
-									asdasd
-								</td>
-								<td>
-									asdasd
-								</td>
-								<td>
-									asdasd
-								</td>
-							</tr>
-							<tr>
-								<td>
-									2
-								</td>
-								<td>
-									asdasd
-								</td>
-								<td>
-									asdasd
-								</td>
-								<td>
-									asdasd
-								</td>
-							</tr>
-							<tr>
-								<td>
-									3
-								</td>
-								<td>
-									asdasd
-								</td>
-								<td>
-									asdasd
-								</td>
-								<td>
-									asdasd
-								</td>
-							</tr>
-						</tbody>
-					</table>
+		            <!-- <div class="col-12 col-sm-6 col-lg-12 product">
+						<br>
+						<h1>Program Kerja</h1>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Penanggung Jawab</th>
+									<th>Program Kerja</th>
+									<th>asdasd</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>asdasd</td>
+									<td>asdasd</td>
+									<td>asdasd</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>asdasd</td>
+									<td>asdasd</td>
+									<td>asdasd</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>asdasd</td>
+									<td>asdasd</td>
+									<td>asdasd</td>
+								</tr>
+							</tbody>
+						</table>
+					</div> -->
 				</div>
 			</div>
 		</div>
