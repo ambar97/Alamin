@@ -24,15 +24,14 @@
 			<div class="row">
 				<div class="col-12 col-sm-6 col-lg-8 product">
 					<span class="product-thumb-info">
-							<span>
-								<img alt="" class="img-fluid" src="<?php echo base_url(); ?>master/client/img/products/product-2.jpg">
-							</span>
-						</a>
+						<span>
+							<img alt="" class="img-fluid" src="<?php echo base_url(); ?>master/client/img/products/product-2.jpg">
+						</span>
 						<span class="product-thumb-info-content">
-								<h4>Foto Judul</h4>
-								<span class="price">
-									<span class="amount">NIPA: 002211334654</span>
-								</span>
+							<h4>Foto Judul</h4>
+							<span class="price">
+								<span class="amount">NIPA: 002211334654</span>
+							</span>
 						</span>
 					</span>
 					<br>
