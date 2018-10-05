@@ -17,7 +17,7 @@ class RegisterAdmin extends CI_Controller {
 		if(isset($_POST['btnSimpan'])){
         $NIPA = $this -> input -> post ('nipa');
        	$username = $this -> input -> post ('username');
-        $pass = $this -> input -> post ('pass');
+        $pass = $this -> input -> post ('password');
         $data = array(
         'karyawan_NIPA_karyawan'=>$NIPA,
         'username_admin'=>$username,
