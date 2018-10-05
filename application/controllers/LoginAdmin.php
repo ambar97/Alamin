@@ -10,6 +10,7 @@ function __construct()
     }
 	public function index()
 	{
+		
 		$this->load->view('admin/v_login_adm');
 	}
 	function aksi_login(){
@@ -35,5 +36,9 @@ function __construct()
 			$this->session->set_flashdata("Pesan",$this->core->alert_time("Username & Password tidak terdaftar"));
 			redirect(base_url("Loginadmin"));
 		}
+	}
+	function logout(){
+		$this->session->sess_destroy();
+		redirect(base_url('LoginAdmin'));
 	}
 }

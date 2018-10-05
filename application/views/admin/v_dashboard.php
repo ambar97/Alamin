@@ -107,6 +107,65 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-12 col-xlg-12 col-md-12">
+                                        <h4 class="m-b-20">Visi, Misi & Tujuan</h4>
+                        <div class="card">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs profile-tab" role="tablist">
+                                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Visi</a> </li>
+                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Misi</a> </li>
+                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Tujuan</a> </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="home" role="tabpanel">
+                                    <div class="card-body">
+                                        <div class="profiletimeline">
+                                            <div class="sl-item">
+                                                <div class="sl-left"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/4.jpg" alt="user" class="img-circle"> </div>
+                                                <div class="sl-right">
+                                                    <div><a href="" class="link">Visi Sekolah Sdaba02</a><!--  <span class="sl-date">5 minutes ago</span> -->
+                                                        <?php foreach ($vmt->result() as $key) { ?>
+                                                        <blockquote class="m-t-10">
+                                                            <?php echo $key->visi; ?>
+                                                        </blockquote>
+                                                        <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success" data-toggle="modal" data-target="#edit_visimisi"> Edit</a>
+                                                        <div id="edit_visimisi" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" method="post">
+                                                            <div class="modal-dialog modal-lg">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title" id="myModalLabel">Edit Visi, Misi dan Tujuan(+)</h4> 
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <from class="form-horizontal form-material" method="post" action="<?php echo base_url('admin/Dashboard/e_visi') ?>">
+                                                                            <div class="form-group">
+                                                                                <div class="col-md-12 m-b-20">
+                                                                                    <p>Visi</p>
+                                                                                    <textarea name="visi" class="form-control" id="exampleTextarea" rows="4" placeholder="Visi"><?php echo $key->visi; ?></textarea>
+                                                                                </div>
+                                                                                <div class="col-md-12 m-b-20">
+                                                                                    <p>Misi</p>
+                                                                                    <textarea name="misi" class="form-control" id="exampleTextarea" rows="4" placeholder="Misi"><?php echo $key->misi; ?></textarea>
+                                                                                </div>
+                                                                                <div class="col-md-12 m-b-20">
+                                                                                    <p>Tujuan</p>
+                                                                                    <textarea name="tujuan" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->tujuan; ?></textarea> 
+                                                                                </div>
+                                                                            </div>
+                                                                            <div style="float: right;">
+                                                                        <button type="submit" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                                                            </div>
+                                                                        </from>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                <!-- /.modal-content -->
+=======
         </div>
 
         <div class="row">
@@ -158,9 +217,14 @@
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
                                                                 <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+>>>>>>> 93ca23785052cece230e2084eae5a62d960b3e73
                                                             </div>
                                                         </div>
+<<<<<<< HEAD
+                                                    <?php }?>
+=======
                                                         <!-- /.modal-content -->
+>>>>>>> 93ca23785052cece230e2084eae5a62d960b3e73
                                                     </div>
                                                         <!-- /.modal-dialog -->
                                                 </div>
@@ -168,6 +232,24 @@
                                         </div>
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <!--second tab-->
+                                <div class="tab-pane" id="profile" role="tabpanel">
+                                    <div class="card-body">
+                                            <div class="profiletimeline">
+                                            <div class="sl-item">
+                                                <div class="sl-left"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/4.jpg" alt="user" class="img-circle"> </div>
+                                                <div class="sl-right">
+                                                    <div><a href="" class="link">Misi Sekolah Sdaba02</a><!--  <span class="sl-date">5 minutes ago</span> -->
+                                                        <?php foreach ($vmt->result() as $key) { ?>
+                                                        <blockquote class="m-t-10">
+                                                            <?php echo $key->misi; ?>
+                                                        </blockquote>
+                                                        <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit</a>
+                                                    <?php } ?>
+                                                    </div>
+                                                </div>
+=======
                             </div>
                         </div>
                         <!--second tab-->
@@ -182,10 +264,28 @@
                                                     inilah isi dari visi sekolah
                                                 </blockquote>
                                                 <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit</a>
+>>>>>>> 93ca23785052cece230e2084eae5a62d960b3e73
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="tab-pane" id="settings" role="tabpanel">
+                                    <div class="card-body">
+                                        <div class="profiletimeline">
+                                            <div class="sl-item">
+                                                <div class="sl-left"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/4.jpg" alt="user" class="img-circle"> </div>
+                                                <div class="sl-right">
+                                                    <div><a href="" class="link">Tujuan Sekolah Sdaba02</a><!--  <span class="sl-date">5 minutes ago</span> -->
+                                                        <?php foreach ($vmt->result() as $key) { ?>
+                                                        <blockquote class="m-t-10">
+                                                            <?php echo $key->tujuan; ?>
+                                                        </blockquote>
+                                                        <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit</a>
+                                                    <?php } ?>
+                                                    </div>
+                                                </div>
+=======
                             </div>
                         </div>
                         <div class="tab-pane" id="settings" role="tabpanel">
@@ -199,6 +299,7 @@
                                                     inilah isi dari visi sekolah
                                                 </blockquote>
                                                 <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit</a>
+>>>>>>> 93ca23785052cece230e2084eae5a62d960b3e73
                                             </div>
                                         </div>
                                     </div>
@@ -378,4 +479,7 @@
         })
     });
     </script>
+     <?php if ($this->session->flashdata()) { ?>
+                        <?php echo $this->session->flashdata('Pesan'); ?></div>                    
+                    <?php } ?>
 </html>
