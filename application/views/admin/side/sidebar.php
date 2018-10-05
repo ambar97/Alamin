@@ -33,15 +33,15 @@
                         </li>
                         <li class="nav-devider"></li>
                         <li class="nav-small-cap">Profile</li>
-                        <li> <a class="" href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Sarpras</span></a>
+                        <li> <a class="<?php if($this->uri->segment('2')=="Sarpras"){ echo "active";}?>" href="<?php echo base_url("admin/Sarpras") ?>" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Sarpras</span></a>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Struktur & Personalia</span></a>
+                        <li> <a class="<?php if($this->uri->segment('2')=="StrukturPers"){ echo "active";}?>has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Struktur & Personalia</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="table-basic.html">Kepala Sekolah</a></li>
-                                <li><a href="table-layout.html">Tata Usaha</a></li>
-                                <li><a href="table-data-table.html">Kesiswaan</a></li>
-                                <li><a href="table-footable.html">Kurukulum</a></li>
-                                <li><a href="table-jsgrid.html">Sapras & Humas</a></li>
+                                <li><a href="<?php echo base_url("admin/StrukturPers/Kepsek") ?>">Kepala Sekolah</a></li>
+                                <li><a href="<?php echo base_url("admin/StrukturPers/TataUsaha") ?>">Tata Usaha</a></li>
+                                <li><a href="<?php echo base_url("admin/StrukturPers/Kesiswaan") ?>">Kesiswaan</a></li>
+                                <li><a href="<?php echo base_url("admin/StrukturPers/Kurikulum") ?>">Kurikulum</a></li>
+                                <li><a href="<?php echo base_url("admin/StrukturPers/SarprasHum") ?>">Sapras & Humas</a></li>
                             </ul>
                         </li>
                         <li> <a class="" href="#" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Ekstrakurikuler</span></a>
