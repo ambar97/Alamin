@@ -65,17 +65,23 @@
                                                 <div class="form-group">
                                                     <h6>Jabatan</h6>
                                                     <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="jabatan_k">
-                                                        <option value="Category 1">Kepala Sekolah</option>
-                                                        <option value="Category 2">1236</option>
+                                                        <option disabled=""> Pilih Jabatan</option>
+                                                        <?php foreach ($jabatan->result() as $jbt) { ?>
+                                                        <option value="<?php echo $jbt->id_jabatan; ?>"><?php echo $jbt->nama_jabatan; ?></option>
+                                                    <?php }?>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-md-12 m-b-20">
                                                 <div class="form-group">
+
                                                     <h6>Bidang</h6>
                                                     <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="bidang_k">
-                                                        <option value="Category 1">121</option>
-                                                        <option value="Category 2">Karyawan</option>
+                                                        <option disabled="" >Pilih Bidang</option>
+                                                        <?php foreach ($bidang->result() as $bid) { ?>
+                                                        <option value="<?php echo $bid->id_bidang; ?>"><?php echo $bid->nama_bidang; ?></option>
+                                                        <?php } ?>
+                                                    
                                                     </select>
                                                 </div>
                                             </div>
@@ -143,9 +149,10 @@
                                         <td><?php echo $key->nama_bidang; ?></td>
                                         <td><?php echo $key->alamat; ?></td>
                                         <td>
-                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
-                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline edit-row-btn" data-toggle="tooltip" data-original-title="Edit"><i class="ti-close" aria-hidden="true"></i></button>
-                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn" data-toggle="tooltip" data-original-title="View"><i class="ti-close" aria-hidden="true"></i></button>
+                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn" data-toggle="tooltip" data-original-title="View"><i class="mdi mdi-eye" aria-hidden="true"></i></button>
+                                            <a href="<?php echo base_url('admin/Karyawan/d_karyawan/'.$key->NIPA_karyawan) ?>">
+                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="mdi mdi-close" aria-hidden="true"></i></button></a>
+                                            
                                         </td>
                                     </tr>
                                     <?php } ?>
