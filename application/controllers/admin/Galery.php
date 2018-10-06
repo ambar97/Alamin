@@ -34,7 +34,7 @@ class Galery extends CI_Controller {
         $insert_data = $this->db->insert('galeri',$data);
       }
       if ($insert_data) {
-        redirect(base_url().'index.php/admin/Galery');
+        redirect(base_url().'admin/Galery');
        } else{
         echo "string";
        }
@@ -48,10 +48,6 @@ class Galery extends CI_Controller {
     $hapus = $this -> M_alamin -> delete($where,'galeri');
     if($hapus){
     header('location:'.base_url('index.php/admin/Galery')); ?>
-    <div class="alert bg-red">
-               Lorem ipsum dolor sit amet, id fugit tollit pro, illud nostrud aliquando ad est, quo e sse dolorum id
-         </div>
-
             <?php
     }else{
       header('location:'.base_url('index.php/admin/Galery'));

@@ -55,40 +55,40 @@
                         </h2>
                         <div class="message-widget contact-widget">
                             <!-- Message -->
-                        <form autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/admin/Galery/create'; ?>" enctype="multipart/form-data">
-                            <div class="col-lg-12 col-md-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Upload Gambar Galery (+)</h4>
-                                        <small>Maksimal ukuran upload 5 Mb.</small>
-                                        <input type="file" id="input-file-now" class="dropify" name="gambar_galeri" />
-                                        <br>
-                                        <form>
-                                          <div class="form-group">
-                                            <label>Judul Galery</label>
-                                            <input type="text" class="form-control" placeholder="Masukan judul" name="judul_galeri">
-                                          </div>
-                                          <div class="form-group">
-                                            <label>Deskripsi Galery</label>
-                                            <textarea type="textarea" rows="4" class="form-control" placeholder="Masukan deskripsi" name="deskripsi_galeri"></textarea>
-                                          </div>
-                                          <button class="btn btn-success" style="float: right;" name="btnSimpan">Simpan</button>
-                                        </form>
+                            <form autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/admin/Galery/create'; ?>" enctype="multipart/form-data">
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Upload Gambar Galery (+)</h4>
+                                            <small>Maksimal ukuran upload 5 Mb.</small>
+                                            <input type="file" id="input-file-now" class="dropify" name="gambar_galeri" />
+                                            <br>
+                                            <form>
+                                              <div class="form-group">
+                                                <label>Judul Galery</label>
+                                                <input type="text" class="form-control" placeholder="Masukan judul" name="judul_galeri">
+                                              </div>
+                                              <div class="form-group">
+                                                <label>Deskripsi Galery</label>
+                                                <textarea type="textarea" rows="4" class="form-control" placeholder="Masukan deskripsi" name="deskripsi_galeri"></textarea>
+                                              </div>
+                                              <button class="btn btn-success" style="float: right;" name="btnSimpan">Simpan</button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             </form>
                         </div>
-                    
                     </div>
                 </div>
             
         </div>
 <!-- List Galery -->
-                <div class="row el-element-overlay">
-                    <div class="col-md-12">
-                        <h4 class="card-title">Galery</h4>
-                        <h6 class="card-subtitle m-b-20 text-muted">Klik tanda (x) untuk menghapus </h6> </div>
+            <div class="row el-element-overlay">
+                <div class="col-md-12">
+                    <h4 class="card-title">Galery</h4>
+                    <h6 class="card-subtitle m-b-20 text-muted">Klik tanda (x) untuk menghapus </h6> 
+                </div>
                 <?php foreach ($galery->result() as $s) {?>
                     <div class="col-lg-3 col-md-6">
                         <div class="card">

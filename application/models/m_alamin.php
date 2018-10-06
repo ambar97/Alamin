@@ -49,5 +49,4 @@ class M_alamin extends CI_Model {
       return $this->db->query('SELECT * FROM galeri ORDER BY id_galeri DESC');
       return $query->result ();
   }
-
 }
