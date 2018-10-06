@@ -18,10 +18,11 @@ class Dashboard extends CI_Controller {
 		// }
 	}
 	public function e_visi(){
-		$id=$this->uri->segment(4);
+		$id['id_visi_misi']=$this->input->post('id_visi_misi');
 		$data['visi'] = $this->input->post('visi');
 		$data['misi'] = $this->input->post('misi');
 		$data['tujuan'] = $this->input->post('tujuan');
-		$this->M_alamin->update('visi_misi', $data, array('id_harga' => $id));
+		$this->M_alamin->update('visi_misi', $data, $id);
+		header('location:'.base_url().'admin/Dashboard');
 	}
 }
