@@ -96,8 +96,9 @@
 
     </div>
 </div>
-  <?php $this->load->view("admin/side/footer"); ?>
- <?php $this->load->view("admin/side/js"); ?>
+
+<?php $this->load->view("admin/side/footer"); ?>
+<?php $this->load->view("admin/side/js"); ?>
 
 
  <!-- jQuery file upload -->
