@@ -18,15 +18,15 @@ class Karyawan extends CI_Controller {
 	public function t_karyawan(){
 		$Nipa = $this -> input -> post ('nipa_k');
         $nama_k = $this -> input -> post ('nama_k');
-        // $jabatan_k = $this -> input -> post ('jabatan_k');
-        // $bidang_k = $this -> input -> post ('bidang_k');
+        $jabatan_k = $this -> input -> post ('jabatan_k');
+        $bidang_k = $this -> input -> post ('bidang_k');
         $alamat_k = $this -> input -> post ('alamat_k');
         $TL_k = $this -> input -> post ('tl_k');
         $tempat_k = $this -> input -> post ('tempat_k');
         $foto = $_FILES['gambar']['name'];
 
         if ($foto='') {} else {
-        	$config['upload_path']='./gambar/karyawan';
+        	$config['upload_path']='./galery/karyawan';
         	$config['alowed_types']='jpg|gif|png';
 
         	$this->load->library('upload',$config);
@@ -49,6 +49,12 @@ class Karyawan extends CI_Controller {
         	redirect(base_url().'admin/Karyawan');
         }
         
+    }
+    public function d_karyawan(){
+    	$id=$this->uri->segment(4);
+		$deletebyid=array('id_berita'=>$id);
+		$this->suzuki_model->delete($deletebyid,'berita');
+		header('location:'.base_url().'admin/berita');
     }
 
 }

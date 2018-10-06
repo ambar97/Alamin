@@ -65,7 +65,7 @@
                                                 <div class="form-group">
                                                     <h6>Jabatan</h6>
                                                     <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="jabatan_k">
-                                                        <option value="Category 1">Kepala Sekolah</option>
+                                                        <option value="131">Kepala Sekolah</option>
                                                         <option value="Category 2">1236</option>
                                                     </select>
                                                 </div>
@@ -74,7 +74,7 @@
                                                 <div class="form-group">
                                                     <h6>Bidang</h6>
                                                     <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="bidang_k">
-                                                        <option value="Category 1">121</option>
+                                                        <option value="121">Kepala Sekolah</option>
                                                         <option value="Category 2">Karyawan</option>
                                                     </select>
                                                 </div>
@@ -144,7 +144,6 @@
                                         <td><?php echo $key->alamat; ?></td>
                                         <td>
                                             <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
-                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline edit-row-btn" data-toggle="tooltip" data-original-title="Edit"><i class="ti-close" aria-hidden="true"></i></button>
                                             <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn" data-toggle="tooltip" data-original-title="View"><i class="ti-close" aria-hidden="true"></i></button>
                                         </td>
                                     </tr>
