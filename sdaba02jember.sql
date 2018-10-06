@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2018 at 06:48 AM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Generation Time: Oct 06, 2018 at 10:32 AM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 5.6.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -65,8 +65,8 @@ CREATE TABLE `bidang` (
 --
 
 CREATE TABLE `denah_sekolah` (
-  `judul_denah` varchar(255) NOT NULL,
   `id_denah` varchar(45) NOT NULL,
+  `judul_denah` varchar(255) NOT NULL,
   `gambar_denah` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -158,6 +158,7 @@ CREATE TABLE `kategori_juara` (
 --
 
 CREATE TABLE `kontak` (
+  `id_kontak` int(9) NOT NULL,
   `alamat` varchar(255) NOT NULL,
   `telepon` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL
@@ -246,6 +247,7 @@ CREATE TABLE `sarana_prasarana` (
 --
 
 CREATE TABLE `sejarah` (
+  `id_sejarah` int(9) NOT NULL,
   `judul_sejarah` varchar(255) NOT NULL,
   `isi_sejarah` varchar(255) NOT NULL,
   `id_gambar` int(9) NOT NULL,
@@ -270,10 +272,18 @@ CREATE TABLE `status_dibaca` (
 --
 
 CREATE TABLE `visi_misi` (
+  `id_visi_misi` int(9) NOT NULL,
   `visi` varchar(255) NOT NULL,
   `misi` varchar(255) NOT NULL,
   `tujuan` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `visi_misi`
+--
+
+INSERT INTO `visi_misi` (`id_visi_misi`, `visi`, `misi`, `tujuan`) VALUES
+(2, 'asd', 'qwe', 'zxc');
 
 --
 -- Indexes for dumped tables
@@ -343,6 +353,12 @@ ALTER TABLE `kategori_juara`
   ADD PRIMARY KEY (`id_juara`);
 
 --
+-- Indexes for table `kontak`
+--
+ALTER TABLE `kontak`
+  ADD PRIMARY KEY (`id_kontak`);
+
+--
 -- Indexes for table `kritik_saran`
 --
 ALTER TABLE `kritik_saran`
@@ -383,10 +399,22 @@ ALTER TABLE `sarana_prasarana`
   ADD PRIMARY KEY (`id_sarana_prasarana`);
 
 --
+-- Indexes for table `sejarah`
+--
+ALTER TABLE `sejarah`
+  ADD PRIMARY KEY (`id_sejarah`);
+
+--
 -- Indexes for table `status_dibaca`
 --
 ALTER TABLE `status_dibaca`
   ADD PRIMARY KEY (`id_status_dibaca`);
+
+--
+-- Indexes for table `visi_misi`
+--
+ALTER TABLE `visi_misi`
+  ADD PRIMARY KEY (`id_visi_misi`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -441,6 +469,12 @@ ALTER TABLE `kategori_juara`
   MODIFY `id_juara` int(9) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `kontak`
+--
+ALTER TABLE `kontak`
+  MODIFY `id_kontak` int(9) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `kritik_saran`
 --
 ALTER TABLE `kritik_saran`
@@ -477,10 +511,22 @@ ALTER TABLE `sarana_prasarana`
   MODIFY `id_sarana_prasarana` int(9) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `sejarah`
+--
+ALTER TABLE `sejarah`
+  MODIFY `id_sejarah` int(9) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `status_dibaca`
 --
 ALTER TABLE `status_dibaca`
   MODIFY `id_status_dibaca` int(9) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `visi_misi`
+--
+ALTER TABLE `visi_misi`
+  MODIFY `id_visi_misi` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
