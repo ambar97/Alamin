@@ -45,5 +45,9 @@ class M_alamin extends CI_Model {
           $data=$this->db->get();
           return $data;
   }
+  function get_galery(){
+      return $this->db->query('SELECT * FROM galeri ORDER BY id_galeri DESC');
+      return $query->result ();
+  }
 
 }
