@@ -146,6 +146,7 @@
                                         <td>
                                             <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
                                             <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline edit-row-btn" data-toggle="tooltip" data-original-title="Edit"><i class="ti-close" aria-hidden="true"></i></button>
+                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn" data-toggle="tooltip" data-original-title="View"><i class="ti-close" aria-hidden="true"></i></button>
                                         </td>
                                     </tr>
                                     <?php } ?>
