@@ -47,7 +47,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                      <h4 class="modal-title" id="myModalLabel">Tambah data karyawan (+)</h4> 
-                                    <button type="button" class="close" aria-hidden="true">×</button>
+                                    <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
                                 </div>
                                 <div class="modal-body">
                                     <form class="form-horizontal form-material" method="post" action="<?php echo base_url("admin/Karyawan/t_karyawan")?>">
