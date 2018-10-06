@@ -100,7 +100,7 @@
                                 </div>
                                 <div class="el-card-content">
                                      <small><?php echo $s -> judul_galeri; ?></small>
-                                     <a href="<?php echo base_url('index.php/admin/Galery/hapus/'.$s-> id_galeri) ?>">
+                                     <a href="<?php echo base_url('admin/Galery/hapus/'.$s-> id_galeri) ?>">
                                          <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete">
                                             <i class="ti-close" aria-hidden="true"></i>
                                         </button>

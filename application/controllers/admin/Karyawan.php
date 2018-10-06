@@ -12,6 +12,8 @@ class Karyawan extends CI_Controller {
 	{
 
 		$data['karyaw']=$this->M_alamin->select_multy();
+		$data['bidang']=$this->M_alamin->select('bidang');
+		$data['jabatan']=$this->M_alamin->select('jabatan_karyawan');
 		$this->load->view('admin/v_karyawan',$data);
 	}
 	
@@ -31,7 +33,7 @@ class Karyawan extends CI_Controller {
 
         	$this->load->library('upload',$config);
         	if ($this->upload->do_upload('foto')) {
-        		$this->session->set_flashdata("Pesan",$this->core->alert_succes("gagal upload"));
+        		$this->session->set_flashdata("Pesan",$this->core->alert_time("gagal upload"));
         	} else {
         		$foto = $this->upload->data('file_name');
         	}
@@ -46,15 +48,21 @@ class Karyawan extends CI_Controller {
 				'gambar_karyawan' => $foto
 				);
         	$this->M_alamin->insert('karyawan',$data);
+        	$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
         	redirect(base_url().'admin/Karyawan');
         }
         
     }
-    public function d_karyawan(){
-    	$id=$this->uri->segment(4);
-		$deletebyid=array('id_berita'=>$id);
-		$this->suzuki_model->delete($deletebyid,'berita');
-		header('location:'.base_url().'admin/berita');
+    public function d_karyawan($id){
+    $where = array('NIPA_karyawan'=>$id);
+    $hapus = $this->M_alamin-> delete($where,'karyawan');
+    if($hapus){
+    	$this->session->set_flashdata("Pesan",$this->core->alert_succes("Berhasil di Hapus"));
+    header('location:'.base_url('admin/Karyawan')); 
+    }else{
+      header('location:'.base_url('admin/Karyawan'));
+      $this->session->set_flashdata("Pesan",$this->core->alert_time("gagal upload"));
+    }
     }
 
 }
