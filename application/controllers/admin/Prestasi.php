@@ -33,16 +33,17 @@ class Prestasi extends CI_Controller {
         		$foto = $this->upload->data('file_name');
         	}
         	$data = array(
-				'NIPA_karyawan' => $nama_s,
-				'nama_karyawan' => $juara_p,
-				'id_jabatan' => $nm_lomba,
-				'id_bidang' => $kategori_j,
-				'alamat' => $nm_lomba,
+				'id_prestasi' => "",
+				'nama_siswa' => $nama_s,
+				'id_juara' => $juara_p,
+				'id_lingkup_prestasi' => $kategori_j,
+				'nama_lomba' => $nm_lomba,
+                'nama_pembimbing_lomba' => $nm_bim,
 				'gambar_karyawan' => $foto
 				);
-        	$this->M_alamin->insert('karyawan',$data);
+        	$this->M_alamin->insert('prestasi',$data);
         	$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
-        	redirect(base_url().'admin/Karyawan');
+        	redirect(base_url().'admin/Prsetasi');
         }
 	}
 }
