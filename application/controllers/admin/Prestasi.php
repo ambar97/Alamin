@@ -27,19 +27,17 @@ class Prestasi extends CI_Controller {
         	$config['alowed_types']='jpg|gif|png';
 
         	$this->load->library('upload',$config);
-        	if ($this->upload->do_upload('foto')) {
+        	if (!$this->upload->do_upload('foto')) {
         		$this->session->set_flashdata("Pesan",$this->core->alert_time("gagal upload"));
         	} else {
         		$foto = $this->upload->data('file_name');
         	}
         	$data = array(
-				'NIPA_karyawan' => $Nipa,
-				'nama_karyawan' => $nama_k,
-				'id_jabatan' => $jabatan_k,
-				'id_bidang' => $bidang_k,
-				'alamat' => $alamat_k,
-				'tanggal_lahir_karyawan' => $TL_k,
-				'tempat_lahir_karyawan' => $tempat_k,
+				'NIPA_karyawan' => $nama_s,
+				'nama_karyawan' => $juara_p,
+				'id_jabatan' => $nm_lomba,
+				'id_bidang' => $kategori_j,
+				'alamat' => $nm_lomba,
 				'gambar_karyawan' => $foto
 				);
         	$this->M_alamin->insert('karyawan',$data);
