@@ -57,26 +57,26 @@
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                         </div>
                                         <div class="modal-body">
-                                            <from class="form-horizontal form-material">
+                                            <form class="form-horizontal form-material" autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/admin/Prestasi/create'; ?>" enctype="multipart/form-data">
                                                 <div class="form-group">
                                                     <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Nama Siswa"> </div>
+                                                        <input type="text" class="form-control" placeholder="Nama Siswa" name="nama_siswa"> </div>
                                                     <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Juara"> </div>
+                                                        <input type="text" class="form-control" placeholder="Nominasi Juara" name="nominasi_juara"> </div>
                                                     <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Jenis Kejuaraan"> </div>
+                                                        <input type="text" class="form-control" placeholder="Jenis Kejuaraan" name="jenis_juara"> </div>
                                                     <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Tingkat Kejuaraan"> </div>
+                                                        <input type="text" class="form-control" placeholder="Tingkat Kejuaraan" name="tingkat_juara"> </div>
                                                     <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Nama Pembimbing"> </div>
+                                                        <input type="text" class="form-control" placeholder="Nama Pembimbing" name="nama_pembimbing"> </div>
                                                     <div class="col-md-12 m-b-20">
-                                                         <input type="file" id="input-file-now" class="dropify" />
+                                                         <input type="file" id="input-file-now" class="dropify" name="gambar_prestasi" />
                                                     </div>
                                                 </div>
-                                            </from>
+                                            </form>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                            <button type="button" class="btn btn-info waves-effect" data-dismiss="modal" name="btnSimpan">Save</button>
                                             <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
