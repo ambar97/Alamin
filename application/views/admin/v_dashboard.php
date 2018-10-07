@@ -119,6 +119,7 @@
                                        <h4 class="m-b-20">Visi, Misi & Tujuan</h4>
                        <div class="card">
                            <!-- Nav tabs -->
+
                            <ul class="nav nav-tabs profile-tab" role="tablist">
                                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Visi</a> </li>
                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Misi</a> </li>
@@ -137,42 +138,7 @@
                                                        <blockquote class="m-t-10">
                                                            <?php echo $key->visi; ?>
                                                        </blockquote>
-                                                       <a href="" class="btn btn-success" data-toggle="modal" data-target="#edit_visimisi"> Edit</a>
-                                                       <div id="edit_visimisi" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" method="post">
-                                                           <div class="modal-dialog modal-lg">
-                                                               <div class="modal-content">
-                                                                   <div class="modal-header">
-                                                                       <h4 class="modal-title" id="myModalLabel">Edit Visi, Misi dan Tujuan(+)</h4>
-                                                                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                                   </div>
-                                                                   <div class="modal-body">
-                                                                       <form class="form-horizontal form-material" method="post" action="<?php echo base_url('admin/Dashboard/e_visi') ?>">
-                                                                           <div class="form-group">
-                                                                               <div class="col-md-12 m-b-20">
-                                                                                   <p>Visi</p>
-                                                                                   <input type="text" name="id_visi_misi" value="2" hidden>
-                                                                                   <textarea name="visi" class="form-control" id="exampleTextarea" rows="4" placeholder="Visi"><?php echo $key->visi; ?></textarea>
-                                                                               </div>
-                                                                               <div class="col-md-12 m-b-20">
-                                                                                   <p>Misi</p>
-                                                                                   <textarea name="misi" class="form-control" id="exampleTextarea" rows="4" placeholder="Misi"><?php echo $key->misi; ?></textarea>
-                                                                               </div>
-                                                                               <div class="col-md-12 m-b-20">
-                                                                                   <p>Tujuan</p>
-                                                                                   <textarea name="tujuan" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->tujuan; ?></textarea>
-                                                                               </div>
-                                                                           </div>
-                                                                           <div style="float: right;">
-                                                                               <button type="submit" class="btn btn-info waves-effect">Save</button>
-                                                                               <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                                                                           </div>
-                                                                       </form>
-                                                                   </div>
-                                                               </div>
-                                                               <!-- /.modal-content -->
-                                                           </div>
-                                                               <!-- /.modal-dialog -->
-                                                       </div>
+                                                       
                                                    <?php }?>
                                                    </div>
                                                </div>
@@ -218,6 +184,55 @@
                                    </div>
                                </div>
                            </div>
+                           <!-- <div class="col-lg-10" ></div> -->
+                           <div><a  style="float: right; margin:30px; margin-top: -30px;"   href="" class="btn btn-success" data-toggle="modal" data-target="#edit_visimisi"> Edit</a></div>  
+                           <div id="edit_visimisi" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" method="post">
+                                                           <div class="modal-dialog modal-lg">
+                                                               <div class="modal-content">
+                                                                   <div class="modal-header">
+                                                                       <h4 class="modal-title" id="myModalLabel">Edit Visi, Misi dan Tujuan(+)</h4>
+                                                                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                                   </div>
+                                                                   <div class="modal-body">
+                                                                       <form class="form-horizontal form-material" method="post" action="<?php echo base_url('admin/Dashboard/e_visi') ?>">
+                                                                           <div class="form-group">
+                                                                               <div class="col-md-12 m-b-20">
+                                                                                   <p>Visi</p>
+                                                                                   <?php foreach ($vmt->result() as $key) { ?>
+                                                                                   <textarea name="visi" class="form-control" id="exampleTextarea" rows="4" placeholder="Visi"><?php echo $key->visi; ?></textarea>
+                                                                                 <?php } ?>
+                                                                               </div>
+                                                                               <div class="col-md-12 m-b-20">
+                                                                                   <p>Misi</p>
+                                                                                   <?php foreach ($vmt->result() as $key) { ?>
+                                                                                   <textarea name="misi" class="form-control" id="exampleTextarea" rows="4" placeholder="Misi"><?php echo $key->misi; ?></textarea>
+                                                                                 <?php } ?>
+                                                                               </div>
+                                                                               <div class="col-md-12 m-b-20">
+                                                                                   <p>Tujuan</p>
+                                                                                   <?php foreach ($vmt->result() as $key) { ?>
+                                                                                   <textarea name="tujuan" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->tujuan; ?></textarea>
+                                                                                 <?php } ?>
+                                                                               </div>
+
+                                                                              <div class="col-md-12 m-b-20">
+                                                                                   <!-- <p>Tujuan</p> -->
+                                                                                   <?php foreach ($vmt->result() as $key) { ?>
+                                                                                   <textarea style="color: #fff; margin-bottom: -20px; margin-top: -20px; font-size: 2px;" name="id" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->id_visi_misi; ?></textarea>
+                                                                                 <?php } ?>
+                                                                               </div>
+                                                                           </div>
+                                                                           <div style="float: right;">
+                                                                               <button type="submit" class="btn btn-info waves-effect" value="OK">Save</button>
+                                                                               <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                                                           </div>
+                                                                       </form>
+                                                                   </div>
+                                                               </div>
+                                                               <!-- /.modal-content -->
+                                                           </div>
+                                                               <!-- /.modal-dialog -->
+                                                       </div>  
                        </div>
                    </div>
 
@@ -227,11 +242,13 @@
                                        <h4 class="m-b-20">Sejarah Sekolah</h4>
                        <div class="card blog-widget">
                            <div class="card-body">
-                               <div class="blog-image"><img src="<?php echo base_url() ?>master/adm/assets/images/big/img1.jpg" alt="img" class="img-responsive" /></div>
-                               <h3>Sejarah Terbentuknya sekolah</h3>
+                            <?php foreach ($sejarah->result() as $sejarah) { ?>
+                               <div class="blog-image"><img src="<?php echo base_url().$sejarah -> gambar_sejarah ?>" alt="img" class="img-responsive" /></div>
+                               <h3><?php echo $sejarah->judul_sejarah; ?></h3>
                                <p class="m-t-20 m-b-20">
-                                   Lorem ipsum dolor sit amet, this is a consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                   <?php echo $sejarah->isi_sejarah; ?>
                                </p>
+                             
                                <div class="d-flex">
                                    <div class="col-lg-12">
                                        <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success" data-toggle="modal" data-target="#edit_sejarah"> Edit</a>
@@ -243,16 +260,18 @@
                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                    </div>
                                                    <div class="modal-body">
-                                                       <form class="form-horizontal form-material">
+                                                       <form class="form-horizontal form-material" method="post" action="<?php echo base_url("admin/Dashboard/e_sejarah")?>" enctype="multipart/form-data">
                                                            <div class="form-group">
                                                                <div class="col-md-12 m-b-20">
-                                                                   <input type="text" class="form-control" id="exampleInputname1" placeholder="Judul">
+                                                                <h6>Judul</h6>
+                                                                   <textarea  name="tujuan" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $sejarah->judul_sejarah; ?></textarea>
                                                                </div>
                                                                <div class="col-md-12 m-b-20">
-                                                                   <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Isi Sejarah"></textarea>
+                                                                <h6>Isi Sejarah</h6>
+                                                                   <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Isi Sejarah"> <?php echo $sejarah->isi_sejarah; ?></textarea>
                                                                </div>
                                                                <div class="col-md-12 m-b-20">
-                                                                   <input style="width: 5%" type="file" id="input-file-now" class="dropify" />
+                                                                   <input  type="file" id="input-file-now" />
                                                                </div>
                                                            </div>
                                                        </form>
@@ -269,6 +288,7 @@
                                    </div>
 
                                </div>
+                               <?php } ?>
                            </div>
                        </div>
                    </div>

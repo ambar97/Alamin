@@ -13,16 +13,42 @@ class Dashboard extends CI_Controller {
 		// if(!$this->session->userdata('status') == 'login'){
   //     	redirect('LoginAdmin');
   //   	}else{
+		$data['sejarah']=$this->M_alamin->select("sejarah");
 		$data['vmt']=$this->M_alamin->select("visi_misi");
 		$this->load->view('admin/v_dashboard',$data);
 		// }
 	}
 	public function e_visi(){
-		$id['id_visi_misi']=$this->input->post('id_visi_misi');
-		$data['visi'] = $this->input->post('visi');
-		$data['misi'] = $this->input->post('misi');
-		$data['tujuan'] = $this->input->post('tujuan');
-		$this->M_alamin->update('visi_misi', $data, $id);
-		header('location:'.base_url().'admin/Dashboard');
+		$id=$this->input->post('id');
+		// $where= array('no'=>$id);
+		$where= array('id_visi_misi'=>$id);
+		$data['visi']=$this->input->post('visi');
+		$data['misi']=$this->input->post('misi');
+		$data['tujuan']=$this->input->post('tujuan');
+		$res = $this->M_alamin->update('visi_misi',$data,$where);
+		if ($res >= 0) {
+			$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
+			header('location:'.base_url().'admin/Dashboard');
+		} else {
+			$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Gagal di simpan"));
+			header('location:'.base_url().'admin/Dashboard');
+		}
+	}
+	public function e_sejarah(){
+		$id=$this->input->post('id');
+		// $where= array('no'=>$id);
+		$where= array('id_visi_misi'=>$id);
+		$data['visi']=$this->input->post('visi');
+		$data['misi']=$this->input->post('misi');
+		$data['tujuan']=$this->input->post('tujuan');
+		$res = $this->M_alamin->update('visi_misi',$data,$where);
+		if ($res >= 0) {
+			$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
+			header('location:'.base_url().'admin/Dashboard');
+		} else {
+			$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Gagal di simpan"));
+			header('location:'.base_url().'admin/Dashboard');
+		}
+
 	}
 }

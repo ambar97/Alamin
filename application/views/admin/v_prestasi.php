@@ -57,7 +57,7 @@
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                         </div>
                                         <div class="modal-body">
-                                            <form class="form-horizontal form-material" method="post" action="<?php echo base_url('admin/Prestasi/t_prestasi') ?>">
+                                            <form class="form-horizontal form-material" method="post" action="<?php echo base_url('admin/Prestasi/t_prestasi') ?>" enctype="multipart/form-data">
                                                 <div class="form-group">
                                                     <div class="col-md-12 m-b-20">
                                                         <input type="text" class="form-control" placeholder="Nama Siswa" name="nm_siswa" required=""> </div>
@@ -88,11 +88,11 @@
                                                     <div class="col-md-12 m-b-20">
                                                         <input type="text" class="form-control" placeholder="Nama Pembimbing" name="nm_bimbing" required=""> </div>
                                                     <div class="col-md-12 m-b-20">
-                                                         <input type="file" id="input-file-now" class="dropify" name="photo" required="" />
+                                                         <input type="file" id="input-file-now" class="dropify" name="gambar" required="" />
                                                     </div>
                                                 </div>
                                             <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                                            <button type="submit" class="btn btn-default waves-effect" value="OK">Save</button>
+                                            <button type="submit" class="btn btn-default waves-effect" value="OK" name="btnSimpan">Save</button>
                                             </form>
                                         </div>
                                     </div>
@@ -116,11 +116,11 @@
                     <div class="col-lg-3">
                        
                         <div class="card">
-                            <img class="card-img-top img-responsive" src="<?php echo $prs->gambar_prestasi; ?>" alt="Card image cap">
+                            <img class="card-img-top img-responsive" src="<?php echo base_url().$prs -> gambar_prestasi ?>" alt="Card image cap">
                             <div class="card-body">
                                 <ul class="list-inline font-14">
                                     <li class="p-l-0"><?php echo $prs->nama_siswa_prestasi; ?></li><br>
-                                    <li><h6 class="font-normal"><?php echo $prs->nama_juara; ?>, <?php echo $prs->nama_lomba; ?></h6></li>
+                                    <li><h6 class="font-normal"><?php echo $prs->nama_juara; ?> <?php echo $prs->nama_lomba; ?></h6></li>
                                 </ul>
                                 <hr>
                                 <div><center>

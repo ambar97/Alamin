@@ -41,10 +41,32 @@
                     </div>
                 </div>
 
+ <div class="card">
+            <div class="card-body bg-info">
+                <h4 class="text-white card-title">Tambah Karyawan </h4>
+            </div>
+            <div class="card-body">
+                <div class="message-box contact-box">
+                    <a href="<?php echo base_url('admin/Berita/t_berita') ?>"><h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark" data-toggle="modal" data-target="#tambah_karyawan">+</button></h2></a>
+                    <div class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    </div>
+                    <div class="message-widget contact-widget">
+                        <!-- Message -->
+                        <a>
+                            <div class="user-img"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                            <div class="mail-contnet">
+                                <h5>Klik tombol Tambah (+) untuk Menambahkan Data Karyawan </h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 <!-- Berita -->
- <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+                        <div class="card-body">
                                 <h4 class="card-title">Data Export</h4>
                                 <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
                                 <div class="table-responsive m-t-40">
@@ -52,62 +74,42 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Judul</th>
-                                                <th>Tanggal</th>
+                                                <th>Nama Berita</th>
+                                                <th>Isi Berita</th>
+                                                <th>Tanggal Upload</th>
                                                 <th>Views</th>
-                                                <th>gambar</th>
-                                                <th>Isi</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Judul</th>
-                                                <th>Tanggal</th>
-                                                <th>Views</th>
-                                                <th>gambar</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </tfoot>
                                         <tbody>
+                                            <?php 
+                                            $no = 1;
+                                            foreach ($berita->result() as $ber) { ?>
                                             <tr>
-                                                <td>1</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
-                                                <td>$320,800</td>
+                                                <td><?php echo $no++?></td>
+                                                <td><?php echo $ber->judul_informasi; ?></td>
+                                                <td><?php echo $ber->isi_informasi; ?></td>
+                                                <td><?php echo $ber->date; ?></td>
+                                                <td><?php echo $ber->viewers; ?></td>
+                                                <td>
+                                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn" data-toggle="tooltip" data-original-title="View"><i class="mdi mdi-eye" aria-hidden="true"></i></button>
+                                            <a href="">
+                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="mdi mdi-close" aria-hidden="true"></i></button></a>
+                                                </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>63</td>
-                                                <td>2011/07/25</td>
-                                                <td>$170,750</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Junior Technical Author</td>
-                                                <td>San Francisco</td>
-                                                <td>66</td>
-                                                <td>2009/01/12</td>
-                                                <td>$86,000</td>
-                                            </tr>
-                                            
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                        </div>
                     </div>
-
+</div>
+</div>
 
 
 </div>
 </div>
-  <?php $this->load->view("admin/side/footer"); ?>
+<!-- <?php $this->load->view("admin/side/footer"); ?> -->
  <?php $this->load->view("admin/side/js"); ?>
  <?php $this->load->view("admin/side/footer"); ?>
  <?php $this->load->view("admin/side/js"); ?>
