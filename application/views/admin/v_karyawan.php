@@ -50,7 +50,7 @@
                                     <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
                                 </div>
                                 <div class="modal-body">
-                                    <form class="form-horizontal form-material" method="post" action="<?php echo base_url("admin/Karyawan/t_karyawan")?>">
+                                    <form class="form-horizontal form-material" method="post" action="<?php echo base_url("admin/Karyawan/t_karyawan")?>" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <div class="col-md-12 m-b-20">
                                                 <input type="text" class="form-control" placeholder="Nama" name="nama_k" required=""> </div>

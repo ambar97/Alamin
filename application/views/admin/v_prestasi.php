@@ -1,5 +1,5 @@
 <?php $this->load->view("admin/side/head"); ?>
- <?php $this->load->view("admin/side/loader"); ?>
+ <?php $this->load->view("admin/side/loader"); ?> 
  <?php $this->load->view("admin/side/header"); ?>
  <?php $this->load->view("admin/side/sidebar"); ?>
 
@@ -57,119 +57,83 @@
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                         </div>
                                         <div class="modal-body">
-                                            <form class="form-horizontal form-material" autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/admin/Prestasi/create'; ?>" enctype="multipart/form-data">
+                                            <form class="form-horizontal form-material" method="post" action="<?php echo base_url('admin/Prestasi/t_prestasi') ?>">
                                                 <div class="form-group">
                                                     <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Nama Siswa" name="nama_siswa"> </div>
+                                                        <input type="text" class="form-control" placeholder="Nama Siswa" name="nm_siswa" required=""> </div>
                                                     <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Nominasi Juara" name="nominasi_juara"> </div>
+                                                        <div class="form-group">
+
+                                                    <h6>Bidang</h6>
+                                                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="juara_p">
+                                                        <option disabled="" >Pilih Juara</option>
+                                                        <option value="">xxx</option>
+                                                    
+                                                    </select>
+                                                </div>
                                                     <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Jenis Kejuaraan" name="jenis_juara"> </div>
+                                                        <input type="text" class="form-control" placeholder="Nama Lomba" name="nm_lomba" required=""> </div>
                                                     <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Tingkat Kejuaraan" name="tingkat_juara"> </div>
+                                                    <div class="form-group">
+
+                                                    <h6>Bidang</h6>
+                                                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="kategori_juara">
+                                                        <option disabled="" >Pilih Kategori</option>
+                                                        <option value="">xxx</option>
+                                                    
+                                                    </select>
+                                                </div>
+                                            </div>
                                                     <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Nama Pembimbing" name="nama_pembimbing"> </div>
+                                                        <input type="text" class="form-control" placeholder="Nama Pembimbing" name="nm_bimbing" required=""> </div>
                                                     <div class="col-md-12 m-b-20">
-                                                         <input type="file" id="input-file-now" class="dropify" name="gambar_prestasi" />
+                                                         <input type="file" id="input-file-now" class="dropify" name="photo" required="" />
                                                     </div>
                                                 </div>
+                                                <button type="submit" class="btn btn-info waves-effect" value
+                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
                                             </form>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-info waves-effect" data-dismiss="modal" name="btnSimpan">Save</button>
-                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                                        </div>
                                     </div>
-                                    <!-- /.modal-content -->
                                 </div>
-                                        <!-- /.modal-dialog -->
                             </div>
-                            <div class="message-widget contact-widget">
-                                <!-- Message -->
+                            <!-- <div class="message-widget contact-widget">
                                 <a>
                                     <div class="user-img"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
                                     <div class="mail-contnet">
                                         <h5>Klik tombol Tambah (+) untuk Menambahkan prestasi </h5></div>
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
 
 <!-- List Prestasi -->
  				<div class="row">
+                    <?php foreach ($prestasi->result() as $prs) { ?>
                     <!-- Column -->
                     <div class="col-lg-3">
+                       
                         <div class="card">
-                            <img class="card-img-top img-responsive" src="<?php echo base_url() ?>master/adm/assets/images/big/img1.jpg" alt="Card image cap">
+                            <img class="card-img-top img-responsive" src="<?php echo $prs->gambar_prestasi; ?>" alt="Card image cap">
                             <div class="card-body">
                                 <ul class="list-inline font-14">
-                                    <li class="p-l-0">Nama Siswa</li>
+                                    <li class="p-l-0"><?php echo $prs->nama_siswa; ?></li><br>
+                                    <li><h3 class="font-normal"><?php echo $prs->nama_juara; ?>, <?php echo $prs->nama_lomba; ?></h3></li>
                                 </ul>
-                                <h3 class="font-normal">Judul</h3>
                                 <hr>
                                 <div><center>
-                                	<button type="button" class="btn btn-warning btn-circle" title="Lihat Detail"><i class="mdi mdi-eye "></i> </button>
-                                	<button type="button" class="btn btn-info btn-circle" title="Edit"><i class="mdi mdi-brush"></i> </button>
-                                	<button type="button" class="btn btn-danger btn-circle" title="Hapus"><i class="mdi mdi-close"></i> </button>
+                                	<button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Lihat Detail"><i class="mdi mdi-eye "></i> </button>
+                                	<button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Edit"><i class="mdi mdi-brush"></i> </button>
+                                	<button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Hapus"><i class="mdi mdi-close"></i> </button>
                                 </center>
                                 </div>
                             </div>
                         </div>
+                    
                     </div>
                     <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-responsive" src="<?php echo base_url() ?>master/adm/assets/images/big/img2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <ul class="list-inline font-14">
-                                    <li class="p-l-0">Nama Siswa</li>
-                                </ul>
-                                <h3 class="font-normal">Judul</h3>
-                                <hr>
-                                <div><center>
-                                	<button type="button" class="btn btn-warning btn-circle" title="Lihat Detail"><i class="mdi mdi-eye "></i> </button>
-                                	<button type="button" class="btn btn-info btn-circle" title="Edit"><i class="mdi mdi-brush"></i> </button>
-                                	<button type="button" class="btn btn-danger btn-circle" title="Hapus"><i class="mdi mdi-close"></i> </button>
-                                </center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-responsive" src="<?php echo base_url() ?>master/adm/assets/images/big/img4.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <ul class="list-inline font-14">
-                                    <li class="p-l-0">Nama Siswa</li>
-                                </ul>
-                                <h3 class="font-normal">Judul</h3>
-                                <hr>
-                                <div><center>
-                                	<button type="button" class="btn btn-warning btn-circle" title="Lihat Detail"><i class="mdi mdi-eye "></i> </button>
-                                	<button type="button" class="btn btn-info btn-circle" title="Edit"><i class="mdi mdi-brush"></i> </button>
-                                	<button type="button" class="btn btn-danger btn-circle" title="Hapus"><i class="mdi mdi-close"></i> </button>
-                                </center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-responsive" src="<?php echo base_url() ?>master/adm/assets/images/big/img4.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <ul class="list-inline font-14">
-                                    <li class="p-l-0">Nama Siswa</li>
-                                </ul>
-                                <h3 class="font-normal">Judul</h3>
-                                <button class="btn btn-success btn-rounded waves-effect waves-light m-t-20">Read more</button>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
 
 
