@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url() ?>master/adm/assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url() ?>master/favicon.png">
     <title>SDABA02</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url() ?>master/adm/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">

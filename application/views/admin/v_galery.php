@@ -42,95 +42,74 @@
                 </div>
 
 <!-- Tambah Galery -->
-                <div class="card">
-                    <div class="card-body bg-info">
-                        <h4 class="text-white card-title">Tambah Galery Kegiatan</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="message-box contact-box">
-                            <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark" data-toggle="modal" data-target="#tambah_galeri">+</button></h2>
-                            <div id="tambah_galeri" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h4 class="modal-title" id="myModalLabel">Tambah galery (+)</h4> 
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <from class="form-horizontal form-material">
-                                                <div class="form-group">
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Type name"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Email"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Phone"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Designation"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Age"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Date of joining"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <input type="text" class="form-control" placeholder="Salary"> </div>
-                                                    <div class="col-md-12 m-b-20">
-                                                        <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light"><span><i class="ion-upload m-r-5"></i>Upload Contact Image</span>
-                                                            <input type="file" class="upload"> </div>
-                                                    </div>
-                                                </div>
-                                            </from>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
-                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                                        </div>
-                                    </div>
-                                    <!-- /.modal-content -->
-                                </div>
-                                        <!-- /.modal-dialog -->
-                            </div>
-                            <div class="message-widget contact-widget">
-                                <!-- Message -->
+        <div class="card">
+            <div class="card-body bg-info">
+                <h4 class="text-white card-title">Tambah Galery Kegiatan</h4>
+            </div>
+            
+                <div class="card-body">
+                    <div class="message-box contact-box">
+                        
+                        <h2 class="add-ct-btn">
+                            <button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark" data-toggle="modal" data-target="#tambah_galeri">+</button>
+                        </h2>
+                        <div class="message-widget contact-widget">
+                            <!-- Message -->
+                            <form autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/admin/Galery/create'; ?>" enctype="multipart/form-data">
                                 <div class="col-lg-12 col-md-12">
                                     <div class="card">
                                         <div class="card-body">
                                             <h4 class="card-title">Upload Gambar Galery (+)</h4>
                                             <small>Maksimal ukuran upload 5 Mb.</small>
-                                            <input type="file" id="input-file-now" class="dropify" />
+                                            <input type="file" id="input-file-now" class="dropify" name="gambar_galeri" />
                                             <br>
                                             <form>
                                               <div class="form-group">
-                                                <label for="exampleInputEmail1">Judul Galery</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan judul">
+                                                <label>Judul Galery</label>
+                                                <input type="text" class="form-control" placeholder="Masukan judul" name="judul_galeri">
                                               </div>
+                                              <div class="form-group">
+                                                <label>Deskripsi Galery</label>
+                                                <textarea type="textarea" rows="4" class="form-control" placeholder="Masukan deskripsi" name="deskripsi_galeri"></textarea>
+                                              </div>
+                                              <button class="btn btn-success" style="float: right;" name="btnSimpan">Simpan</button>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+            
+        </div>
 <!-- List Galery -->
-                <div class="row el-element-overlay">
-                    <div class="col-md-12">
-                        <h4 class="card-title">Galery</h4>
-                        <h6 class="card-subtitle m-b-20 text-muted">Klik tanda (x) untuk menghapus </h6> </div>
+            <div class="row el-element-overlay">
+                <div class="col-md-12">
+                    <h4 class="card-title">Galery</h4>
+                    <h6 class="card-subtitle m-b-20 text-muted">Klik tanda (x) untuk menghapus </h6> 
+                </div>
+                <?php foreach ($galery->result() as $s) {?>
                     <div class="col-lg-3 col-md-6">
                         <div class="card">
                             <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/2.jpg" alt="user" />
+                                <div class="el-card-avatar el-overlay-1"> <img src="<?php echo base_url().$s -> gambar_galeri ?>" alt="user" />
                                     <div class="el-overlay">
                                         
                                     </div>
                                 </div>
                                 <div class="el-card-content">
-                                 <small>Managing Director</small> 
-                                 <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
-                                    <br/> </div>
+                                     <small><?php echo $s -> judul_galeri; ?></small>
+                                     <a href="<?php echo base_url('admin/Galery/hapus/'.$s-> id_galeri) ?>">
+                                         <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete">
+                                            <i class="ti-close" aria-hidden="true"></i>
+                                        </button>
+                                     </a>   
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <?php } ?>
                 </div>
 
 

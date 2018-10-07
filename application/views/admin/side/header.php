@@ -8,9 +8,9 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img  src="<?php echo base_url() ?>master/adm/assets/images/favicon.png" alt="homepage" class="dark-logo" />
+                            <img  src="<?php echo base_url() ?>master/favicon.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img style="height: 40px;" src="<?php echo base_url() ?>master/adm/assets/images/favicon.png" alt="homepage" class="light-logo" />
+                            <img style="height: 40px;" src="<?php echo base_url() ?>master/favicon.png" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
