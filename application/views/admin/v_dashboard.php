@@ -208,7 +208,7 @@
                                                    <div><a href="" class="link">Tujuan Sekolah Sdaba02</a><!--  <span class="sl-date">5 minutes ago</span> -->
                                                        <?php foreach ($vmt->result() as $key) { ?>
                                                        <blockquote class="m-t-10">
-                                                           <?php echo $key->tujuan; ?>
+                                                           <?php echo $key-> tujuan; ?>
                                                        </blockquote>
                                                    <?php } ?>
                                                    </div>
@@ -224,14 +224,18 @@
                    <!-- Sejarah Sekolah -->
 
                    <div class="col-lg-6 col-xlg-3 col-md-5">
-                                       <h4 class="m-b-20">Sejarah Sekolah</h4>
+                      <h4 class="m-b-20">Sejarah Sekolah</h4>
                        <div class="card blog-widget">
                            <div class="card-body">
-                               <div class="blog-image"><img src="<?php echo base_url() ?>master/adm/assets/images/big/img1.jpg" alt="img" class="img-responsive" /></div>
-                               <h3>Sejarah Terbentuknya sekolah</h3>
+                            <?php foreach ($sjrh ->result() as $ss ) { ?>
+
+                               <div class="blog-image"><img src="<?php echo base_url().$ss -> gambar_sejarah ?>" alt="img" class="img-responsive" /></div>
+                               <h3><?php echo $ss -> judul_sejarah; ?></h3>
                                <p class="m-t-20 m-b-20">
-                                   Lorem ipsum dolor sit amet, this is a consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                   <?php echo $ss -> isi_sejarah; ?>
                                </p>
+                            <?php } ?>
+
                                <div class="d-flex">
                                    <div class="col-lg-12">
                                        <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success" data-toggle="modal" data-target="#edit_sejarah"> Edit</a>
@@ -244,21 +248,22 @@
                                                    </div>
                                                    <div class="modal-body">
                                                        <form class="form-horizontal form-material">
+                                                        
                                                            <div class="form-group">
                                                                <div class="col-md-12 m-b-20">
-                                                                   <input type="text" class="form-control" id="exampleInputname1" placeholder="Judul">
+                                                                   <input type="text" class="form-control" id="exampleInputname1" placeholder="Judul" name="judul_sejarah" required="">
                                                                </div>
                                                                <div class="col-md-12 m-b-20">
-                                                                   <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Isi Sejarah"></textarea>
+                                                                   <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Isi Sejarah" name="isi_sejarah" required=""></textarea>
                                                                </div>
                                                                <div class="col-md-12 m-b-20">
-                                                                   <input style="width: 5%" type="file" id="input-file-now" class="dropify" />
+                                                                   <input type="file" id="input-file-now" class="dropify" name="gambar_sejarah" required="" />
                                                                </div>
                                                            </div>
                                                        </form>
                                                    </div>
                                                    <div class="modal-footer">
-                                                       <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                                       <button type="button" class="btn btn-info waves-effect" data-dismiss="modal" type="submit" value="upload">Save</button>
                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
                                                    </div>
                                                </div>
