@@ -63,24 +63,25 @@
                                                         <input type="text" class="form-control" placeholder="Nama Siswa" name="nm_siswa" required=""> </div>
                                                     <div class="col-md-12 m-b-20">
                                                         <div class="form-group">
-
-                                                    <h6>Bidang</h6>
-                                                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="juara_p">
+                                                    <h6>Juara ke-</h6>
+                                                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="juara_p"> Pilih Juara
                                                         <option disabled="" >Pilih Juara</option>
-                                                        <option value="">xxx</option>
-                                                    
+                                                        <?php foreach ($juara->result() as $jr) { ?>
+                                                        <option value="<?php echo $jr->id_juara; ?>"><?php echo $jr->nama_juara; ?></option>
+                                                    <?php } ?>
                                                     </select>
-                                                </div>
+                                                        </div>
+                                                    </div>
                                                     <div class="col-md-12 m-b-20">
                                                         <input type="text" class="form-control" placeholder="Nama Lomba" name="nm_lomba" required=""> </div>
                                                     <div class="col-md-12 m-b-20">
                                                     <div class="form-group">
-
-                                                    <h6>Bidang</h6>
+                                                    <h6>Lingkup Prestasi</h6>
                                                     <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="kategori_juara">
                                                         <option disabled="" >Pilih Kategori</option>
-                                                        <option value="">xxx</option>
-                                                    
+                                                        <?php foreach ($lingkup->result() as $lin) { ?>
+                                                            <option value="<?php echo $lin->id_lingkup_prestasi; ?>"><?php echo $lin->nama_lingkup_prestasi; ?></option>
+                                                        <?php } ?>
                                                     </select>
                                                 </div>
                                             </div>
@@ -90,20 +91,20 @@
                                                          <input type="file" id="input-file-now" class="dropify" name="photo" required="" />
                                                     </div>
                                                 </div>
-                                                <button type="submit" class="btn btn-info waves-effect" value
                                             <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-default waves-effect" value="OK">Save</button>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="message-widget contact-widget">
+                            <div class="message-widget contact-widget">
                                 <a>
                                     <div class="user-img"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
                                     <div class="mail-contnet">
                                         <h5>Klik tombol Tambah (+) untuk Menambahkan prestasi </h5></div>
                                 </a>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -118,8 +119,8 @@
                             <img class="card-img-top img-responsive" src="<?php echo $prs->gambar_prestasi; ?>" alt="Card image cap">
                             <div class="card-body">
                                 <ul class="list-inline font-14">
-                                    <li class="p-l-0"><?php echo $prs->nama_siswa; ?></li><br>
-                                    <li><h3 class="font-normal"><?php echo $prs->nama_juara; ?>, <?php echo $prs->nama_lomba; ?></h3></li>
+                                    <li class="p-l-0"><?php echo $prs->nama_siswa_prestasi; ?></li><br>
+                                    <li><h6 class="font-normal"><?php echo $prs->nama_juara; ?>, <?php echo $prs->nama_lomba; ?></h6></li>
                                 </ul>
                                 <hr>
                                 <div><center>
