@@ -134,7 +134,11 @@
       acceptedMimeTypes: null,
       autoProcessQueue: true,
       autoQueue: true,
+<<<<<<< HEAD
       addRemoveLinks: false,
+=======
+      addRemoveLinks: true,
+>>>>>>> b3bb3d40691ecc78eb595e1f664f14cf0ac3d1ca
       previewsContainer: null,
       hiddenInputContainer: "body",
       capture: null,
@@ -147,7 +151,11 @@
       dictResponseError: "Server responded with {{statusCode}} code.",
       dictCancelUpload: "Cancel upload",
       dictCancelUploadConfirmation: "Are you sure you want to cancel this upload?",
+<<<<<<< HEAD
       dictRemoveFile: "Remove file",
+=======
+      dictRemoveFile: "Remove",
+>>>>>>> b3bb3d40691ecc78eb595e1f664f14cf0ac3d1ca
       dictRemoveFileConfirmation: null,
       dictMaxFilesExceeded: "You can not upload any more files.",
       accept: function(file, done) {
