@@ -48,17 +48,17 @@
                            <div class="card-body">
                                <div class="d-flex">
                                    <div class="m-r-20 align-self-center">
-                                       <h1 class="text-white"><i class="ti-pie-chart"></i></h1></div>
+                                       <h1 class="text-white"><i class="ti-user"></i></h1></div>
                                    <div>
-                                       <h3 class="card-title">Bandwidth usage</h3>
-                                       <h6 class="card-subtitle">March  2017</h6> </div>
+                                       <h3 class="card-title">Jumlah Karyawan</h3>
+                                       <!-- <h6 class="card-subtitle">March  2017</h6> --> </div>
                                </div>
                                <div class="row">
-                                   <div class="col-4 align-self-center">
-                                       <h2 class="font-light text-white">50 GB</h2>
-                                   </div>
-                                   <div class="col-8 p-t-10 p-b-20 align-self-center">
+                                <div class="col-8 p-t-10 p-b-20 align-self-center">
                                        <div class="usage chartist-chart" style="height:65px"></div>
+                                   </div>
+                                   <div class="col-4 align-self-center">
+                                       <h2 class="font-light text-white"><?php echo $karyawan; ?></h2>
                                    </div>
                                </div>
                            </div>
@@ -69,14 +69,14 @@
                            <div class="card-body">
                                <div class="d-flex">
                                    <div class="m-r-20 align-self-center">
-                                       <h1 class="text-white"><i class="icon-cloud-download"></i></h1></div>
+                                       <h1 class="text-white"><i class="ti-medall-alt"></i></h1></div>
                                    <div>
-                                       <h3 class="card-title">Download count</h3>
-                                       <h6 class="card-subtitle">March  2017</h6> </div>
+                                       <h3 class="card-title">Jumlah Prestasi</h3>
+                                       <!-- <h6 class="card-subtitle">March  2017</h6> --> </div>
                                </div>
                                <div class="row">
                                    <div class="col-4 align-self-center">
-                                       <h2 class="font-light text-white">35487</h2>
+                                       <h2 class="font-light text-white"><?php echo $prestasi; ?></h2>
                                    </div>
                                    <div class="col-8 p-t-10 p-b-20 text-right">
                                        <div class="spark-count" style="height:65px"></div>
@@ -86,31 +86,27 @@
                        </div>
                    </div>
                    <div class="col-lg-4 col-md-4">
-                       <div class="card">
-                           <img class="" src="<?php echo base_url() ?>master/adm/assets/images/background/weatherbg.jpg" alt="Card image cap">
-                           <div class="card-img-overlay" style="height:110px;">
-                               <h3 class="card-title text-white m-b-0 dl">New Delhi</h3>
-                               <small class="card-text text-white font-light">Sunday 15 march</small>
-                           </div>
-                           <div class="card-body weather-small">
+                       <div class="card card-inverse card-info">
+                           <div class="card-body">
+                               <div class="d-flex">
+                                   <div class="m-r-20 align-self-center">
+                                       <h1 class="text-white"><i class="ti-book"></i></h1></div>
+                                   <div>
+                                       <h3 class="card-title">Jumlah Berita</h3>
+                                       <!-- <h6 class="card-subtitle">March  2017</h6> --> </div>
+                               </div>
                                <div class="row">
-                                   <div class="col-8 b-r align-self-center">
-                                       <div class="d-flex">
-                                           <div class="display-6 text-info"><i class="wi wi-day-rain-wind"></i></div>
-                                           <div class="m-l-20">
-                                               <h1 class="font-light text-info m-b-0">32<sup>0</sup></h1>
-                                               <small>Sunny Rainy day</small>
-                                           </div>
-                                       </div>
+                                <div class="col-8 p-t-10 p-b-20 text-right">
+                                       <div class="spark-count" style="height:65px"></div>
                                    </div>
-                                   <div class="col-4 text-center">
-                                       <h1 class="font-light m-b-0">25<sup>0</sup></h1>
-                                       <small>Tonight</small>
+                                   <div class="col-4 align-self-center">
+                                       <h2 class="font-light text-white"><?php echo $berita; ?></h2>
                                    </div>
                                </div>
                            </div>
                        </div>
                    </div>
+                   
                </div>
            </div>
                <div class="row">
@@ -242,25 +238,13 @@
                       <h4 class="m-b-20">Sejarah Sekolah</h4>
                        <div class="card blog-widget">
                            <div class="card-body">
-<<<<<<< HEAD
                             <?php foreach ($sejarah->result() as $sejarah) { ?>
                                <div class="blog-image"><img src="<?php echo base_url().$sejarah -> gambar_sejarah ?>" alt="img" class="img-responsive" /></div>
                                <h3><?php echo $sejarah->judul_sejarah; ?></h3>
                                <p class="m-t-20 m-b-20">
                                    <?php echo $sejarah->isi_sejarah; ?>
                                </p>
-                             
-=======
-                            <?php foreach ($sjrh ->result() as $ss ) { ?>
-
-                               <div class="blog-image"><img src="<?php echo base_url().$ss -> gambar_sejarah ?>" alt="img" class="img-responsive" /></div>
-                               <h3><?php echo $ss -> judul_sejarah; ?></h3>
-                               <p class="m-t-20 m-b-20">
-                                   <?php echo $ss -> isi_sejarah; ?>
-                               </p>
-                            <?php } ?>
-
->>>>>>> ff00a6ce78ada504d1f536cbea579168e32817f4
+                            
                                <div class="d-flex">
                                    <div class="col-lg-12">
                                        <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success" data-toggle="modal" data-target="#edit_sejarah"> Edit</a>
@@ -272,9 +256,11 @@
                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                    </div>
                                                    <div class="modal-body">
-<<<<<<< HEAD
-                                                       <form class="form-horizontal form-material" method="post" action="<?php echo base_url("admin/Dashboard/e_sejarah")?>" enctype="multipart/form-data">
+                                                       <form class="form-horizontal form-material" method="post" action="<?php echo base_url("admin/Dashboard/e_sej")?>" enctype="multipart/form-data">
                                                            <div class="form-group">
+                                                            <div class="col-md-12 m-b-20">
+                                                                   
+                                                               </div>
                                                                <div class="col-md-12 m-b-20">
                                                                 <h6>Judul</h6>
                                                                    <textarea  name="tujuan" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $sejarah->judul_sejarah; ?></textarea>
@@ -284,28 +270,18 @@
                                                                    <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Isi Sejarah"> <?php echo $sejarah->isi_sejarah; ?></textarea>
                                                                </div>
                                                                <div class="col-md-12 m-b-20">
-                                                                   <input  type="file" id="input-file-now" />
-=======
-                                                       <form class="form-horizontal form-material">
-                                                        
-                                                           <div class="form-group">
-                                                               <div class="col-md-12 m-b-20">
-                                                                   <input type="text" class="form-control" id="exampleInputname1" placeholder="Judul" name="judul_sejarah" required="">
-                                                               </div>
-                                                               <div class="col-md-12 m-b-20">
-                                                                   <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Isi Sejarah" name="isi_sejarah" required=""></textarea>
-                                                               </div>
-                                                               <div class="col-md-12 m-b-20">
-                                                                   <input type="file" id="input-file-now" class="dropify" name="gambar_sejarah" required="" />
->>>>>>> ff00a6ce78ada504d1f536cbea579168e32817f4
+                                                                   <input name="img_sejarah"  type="file" id="input-file-now" required="" /><hr>
+                                                                   <center><img class="col-md-8" style="max-height: 200px;" src="<?php echo base_url().$sejarah -> gambar_sejarah ?>"></center>
+                                                                   <textarea  name="id_sejarah" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan" style="color: #fff; margin-bottom:  -30"><?php echo $sejarah->id_sejarah; ?></textarea>
                                                                </div>
                                                            </div>
+                                                           <div class="modal-footer">
+                                                       <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                                       <button type="submit" class="btn btn-info waves-effect" value="OK">Save</button>
+                                                   </div>
                                                        </form>
                                                    </div>
-                                                   <div class="modal-footer">
-                                                       <button type="button" class="btn btn-info waves-effect" data-dismiss="modal" type="submit" value="upload">Save</button>
-                                                       <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                                                   </div>
+                                                   
                                                </div>
                                                <!-- /.modal-content -->
                                            </div>

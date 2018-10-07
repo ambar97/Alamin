@@ -13,6 +13,9 @@ class Dashboard extends CI_Controller {
 		// if(!$this->session->userdata('status') == 'login'){
   //     	redirect('LoginAdmin');
   //   	}else{
+		$data['karyawan']=$this->M_alamin->dashboard_karyawan();
+		$data['prestasi']=$this->M_alamin->dashboard_prestasi();
+		$data['berita']=$this->M_alamin->dashboard_berita();
 		$data['sejarah']=$this->M_alamin->select("sejarah");
 		$data['vmt']=$this->M_alamin->select("visi_misi");
 		$data['sjrh']=$this->M_alamin->select("sejarah");
@@ -52,7 +55,7 @@ class Dashboard extends CI_Controller {
 		}
 
 	}
-	public function e_sejarah(){
+	public function e_sej(){
 		$id['id_visi_misi']=$this->input->post('id_visi_misi');
 		$data['judul_sejarah'] = $this->input->post('judul_sejarah');
 		$data['isi_sejarah'] = $this->input->post('isi_sejarah');
