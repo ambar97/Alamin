@@ -90,23 +90,20 @@
                                                          <input type="file" id="input-file-now" class="dropify" name="photo" required="" />
                                                     </div>
                                                 </div>
-                                                <button type="submit" class="btn btn-info waves-effect" value="OK">Save</button>
+                                                <button type="submit" class="btn btn-info waves-effect" value
                                             <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
                                             </form>
                                         </div>
                                     </div>
-                                    <!-- /.modal-content -->
                                 </div>
-                                        <!-- /.modal-dialog -->
                             </div>
-                            <div class="message-widget contact-widget">
-                                <!-- Message -->
+                            <!-- <div class="message-widget contact-widget">
                                 <a>
                                     <div class="user-img"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
                                     <div class="mail-contnet">
                                         <h5>Klik tombol Tambah (+) untuk Menambahkan prestasi </h5></div>
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

@@ -11,6 +11,7 @@ class Prestasi extends CI_Controller {
 
 	public function index()
 	{
+
 		$data['prestasi']=$this->M_alamin->select_prestasi();
 		$this->load->view('admin/v_prestasi',$data);
 	}

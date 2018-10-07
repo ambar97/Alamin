@@ -49,6 +49,7 @@ class M_alamin extends CI_Model {
       return $this->db->query('SELECT * FROM galeri ORDER BY id_galeri DESC');
       return $query->result ();
   }
+
   function select_prestasi(){
     $this->db->select('prestasi.*, lingkup_prestasi.*, kategori_juara.*');
           $this->db->join('lingkup_prestasi', 'lingkup_prestasi.id_lingkup_prestasi = prestasi.id_lingkup_prestasi');
