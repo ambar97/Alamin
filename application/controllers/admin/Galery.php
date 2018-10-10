@@ -47,9 +47,9 @@ class Galery extends CI_Controller {
     $where = array('id_galeri'=>$id);
     $hapus = $this -> M_alamin -> delete($where,'galeri');
     if($hapus){
-    header('location:'.base_url('index.php/admin/Galery')); 
+    header('location:'.base_url('admin/Galery')); 
     }else{
-      header('location:'.base_url('index.php/admin/Galery'));
+      header('location:'.base_url('admin/Galery'));
       echo "gagal";
     }
   }

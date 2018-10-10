@@ -116,26 +116,26 @@
         </div>
 
         <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Daftar Karyawan</h4>
-                        <h6 class="card-subtitle"></h6>
-                        <div class="table-responsive">
-                            <table id="demo-foo-addrow" class="table m-t-30 table-hover contact-list" data-page-size="10">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama</th>
-                                        <th>TTL</th>
-                                        <th>NIPA</th>
-                                        <th>Jabatan</th>
-                                        <th>Bidang</th>
-                                        <th>Alamat</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+    <div class="col-12">
+        <div class="card">
+                        <div class="card-body">
+                                <h4 class="card-title">Data Export</h4>
+                                <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+                                <div class="table-responsive m-t-40">
+                                    <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Nama</th>
+                                                <th>TTL</th>
+                                                <th>NIPA</th>
+                                                <th>Jabatan</th>
+                                                <th>Bidang</th>
+                                                <th>Alamat</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
 
                                     <?php 
                                     $no = 1;
@@ -157,21 +157,13 @@
                                     </tr>
                                     <?php } ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="7">
-                                            <div class="text-right">
-                                                <ul class="pagination"> </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
+                                    </table>
+                                </div>
+                            </div>
                     </div>
-                </div>
-            </div>
+             </div>
         </div>
+
     </div>
 </div>
 
@@ -180,9 +172,61 @@
 <?php if ($this->session->flashdata()) { ?>
                         <?php echo $this->session->flashdata('Pesan'); ?></div>                    
                     <?php } ?> 
-    <!-- Footable -->
-    <script src="<?php echo base_url() ?>master/adm/assets/plugins/footable/js/footable.all.min.js"></script>
-    <script src="<?php echo base_url() ?>master/adm/assets/plugins/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
-    <!--FooTable init-->
-    <script src="<?php echo base_url() ?>master/adm/js/footable-init.js"></script>
-    <script src="<?php echo base_url() ?>master/adm/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+
+<script src="<?php echo base_url() ?>master/adm/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <!-- start - This is for export functionality only -->
+    <script src="<?php echo base_url() ?>master/adm/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="<?php echo base_url() ?>master/adm/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="<?php echo base_url() ?>master/adm/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="<?php echo base_url() ?>master/adm/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="<?php echo base_url() ?>master/adm/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="<?php echo base_url() ?>master/adm/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="<?php echo base_url() ?>master/adm/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+
+ <script>
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+        $(document).ready(function() {
+            var table = $('#example').DataTable({
+                "columnDefs": [{
+                    "visible": false,
+                    "targets": 2
+                }],
+                "order": [
+                    [2, 'asc']
+                ],
+                "displayLength": 25,
+                "drawCallback": function(settings) {
+                    var api = this.api();
+                    var rows = api.rows({
+                        page: 'current'
+                    }).nodes();
+                    var last = null;
+                    api.column(2, {
+                        page: 'current'
+                    }).data().each(function(group, i) {
+                        if (last !== group) {
+                            $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
+                            last = group;
+                        }
+                    });
+                }
+            });
+            // Order by the grouping
+            $('#example tbody').on('click', 'tr.group', function() {
+                var currentOrder = table.order()[0];
+                if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+                    table.order([2, 'desc']).draw();
+                } else {
+                    table.order([2, 'asc']).draw();
+                }
+            });
+        });
+    });
+    $('#example23').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+    </script>

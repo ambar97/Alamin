@@ -61,18 +61,18 @@
                                         <div class="card-body">
                                             <h4 class="card-title">Upload Gambar Galery (+)</h4>
                                             <small>Maksimal ukuran upload 5 Mb.</small>
-                                            <input type="file" id="input-file-now" class="dropify" name="gambar_galeri" />
+                                            <input type="file" id="input-file-now" class="dropify" name="gambar_galeri" required="" />
                                             <br>
                                             <form>
                                               <div class="form-group">
                                                 <label>Judul Galery</label>
-                                                <input type="text" class="form-control" placeholder="Masukan judul" name="judul_galeri">
+                                                <input type="text" class="form-control" placeholder="Masukan judul" name="judul_galeri" required="">
                                               </div>
                                               <div class="form-group">
                                                 <label>Deskripsi Galery</label>
-                                                <textarea type="textarea" rows="4" class="form-control" placeholder="Masukan deskripsi" name="deskripsi_galeri"></textarea>
+                                                <textarea type="textarea" rows="4" class="form-control" placeholder="Masukan deskripsi" name="deskripsi_galeri" required=""></textarea>
                                               </div>
-                                              <button class="btn btn-success" style="float: right;" name="btnSimpan">Simpan</button>
+                                              <button class="btn btn-success" style="float: right;" name="btnSimpan" value="OK">Simpan</button>
                                             </form>
                                         </div>
                                     </div>

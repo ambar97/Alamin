@@ -53,8 +53,45 @@ class M_alamin extends CI_Model {
     return $this->db->query('SELECT * FROM sejarah');
       return $query->result ();
   }
+
   function get_sarpras(){
       return $this->db->query('SELECT * FROM sarana_prasarana ORDER BY id_sarana_prasarana DESC');
       return $query->result ();
+    }
+
+  //tampilan dashboard
+        function dashboard_karyawan(){
+          // get total rows
+          $this->db->from('karyawan');
+            return $this->db->count_all_results();
+        }
+
+        function dashboard_berita(){
+          // get total rows
+          $this->db->from('informasi');
+            return $this->db->count_all_results();
+        }
+
+        function dashboard_prestasi(){
+          // get total rows
+          $this->db->from('prestasi');
+            return $this->db->count_all_results();
+        }
+
+        function dashboard_video(){
+          // get total rows
+          $this->db->from('headline');
+            return $this->db->count_all_results();
+        }
+  //end of tampilan dashboard
+
+   function select_prestasi(){
+    $this->db->select('prestasi.*, lingkup_prestasi.*, kategori_juara.*');
+          $this->db->join('lingkup_prestasi', 'lingkup_prestasi.id_lingkup_prestasi = prestasi.id_lingkup_prestasi');
+          $this->db->join('kategori_juara', 'kategori_juara.id_juara= prestasi.id_juara');
+          $this->db->from('prestasi');
+          // $this->db->where('harga.id_harga', '1');
+          $data=$this->db->get();
+          return $data;
   }
 }
