@@ -38,29 +38,40 @@ class Dashboard extends CI_Controller {
 			header('location:'.base_url().'admin/Dashboard');
 		}
 	}
-	public function e_sejarah(){
-		$id=$this->input->post('id');
-		// $where= array('no'=>$id);
-		$where= array('id_visi_misi'=>$id);
-		$data['visi']=$this->input->post('visi');
-		$data['misi']=$this->input->post('misi');
-		$data['tujuan']=$this->input->post('tujuan');
-		$res = $this->M_alamin->update('visi_misi',$data,$where);
-		if ($res >= 0) {
-			$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
-			header('location:'.base_url().'admin/Dashboard');
-		} else {
-			$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Gagal di simpan"));
-			header('location:'.base_url().'admin/Dashboard');
+	// public function e_sejarah(){
+	// 	$id=$this->input->post('id');
+	// 	// $where= array('no'=>$id);
+	// 	$where= array('id_visi_misi'=>$id);
+	// 	$data['visi']=$this->input->post('visi');
+	// 	$data['misi']=$this->input->post('misi');
+	// 	$data['tujuan']=$this->input->post('tujuan');
+	// 	$res = $this->M_alamin->update('visi_misi',$data,$where);
+	// 	if ($res >= 0) {
+	// 		$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
+	// 		header('location:'.base_url().'admin/Dashboard');
+	// 	} else {
+	// 		$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Gagal di simpan"));
+	// 		header('location:'.base_url().'admin/Dashboard');
+	// 	}
+
+	// }
+	public function e_sej(){
+		$config['upload_path']          = 'gallery/Sejarah';
+		$config['allowed_types']        = 'gif|jpg|png|jpeg';
+		$this->load->library('upload', $config);
+
+		if ( $this->upload->do_upload('img_sejarah'))
+		{
+						$data = $this->upload->data();
+						$name_file=$data['file_name'];
+						$dataupdate['gambar_sejarah'] = $name_file;
+						$id['id_sejarah'] = $this->input->post('id_sejarah');
+						$dataupdate['judul_sejarah'] = $this->input->post('judul_sejarah');
+						$dataupdate['isi_sejarah'] = $this->input->post('isi_sejarah');
+						$this->M_alamin->update('sejarah', $dataupdate, $id);
 		}
 
-	}
-	public function e_sej(){
-		$id['id_visi_misi']=$this->input->post('id_visi_misi');
-		$data['judul_sejarah'] = $this->input->post('judul_sejarah');
-		$data['isi_sejarah'] = $this->input->post('isi_sejarah');
-		$data['gambar_sejarah'] = $this->input->post('gambar_sejarah');
-		$this->M_alamin->update('sejarah', $data, $id);
+
 		header('location:'.base_url().'admin/Dashboard');
 	}
 }
