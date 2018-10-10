@@ -51,22 +51,25 @@
                             <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark">+</button></h2>
                             <div class="message-widget contact-widget">
                                 <!-- Message -->
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Upload Gambar Sarpras (+)</h4>
-                                            <small>Maksimal ukuran upload 5 Mb.</small>
-                                            <input type="file" id="input-file-now" class="dropify" />
-                                            <br>
-                                            <form>
-                                              <div class="form-group">
-                                                <label for="exampleInputEmail1">Judul Sarpras</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan judul">
-                                              </div>
-                                            </form>
+                                <form autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/admin/Sarpras/create'; ?>" enctype="multipart/form-data">
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Upload Gambar Sarpras (+)</h4>
+                                                <small>Maksimal ukuran upload 5 Mb.</small>
+                                                <input type="file" id="input-file-now" class="dropify" name="gambar_sarpras" />
+                                                <br>
+                                                <form>
+                                                  <div class="form-group">
+                                                    <label for="exampleInputEmail1">Judul Sarpras</label>
+                                                    <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan_sarana" required="">
+                                                  </div>
+                                                   <button class="btn btn-success" style="float: right;" name="btnSimpan">Simpan</button>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -75,23 +78,27 @@
                 <div class="row el-element-overlay">
                     <div class="col-md-12">
                         <h4 class="card-title">Sarana & Prasarana</h4>
-                        <h6 class="card-subtitle m-b-20 text-muted">You can use by default </h6> 
+                        <h6 class="card-subtitle m-b-20 text-muted">Klik tanda (x) untuk menghapus </h6> 
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/2.jpg" alt="user" />
-                                    <div class="el-overlay">
-                                        
+                    <?php foreach ($sarana->result() as $sarpras) {?>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1"> <img src="<?php echo base_url().$sarpras -> gambar_sarana ?>" alt="user" />
+                                        <div class="el-overlay">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="el-card-content">
+                                         <small><?php echo $sarpras -> ket_sarana_prasarana ?></small>
+                                         <a href="<?php echo base_url('admin/Sarpras/hapus/'.$sarpras-> id_sarana_prasarana) ?>">
+                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="el-card-content">
-                                 <small>Managing Director</small> 
-                                 <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
-                                    <br/> </div>
                             </div>
                         </div>
-                    </div>
+                    <?php } ?>
                 </div>
 
     </div>

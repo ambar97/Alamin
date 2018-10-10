@@ -53,4 +53,8 @@ class M_alamin extends CI_Model {
     return $this->db->query('SELECT * FROM sejarah');
       return $query->result ();
   }
+  function get_sarpras(){
+      return $this->db->query('SELECT * FROM sarana_prasarana ORDER BY id_sarana_prasarana DESC');
+      return $query->result ();
+  }
 }
