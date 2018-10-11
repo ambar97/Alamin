@@ -301,21 +301,22 @@
                            <div class="card-body">
                                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                            <div class="carousel-inner" role="listbox">
+                                             <?php foreach ($slider1->result() as $s) { ?>
                                                <div class="carousel-item active">
-                                                   <div class="blog-image"> <img class="d-block img-fluid" src="<?php echo base_url() ?>master/adm/assets/images/big/img1.jpg" alt="First slide"></div>
+                                                   <div class="blog-image"> <img class="d-block img-fluid" src="<?php echo base_url()?>gallery/Slider/<?php echo $s->gambar_galeri; ?>" alt="Slider"></div>
                                                </div>
+                                             <?php } ?>
+                                             <?php foreach ($slider2->result() as $s2) { ?>
                                                <div class="carousel-item">
-                                                   <div class="blog-image"><img class="d-block img-fluid" src="<?php echo base_url() ?>master/adm/assets/images/big/img2.jpg" alt="Second slide"></div>
+                                                   <div class="blog-image"> <img class="d-block img-fluid" src="<?php echo base_url()?>gallery/Slider/<?php echo $s2->gambar_galeri; ?>" alt="Slider"></div>
                                                </div>
-                                               <div class="carousel-item">
-                                                   <div class="blog-image"><img class="d-block img-fluid" src="<?php echo base_url() ?>master/adm/assets/images/big/img3.jpg" alt="Third slide"></div>
-                                               </div>
+                                             <?php } ?>
                                            </div>
                                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
                                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
                                        </div>
                                        <div class="d-flex">
-                                   <div class="col-lg-12">  <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit Slider</a></div>
+                                   <div class="col-lg-12">  <a style="float: right; margin-bottom: 30px; " href="Dashboard/slider" class="btn btn-success"> Edit Slider</a></div>
 
                                </div>
                                    </div>
