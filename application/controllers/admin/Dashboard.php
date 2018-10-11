@@ -23,6 +23,7 @@ class Dashboard extends CI_Controller {
 		$data['sjrh']=$this->M_alamin->select("sejarah");
 		$data['slider1']=$this->M_alamin->selectwhere('galeri', $where1);
 		$data['slider2']=$this->M_alamin->selectwhere('galeri', $where2);
+		$data['denah']=$this->M_alamin->select('denah_sekolah');
 		$this->load->view('admin/v_dashboard',$data);
 		// }
 	}
@@ -117,6 +118,24 @@ class Dashboard extends CI_Controller {
 						// $dataupdate['judul_galeri'] = $this->input->post('judul_galeri');
 						// $dataupdate['isi_sejarah'] = $this->input->post('isi_sejarah');
 						$this->M_alamin->update('galeri', $dataupdate, $id);
+		}
+		header('location:'.base_url().'admin/Dashboard');
+	}
+
+	public function e_denah(){
+		$config['upload_path']          = 'gallery/Denah';
+		$config['allowed_types']        = 'gif|jpg|png|jpeg';
+		$this->load->library('upload', $config);
+
+		if ( $this->upload->do_upload('denah_sekolah'))
+		{
+						$data = $this->upload->data();
+						$name_file=$data['file_name'];
+						$dataupdate['gambar_denah'] = $name_file;
+						$id['id_denah'] = $this->input->post('id_denah');
+						// $dataupdate['judul_galeri'] = $this->input->post('judul_galeri');
+						// $dataupdate['isi_sejarah'] = $this->input->post('isi_sejarah');
+						$this->M_alamin->update('denah_sekolah', $dataupdate, $id);
 		}
 		header('location:'.base_url().'admin/Dashboard');
 	}

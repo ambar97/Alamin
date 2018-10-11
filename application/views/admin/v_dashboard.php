@@ -330,10 +330,35 @@
                        <hr>
                        <div class="card blog-widget">
                            <div class="card-body">
-                               <div class="blog-image"><img src="<?php echo base_url() ?>master/adm/assets/images/big/img1.jpg" alt="img" class="img-responsive" /></div>
+                             <?php foreach ($denah->result() as $asd) { ?>
+                               <div class="blog-image"><img src="<?php echo base_url(); ?>gallery/Denah/<?php echo $asd->gambar_denah; ?>" alt="Gambar Denah Sekolah" class="img-responsive" /></div>
+                             <?php } ?>
                                <div class="d-flex">
-                                   <div class="col-lg-12">  <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit</a></div>
-
+                                 <div id="responsive-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                     <div class="modal-dialog">
+                                         <div class="modal-content">
+                                             <div class="modal-header">
+                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                 <h4 class="modal-title">Edit Denah Sekolah</h4>
+                                             </div>
+                                             <form method="post" action="<?php echo base_url("admin/Dashboard/e_denah")?>" enctype="multipart/form-data">
+                                             <div class="modal-body">
+                                                     <div class="form-group">
+                                                       <input type="text" name="id_denah" value="1" hidden>
+                                                       <input type="file" name="denah_sekolah" required>
+                                                     </div>
+                                             </div>
+                                             <div class="modal-footer">
+                                                 <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                                                 <button type="submit" class="btn btn-danger waves-effect waves-light">Save changes</button>
+                                             </div>
+                                             </form>
+                                         </div>
+                                     </div>
+                                 </div>
+                                   <div class="col-lg-12">
+                                     <button style="float: right; margin-bottom: 30px; " data-toggle="modal" data-target="#responsive-modal" class="btn btn-success"> Edit</button>
+                                   </div>
                                </div>
                            </div>
                        </div>
