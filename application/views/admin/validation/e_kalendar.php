@@ -21,10 +21,15 @@
             <h4 class="card-title">Edit Kalendar</h4>
             <form class="form-material m-t-40">
                 <div class="form-group">
-                    <label>Placeholder</label>
-                    <input type="text" class="form-control" placeholder="placeholder">
+                    <label>Tanggal</label>
+                    <input type="text" class="form-control" placeholder="1 Januari 2018">
+                </div>
+                <div class="form-group">
+                    <label>Kegiatan</label>
+                    <input type="text" class="form-control" placeholder="Kegiatan Sekolah">
                 </div>
             </form>
+            <button type="submit">Save</button>
           </div>
         </div>
       </div>
