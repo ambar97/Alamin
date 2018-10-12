@@ -38,48 +38,40 @@
             <div class="card-body bg-info">
                 <h4 class="text-white card-title">Tambah Berita</h4>
             </div>
-            
                 <div class="card-body">
                     <div class="message-box contact-box">
                         <div class="message-widget contact-widget">
                             <!-- Message -->
-                            <form autocomplete="off" method="post" action="" enctype="multipart/form-data">
                                 <div class="col-lg-12 col-md-12">
                                     <div class="card">
+                                      <form method="post" action="<?php echo base_url("admin/Berita/i_berita")?>" enctype="multipart/form-data">
                                         <div class="card-body">
-                                            <form>
                                               <div class="form-group">
                                                 <label>Judul Berita</label>
-                                                <input type="text" class="form-control" placeholder="Masukan judul" name="judul_galeri" required="">
-                                              </div>
-                                              <div class="form-group">
-                                                <label>Tanggal Realise</label>
-                                                <input type="date" class="form-control" placeholder="dd/mm/yyyy" name="judul_galeri" required="">
+                                                <input type="text" class="form-control" placeholder="Masukan judul" name="judul_informasi" required>
                                               </div>
                                               <div class="form-group">
                                                 <label>Isi Berita</label>
                                                  <div class="card">
                                                     <div class="card-body">
-                                                        <div class="summernote" required="">
-                                                            
-                                                        </div>
+                                                        <textarea class="summernote" name="isi_informasi" required>
+                                                          
+                                                        </textarea>
                                                     </div>
                                                 </div>
                                               </div>
                                               <div class="form-group">
                                                 <label>Gambar Berita</label>
-                                                <input type="file" class="form-control" placeholder="Masukan judul" name="judul_galeri" required="">
+                                                <input type="file" class="form-control" placeholder="Masukan judul" name="gambar_informasi" required>
                                               </div>
-                                              <button class="btn btn-success" style="float: right;" name="btnSimpan" value="OK">Simpan</button>
-                                            </form>
+                                              <button type="submit" name="button">save</button>
                                         </div>
+                                        </form>
                                     </div>
                                 </div>
-                            </form>
                         </div>
                     </div>
                 </div>
-            
         </div>
     </div>
 </div>

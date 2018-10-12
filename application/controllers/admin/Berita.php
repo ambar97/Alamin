@@ -16,4 +16,13 @@ class Berita extends CI_Controller {
 	public function t_berita(){
 		$this->load->view('admin/validation/t_berita');
 	}
+
+	public function i_berita(){
+		$now = date('Y-m-d H:i:s');
+		$data['judul_informasi']=$this->input->post('judul_informasi');
+		$data['isi_informasi']=$this->input->post('isi_informasi');
+		$data['date'] = $now;
+		$this->M_alamin->insert('informasi', $data);
+		header('location:'.base_url().'admin/Berita');
+	}
 }
