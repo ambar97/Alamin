@@ -301,21 +301,22 @@
                            <div class="card-body">
                                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                            <div class="carousel-inner" role="listbox">
+                                             <?php foreach ($slider1->result() as $s) { ?>
                                                <div class="carousel-item active">
-                                                   <div class="blog-image"> <img class="d-block img-fluid" src="<?php echo base_url() ?>master/adm/assets/images/big/img1.jpg" alt="First slide"></div>
+                                                   <div class="blog-image"> <img class="d-block img-fluid" src="<?php echo base_url()?>gallery/Slider/<?php echo $s->gambar_galeri; ?>" alt="Slider"></div>
                                                </div>
+                                             <?php } ?>
+                                             <?php foreach ($slider2->result() as $s2) { ?>
                                                <div class="carousel-item">
-                                                   <div class="blog-image"><img class="d-block img-fluid" src="<?php echo base_url() ?>master/adm/assets/images/big/img2.jpg" alt="Second slide"></div>
+                                                   <div class="blog-image"> <img class="d-block img-fluid" src="<?php echo base_url()?>gallery/Slider/<?php echo $s2->gambar_galeri; ?>" alt="Slider"></div>
                                                </div>
-                                               <div class="carousel-item">
-                                                   <div class="blog-image"><img class="d-block img-fluid" src="<?php echo base_url() ?>master/adm/assets/images/big/img3.jpg" alt="Third slide"></div>
-                                               </div>
+                                             <?php } ?>
                                            </div>
                                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
                                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
                                        </div>
                                        <div class="d-flex">
-                                   <div class="col-lg-12">  <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit Slider</a></div>
+                                   <div class="col-lg-12">  <a style="float: right; margin-bottom: 30px; " href="Dashboard/slider" class="btn btn-success"> Edit Slider</a></div>
 
                                </div>
                                    </div>
@@ -329,10 +330,35 @@
                        <hr>
                        <div class="card blog-widget">
                            <div class="card-body">
-                               <div class="blog-image"><img src="<?php echo base_url() ?>master/adm/assets/images/big/img1.jpg" alt="img" class="img-responsive" /></div>
+                             <?php foreach ($denah->result() as $asd) { ?>
+                               <div class="blog-image"><img src="<?php echo base_url(); ?>gallery/Denah/<?php echo $asd->gambar_denah; ?>" alt="Gambar Denah Sekolah" class="img-responsive" /></div>
+                             <?php } ?>
                                <div class="d-flex">
-                                   <div class="col-lg-12">  <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit</a></div>
-
+                                 <div id="responsive-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                     <div class="modal-dialog">
+                                         <div class="modal-content">
+                                             <div class="modal-header">
+                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                 <h4 class="modal-title">Edit Denah Sekolah</h4>
+                                             </div>
+                                             <form method="post" action="<?php echo base_url("admin/Dashboard/e_denah")?>" enctype="multipart/form-data">
+                                             <div class="modal-body">
+                                                     <div class="form-group">
+                                                       <input type="text" name="id_denah" value="1" hidden>
+                                                       <input type="file" name="denah_sekolah" required>
+                                                     </div>
+                                             </div>
+                                             <div class="modal-footer">
+                                                 <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                                                 <button type="submit" class="btn btn-danger waves-effect waves-light">Save changes</button>
+                                             </div>
+                                             </form>
+                                         </div>
+                                     </div>
+                                 </div>
+                                   <div class="col-lg-12">
+                                     <button style="float: right; margin-bottom: 30px; " data-toggle="modal" data-target="#responsive-modal" class="btn btn-success"> Edit</button>
+                                   </div>
                                </div>
                            </div>
                        </div>
