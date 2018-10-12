@@ -30,4 +30,11 @@ class Kalendar extends CI_Controller {
 		$data['detail']= $this->db->query("SELECT * FROM agenda WHERE id_agenda='$id'");
 	 	$this->load->view('admin/validation/e_kalendar',$data);
 	}
+
+	public function delete_kalendar(){
+		$id=$this->uri->segment(4);
+		$deletebyid=array('id_agenda'=>$id);
+		$this->M_alamin->delete($deletebyid, 'agenda');
+		header('location:'.base_url().'admin/Kalendar');
+	}
 }

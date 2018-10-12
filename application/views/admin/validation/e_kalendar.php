@@ -19,17 +19,21 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Edit Kalendar</h4>
-            <form class="form-material m-t-40">
+            <form class="form-material m-t-40" method="post" action="<?php echo base_url("admin/Kalendar/e_kalendar")?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label>Tanggal</label>
-                    <input type="text" class="form-control" placeholder="1 Januari 2018">
+                    <?php foreach ($detail->result() as $d) { ?>
+                      <input type="text" class="form-control" value="<?php echo $d->tanggal_agenda; ?>" name="tanggal_akademik">
+                    <?php } ?>
                 </div>
                 <div class="form-group">
                     <label>Kegiatan</label>
-                    <input type="text" class="form-control" placeholder="Kegiatan Sekolah">
+                    <?php foreach ($detail->result() as $d) { ?>
+                      <input type="text" class="form-control" value="<?php echo $d->nama_kegiatan; ?>" name="kegiatan_akademik">
+                    <?php } ?>
                 </div>
+                  <button type="submit">Save</button>
             </form>
-            <button type="submit">Save</button>
           </div>
         </div>
       </div>

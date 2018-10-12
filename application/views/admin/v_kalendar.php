@@ -87,7 +87,7 @@
                                     <td><?php echo $no++; ?></td>
                                     <td><?php echo $a->tanggal_agenda; ?></td>
                                     <td><span class="peity-line" data-width="120" data-peity='{ "fill": ["#009efb"], "stroke":["#009efb"]}' data-height="40"><?php echo $a->nama_kegiatan; ?></span> </td>
-                                    <td><button onclick="updatejs('<?php echo $a->id_agenda; ?>')">edit</button><button>hapus</button></td>
+                                    <td><button onclick="updatejs('<?php echo $a->id_agenda; ?>')">edit</button><button onclick="deleted('<?php echo $a->id_agenda; ?>')">hapus</button></td>
                               <?php } ?>
                                 </tr>
                             </tbody>
@@ -103,7 +103,7 @@
  function deleted(param){
    var proc = window.confirm('Are you sure delete this data?');
    if(proc){
-      document.location='<?php echo base_url(); ?>nilai/nilai/delete_nilai/'+param;
+      document.location='<?php echo base_url(); ?>admin/Kalendar/delete_kalendar/'+param;
     }
   }
   function updatejs(param){
