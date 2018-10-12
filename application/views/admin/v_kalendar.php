@@ -87,35 +87,8 @@
                                     <td><?php echo $no++; ?></td>
                                     <td><?php echo $a->tanggal_agenda; ?></td>
                                     <td><span class="peity-line" data-width="120" data-peity='{ "fill": ["#009efb"], "stroke":["#009efb"]}' data-height="40"><?php echo $a->nama_kegiatan; ?></span> </td>
-                                    <td><button data-toggle="modal" data-target="#responsive-modal-edit">edit</button><button>hapus</button></td>
+                                    <td><button onclick="updatejs('<?php echo $a->id_agenda; ?>')">edit</button><button>hapus</button></td>
                               <?php } ?>
-                                    <div id="responsive-modal-edit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                    <h4 class="modal-title">Edit Kegiatan</h4>
-                                                </div>
-                                                <form method="post" action="<?php echo base_url("admin/Kalendar/e_kalendar")?>" enctype="multipart/form-data">
-                                                <div class="modal-body">
-                                                        <div class="form-group">
-                                                            <label for="recipient-name" class="control-label">Tanggal:</label>
-                                                            <input type="text" class="form-control" name="tanggal_akademik" value="<?php echo $agenda->tanggal_agenda; ?>">
-                                                            <input type="text" class="form-control" name="id_agenda" value="<?php echo $agenda->id_agenda; ?>" hidden>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="message-text" class="control-label">Kegiatan:</label>
-                                                            <textarea type="text" class="form-control" name="kegiatan_akademik"><?php echo $agenda->nama_kegiatan; ?></textarea>
-                                                        </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                                    <button type="submit" class="btn btn-danger waves-effect waves-light">Save changes</button>
-                                                </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </tr>
                             </tbody>
                         </table>
@@ -125,5 +98,18 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+ function deleted(param){
+   var proc = window.confirm('Are you sure delete this data?');
+   if(proc){
+      document.location='<?php echo base_url(); ?>nilai/nilai/delete_nilai/'+param;
+    }
+  }
+  function updatejs(param){
+      document.location='<?php echo base_url(); ?>admin/Kalendar/d_kalendar/'+param;
+  }
+</script>
+
   <?php $this->load->view("admin/side/footer"); ?>
  <?php $this->load->view("admin/side/js"); ?>

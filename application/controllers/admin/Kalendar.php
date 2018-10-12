@@ -23,4 +23,11 @@ class Kalendar extends CI_Controller {
 		$this->M_alamin->update('agenda', $data);
 		header('location:'.base_url().'admin/Kalendar');
 	}
+
+	public function d_kalendar()
+	{
+		$id=$this->uri->segment(4);
+		$data['detail']= $this->db->query("SELECT * FROM agenda WHERE id_agenda='$id'");
+	 	$this->load->view('admin/validation/e_kalendar',$data);
+	}
 }
