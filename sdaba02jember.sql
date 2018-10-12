@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2018 at 10:32 AM
+-- Generation Time: Oct 12, 2018 at 03:22 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -43,9 +43,16 @@ CREATE TABLE `admin` (
 
 CREATE TABLE `agenda` (
   `id_agenda` int(9) NOT NULL,
-  `tanggal_ageda` varchar(255) NOT NULL,
+  `tanggal_agenda` varchar(255) NOT NULL,
   `nama_kegiatan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `agenda`
+--
+
+INSERT INTO `agenda` (`id_agenda`, `tanggal_agenda`, `nama_kegiatan`) VALUES
+(1, '', '');
 
 -- --------------------------------------------------------
 
@@ -70,6 +77,13 @@ CREATE TABLE `denah_sekolah` (
   `gambar_denah` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `denah_sekolah`
+--
+
+INSERT INTO `denah_sekolah` (`id_denah`, `judul_denah`, `gambar_denah`) VALUES
+('1', 'asd', 'BJzNQ-XAC1K1.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -80,7 +94,6 @@ CREATE TABLE `ekstrakurikuler` (
   `id_ekstrakurikuler` int(9) NOT NULL,
   `nama_ekstrakurikuler` varchar(255) NOT NULL,
   `keterangan_ekstrakurikuler` varchar(255) NOT NULL,
-  `id_gambar` int(9) NOT NULL,
   `gambar_ekstra` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -96,6 +109,14 @@ CREATE TABLE `galeri` (
   `deskripsi_galeri` varchar(255) NOT NULL,
   `gambar_galeri` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `galeri`
+--
+
+INSERT INTO `galeri` (`id_galeri`, `judul_galeri`, `deskripsi_galeri`, `gambar_galeri`) VALUES
+(1, 'slider 1', '', 'BMQbR88A1Mk.jpg'),
+(2, 'slider 2', '', 'BJw0DGjAvfF.jpg');
 
 -- --------------------------------------------------------
 
@@ -250,9 +271,15 @@ CREATE TABLE `sejarah` (
   `id_sejarah` int(9) NOT NULL,
   `judul_sejarah` varchar(255) NOT NULL,
   `isi_sejarah` varchar(255) NOT NULL,
-  `id_gambar` int(9) NOT NULL,
   `gambar_sejarah` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sejarah`
+--
+
+INSERT INTO `sejarah` (`id_sejarah`, `judul_sejarah`, `isi_sejarah`, `gambar_sejarah`) VALUES
+(1, 'Sejarah SDABA 02 Jember', 'Menenggor gor or gorgor gorrr ', 'BKnYq2PgpEN.jpg');
 
 -- --------------------------------------------------------
 
@@ -283,7 +310,7 @@ CREATE TABLE `visi_misi` (
 --
 
 INSERT INTO `visi_misi` (`id_visi_misi`, `visi`, `misi`, `tujuan`) VALUES
-(2, 'asd', 'qwe', 'zxc');
+(2, 'asdasd', 'qwe', 'zxc');
 
 --
 -- Indexes for dumped tables
@@ -424,19 +451,19 @@ ALTER TABLE `visi_misi`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_admin` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `agenda`
 --
 ALTER TABLE `agenda`
-  MODIFY `id_agenda` int(9) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_agenda` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `bidang`
 --
 ALTER TABLE `bidang`
-  MODIFY `id_bidang` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_bidang` int(9) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `ekstrakurikuler`
@@ -448,7 +475,7 @@ ALTER TABLE `ekstrakurikuler`
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id_galeri` int(9) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_galeri` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `informasi`
@@ -460,7 +487,7 @@ ALTER TABLE `informasi`
 -- AUTO_INCREMENT for table `jabatan_karyawan`
 --
 ALTER TABLE `jabatan_karyawan`
-  MODIFY `id_jabatan` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1236;
+  MODIFY `id_jabatan` int(9) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `kategori_juara`
@@ -484,7 +511,7 @@ ALTER TABLE `kritik_saran`
 -- AUTO_INCREMENT for table `lingkup_prestasi`
 --
 ALTER TABLE `lingkup_prestasi`
-  MODIFY `id_lingkup_prestasi` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_lingkup_prestasi` int(9) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `poling`
@@ -514,7 +541,7 @@ ALTER TABLE `sarana_prasarana`
 -- AUTO_INCREMENT for table `sejarah`
 --
 ALTER TABLE `sejarah`
-  MODIFY `id_sejarah` int(9) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_sejarah` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `status_dibaca`
