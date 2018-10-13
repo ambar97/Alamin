@@ -44,7 +44,7 @@
                                 <li><a href="<?php echo base_url("admin/StrukturPers/SarprasHum") ?>">Sapras & Humas</a></li>
                             </ul>
                         </li>
-                        <li> <a class="" href="#" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Ekstrakurikuler</span></a>
+                        <li> <a class="" href="<?php echo base_url("admin/Extra") ?>" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Ekstrakurikuler</span></a>
                         </li>
 
                         <li class="nav-devider"></li>

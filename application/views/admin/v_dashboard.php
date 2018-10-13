@@ -258,9 +258,6 @@
                                                    <div class="modal-body">
                                                        <form class="form-horizontal form-material" method="post" action="<?php echo base_url("admin/Dashboard/e_sej")?>" enctype="multipart/form-data">
                                                            <div class="form-group">
-                                                            <div class="col-md-12 m-b-20">
-
-                                                               </div>
                                                                <div class="col-md-12 m-b-20">
                                                                  <input type="text" name="id_sejarah" value="1" hidden>
                                                                 <h6>Judul</h6>
