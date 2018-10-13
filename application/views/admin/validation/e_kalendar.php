@@ -23,6 +23,7 @@
                 <div class="form-group">
                     <label>Tanggal</label>
                     <?php foreach ($detail->result() as $d) { ?>
+                      <input type="text" name="id_agenda" value="<?php echo $d->id_agenda; ?>" hidden>
                       <input type="text" class="form-control" value="<?php echo $d->tanggal_agenda; ?>" name="tanggal_akademik">
                     <?php } ?>
                 </div>

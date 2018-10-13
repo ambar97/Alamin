@@ -17,10 +17,12 @@ class Kalendar extends CI_Controller {
 	}
 
 	public function e_kalendar(){
-		$id = $this->input->post('id_agenda');
+
+		$id= $this->input->post('id_agenda');
+		$where['id_agenda'] = $id;
 		$data['tanggal_agenda']=$this->input->post('tanggal_akademik');
 		$data['nama_kegiatan']=$this->input->post('kegiatan_akademik');
-		$this->M_alamin->update('agenda', $data);
+		$this->M_alamin->update('agenda', $data, $where);
 		header('location:'.base_url().'admin/Kalendar');
 	}
 
