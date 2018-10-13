@@ -46,7 +46,7 @@
             <div class="card-body">
                 <div class="message-box contact-box">
                     <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark">+</button></h2>
-                    <div id="edit_ekstra" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <!-- <div id="edit_ekstra" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -72,7 +72,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="message-widget contact-widget">
                     	<form class="form-horizontal form-material" method="post" action="<?php echo base_url(). 'index.php/admin/Extra/t_ekstra'; ?>" enctype="multipart/form-data">
                          	<div class="col-lg-12 col-md-12">
@@ -108,7 +108,7 @@
                 <h4 class="card-title">List Ekstrakulikuler</h4>
                 <h6 class="card-subtitle m-b-20 text-muted">Kumpulan nama ekstrakulikuler sekolah</h6>
             </div>
-            	<?php foreach ($ekstra->result() as $eks) {?>
+            	<?php foreach ($ekstra->result() as $eks) { ?>
             <div class="col-lg-3 col-md-6">
                 <div class="card">
                     <div class="el-card-item">
@@ -119,39 +119,10 @@
                                     	<a class="btn default btn-outline image-popup-vertical-fit" href="<?php echo base_url().$eks -> gambar_ekstra ?>"><i class="icon-magnifier" title="zoom"></i>
                                     	</a>
                                 	</li>
-                                    <li><a class="btn default btn-outline" href="javascript:void(0);" data-toggle="modal" data-target="#edit_ekstra"><i class="icon-pencil" title="edit"></i></a></li>
+                                    <li><a class="btn default btn-outline" href="<?php echo base_url() ?>admin/Extra/edit_view/<?php echo $eks -> id_ekstrakurikuler; ?>"><i class="icon-pencil" title="edit"></i></a></li>
                                     <li><a class="btn default btn-outline" href="<?php echo base_url('admin/Extra/hapus/'.$eks-> id_ekstrakurikuler) ?>"><i class="icon-trash" title="hapus"></i></a></li>
                                 </ul>
                             </div>
-                            <div id="edit_ekstra" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title" id="myModalLabel">Edit ekstrakulikuler (+)</h4> 
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                </div>
-                                <div class="modal-body">
-                                    <form class="form-horizontal form-material" method="post" action="<?php echo base_url(). 'index.php/admin/Extra/t_ekstra'; ?>" enctype="multipart/form-data">
-                                        <div class="form-group">
-                                            <div class="col-md-12 m-b-20">
-                                            	<input type="text" name="id_ekstrakurikuler" value="1" hidden>
-                                                <textarea type="text" class="form-control" name="nm_ekstra" placeholder="Nama Ekstrakulikuler" rows="1" required=""><?php echo $eks -> nama_ekstrakurikuler; ?></textarea>
-                                            </div>
-                                            <div class="col-md-12 m-b-20">
-                                                <div class="form-group">
-                                        			<textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Keterangan" name="ket_ekstra"><?php echo $eks -> keterangan_ekstrakurikuler; ?></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 m-b-20">
-                                                 <input type="file" id="input-file-now" class="dropify" name="gambar_eks" required="" data-default_file="<?php echo base_url().$eks -> gambar_ekstra ?>"/>
-                                            </div>
-                                        </div>
-                                    <button type="submit" class="btn btn-success waves-effect" value="OK" name="btnSimpan" style="float: right;">Save</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                         </div>
                         <div class="el-card-content">
                             <h3 class="box-title"><?php echo $eks -> nama_ekstrakurikuler; ?></h3> <small><?php echo $eks -> keterangan_ekstrakurikuler; ?></small>

@@ -183,52 +183,52 @@
                            <!-- <div class="col-lg-10" ></div> -->
                            <div><a  style="float: right; margin:30px; margin-top: -30px;"   href="" class="btn btn-success" data-toggle="modal" data-target="#edit_visimisi"> Edit</a></div>
                            <div id="edit_visimisi" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" method="post">
-                                                           <div class="modal-dialog modal-lg">
-                                                               <div class="modal-content">
-                                                                   <div class="modal-header">
-                                                                       <h4 class="modal-title" id="myModalLabel">Edit Visi, Misi dan Tujuan(+)</h4>
-                                                                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                                   </div>
-                                                                   <div class="modal-body">
-                                                                       <form class="form-horizontal form-material" method="post" action="<?php echo base_url('admin/Dashboard/e_visi') ?>">
-                                                                           <div class="form-group">
-                                                                               <div class="col-md-12 m-b-20">
-                                                                                   <p>Visi</p>
-                                                                                   <?php foreach ($vmt->result() as $key) { ?>
-                                                                                   <textarea name="visi" class="form-control" id="exampleTextarea" rows="4" placeholder="Visi"><?php echo $key->visi; ?></textarea>
-                                                                                 <?php } ?>
-                                                                               </div>
-                                                                               <div class="col-md-12 m-b-20">
-                                                                                   <p>Misi</p>
-                                                                                   <?php foreach ($vmt->result() as $key) { ?>
-                                                                                   <textarea name="misi" class="form-control" id="exampleTextarea" rows="4" placeholder="Misi"><?php echo $key->misi; ?></textarea>
-                                                                                 <?php } ?>
-                                                                               </div>
-                                                                               <div class="col-md-12 m-b-20">
-                                                                                   <p>Tujuan</p>
-                                                                                   <?php foreach ($vmt->result() as $key) { ?>
-                                                                                   <textarea name="tujuan" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->tujuan; ?></textarea>
-                                                                                 <?php } ?>
-                                                                               </div>
+                               <div class="modal-dialog modal-lg">
+                                   <div class="modal-content">
+                                       <div class="modal-header">
+                                           <h4 class="modal-title" id="myModalLabel">Edit Visi, Misi dan Tujuan(+)</h4>
+                                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                       </div>
+                                       <div class="modal-body">
+                                           <form class="form-horizontal form-material" method="post" action="<?php echo base_url('admin/Dashboard/e_visi') ?>">
+                                               <div class="form-group">
+                                                   <div class="col-md-12 m-b-20">
+                                                       <p>Visi</p>
+                                                       <?php foreach ($vmt->result() as $key) { ?>
+                                                       <textarea name="visi" class="form-control" id="exampleTextarea" rows="4" placeholder="Visi"><?php echo $key->visi; ?></textarea>
+                                                     <?php } ?>
+                                                   </div>
+                                                   <div class="col-md-12 m-b-20">
+                                                       <p>Misi</p>
+                                                       <?php foreach ($vmt->result() as $key) { ?>
+                                                       <textarea name="misi" class="form-control" id="exampleTextarea" rows="4" placeholder="Misi"><?php echo $key->misi; ?></textarea>
+                                                     <?php } ?>
+                                                   </div>
+                                                   <div class="col-md-12 m-b-20">
+                                                       <p>Tujuan</p>
+                                                       <?php foreach ($vmt->result() as $key) { ?>
+                                                       <textarea name="tujuan" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->tujuan; ?></textarea>
+                                                     <?php } ?>
+                                                   </div>
 
-                                                                              <div class="col-md-12 m-b-20">
-                                                                                   <!-- <p>Tujuan</p> -->
-                                                                                   <?php foreach ($vmt->result() as $key) { ?>
-                                                                                   <textarea style="color: #fff; margin-bottom: -20px; margin-top: -20px; font-size: 2px;" name="id" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->id_visi_misi; ?></textarea>
-                                                                                 <?php } ?>
-                                                                               </div>
-                                                                           </div>
-                                                                           <div style="float: right;">
-                                                                               <button type="submit" class="btn btn-info waves-effect" value="OK">Save</button>
-                                                                               <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                                                                           </div>
-                                                                       </form>
-                                                                   </div>
-                                                               </div>
-                                                               <!-- /.modal-content -->
-                                                           </div>
-                                                               <!-- /.modal-dialog -->
-                                                       </div>
+                                                  <div class="col-md-12 m-b-20">
+                                                       <!-- <p>Tujuan</p> -->
+                                                       <?php foreach ($vmt->result() as $key) { ?>
+                                                       <textarea style="color: #fff; margin-bottom: -20px; margin-top: -20px; font-size: 2px;" name="id" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->id_visi_misi; ?></textarea>
+                                                     <?php } ?>
+                                                   </div>
+                                               </div>
+                                               <div style="float: right;">
+                                                   <button type="submit" class="btn btn-info waves-effect" value="OK">Save</button>
+                                                   <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                               </div>
+                                           </form>
+                                       </div>
+                                   </div>
+                                   <!-- /.modal-content -->
+                               </div>
+                                   <!-- /.modal-dialog -->
+                           </div>
                        </div>
                    </div>
 
