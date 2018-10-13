@@ -49,6 +49,7 @@
                                               <div class="form-group">
                                                 <label>Judul Berita</label>
                                                 <?php foreach ($d_berita->result() as $d) { ?>
+                                                  <input type="text" name="id_informasi" value="<?php echo $d->id_informasi; ?>">
                                                   <input type="text" class="form-control" name="judul_informasi" value="<?php echo $d->judul_informasi;?>" required>
                                                 <?php } ?>
                                               </div>

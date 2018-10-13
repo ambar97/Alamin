@@ -47,12 +47,12 @@ class Berita extends CI_Controller {
 						$data = $this->upload->data();
 						$name_file=$data['file_name'];
 						$datainsert['gambar_informasi'] = $name_file;
-						$id=$this->uri->segment(4);
+						$id=$this->input->post('id_informasi'); $where['id_informasi'] = $id;
 						$now = date('Y-m-d H:i:s');
 						$datainsert['judul_informasi']=$this->input->post('judul_informasi');
 						$datainsert['isi_informasi']=$this->input->post('isi_informasi');
 						$datainsert['date'] = $now;
-						$this->M_alamin->update('informasi', $datainsert);
+						$this->M_alamin->update('informasi', $datainsert, $where);
 		}
 		header('location:'.base_url().'admin/Berita');
 	}
