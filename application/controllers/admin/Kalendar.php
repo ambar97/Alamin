@@ -17,10 +17,12 @@ class Kalendar extends CI_Controller {
 	}
 
 	public function e_kalendar(){
-		$id = $this->input->post('id_agenda');
+
+		$id= $this->input->post('id_agenda');
+		$where['id_agenda'] = $id;
 		$data['tanggal_agenda']=$this->input->post('tanggal_akademik');
 		$data['nama_kegiatan']=$this->input->post('kegiatan_akademik');
-		$this->M_alamin->update('agenda', $data);
+		$this->M_alamin->update('agenda', $data, $where);
 		header('location:'.base_url().'admin/Kalendar');
 	}
 
@@ -29,5 +31,12 @@ class Kalendar extends CI_Controller {
 		$id=$this->uri->segment(4);
 		$data['detail']= $this->db->query("SELECT * FROM agenda WHERE id_agenda='$id'");
 	 	$this->load->view('admin/validation/e_kalendar',$data);
+	}
+
+	public function delete_kalendar(){
+		$id=$this->uri->segment(4);
+		$deletebyid=array('id_agenda'=>$id);
+		$this->M_alamin->delete($deletebyid, 'agenda');
+		header('location:'.base_url().'admin/Kalendar');
 	}
 }

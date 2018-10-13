@@ -36,7 +36,7 @@
                 </div>
 <div class="card">
             <div class="card-body bg-info">
-                <h4 class="text-white card-title">Tambah Berita</h4>
+                <h4 class="text-white card-title">Edit Berita</h4>
             </div>
                 <div class="card-body">
                     <div class="message-box contact-box">
@@ -44,24 +44,29 @@
                             <!-- Message -->
                                 <div class="col-lg-12 col-md-12">
                                     <div class="card">
-                                      <form method="post" action="<?php echo base_url("admin/Berita/i_berita")?>" enctype="multipart/form-data">
+                                      <form method="post" action="<?php echo base_url("admin/Berita/e_berita")?>" enctype="multipart/form-data">
                                         <div class="card-body">
                                               <div class="form-group">
                                                 <label>Judul Berita</label>
-                                                <input type="text" class="form-control" placeholder="Masukan judul" name="judul_informasi" required>
+                                                <?php foreach ($d_berita->result() as $d) { ?>
+                                                  <input type="text" class="form-control" name="judul_informasi" value="<?php echo $d->judul_informasi;?>" required>
+                                                <?php } ?>
                                               </div>
                                               <div class="form-group">
                                                 <label>Isi Berita</label>
                                                  <div class="card">
                                                     <div class="card-body">
+                                                      <?php foreach ($d_berita->result() as $d) { ?>
                                                         <textarea class="summernote" name="isi_informasi" required>
-
+                                                          <?php echo $d->isi_informasi; ?>
                                                         </textarea>
+                                                      <?php } ?>
                                                     </div>
                                                 </div>
                                               </div>
                                               <div class="form-group">
                                                 <label>Gambar Berita</label>
+                                                <img src="<?php echo base_url(); ?>gallery/Informasi/<?php echo $d->gambar_informasi; ?>" alt="Gambar Berita">
                                                 <input type="file" class="form-control" placeholder="Pilih Gambar" name="gambar_informasi" required>
                                               </div>
                                               <button type="submit" name="button">save</button>
@@ -103,6 +108,7 @@
             $(".click2edit").summernote('destroy');
         }
     </script>
+
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->
