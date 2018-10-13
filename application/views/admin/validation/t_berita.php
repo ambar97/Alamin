@@ -55,14 +55,14 @@
                                                  <div class="card">
                                                     <div class="card-body">
                                                         <textarea class="summernote" name="isi_informasi" required>
-                                                          
+
                                                         </textarea>
                                                     </div>
                                                 </div>
                                               </div>
                                               <div class="form-group">
                                                 <label>Gambar Berita</label>
-                                                <input type="file" class="form-control" placeholder="Masukan judul" name="gambar_informasi" required>
+                                                <input type="file" class="form-control" placeholder="Pilih Gambar" name="gambar_informasi" required>
                                               </div>
                                               <button type="submit" name="button">save</button>
                                         </div>

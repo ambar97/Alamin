@@ -46,14 +46,14 @@
     <div class="col-12">
         <div class="card">
                         <div class="card-body">
-                          <button href="<?php echo base_url('admin/Berita/t_berita') ?>">Tambah Berita</button>
+                          <button type="button"><a href="<?php echo base_url('admin/Berita/t_berita'); ?>">Tambah Berita</a></button>
                                 <div class="table-responsive m-t-40">
                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
                                                 <th>Nama Berita</th>
-                                                <th>Isi Berita</th>
+                                                <!-- <th>Isi Berita</th> -->
                                                 <th>Tanggal Upload</th>
                                                 <th>Views</th>
                                                 <th>Action</th>
@@ -66,13 +66,13 @@
                                             <tr>
                                                 <td><?php echo $no++?></td>
                                                 <td><?php echo $ber->judul_informasi; ?></td>
-                                                <td><?php echo $ber->isi_informasi; ?></td>
+                                                <!-- <td><?php echo $ber->isi_informasi; ?></td> -->
                                                 <td><?php echo $ber->date; ?></td>
                                                 <td><?php echo $ber->viewers; ?></td>
                                                 <td>
                                                     <button type="button">Lihat</button>
-                                                    <button type="button">Edit</button>
-                                                    <button type="button">Hapus</button>
+                                                    <button type="button" onclick="updatejs('<?php echo $ber->id_informasi; ?>')">Edit</button>
+                                                    <button type="button" onclick="deleted('<?php echo $ber->id_informasi; ?>')">Hapus</button>
                                                 </td>
                                             </tr>
                                             <?php } ?>
@@ -91,3 +91,15 @@
  <?php $this->load->view("admin/side/js"); ?>
  <?php $this->load->view("admin/side/footer"); ?>
  <?php $this->load->view("admin/side/js"); ?>
+
+ <script type="text/javascript">
+  function deleted(param){
+    var proc = window.confirm('Are you sure delete this data?');
+    if(proc){
+       document.location='<?php echo base_url(); ?>admin/Berita/delete_berita/'+param;
+     }
+   }
+   function updatejs(param){
+       document.location='<?php echo base_url(); ?>admin/Berita/d_berita/'+param;
+   }
+ </script>
