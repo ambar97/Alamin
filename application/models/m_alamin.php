@@ -32,10 +32,11 @@ class M_alamin extends CI_Model {
     return $this->db->get_where($table,$where);
   }
 
-    function get_model(){
-    $query = $this->db->query('SELECT * FROM automobil ORDER BY id_automobile ASC');
-    return $query->result();
-  }
+  // function get_model(){
+  // $query = $this->db->query('SELECT * FROM automobil ORDER BY id_automobile ASC');
+  // return $query->result();
+  // }
+
   function select_multy(){
     $this->db->select('karyawan.*, jabatan_karyawan.*, bidang.*');
           $this->db->join('jabatan_karyawan', 'jabatan_karyawan.id_jabatan = karyawan.id_jabatan');
@@ -93,5 +94,14 @@ class M_alamin extends CI_Model {
           // $this->db->where('harga.id_harga', '1');
           $data=$this->db->get();
           return $data;
+  }
+
+  function struktur_kepsek(){
+    $this->db->select('karyawan.*, bidang.*');
+    $this->db->from('karyawan');
+    $this->db->join('bidang', 'bidang.id_bidang = karyawan.id_bidang');
+    $this->db->where('karyawan.id_bidang = 1');
+    $data = $this->db->get();
+    return $data;
   }
 }
