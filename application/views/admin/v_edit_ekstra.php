@@ -50,6 +50,7 @@
                                     <div class="card-body">
                                         <h4 class="card-title">Upload Gambar Esktrakurikuler (+)</h4>
                                         <small>Maksimal ukuran upload 5 Mb.</small>
+                                        <input type="text" name="id_ekstrakurikuler" value="<?php echo $e_eks->id_ekstrakurikuler; ?>" hidden>
                                         <input type="file" id="input-file-now" class="dropify" name="gambar_eks" data-default-file="<?php echo base_url().$e_eks -> gambar_ekstra ?>" />
                                         <br>
                                         <form>

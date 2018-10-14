@@ -57,6 +57,8 @@ class Extra extends CI_Controller {
 		      if ($this->upload->do_upload('gambar_eks'))
 		    {
 		        $upload_data = $this -> upload -> data ();
+		        $id= $this->input->post('id_ekstrakurikuler');
+		        $where['id_ekstrakurikuler'] = $id;
 		        $nm_eks = $this -> input -> post('nm_ekstra');
 		        $ket_eks = $this -> input -> post('ket_ekstra');
 		        $foto = "gallery/Ekstrakulikuler/".$upload_data['file_name'];
@@ -65,7 +67,7 @@ class Extra extends CI_Controller {
 		    'keterangan_ekstrakurikuler' => $ket_eks,
 		    'gambar_ekstra' => $foto
 		    );
-		    $insert_data = $this->db->update('ekstrakurikuler',$data);
+		    $insert_data = $this->db->update('ekstrakurikuler',$data, $where);
 		  }
 		  if ($insert_data) {
 		    redirect(base_url().'admin/Extra');
