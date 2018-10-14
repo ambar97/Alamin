@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2018 at 05:11 PM
+-- Generation Time: Oct 14, 2018 at 05:52 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -302,6 +302,13 @@ CREATE TABLE `proker` (
   `id_jabatan` int(9) NOT NULL,
   `isi_proker` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `proker`
+--
+
+INSERT INTO `proker` (`id_proker`, `id_bidang`, `id_jabatan`, `isi_proker`) VALUES
+(1, 1, 1, 'asdasd');
 
 -- --------------------------------------------------------
 
@@ -603,7 +610,7 @@ ALTER TABLE `prestasi`
 -- AUTO_INCREMENT for table `proker`
 --
 ALTER TABLE `proker`
-  MODIFY `id_proker` int(9) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_proker` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `quotes`
@@ -669,7 +676,8 @@ ALTER TABLE `prestasi`
 -- Constraints for table `proker`
 --
 ALTER TABLE `proker`
-  ADD CONSTRAINT `proker_ibfk_1` FOREIGN KEY (`id_bidang`) REFERENCES `bidang` (`id_bidang`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `proker_ibfk_1` FOREIGN KEY (`id_bidang`) REFERENCES `bidang` (`id_bidang`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `proker_ibfk_2` FOREIGN KEY (`id_jabatan`) REFERENCES `jabatan_karyawan` (`id_jabatan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `quotes`
