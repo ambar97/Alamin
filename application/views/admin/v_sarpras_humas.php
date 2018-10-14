@@ -52,20 +52,11 @@
 	            <div class="card">
             		<form>
 		                <ul class="nav nav-tabs profile-tab" role="tablist">
-		                    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#quotes" role="tab">Quotes</a> </li>
 		                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#proker" role="tab">Program Kerja</a> </li>
 		                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#gambar" role="tab">Gambar Struktur</a> </li>
 		                </ul>
 		                <div class="tab-content">
-		                    <div class="tab-pane active" id="quotes" role="tabpanel">
-		                        <div class="card-body">
-		                           <div class="form-group">
-		                                <label>Quotes</label>
-		                                <textarea class="form-control" rows="6" placeholder="..." name="isi_quotes"></textarea>
-	                                </div>
-		                        </div>
-		                    </div>
-		                    <div class="tab-pane" id="proker" role="tabpanel">
+		                    <div class="tab-pane active" id="proker" role="tabpanel">
 		                        <div class="card-body">
 		                           <div class="summernote" name="isi_proker">
 	                                </div>
@@ -77,7 +68,7 @@
 	                                <small>Maksimal ukuran upload 5 Mb.</small>
 	                                <input type="file" id="input-file-now" class="dropify" name="gambar_struktur" />
 	                             </div>
-		                    </div>     
+		                    </div>
 		                </div>
 		                <div class="card-body">
 	                    	<button class="btn btn-success" style="float: right;">Simpan</button>
@@ -88,20 +79,11 @@
         	<div class="col-lg-12 col-xlg-9 col-md-7">
 	            <div class="card">
 	                <ul class="nav nav-tabs profile-tab" role="tablist">
-	                    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#isiquotes" role="tab">Quotes</a> </li>
 	                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#isiproker" role="tab">Program Kerja</a> </li>
 	                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#gambarTu" role="tab">Gambar Struktur</a> </li>
 	                </ul>
 	                <div class="tab-content">
-	                    <div class="tab-pane active" id="isiquotes" role="tabpanel">
-	                        <div class="card-body">
-	                           <div class="form-group">
-	                                <p>isi quotes</p>
-                                </div>
-                                <a href=""></a>
-	                        </div>
-	                    </div>
-	                    <div class="tab-pane" id="isiproker" role="tabpanel">
+	                    <div class="tab-pane active" id="isiproker" role="tabpanel">
 	                        <div class="card-body">
 	                           <p>isi proker</p>
 	                        </div>
@@ -110,7 +92,7 @@
 	                        <div class="card-body">
 	                           <p>Gambar Struktur</p>
 	                        </div>
-	                    </div>      
+	                    </div>
 	                </div>
 	                <div class="card-body">
                     	<button class="btn btn-danger" style="float: right;">Hapus</button>

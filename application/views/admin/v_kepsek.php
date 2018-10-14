@@ -51,26 +51,9 @@
 		    <div class="col-lg-8 col-xlg-9 col-md-7">
 	            <div class="card">
             		<form>
-		                <ul class="nav nav-tabs profile-tab" role="tablist">
-		                    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Quotes</a> </li>
-		                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Program Kerja</a> </li>
-		                </ul>
-		                <div class="tab-content">
-		                    <div class="tab-pane active" id="home" role="tabpanel">
-		                        <div class="card-body">
-		                           <div class="form-group">
-		                                <label>Quotes</label>
-		                                <textarea class="form-control" rows="6" placeholder="..."></textarea>
-	                                </div>
-	                                <a href=""></a>
-		                        </div>
-		                    </div>
-		                    <div class="tab-pane" id="profile" role="tabpanel">
-		                        <div class="card-body">
-		                           <div class="summernote">
-	                                </div>
-		                        </div>
-		                    </div>   
+		                <div class="card-body">
+                      <h3 class="card-title">Edit Program Kerja</h3>
+		                           <div class="summernote"></div>
 		                </div>
 		                <div class="card-body">
 	                    	<button class="btn btn-success" style="float: right;">Simpan</button>
@@ -80,33 +63,20 @@
         	</div>
         	<div class="col-lg-12 col-xlg-9 col-md-7">
 	            <div class="card">
-	                <ul class="nav nav-tabs profile-tab" role="tablist">
-	                    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#isiquotes" role="tab">Quotes</a> </li>
-	                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#isiproker" role="tab">Program Kerja</a> </li>
-	                </ul>
+                <div class="card-body">
+                  <h3>Program Kerja</h3>
+                </div>
 	                <div class="tab-content">
-	                    <div class="tab-pane active" id="isiquotes" role="tabpanel">
-	                        <div class="card-body">
-	                           <div class="form-group">
-	                                <p>isi quotes</p>
-                                </div>
-                                <a href=""></a>
-	                        </div>
-	                    </div>
-	                    <div class="tab-pane" id="isiproker" role="tabpanel">
 	                        <div class="card-body">
 	                           <p>isi proker</p>
 	                        </div>
-	                    </div>   
 	                </div>
 	                <div class="card-body">
                     	<button class="btn btn-danger" style="float: right;">Hapus</button>
-                    </div>
+                  </div>
 	            </div>
         	</div>
 		</div>
-
-
     </div>
 </div>
 
