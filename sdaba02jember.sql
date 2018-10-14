@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2018 at 05:06 PM
+-- Generation Time: Oct 14, 2018 at 05:11 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -299,6 +299,7 @@ CREATE TABLE `prestasi` (
 CREATE TABLE `proker` (
   `id_proker` int(9) NOT NULL,
   `id_bidang` int(9) NOT NULL,
+  `id_jabatan` int(9) NOT NULL,
   `isi_proker` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -482,7 +483,8 @@ ALTER TABLE `prestasi`
 --
 ALTER TABLE `proker`
   ADD PRIMARY KEY (`id_proker`),
-  ADD KEY `id_bidang_proker` (`id_bidang`);
+  ADD KEY `id_bidang_proker` (`id_bidang`),
+  ADD KEY `id_jabatan_proker` (`id_jabatan`);
 
 --
 -- Indexes for table `quotes`
