@@ -84,7 +84,7 @@ class Karyawan extends CI_Controller {
           $this -> load -> library ('upload',$config);
           if ($this->upload->do_upload('gambar')){
             $upload_data = $this -> upload -> data ();
-            $id=$this->uri->segment(4);
+            $id=$this->uri->segment(5);
             $id_karyawan = $this->input->post('id_karyawan');
             $Nipa = $this -> input -> post ('nipa_k');
             $nama_k = $this -> input -> post ('nama_k');

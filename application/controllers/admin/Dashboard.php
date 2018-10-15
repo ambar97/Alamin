@@ -58,16 +58,7 @@ class Dashboard extends CI_Controller {
 	// 		$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Gagal di simpan"));
 	// 		header('location:'.base_url().'admin/Dashboard');
 	// 	}
-<<<<<<< HEAD
 
-	// }
-	public function e_sej(){
-		$id['id_visi_misi']=$this->input->post('id_visi_misi');
-		$data['judul_sejarah'] = $this->input->post('judul_sejarah');
-		$data['isi_sejarah'] = $this->input->post('isi_sejarah');
-		$data['gambar_sejarah'] = $this->input->post('gambar_sejarah');
-		$this->M_alamin->update('sejarah', $data, $id);
-=======
 
 	// }
 	public function e_sej(){
@@ -147,7 +138,6 @@ class Dashboard extends CI_Controller {
 						// $dataupdate['isi_sejarah'] = $this->input->post('isi_sejarah');
 						$this->M_alamin->update('denah_sekolah', $dataupdate, $id);
 		}
->>>>>>> 06abe0ad9298559e3e91153094a391f6c061b971
 		header('location:'.base_url().'admin/Dashboard');
 	}
 }
