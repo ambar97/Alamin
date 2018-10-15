@@ -106,7 +106,7 @@
                            </div>
                        </div>
                    </div>
-                   
+
                </div>
            </div>
                <div class="row">
@@ -134,7 +134,7 @@
                                                        <blockquote class="m-t-10">
                                                            <?php echo $key->visi; ?>
                                                        </blockquote>
-                                                       
+
                                                    <?php }?>
                                                    </div>
                                                </div>
@@ -181,54 +181,54 @@
                                </div>
                            </div>
                            <!-- <div class="col-lg-10" ></div> -->
-                           <div><a  style="float: right; margin:30px; margin-top: -30px;"   href="" class="btn btn-success" data-toggle="modal" data-target="#edit_visimisi"> Edit</a></div>  
+                           <div><a  style="float: right; margin:30px; margin-top: -30px;"   href="" class="btn btn-success" data-toggle="modal" data-target="#edit_visimisi"> Edit</a></div>
                            <div id="edit_visimisi" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" method="post">
-                                                           <div class="modal-dialog modal-lg">
-                                                               <div class="modal-content">
-                                                                   <div class="modal-header">
-                                                                       <h4 class="modal-title" id="myModalLabel">Edit Visi, Misi dan Tujuan(+)</h4>
-                                                                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                                   </div>
-                                                                   <div class="modal-body">
-                                                                       <form class="form-horizontal form-material" method="post" action="<?php echo base_url('admin/Dashboard/e_visi') ?>">
-                                                                           <div class="form-group">
-                                                                               <div class="col-md-12 m-b-20">
-                                                                                   <p>Visi</p>
-                                                                                   <?php foreach ($vmt->result() as $key) { ?>
-                                                                                   <textarea name="visi" class="form-control" id="exampleTextarea" rows="4" placeholder="Visi"><?php echo $key->visi; ?></textarea>
-                                                                                 <?php } ?>
-                                                                               </div>
-                                                                               <div class="col-md-12 m-b-20">
-                                                                                   <p>Misi</p>
-                                                                                   <?php foreach ($vmt->result() as $key) { ?>
-                                                                                   <textarea name="misi" class="form-control" id="exampleTextarea" rows="4" placeholder="Misi"><?php echo $key->misi; ?></textarea>
-                                                                                 <?php } ?>
-                                                                               </div>
-                                                                               <div class="col-md-12 m-b-20">
-                                                                                   <p>Tujuan</p>
-                                                                                   <?php foreach ($vmt->result() as $key) { ?>
-                                                                                   <textarea name="tujuan" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->tujuan; ?></textarea>
-                                                                                 <?php } ?>
-                                                                               </div>
+                               <div class="modal-dialog modal-lg">
+                                   <div class="modal-content">
+                                       <div class="modal-header">
+                                           <h4 class="modal-title" id="myModalLabel">Edit Visi, Misi dan Tujuan(+)</h4>
+                                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                       </div>
+                                       <div class="modal-body">
+                                           <form class="form-horizontal form-material" method="post" action="<?php echo base_url('admin/Dashboard/e_visi') ?>">
+                                               <div class="form-group">
+                                                   <div class="col-md-12 m-b-20">
+                                                       <p>Visi</p>
+                                                       <?php foreach ($vmt->result() as $key) { ?>
+                                                       <textarea name="visi" class="form-control" id="exampleTextarea" rows="4" placeholder="Visi"><?php echo $key->visi; ?></textarea>
+                                                     <?php } ?>
+                                                   </div>
+                                                   <div class="col-md-12 m-b-20">
+                                                       <p>Misi</p>
+                                                       <?php foreach ($vmt->result() as $key) { ?>
+                                                       <textarea name="misi" class="form-control" id="exampleTextarea" rows="4" placeholder="Misi"><?php echo $key->misi; ?></textarea>
+                                                     <?php } ?>
+                                                   </div>
+                                                   <div class="col-md-12 m-b-20">
+                                                       <p>Tujuan</p>
+                                                       <?php foreach ($vmt->result() as $key) { ?>
+                                                       <textarea name="tujuan" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->tujuan; ?></textarea>
+                                                     <?php } ?>
+                                                   </div>
 
-                                                                              <div class="col-md-12 m-b-20">
-                                                                                   <!-- <p>Tujuan</p> -->
-                                                                                   <?php foreach ($vmt->result() as $key) { ?>
-                                                                                   <textarea style="color: #fff; margin-bottom: -20px; margin-top: -20px; font-size: 2px;" name="id" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->id_visi_misi; ?></textarea>
-                                                                                 <?php } ?>
-                                                                               </div>
-                                                                           </div>
-                                                                           <div style="float: right;">
-                                                                               <button type="submit" class="btn btn-info waves-effect" value="OK">Save</button>
-                                                                               <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                                                                           </div>
-                                                                       </form>
-                                                                   </div>
-                                                               </div>
-                                                               <!-- /.modal-content -->
-                                                           </div>
-                                                               <!-- /.modal-dialog -->
-                                                       </div>  
+                                                  <div class="col-md-12 m-b-20">
+                                                       <!-- <p>Tujuan</p> -->
+                                                       <?php foreach ($vmt->result() as $key) { ?>
+                                                       <textarea style="color: #fff; margin-bottom: -20px; margin-top: -20px; font-size: 2px;" name="id" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $key->id_visi_misi; ?></textarea>
+                                                     <?php } ?>
+                                                   </div>
+                                               </div>
+                                               <div style="float: right;">
+                                                   <button type="submit" class="btn btn-info waves-effect" value="OK">Save</button>
+                                                   <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                               </div>
+                                           </form>
+                                       </div>
+                                   </div>
+                                   <!-- /.modal-content -->
+                               </div>
+                                   <!-- /.modal-dialog -->
+                           </div>
                        </div>
                    </div>
 
@@ -239,12 +239,12 @@
                        <div class="card blog-widget">
                            <div class="card-body">
                             <?php foreach ($sejarah->result() as $sejarah) { ?>
-                               <div class="blog-image"><img src="<?php echo base_url().$sejarah -> gambar_sejarah ?>" alt="img" class="img-responsive" /></div>
+                               <div class="blog-image"><img class="img-responsive" src="<?php echo base_url()?>gallery/Sejarah/<?php echo $sejarah->gambar_sejarah?>" /></div>
                                <h3><?php echo $sejarah->judul_sejarah; ?></h3>
                                <p class="m-t-20 m-b-20">
                                    <?php echo $sejarah->isi_sejarah; ?>
                                </p>
-                            
+
                                <div class="d-flex">
                                    <div class="col-lg-12">
                                        <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success" data-toggle="modal" data-target="#edit_sejarah"> Edit</a>
@@ -258,21 +258,18 @@
                                                    <div class="modal-body">
                                                        <form class="form-horizontal form-material" method="post" action="<?php echo base_url("admin/Dashboard/e_sej")?>" enctype="multipart/form-data">
                                                            <div class="form-group">
-                                                            <div class="col-md-12 m-b-20">
-                                                                   
-                                                               </div>
                                                                <div class="col-md-12 m-b-20">
+                                                                 <input type="text" name="id_sejarah" value="1" hidden>
                                                                 <h6>Judul</h6>
-                                                                   <textarea  name="tujuan" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $sejarah->judul_sejarah; ?></textarea>
+                                                                   <textarea  name="judul_sejarah" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan"><?php echo $sejarah->judul_sejarah; ?></textarea>
                                                                </div>
                                                                <div class="col-md-12 m-b-20">
                                                                 <h6>Isi Sejarah</h6>
-                                                                   <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Isi Sejarah"> <?php echo $sejarah->isi_sejarah; ?></textarea>
+                                                                   <textarea name="isi_sejarah" class="form-control" id="exampleTextarea" rows="4" placeholder="Isi Sejarah"> <?php echo $sejarah->isi_sejarah; ?></textarea>
                                                                </div>
                                                                <div class="col-md-12 m-b-20">
                                                                    <input name="img_sejarah"  type="file" id="input-file-now" required="" /><hr>
-                                                                   <center><img class="col-md-8" style="max-height: 200px;" src="<?php echo base_url().$sejarah -> gambar_sejarah ?>"></center>
-                                                                   <textarea  name="id_sejarah" class="form-control" id="exampleTextarea" rows="4" placeholder="Tujuan" style="color: #fff; margin-bottom:  -30"><?php echo $sejarah->id_sejarah; ?></textarea>
+                                                                   <center><img class="col-md-8" style="max-height: 200px;" src="<?php echo base_url()?>gallery/Sejarah/<?php echo $sejarah->gambar_sejarah?>" /></center>
                                                                </div>
                                                            </div>
                                                            <div class="modal-footer">
@@ -281,7 +278,7 @@
                                                    </div>
                                                        </form>
                                                    </div>
-                                                   
+
                                                </div>
                                                <!-- /.modal-content -->
                                            </div>
@@ -301,21 +298,22 @@
                            <div class="card-body">
                                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                            <div class="carousel-inner" role="listbox">
+                                             <?php foreach ($slider1->result() as $s) { ?>
                                                <div class="carousel-item active">
-                                                   <div class="blog-image"> <img class="d-block img-fluid" src="<?php echo base_url() ?>master/adm/assets/images/big/img1.jpg" alt="First slide"></div>
+                                                   <div class="blog-image"> <img class="d-block img-fluid" src="<?php echo base_url()?>gallery/Slider/<?php echo $s->gambar_galeri; ?>" alt="Slider"></div>
                                                </div>
+                                             <?php } ?>
+                                             <?php foreach ($slider2->result() as $s2) { ?>
                                                <div class="carousel-item">
-                                                   <div class="blog-image"><img class="d-block img-fluid" src="<?php echo base_url() ?>master/adm/assets/images/big/img2.jpg" alt="Second slide"></div>
+                                                   <div class="blog-image"> <img class="d-block img-fluid" src="<?php echo base_url()?>gallery/Slider/<?php echo $s2->gambar_galeri; ?>" alt="Slider"></div>
                                                </div>
-                                               <div class="carousel-item">
-                                                   <div class="blog-image"><img class="d-block img-fluid" src="<?php echo base_url() ?>master/adm/assets/images/big/img3.jpg" alt="Third slide"></div>
-                                               </div>
+                                             <?php } ?>
                                            </div>
                                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
                                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
                                        </div>
                                        <div class="d-flex">
-                                   <div class="col-lg-12">  <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit Slider</a></div>
+                                   <div class="col-lg-12">  <a style="float: right; margin-bottom: 30px; " href="Dashboard/slider" class="btn btn-success"> Edit Slider</a></div>
 
                                </div>
                                    </div>
@@ -329,10 +327,35 @@
                        <hr>
                        <div class="card blog-widget">
                            <div class="card-body">
-                               <div class="blog-image"><img src="<?php echo base_url() ?>master/adm/assets/images/big/img1.jpg" alt="img" class="img-responsive" /></div>
+                             <?php foreach ($denah->result() as $asd) { ?>
+                               <div class="blog-image"><img src="<?php echo base_url(); ?>gallery/Denah/<?php echo $asd->gambar_denah; ?>" alt="Gambar Denah Sekolah" class="img-responsive" /></div>
+                             <?php } ?>
                                <div class="d-flex">
-                                   <div class="col-lg-12">  <a style="float: right; margin-bottom: 30px; " href="" class="btn btn-success"> Edit</a></div>
-
+                                 <div id="responsive-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                     <div class="modal-dialog">
+                                         <div class="modal-content">
+                                             <div class="modal-header">
+                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                 <h4 class="modal-title">Edit Denah Sekolah</h4>
+                                             </div>
+                                             <form method="post" action="<?php echo base_url("admin/Dashboard/e_denah")?>" enctype="multipart/form-data">
+                                             <div class="modal-body">
+                                                     <div class="form-group">
+                                                       <input type="text" name="id_denah" value="1" hidden>
+                                                       <input type="file" name="denah_sekolah" required>
+                                                     </div>
+                                             </div>
+                                             <div class="modal-footer">
+                                                 <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                                                 <button type="submit" class="btn btn-danger waves-effect waves-light">Save changes</button>
+                                             </div>
+                                             </form>
+                                         </div>
+                                     </div>
+                                 </div>
+                                   <div class="col-lg-12">
+                                     <button style="float: right; margin-bottom: 30px; " data-toggle="modal" data-target="#responsive-modal" class="btn btn-success"> Edit</button>
+                                   </div>
                                </div>
                            </div>
                        </div>

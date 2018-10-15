@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2018 at 10:32 AM
+-- Generation Time: Oct 14, 2018 at 05:52 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -43,7 +43,7 @@ CREATE TABLE `admin` (
 
 CREATE TABLE `agenda` (
   `id_agenda` int(9) NOT NULL,
-  `tanggal_ageda` varchar(255) NOT NULL,
+  `tanggal_agenda` varchar(255) NOT NULL,
   `nama_kegiatan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -58,6 +58,17 @@ CREATE TABLE `bidang` (
   `nama_bidang` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `bidang`
+--
+
+INSERT INTO `bidang` (`id_bidang`, `nama_bidang`) VALUES
+(1, 'Kepala Sekolah'),
+(2, 'Tata Usaha'),
+(3, 'Kesiswaan'),
+(4, 'Kurikulum'),
+(5, 'Sapras dan Humas');
+
 -- --------------------------------------------------------
 
 --
@@ -70,6 +81,13 @@ CREATE TABLE `denah_sekolah` (
   `gambar_denah` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `denah_sekolah`
+--
+
+INSERT INTO `denah_sekolah` (`id_denah`, `judul_denah`, `gambar_denah`) VALUES
+('1', 'asd', 'BJzNQ-XAC1K1.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -80,9 +98,16 @@ CREATE TABLE `ekstrakurikuler` (
   `id_ekstrakurikuler` int(9) NOT NULL,
   `nama_ekstrakurikuler` varchar(255) NOT NULL,
   `keterangan_ekstrakurikuler` varchar(255) NOT NULL,
-  `id_gambar` int(9) NOT NULL,
   `gambar_ekstra` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ekstrakurikuler`
+--
+
+INSERT INTO `ekstrakurikuler` (`id_ekstrakurikuler`, `nama_ekstrakurikuler`, `keterangan_ekstrakurikuler`, `gambar_ekstra`) VALUES
+(1, 'we', 'asdfghqwe', 'gallery/Ekstrakulikuler/nami.jpg'),
+(2, 'we', 'asdfghqwe', 'gallery/Ekstrakulikuler/nami.jpg');
 
 -- --------------------------------------------------------
 
@@ -97,6 +122,14 @@ CREATE TABLE `galeri` (
   `gambar_galeri` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `galeri`
+--
+
+INSERT INTO `galeri` (`id_galeri`, `judul_galeri`, `deskripsi_galeri`, `gambar_galeri`) VALUES
+(1, 'slider 1', '', 'BMQbR88A1Mk.jpg'),
+(2, 'slider 2', '', 'BJw0DGjAvfF.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -106,11 +139,19 @@ CREATE TABLE `galeri` (
 CREATE TABLE `informasi` (
   `id_informasi` int(9) NOT NULL,
   `judul_informasi` varchar(255) NOT NULL,
-  `isi_informasi` varchar(255) NOT NULL,
+  `isi_informasi` text NOT NULL,
   `date` date NOT NULL,
   `viewers` int(9) NOT NULL,
   `gambar_informasi` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `informasi`
+--
+
+INSERT INTO `informasi` (`id_informasi`, `judul_informasi`, `isi_informasi`, `date`, `viewers`, `gambar_informasi`) VALUES
+(15, 'nyoh', '                                                                                                                    qwertyuiopasdfghjkzxcvbnm,                                                                                                                ', '2018-10-13', 0, 'best_one_piece_wallpapers_0011.jpg'),
+(16, 'juduluuuuu', '                                                          qwertyuiopasdfghjkzxcvbnm,                                                        ', '2018-10-13', 0, 'nami.jpg');
 
 -- --------------------------------------------------------
 
@@ -122,6 +163,32 @@ CREATE TABLE `jabatan_karyawan` (
   `id_jabatan` int(9) NOT NULL,
   `nama_jabatan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jabatan_karyawan`
+--
+
+INSERT INTO `jabatan_karyawan` (`id_jabatan`, `nama_jabatan`) VALUES
+(1, 'Kepala Sekolah'),
+(2, 'Guru Pendidikan Agama Islam'),
+(3, 'Guru Kelas'),
+(4, 'Rumah Tangga'),
+(5, 'Guru Al-Qur\'an'),
+(6, 'Guru Penjas'),
+(7, 'Ka. Tata Usaha'),
+(8, 'Guru Bahasa Inggris'),
+(9, 'Staf Kebersihan'),
+(10, 'Satpam'),
+(11, 'Koordinator Kebersihan'),
+(12, 'Guru Mulok (Al-Qur\'an)'),
+(13, 'Guru Pendamping Kelas'),
+(14, 'Guru Mulok (Bahasa Arab)'),
+(15, 'Guru Mulok (TIK)'),
+(16, 'Kebersihan'),
+(17, 'Staf Administrasi'),
+(18, 'Guru PJOK'),
+(19, 'Petugas Perpustakaan'),
+(20, 'Waker');
 
 -- --------------------------------------------------------
 
@@ -139,6 +206,13 @@ CREATE TABLE `karyawan` (
   `tempat_lahir_karyawan` varchar(99) NOT NULL,
   `gambar_karyawan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `karyawan`
+--
+
+INSERT INTO `karyawan` (`NIPA_karyawan`, `nama_karyawan`, `id_jabatan`, `id_bidang`, `alamat`, `tanggal_lahir_karyawan`, `tempat_lahir_karyawan`, `gambar_karyawan`) VALUES
+('081081081081', 'Paijo', 1, 1, 'Kaliurang', '2018-10-10', 'Jember', 'gallery/Karyawan/BJ5a3XADwCN1.jpg');
 
 -- --------------------------------------------------------
 
@@ -219,6 +293,26 @@ CREATE TABLE `prestasi` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `proker`
+--
+
+CREATE TABLE `proker` (
+  `id_proker` int(9) NOT NULL,
+  `id_bidang` int(9) NOT NULL,
+  `id_jabatan` int(9) NOT NULL,
+  `isi_proker` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `proker`
+--
+
+INSERT INTO `proker` (`id_proker`, `id_bidang`, `id_jabatan`, `isi_proker`) VALUES
+(1, 1, 1, 'asdasd');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `quotes`
 --
 
@@ -250,9 +344,15 @@ CREATE TABLE `sejarah` (
   `id_sejarah` int(9) NOT NULL,
   `judul_sejarah` varchar(255) NOT NULL,
   `isi_sejarah` varchar(255) NOT NULL,
-  `id_gambar` int(9) NOT NULL,
   `gambar_sejarah` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sejarah`
+--
+
+INSERT INTO `sejarah` (`id_sejarah`, `judul_sejarah`, `isi_sejarah`, `gambar_sejarah`) VALUES
+(1, 'Sejarah SDABA 02 Jember', 'Menenggor gor or gorgor gorrr ', 'BKnYq2PgpEN.jpg');
 
 -- --------------------------------------------------------
 
@@ -283,7 +383,7 @@ CREATE TABLE `visi_misi` (
 --
 
 INSERT INTO `visi_misi` (`id_visi_misi`, `visi`, `misi`, `tujuan`) VALUES
-(2, 'asd', 'qwe', 'zxc');
+(2, 'asdasd', 'qwe', 'zxc');
 
 --
 -- Indexes for dumped tables
@@ -386,6 +486,14 @@ ALTER TABLE `prestasi`
   ADD KEY `id_lingkup_prestasi` (`id_lingkup_prestasi`);
 
 --
+-- Indexes for table `proker`
+--
+ALTER TABLE `proker`
+  ADD PRIMARY KEY (`id_proker`),
+  ADD KEY `id_bidang_proker` (`id_bidang`),
+  ADD KEY `id_jabatan_proker` (`id_jabatan`);
+
+--
 -- Indexes for table `quotes`
 --
 ALTER TABLE `quotes`
@@ -424,13 +532,13 @@ ALTER TABLE `visi_misi`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_admin` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `agenda`
 --
 ALTER TABLE `agenda`
-  MODIFY `id_agenda` int(9) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_agenda` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `bidang`
@@ -442,25 +550,25 @@ ALTER TABLE `bidang`
 -- AUTO_INCREMENT for table `ekstrakurikuler`
 --
 ALTER TABLE `ekstrakurikuler`
-  MODIFY `id_ekstrakurikuler` int(9) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ekstrakurikuler` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id_galeri` int(9) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_galeri` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `informasi`
 --
 ALTER TABLE `informasi`
-  MODIFY `id_informasi` int(9) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_informasi` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `jabatan_karyawan`
 --
 ALTER TABLE `jabatan_karyawan`
-  MODIFY `id_jabatan` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1236;
+  MODIFY `id_jabatan` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `kategori_juara`
@@ -484,7 +592,7 @@ ALTER TABLE `kritik_saran`
 -- AUTO_INCREMENT for table `lingkup_prestasi`
 --
 ALTER TABLE `lingkup_prestasi`
-  MODIFY `id_lingkup_prestasi` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_lingkup_prestasi` int(9) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `poling`
@@ -497,6 +605,12 @@ ALTER TABLE `poling`
 --
 ALTER TABLE `prestasi`
   MODIFY `id_prestasi` int(9) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `proker`
+--
+ALTER TABLE `proker`
+  MODIFY `id_proker` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `quotes`
@@ -514,7 +628,7 @@ ALTER TABLE `sarana_prasarana`
 -- AUTO_INCREMENT for table `sejarah`
 --
 ALTER TABLE `sejarah`
-  MODIFY `id_sejarah` int(9) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_sejarah` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `status_dibaca`
@@ -557,6 +671,13 @@ ALTER TABLE `kritik_saran`
 ALTER TABLE `prestasi`
   ADD CONSTRAINT `prestasi_ibfk_1` FOREIGN KEY (`id_juara`) REFERENCES `kategori_juara` (`id_juara`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `prestasi_ibfk_2` FOREIGN KEY (`id_lingkup_prestasi`) REFERENCES `lingkup_prestasi` (`id_lingkup_prestasi`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `proker`
+--
+ALTER TABLE `proker`
+  ADD CONSTRAINT `proker_ibfk_1` FOREIGN KEY (`id_bidang`) REFERENCES `bidang` (`id_bidang`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `proker_ibfk_2` FOREIGN KEY (`id_jabatan`) REFERENCES `jabatan_karyawan` (`id_jabatan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `quotes`

@@ -44,12 +44,12 @@
                                 <li><a href="<?php echo base_url("admin/StrukturPers/SarprasHum") ?>">Sapras & Humas</a></li>
                             </ul>
                         </li>
-                        <li> <a class="" href="#" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Ekstrakurikuler</span></a>
+                        <li> <a class="" href="<?php echo base_url("admin/Extra") ?>" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Ekstrakurikuler</span></a>
                         </li>
 
                         <li class="nav-devider"></li>
                         <li class="nav-small-cap">Lain-Lain</li>
-                        <li> <a class="" href="#" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Quotes</span></a>
+                        <li> <a class="<?php if($this->uri->segment('2')=="Lain-Lain"){ echo "active";}?>" href="<?php echo base_url("admin/Lain-Lain") ?>" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Quotes</span></a>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Sample Pages</span></a>
                         </li>
