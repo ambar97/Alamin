@@ -41,16 +41,18 @@
         	<div class="col-lg-4 col-xlg-3 col-md-5">
                 <div class="card">
                     <div class="card-body">
-                        <center class="m-t-30"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/5.jpg" width="250" />
-                            <h4 class="card-title m-t-10">Nama Kepala TU</h4>
-                            <h6 class="card-subtitle">Nipa</h6>
+                      <?php foreach ($tatausaha->result() as $t) { ?>
+                        <center class="m-t-30"> <img src="<?php echo base_url(); ?><?php echo $t->gambar_karyawan; ?>" width="250" />
+                            <h4 class="card-title m-t-10"><?php echo $t->nama_karyawan; ?></h4>
+                            <h6 class="card-subtitle"><?php echo $t->NIPA_karyawan; ?></h6>
                         </center>
+                      <?php } ?>
                     </div>
                 </div>
             </div>
 		    <div class="col-lg-8 col-xlg-9 col-md-7">
 	            <div class="card">
-            		<form>
+            		<form method="post" enctype="multipart/form-data" action="<?php echo base_url('admin/StrukturPers/editProkerTU'); ?>">
 		                <ul class="nav nav-tabs profile-tab" role="tablist">
 		                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#proker" role="tab">Program Kerja</a> </li>
 		                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#gambar" role="tab">Gambar Struktur</a> </li>
@@ -58,15 +60,20 @@
 		                <div class="tab-content">
 		                    <div class="tab-pane active" id="proker" role="tabpanel">
 		                        <div class="card-body">
-		                           <div class="summernote">
-	                                </div>
+                              <?php foreach ($viewTU->result() as $k) { ?>
+                                <input type="text" name="id_bidangTU" value="<?php echo $k->id_bidang; ?>" hidden>
+                                <input type="text" name="id_jabatanTU" value="<?php echo $k->id_jabatan; ?>"hidden>
+                              <?php } ?>
+		                           <textarea name="proker_tu" class="summernote">
+
+                               </textarea>
 		                        </div>
 		                    </div>
 		                    <div class="tab-pane" id="gambar" role="tabpanel">
 		                        <div class="card-body">
 		                           	<h4 class="card-title">Upload Gambar Galery (+)</h4>
 	                                <small>Maksimal ukuran upload 5 Mb.</small>
-	                                <input type="file" id="input-file-now" class="dropify" name="gambar_struktur" />
+	                                <input type="file" id="input-file-now" class="dropify" name="gambar_struktur_tu" />
 	                             </div>
 		                    </div>
 		                </div>
@@ -85,7 +92,9 @@
 	                <div class="tab-content">
 	                    <div class="tab-pane active" id="isiproker" role="tabpanel">
 	                        <div class="card-body">
-	                           <p>isi proker</p>
+                            <?php foreach ($viewTU->result() as $tu) { ?>
+                              <p><?php echo $tu->isi_proker; ?></p>
+                            <?php } ?>
 	                        </div>
 	                    </div>
 	                    <div class="tab-pane" id="gambar_struktur" role="tabpanel">

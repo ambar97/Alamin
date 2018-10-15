@@ -104,4 +104,15 @@ class M_alamin extends CI_Model {
     $data = $this->db->get();
     return $data;
   }
+
+  function struktur_tatausaha(){
+    $this->db->select('karyawan.*, bidang.*, jabatan_karyawan.*');
+    $this->db->from('karyawan');
+    $this->db->join('bidang', 'bidang.id_bidang = karyawan.id_bidang');
+    $this->db->join('jabatan_karyawan', 'jabatan_karyawan.id_jabatan = karyawan.id_jabatan');
+    $where = array('karyawan.id_bidang' => 2, 'karyawan.id_jabatan' => 7);
+    $this->db->where($where);
+    $data = $this->db->get();
+    return $data;
+  }
 }
