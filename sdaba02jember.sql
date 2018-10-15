@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2018 at 05:52 PM
+-- Generation Time: Oct 15, 2018 at 09:26 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -133,6 +133,26 @@ INSERT INTO `galeri` (`id_galeri`, `judul_galeri`, `deskripsi_galeri`, `gambar_g
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `galeri_struktur`
+--
+
+CREATE TABLE `galeri_struktur` (
+  `id_struktur` int(9) NOT NULL,
+  `id_bidang` int(9) NOT NULL,
+  `id_jabatan` int(9) NOT NULL,
+  `gambar_struktur` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `galeri_struktur`
+--
+
+INSERT INTO `galeri_struktur` (`id_struktur`, `id_bidang`, `id_jabatan`, `gambar_struktur`) VALUES
+(1, 2, 7, '');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `informasi`
 --
 
@@ -212,7 +232,8 @@ CREATE TABLE `karyawan` (
 --
 
 INSERT INTO `karyawan` (`NIPA_karyawan`, `nama_karyawan`, `id_jabatan`, `id_bidang`, `alamat`, `tanggal_lahir_karyawan`, `tempat_lahir_karyawan`, `gambar_karyawan`) VALUES
-('081081081081', 'Paijo', 1, 1, 'Kaliurang', '2018-10-10', 'Jember', 'gallery/Karyawan/BJ5a3XADwCN1.jpg');
+('081081081081', 'Paijo', 1, 1, 'Kaliurang', '2018-10-10', 'Jember', 'gallery/Karyawan/BJ5a3XADwCN1.jpg'),
+('091091091', 'Tukiyem', 7, 2, 'Green Garden', '2018-10-11', 'Jember', 'gallery/Karyawan/BKQltWtDJBa.jpg');
 
 -- --------------------------------------------------------
 
@@ -308,7 +329,8 @@ CREATE TABLE `proker` (
 --
 
 INSERT INTO `proker` (`id_proker`, `id_bidang`, `id_jabatan`, `isi_proker`) VALUES
-(1, 1, 1, 'asdasd');
+(1, 1, 1, 'qwe'),
+(2, 2, 7, 'prokernya TU gan');
 
 -- --------------------------------------------------------
 
@@ -427,6 +449,14 @@ ALTER TABLE `galeri`
   ADD PRIMARY KEY (`id_galeri`);
 
 --
+-- Indexes for table `galeri_struktur`
+--
+ALTER TABLE `galeri_struktur`
+  ADD PRIMARY KEY (`id_struktur`),
+  ADD KEY `id_bidang_struktur` (`id_bidang`),
+  ADD KEY `id_jabatan_struktur` (`id_jabatan`);
+
+--
 -- Indexes for table `informasi`
 --
 ALTER TABLE `informasi`
@@ -538,7 +568,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `agenda`
 --
 ALTER TABLE `agenda`
-  MODIFY `id_agenda` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_agenda` int(9) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `bidang`
@@ -557,6 +587,12 @@ ALTER TABLE `ekstrakurikuler`
 --
 ALTER TABLE `galeri`
   MODIFY `id_galeri` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `galeri_struktur`
+--
+ALTER TABLE `galeri_struktur`
+  MODIFY `id_struktur` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `informasi`
@@ -610,7 +646,7 @@ ALTER TABLE `prestasi`
 -- AUTO_INCREMENT for table `proker`
 --
 ALTER TABLE `proker`
-  MODIFY `id_proker` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_proker` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `quotes`
@@ -651,6 +687,13 @@ ALTER TABLE `visi_misi`
 --
 ALTER TABLE `admin`
   ADD CONSTRAINT `fk_admin_karyawan1` FOREIGN KEY (`karyawan_NIPA_karyawan`) REFERENCES `karyawan` (`NIPA_karyawan`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `galeri_struktur`
+--
+ALTER TABLE `galeri_struktur`
+  ADD CONSTRAINT `galeri_struktur_ibfk_1` FOREIGN KEY (`id_bidang`) REFERENCES `bidang` (`id_bidang`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_struktur_ibfk_2` FOREIGN KEY (`id_jabatan`) REFERENCES `jabatan_karyawan` (`id_jabatan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `karyawan`
