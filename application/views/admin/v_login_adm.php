@@ -67,7 +67,7 @@
      <script src="<?php echo base_url() ?>master/adm/assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
 
     <?php if ($this->session->flashdata()) { ?>
-                        <?php echo $this->session->flashdata('Pesan'); ?></div>                    
+                        <?php echo $this->session->flashdata('Pesan'); ?>                    
                     <?php } ?>
 </body>
 

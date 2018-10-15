@@ -27,6 +27,7 @@ class Galery extends CI_Controller {
             $isi = $this -> input -> post('deskripsi_galeri');
             $foto = "gallery/Galeri/".$upload_data['file_name'];
         $data = array(
+          'id_galeri'=> "",
         'judul_galeri' => $judul,
         'deskripsi_galeri' => $isi,
         'gambar_galeri' => $foto

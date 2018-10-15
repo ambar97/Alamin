@@ -46,6 +46,15 @@ class M_alamin extends CI_Model {
           $data=$this->db->get();
           return $data;
   }
+  function select_karyawan($id){
+    $this->db->select('karyawan.*, jabatan_karyawan.*, bidang.*');
+          $this->db->join('jabatan_karyawan', 'jabatan_karyawan.id_jabatan = karyawan.id_jabatan');
+          $this->db->join('bidang', 'bidang.id_bidang= karyawan.id_bidang');
+          $this->db->from('karyawan');
+          $this->db->where('karyawan.NIPA_karyawan', $id);
+          $data=$this->db->get();
+          return $data;
+  }
   function get_galery(){
       return $this->db->query('SELECT * FROM galeri ORDER BY id_galeri DESC');
       return $query->result ();

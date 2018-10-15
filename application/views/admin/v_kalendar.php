@@ -87,7 +87,8 @@
                                     <td><?php echo $no++; ?></td>
                                     <td><?php echo $a->tanggal_agenda; ?></td>
                                     <td><span class="peity-line" data-width="120" data-peity='{ "fill": ["#009efb"], "stroke":["#009efb"]}' data-height="40"><?php echo $a->nama_kegiatan; ?></span> </td>
-                                    <td><button onclick="updatejs('<?php echo $a->id_agenda; ?>')">edit</button><button onclick="deleted('<?php echo $a->id_agenda; ?>')">hapus</button></td>
+                                    <td><button onclick="updatejs('<?php echo $a->id_agenda; ?>')">edit</button>
+                                        <button onclick="deleted('<?php echo $a->id_agenda; ?>')">hapus</button></td>
                               <?php } ?>
                                 </tr>
                             </tbody>

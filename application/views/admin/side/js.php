@@ -28,4 +28,7 @@
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="<?php echo base_url() ?>master/adm/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+    
+            <script src="<?php echo base_url() ?>master/adm/assets/plugins/sweetalert/sweetalert.min.js"></script>
+     <script src="<?php echo base_url() ?>master/adm/assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
 
