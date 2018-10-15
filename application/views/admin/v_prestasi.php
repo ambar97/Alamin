@@ -116,7 +116,7 @@
                     <div class="col-lg-3">
                        
                         <div class="card">
-                            <img class="card-img-top img-responsive" src="<?php echo base_url().$prs -> gambar_prestasi ?>" alt="Card image cap">
+                            <img style="max-height: 230px;" class="card-img-top img-responsive" src="<?php echo base_url().$prs -> gambar_prestasi ?>" alt="Card image cap">
                             <div class="card-body">
                                 <ul class="list-inline font-14">
                                     <li class="p-l-0"><?php echo $prs->nama_siswa_prestasi; ?></li><br>
@@ -124,20 +124,53 @@
                                 </ul>
                                 <hr>
                                 <div><center>
-                                	<button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Lihat Detail"><i class="mdi mdi-eye "></i> </button>
-                                	<button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Edit"><i class="mdi mdi-brush"></i> </button>
-                                	<button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Hapus"><i class="mdi mdi-close"></i> </button>
+                                	<button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Lihat Detail" data-toggle="modal" data-target="#view_photo"><i class="mdi mdi-eye "></i> </button>
+                                	<a href="<?php echo base_url("admin/Prestasi/e_pres") ?>"><button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Edit"><i class="mdi mdi-brush"></i></button></a>
+                                	<a href="<?php echo base_url('admin/Prestasi/hapus/'.$prs->id_prestasi) ?>"><button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Hapus"><i class="mdi mdi-close"></i> </button></a>
+                                    <!-- Modal -->
+                                    <div id="view_photo" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                         <h4 class="modal-title" id="myModalLabel">Detail Prestasi </h4> 
+                                                        <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form class="form-horizontal form-material" method="post" action="">
+                                                            <div class="form-group">
+                                                                <div class="col-md-12 m-b-20">
+                                                                    <center><img style="max-height: 300px;" src="<?php echo base_url().$prs -> gambar_prestasi ?>"></center>
+                                                                    <hr> 
+                                                                    <div class="col-md-12 row">
+                                                                        <div class="col-md-5">
+                                                                            <p>Nama Siswa</p>
+                                                                            <p>Juara Ke</p>
+                                                                            <p>Nama Lomba</p>
+                                                                            <p>Lingkup Prestasi</p>
+                                                                            <p>Nama Pembimbing</p>
+                                                                        </div>
+                                                                        <div class="col-md-7">
+                                                                            <p>: <?php echo $prs->nama_siswa_prestasi; ?></p>
+                                                                            <p>: <?php echo $prs->nama_juara; ?></p>
+                                                                            <p>: <?php echo $prs->nama_lomba; ?></p>
+                                                                            <p>: <?php echo $prs->nama_lingkup_prestasi; ?></p>
+                                                                            <p>: <?php echo $prs->nama_pembimbing_lomba; ?></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </center>
                                 </div>
                             </div>
                         </div>
-                    
                     </div>
-                    <!-- Column -->
                     <?php } ?>
                 </div>
-
-
 </div>
 </div>
   <?php $this->load->view("admin/side/footer"); ?>

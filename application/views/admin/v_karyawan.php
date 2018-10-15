@@ -149,10 +149,30 @@
                                         <td><?php echo $key->nama_bidang; ?></td>
                                         <td><?php echo $key->alamat; ?></td>
                                         <td>
-                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn" data-toggle="tooltip" data-original-title="View"><i class="mdi mdi-eye" aria-hidden="true"></i></button>
+                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn"  data-original-title="View" data-toggle="modal" data-target="#view_photo"><i class="mdi mdi-eye" aria-hidden="true" ></i></button>
+                                            <a href="<?php echo base_url("admin/Karyawan/e_karyawan") ?>">
+                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn"  data-original-title="Ubah Data" data-toggle="tooltip" ><i class="mdi mdi-brush" aria-hidden="true" ></i></button></a>
                                             <a href="<?php echo base_url('admin/Karyawan/d_karyawan/'.$key->NIPA_karyawan) ?>">
                                             <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="mdi mdi-close" aria-hidden="true"></i></button></a>
-                                            
+                                            <!-- modal view foto karyawan -->
+                                            <div id="view_photo" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                         <h4 class="modal-title" id="myModalLabel">Foto Karyawan (<?php echo $key->nama_karyawan; ?>) </h4> 
+                                                        <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form class="form-horizontal form-material" method="post" action="">
+                                                            <div class="form-group">
+                                                                <div class="col-md-12 m-b-20">
+                                                                    <center><img style="max-height: 300px;" src="<?php echo base_url().$key -> gambar_karyawan ?>"></center>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         </td>
                                     </tr>
                                     <?php } ?>

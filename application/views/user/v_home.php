@@ -400,12 +400,14 @@
               <div>
                 <h2><strong>Polling</strong></h2>
                 <hr>
+                <form method="post" action="" enctype="multipart/form-data">
                 <p>Bagaimana tanggapan anda mengenai desain website kami?</p>
                 <input type=checkbox name=c1 checked>Sangat baik<br>
                 <input type=checkbox name=c2 >Baik<br>
                 <input type=checkbox name=c3 >Cukup baik<br><br>
-                <a href="#" class="btn btn-lg btn-primary">Vote</a>
+                <a href="#" class="btn btn-lg btn-primary"><button type="submit"> Vote </button></a>
                 <a href="#" class="btn btn-lg btn-primary">View result</a><br>
+                </form>
               </div>
               <br>
               <div>
