@@ -28,11 +28,16 @@ class Berita extends CI_Controller {
 			$data = $this->upload->data();
 			$name_file=$data['file_name'];
 			$datainsert['gambar_informasi'] = $name_file;
-			$datainsert['judul_informasi']=$this->input->post('judul_informasi');
-			$datainsert['isi_informasi']=$this->input->post('isi_informasi');
+			$judul = $this->input->post('judul_informasi');
+			$isi = $this->input->post('judul_informasi');
 			$now = date('y-m-d');
-			$datainsert['date'] = $now;
-			$upload = $this->M_alamin->insert('informasi', $datainsert);
+			$datee['date'] = $now;
+			$foto = "gallery/Informasi/".$upload_data['file_name'];
+			$data = array('id_informasi'=>"",
+				'judul_informasi'=>$judul,
+				'isi_informasi'=>$isi,
+				'gambar_informasi'=>$foto);
+			$upload = $this->M_alamin->insert('informasi', $data);
 		}
 		if ($upload >= 0) {
 			$this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
