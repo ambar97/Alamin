@@ -48,14 +48,14 @@
                         <div class="card-body">
                           <button type="button"><a href="<?php echo base_url('admin/Berita/t_berita'); ?>">Tambah Berita</a></button>
                                 <div class="table-responsive m-t-40">
-                                    <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                    <table class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
                                                 <th>Nama Berita</th>
                                                 <!-- <th>Isi Berita</th> -->
                                                 <th>Tanggal Upload</th>
-                                                <th>Views</th>
+                                                <!-- <th>Views</th> -->
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -68,7 +68,7 @@
                                                 <td><?php echo $ber->judul_informasi; ?></td>
                                                 <!-- <td><?php echo $ber->isi_informasi; ?></td> -->
                                                 <td><?php echo $ber->date; ?></td>
-                                                <td><?php echo $ber->viewers; ?></td>
+                                                <!-- <td><?php echo $ber->viewers; ?></td> -->
                                                 <td>
                                                     <!-- <button type="button">Lihat</button> -->
                                                     <button type="button" onclick="updatejs('<?php echo $ber->id_informasi; ?>')">Edit</button>
