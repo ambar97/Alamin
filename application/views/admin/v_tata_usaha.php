@@ -74,7 +74,7 @@
 		                           	<h4 class="card-title">Upload Gambar Galery (+)</h4>
 	                                <small>Maksimal ukuran upload 5 Mb.</small>
 	                                <input type="file" id="input-file-now" class="dropify" name="gambar_struktur_tu" />
-	                             </div>
+	                          </div>
 		                    </div>
 		                </div>
 		                <div class="card-body">

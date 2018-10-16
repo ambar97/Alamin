@@ -39,14 +39,14 @@ class StrukturPers extends CI_Controller {
 	}
 
 	function editProkerTU(){
-		$config['upload_path']          = 'gallery/gambar_product';
+		$config['upload_path']          = 'gallery/Struktur';
                 $config['allowed_types']        = 'gif|jpg|png';
                 $this->load->library('upload', $config);
                 if ( $this->upload->do_upload('gambar_struktur_tu'))
                 {
 												$data = $this->upload->data();
 												$name_file=$data['file_name'];
-												// $update_data[''] = $name_file; belum selesai
+												$update_data['gambar_struktur'] = $name_file;
 												$id_mobil=$this->input->post('id_mobil');
 												$this->suzuki_model->update('mobil', $update_data, array('id_mobil'=>$id_mobil));
                         header('location:'.base_url('admin/Product/editData/'.$id_mobil));

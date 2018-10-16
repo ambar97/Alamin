@@ -115,4 +115,15 @@ class M_alamin extends CI_Model {
     $data = $this->db->get();
     return $data;
   }
+
+  function update_struktur(){
+    $this->db->select('galeri_struktur.*, bidang.*, jabatan_karyawan.*');
+    $this->db->from('galeri_struktur');
+    $this->db->join('bidang', 'bidang.id_bidang = galeri_struktur.id_bidang');
+    $this->db->join('jabatan_karyawan', 'jabatan_karyawan.id_jabatan = galeri_struktur.id_jabatan');
+    $where = array('galeri_struktur.id_bidang' => 2, 'galeri_struktur.id_jabatan' => 7);
+    $this->db->where($where);
+    $data = $this->db->get();
+    return $data;
+  }
 }
