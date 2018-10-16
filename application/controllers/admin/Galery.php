@@ -6,6 +6,7 @@ class Galery extends CI_Controller {
     {
 	parent::__construct();
         $this->load->model('M_alamin');
+    $this->load->model('core');
     }
 
 	public function index()
@@ -34,13 +35,15 @@ class Galery extends CI_Controller {
         );
         $insert_data = $this->db->insert('galeri',$data);
       }
-      if ($insert_data) {
+      if ($insert_data >= 0) {
+        $this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
         redirect(base_url().'admin/Galery');
        } else{
-        echo "string";
+        $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan"));
+        redirect(base_url().'admin/Galery');
        }
     }else{
-      echo "gagal";
+      $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan, cek gambar"));
     }
   }
 

@@ -47,20 +47,30 @@ class Dashboard extends CI_Controller {
 
 // }
 	public function e_sej(){
-		$config['upload_path']          = 'gallery/Sejarah';
-		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-		$this->load->library('upload', $config);
-
-		if ( $this->upload->do_upload('img_sejarah'))
-		{
-			$data = $this->upload->data();
-			$name_file=$data['file_name'];
-			$dataupdate['gambar_sejarah'] = $name_file;
-			$id['id_sejarah'] = $this->input->post('id_sejarah');
-			$dataupdate['judul_sejarah'] = $this->input->post('judul_sejarah');
-			$dataupdate['isi_sejarah'] = $this->input->post('isi_sejarah');
-			$upload = $this->M_alamin->update('sejarah', $dataupdate, $id);
-		}
+		$config = array('upload_path' => './gallery/Sejarah/',
+			'allowed_types' => 'gif|jpg|png|jpeg'
+		);
+		$this -> load -> library ('upload',$config);
+		$this->upload->do_upload('img_sejarah');
+		$upload_data = $this -> upload -> data ();
+		$id_sjr = $this->input->post('id_sejarah');
+		$where['id_sejarah']= $id_sjr;
+		$judul =  $this->input->post('judul_sejarah');
+		$isi = $this->input->post('isi_sejarah');
+		$foto = "gallery/Sejarah/".$upload_data['file_name'];
+		if ($upload_data['file_name'] == null) {
+      	$data = array(
+        'id_sejarah' => $id_sjr,
+        'judul_sejarah' => $judul,
+        'isi_sejarah' => $isi);
+    }else{
+    	$data = array(
+        'id_sejarah' => $id_sjr,
+        'judul_sejarah' => $judul,
+        'isi_sejarah' => $isi,
+        'gambar_sejarah'=> $foto);
+    }
+    $upload = $this->M_alamin->update('sejarah', $data, $where);
 		if ($upload >= 0) {
 			$this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
 			header('location:'.base_url().'admin/Dashboard');
@@ -124,18 +134,24 @@ class Dashboard extends CI_Controller {
 	}
 
 	public function e_denah(){
-		$config['upload_path']          = 'gallery/Denah';
-		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-		$this->load->library('upload', $config);
-
-		if ( $this->upload->do_upload('denah_sekolah'))
-		{
-			$data = $this->upload->data();
-			$name_file=$data['file_name'];
-			$dataupdate['gambar_denah'] = $name_file;
-			$id['id_denah'] = $this->input->post('id_denah');
-			$upload = $this->M_alamin->update('denah_sekolah', $dataupdate, $id);
+		$config = array('upload_path' => './gallery/Denah/',
+			'allowed_types' => 'gif|jpg|png|jpeg'
+		);
+		$this -> load -> library ('upload',$config);
+		$this->upload->do_upload('denah_sekolah');
+		$upload_data = $this -> upload -> data ();
+		$id_denah = $this->input->post('id_denah');
+		$where['id_denah'] = $id_denah;
+		$foto = "gallery/Denah/".$upload_data['file_name']; 
+		if ($upload_data['file_name'] ==  null) {
+		$data = array('id_denah'=> $id_denah,
+				'judul_denah'=> 'Judul');
+		}else{
+			$data = array('id_denah'=> $id_denah,
+				'judul_denah'=> 'Judul',
+				'gambar_denah'=>$foto);
 		}
+			$upload = $this->M_alamin->update('denah_sekolah', $data, $where);
 		if ($upload >= 0) {
 			$this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
 			header('location:'.base_url().'admin/Dashboard');

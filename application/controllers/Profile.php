@@ -2,19 +2,27 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Profile extends CI_Controller {
-
-
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->model('M_alamin');
+		$this->load->model('core');
+	}
 	function VisiMisi(){
-		$this->load->view('user/v_visimisi');
+		$data['visimisi'] = $this->M_alamin->select("visi_misi");
+		$this->load->view('user/v_visimisi', $data);
 	}
 	function SejarahSek(){
-		$this->load->view('user/v_sejarah');
+		$data['sejarah'] = $this->M_alamin->select('sejarah');
+		$this->load->view('user/v_sejarah',$data);
 	}
 	function SarPrasarana(){
-		$this->load->view('user/v_sarana');
+		$data['sarpras']=$this->M_alamin->select('sarana_prasarana');
+		$this->load->view('user/v_sarana',$data);
 	}
 	function BagSekolah(){
-		$this->load->view('user/v_bagan');
+		$data['bagan']=$this->M_alamin->select('denah_sekolah');
+		$this->load->view('user/v_bagan',$data);
 	}
 	function ProgKerja(){
 		$this->load->view('user/v_proker');

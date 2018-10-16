@@ -23,63 +23,19 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>
-					No
-				</th>
-				<th>
-					Tanggal/Bulan
-				</th>
-				<th>
-					Kegiatan
-				</th>
-				<th>
-					asdasd
-				</th>
+				<th>No.</th>
+				<th>Tanggal</th>
+                <th>Kegiatan</th>
 			</tr>
 		</thead>
 		<tbody>
+			<?php $no = 1; foreach ($agenda->result() as $agen) { ?>
 			<tr>
-				<td>
-					1
-				</td>
-				<td>
-					asdasd
-				</td>
-				<td>
-					asdasd
-				</td>
-				<td>
-					asdasd
-				</td>
+				<td><?php echo $no++; ?></td>
+				<td><?php echo $agen->tanggal_agenda; ?></td>
+                <td><span class="peity-line" data-width="120" data-peity='{ "fill": ["#009efb"], "stroke":["#009efb"]}' data-height="40"><?php echo $agen->nama_kegiatan; ?></span> </td>
 			</tr>
-			<tr>
-				<td>
-					2
-				</td>
-				<td>
-					asdasd
-				</td>
-				<td>
-					asdasd
-				</td>
-				<td>
-					asdasd
-				</td>
-			</tr>
-			<tr>
-				<td>
-					3
-				</td>
-				<td>
-					asdasd
-				</td>
-				<td>
-					asdasd
-				</td>
-				<td>
-					asdasd
-				</td>
-			</tr>
+		<?php } ?>
 		</tbody>
 	</table>
 </div>

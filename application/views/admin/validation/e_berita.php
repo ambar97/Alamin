@@ -49,7 +49,7 @@
                                               <div class="form-group">
                                                 <label>Judul Berita</label>
                                                 <?php foreach ($d_berita->result() as $d) { ?>
-                                                  <input type="text" name="id_informasi" value="<?php echo $d->id_informasi; ?>">
+                                                  <input type="text" name="id_informasi" value="<?php echo $d->id_informasi; ?>" hidden>
                                                   <input type="text" class="form-control" name="judul_informasi" value="<?php echo $d->judul_informasi;?>" required>
                                                 <?php } ?>
                                               </div>
@@ -68,7 +68,7 @@
                                               <div class="form-group">
                                                 <label>Gambar Berita</label>
                                                 <img src="<?php echo base_url(); ?>gallery/Informasi/<?php echo $d->gambar_informasi; ?>" alt="Gambar Berita">
-                                                <input type="file" class="form-control" placeholder="Pilih Gambar" name="gambar_informasi" required>
+                                                <input type="file" class="form-control" placeholder="Pilih Gambar" name="gambar_informasi" >
                                               </div>
                                               <button type="submit" name="button">save</button>
                                         </div>
@@ -114,3 +114,4 @@
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="<?php echo base_url() ?>master/adm/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+    <!-- asdasdasd -->

@@ -23,15 +23,16 @@
 		<div class="col-lg-12">
 			<div class="row">
 				<div class="col-12 col-sm-6 col-lg-8 product">
+					<?php foreach ($bagan->result() as $bagan) { ?>
 					<span class="product-thumb-info">
 							<span>
-								<img alt="" class="img-fluid" src="<?php echo base_url(); ?>master/client/img/products/product-2.jpg">
+								<img alt="" style="max-height: 600px;" class="img-fluid" src="<?php echo base_url().$bagan -> gambar_denah ?>">
 							</span>
-						</a>
-						<span class="product-thumb-info-content">
-								<h4>Foto Judul</h4>
-						</span>
+							<span class="product-thumb-info-content">
+									<h4>Denah Sekolah SD Al Baitul Amien 02 Jember</h4>
+							</span>
 					</span>
+						<?php } ?>
 					<br>
 				</div>
 				<div class="col-lg-3">

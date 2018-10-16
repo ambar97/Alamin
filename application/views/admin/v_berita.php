@@ -46,16 +46,16 @@
     <div class="col-12">
         <div class="card">
                         <div class="card-body">
-                          <button type="button"><a href="<?php echo base_url('admin/Berita/t_berita'); ?>">Tambah Berita</a></button>
+                          <a href="<?php echo base_url('admin/Berita/t_berita'); ?>"><button type="button">Tambah Berita</button></a>
                                 <div class="table-responsive m-t-40">
-                                    <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                    <table id="example" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
                                                 <th>Nama Berita</th>
                                                 <!-- <th>Isi Berita</th> -->
                                                 <th>Tanggal Upload</th>
-                                                <th>Views</th>
+                                                <!-- <th>Views</th> -->
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -68,9 +68,9 @@
                                                 <td><?php echo $ber->judul_informasi; ?></td>
                                                 <!-- <td><?php echo $ber->isi_informasi; ?></td> -->
                                                 <td><?php echo $ber->date; ?></td>
-                                                <td><?php echo $ber->viewers; ?></td>
+                                                <!-- <td><?php echo $ber->viewers; ?></td> -->
                                                 <td>
-                                                    <button type="button">Lihat</button>
+                                                    <!-- <button type="button">Lihat</button> -->
                                                     <button type="button" onclick="updatejs('<?php echo $ber->id_informasi; ?>')">Edit</button>
                                                     <button type="button" onclick="deleted('<?php echo $ber->id_informasi; ?>')">Hapus</button>
                                                 </td>
@@ -103,3 +103,16 @@
        document.location='<?php echo base_url(); ?>admin/Berita/d_berita/'+param;
    }
  </script>
+
+ <?php if ($this->session->flashdata()) { ?>
+                        <?php echo $this->session->flashdata('Pesan'); ?>
+                    <?php } ?>
+
+ <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
+
+ <script type="text/javascript">
+ $(document).ready(function() {
+  $('#example').DataTable();
+} );
+ </script>
+<!-- asdasdasdasd -->
