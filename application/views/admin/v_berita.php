@@ -48,7 +48,7 @@
                         <div class="card-body">
                           <button type="button"><a href="<?php echo base_url('admin/Berita/t_berita'); ?>">Tambah Berita</a></button>
                                 <div class="table-responsive m-t-40">
-                                    <table class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                    <table id="example" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
@@ -102,4 +102,12 @@
    function updatejs(param){
        document.location='<?php echo base_url(); ?>admin/Berita/d_berita/'+param;
    }
+ </script>
+
+ <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
+
+ <script type="text/javascript">
+ $(document).ready(function() {
+  $('#example').DataTable();
+} );
  </script>
