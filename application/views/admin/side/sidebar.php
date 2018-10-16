@@ -53,7 +53,7 @@
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Sample Pages</span></a>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Kritik &amp; Saran</span></a>
+                        <li> <a class="<?php if($this->uri->segment('2')=="KritikSaran"){ echo "active";}?>" href="<?php echo base_url("admin/KritikSaran") ?>" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Kritik &amp; Saran</span></a>
                         </li>
                     </ul>
                 </nav>

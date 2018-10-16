@@ -37,32 +37,26 @@
 
 				<h2 class="mb-3 mt-2"><strong>Kritik & Saran</strong></h2>
 
-				<form id="contactForm" action="https://preview.oklerthemes.com/porto/6.2.1/php/contact-form.php" method="POST">
+				<form action="<?php echo base_url(). 'index.php/ContactUs/kirim_kritiksaran'; ?>" method="POST" enctype="multipart/form-data">
 					<div class="form-row">
 						<div class="form-group col-lg-6">
 							<label>Nama</label> <label style="color: #e74c3c">*</label>
-							<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required>
+							<input type="text" value="" data-msg-required="Silahkan isi nama anda." maxlength="100" class="form-control" name="username" required>
 						</div>
 						<div class="form-group col-lg-6">
 							<label>Email</label> <label style="color: #e74c3c">*</label>
-							<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
+							<input type="email" value="" data-msg-required="Silahkan isi email anda." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" required>
 						</div>
 					</div>
-					<!-- <div class="form-row">
-						<div class="form-group col">
-							<label>Judul</label>
-							<input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject" id="subject" required>
-						</div>
-					</div> -->
 					<div class="form-row">
 						<div class="form-group col">
 							<label> Isi Kritik & Saran</label>
-							<textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message" required></textarea>
+							<textarea maxlength="5000" data-msg-required="Silahkan isi kritik dan saran anda." rows="10" class="form-control" name="isi" required></textarea>
 						</div>
 					</div>
 					<div class="form-row">
 						<div class="form-group col">
-							<a href="" class="btn btn-lg btn-primary">Kirim</a>
+							<button type="submit" class="btn btn-lg btn-primary">Kirim</button>
 						</div>
 					</div>
 				</form>

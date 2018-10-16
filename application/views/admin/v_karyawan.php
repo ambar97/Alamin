@@ -116,74 +116,74 @@
         </div>
 
         <div class="row">
-    <div class="col-12">
-        <div class="card">
-                        <div class="card-body">
-                                <h4 class="card-title">Data Export</h4>
-                                <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
-                                <div class="table-responsive m-t-40">
-                                    <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
-                                        <thead>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Nama</th>
-                                                <th>TTL</th>
-                                                <th>NIPA</th>
-                                                <th>Jabatan</th>
-                                                <th>Bidang</th>
-                                                <th>Alamat</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                    <?php 
-                                    $no = 1;
-                                    foreach ($karyaw->result() as $key) { ?>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Tabel Karyawan</h4>
+                        <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+                        <div class="table-responsive m-t-40">
+                            <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                <thead>
                                     <tr>
-                                        <td><?php echo $no++?></td>
-                                        <td><?php echo $key->nama_karyawan; ?></td>
-                                        <td><?php echo $key->tempat_lahir_karyawan; ?>,<?php echo $key->tanggal_lahir_karyawan; ?></td>
-                                        <td><?php echo $key->NIPA_karyawan; ?></td>
-                                        <td><?php echo $key->nama_jabatan; ?></td>
-                                        <td><?php echo $key->nama_bidang; ?></td>
-                                        <td><?php echo $key->alamat; ?></td>
-                                        <td>
-                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn"  data-original-title="View" data-toggle="modal" data-target="#view_photo<?php echo($key->NIPA_karyawan) ?>"><i class="mdi mdi-eye" aria-hidden="true" ></i></button>
-                                            
-                                            
-                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn"  data-original-title="Ubah Data" data-toggle="tooltip" onclick="updatejs('<?php echo $key->NIPA_karyawan; ?>')" ><i class="mdi mdi-brush" aria-hidden="true" ></i></button>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>TTL</th>
+                                        <th>NIPA</th>
+                                        <th>Jabatan</th>
+                                        <th>Bidang</th>
+                                        <th>Alamat</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                            <tbody>
 
-                                            <a href="<?php echo base_url('admin/Karyawan/d_karyawan/'.$key->NIPA_karyawan) ?>">
-                                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="mdi mdi-close" aria-hidden="true"></i></button></a>
-                                            
-                                            <!-- modal view foto karyawan -->
-                                            <div id="view_photo<?php echo($key->NIPA_karyawan) ?>" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                         <h4 class="modal-title" id="myModalLabel">Foto Karyawan (<?php echo $key->nama_karyawan; ?>) </h4> 
-                                                        <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+                            <?php 
+                            $no = 1;
+                            foreach ($karyaw->result() as $key) { ?>
+                            <tr>
+                                <td><?php echo $no++?></td>
+                                <td><?php echo $key->nama_karyawan; ?></td>
+                                <td><?php echo $key->tempat_lahir_karyawan; ?>,<?php echo $key->tanggal_lahir_karyawan; ?></td>
+                                <td><?php echo $key->NIPA_karyawan; ?></td>
+                                <td><?php echo $key->nama_jabatan; ?></td>
+                                <td><?php echo $key->nama_bidang; ?></td>
+                                <td><?php echo $key->alamat; ?></td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn"  data-original-title="View" data-toggle="modal" data-target="#view_photo<?php echo($key->NIPA_karyawan) ?>"><i class="mdi mdi-eye" aria-hidden="true" ></i></button>
+                                    
+                                    
+                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn"  data-original-title="Ubah Data" data-toggle="tooltip" onclick="updatejs('<?php echo $key->NIPA_karyawan; ?>')" ><i class="mdi mdi-brush" aria-hidden="true" ></i></button>
+
+                                    <a href="<?php echo base_url('admin/Karyawan/d_karyawan/'.$key->NIPA_karyawan) ?>">
+                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="mdi mdi-close" aria-hidden="true"></i></button></a>
+                                    
+                                    <!-- modal view foto karyawan -->
+                                    <div id="view_photo<?php echo($key->NIPA_karyawan) ?>" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                 <h4 class="modal-title" id="myModalLabel">Foto Karyawan (<?php echo $key->nama_karyawan; ?>) </h4> 
+                                                <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form class="form-horizontal form-material" method="post" action="">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12 m-b-20">
+                                                            <center><img style="max-height: 300px;" src="<?php echo base_url().$key -> gambar_karyawan ?>"></center>
                                                     </div>
-                                                    <div class="modal-body">
-                                                        <form class="form-horizontal form-material" method="post" action="">
-                                                            <div class="form-group">
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <center><img style="max-height: 300px;" src="<?php echo base_url().$key -> gambar_karyawan ?>"></center>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
+                                                </form>
                                             </div>
                                         </div>
-                                        </td>
-                                    </tr>
-                                    <?php } ?>
-                                </tbody>
-                                    </table>
+                                    </div>
                                 </div>
-                            </div>
+                                </td>
+                            </tr>
+                            <?php } ?>
+                        </tbody>
+                            </table>
+                        </div>
                     </div>
+                </div>
              </div>
         </div>
 
