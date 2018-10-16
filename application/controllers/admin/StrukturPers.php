@@ -15,6 +15,7 @@ class StrukturPers extends CI_Controller {
 	function TataUsaha(){
 		$data['tatausaha'] = $this->M_alamin->struktur_tatausaha();
 		$data['viewTU'] = $this->M_alamin->selectwhere('proker', array('id_bidang'=>2, 'id_jabatan'=>7));
+		$data['viewStruktur'] = $this->M_alamin->update_struktur();
 		$this->load->view('admin/v_tata_usaha', $data);
 	}
 
@@ -39,6 +40,14 @@ class StrukturPers extends CI_Controller {
 	}
 
 	function editProkerTU(){
+		$dataBidang = $this->input->post('id_bidangTU');
+		$dataJabatan = $this->input->post('id_jabatanTU');
+		$data['isi_proker'] = $this->input->post('proker_tu');
+		$this->M_alamin->update('proker', $data, array('id_bidang' => $dataBidang, 'id_jabatan'=>$dataJabatan));
+		header('location:'.base_url().'admin/StrukturPers/TataUsaha');
+	}
+
+	function editStrukturTU(){
 		$config['upload_path']          = 'gallery/Struktur';
                 $config['allowed_types']        = 'gif|jpg|png';
                 $this->load->library('upload', $config);
@@ -47,16 +56,11 @@ class StrukturPers extends CI_Controller {
 												$data = $this->upload->data();
 												$name_file=$data['file_name'];
 												$update_data['gambar_struktur'] = $name_file;
-												$id_mobil=$this->input->post('id_mobil');
-												$this->suzuki_model->update('mobil', $update_data, array('id_mobil'=>$id_mobil));
-                        header('location:'.base_url('admin/Product/editData/'.$id_mobil));
+												$dataBidang = 2;
+												$dataJabatan = 7;
+												$this->M_alamin->update('galeri_struktur', $update_data, array('id_bidang'=>$dataBidang, 'id_jabatan'=>$dataJabatan));
+                        header('location:'.base_url().'admin/StrukturPers/TataUsaha');
                 }
-
-		$dataBidang = $this->input->post('id_bidangTU');
-		$dataJabatan = $this->input->post('id_jabatanTU');
-		$data['isi_proker'] = $this->input->post('proker_tu');
-		$this->M_alamin->update('proker', $data, array('id_bidang' => $dataBidang, 'id_jabatan'=>$dataJabatan));
-		header('location:'.base_url().'admin/StrukturPers/TataUsaha');
 	}
 
 }
