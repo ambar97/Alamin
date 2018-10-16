@@ -9,8 +9,7 @@ function __construct()
         $this->load->model('core');
     }
 	public function index()
-	{
-		
+	{		
 		$this->load->view('admin/v_login_adm');
 	}
 	function aksi_login(){
@@ -30,8 +29,8 @@ function __construct()
 				);
  			
 			$this->session->set_userdata($data_session);
-			redirect(base_url("admin/Dashboard"));
 			$this->session->set_flashdata("Pesan",$this->core->alert_succes("Login sukses"));
+			redirect(base_url("admin/Dashboard?"));
 		}else{
 			$this->session->set_flashdata("Pesan",$this->core->alert_time("Username & Password tidak terdaftar"));
 			redirect(base_url("Loginadmin"));
@@ -39,6 +38,7 @@ function __construct()
 	}
 	function logout(){
 		$this->session->sess_destroy();
+		$this->session->set_flashdata("Pesan",$this->core->alert_succes("Login sukses"));
 		redirect(base_url('LoginAdmin'));
 	}
 }

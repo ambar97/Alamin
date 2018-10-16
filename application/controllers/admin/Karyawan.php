@@ -70,8 +70,21 @@ class Karyawan extends CI_Controller {
     }
     }
 
+    public function detail(){
+      $where = array('NIPA_karyawan'=>$id);
+      $hapus = $this->M_alamin-> selectwhere('karyawan',$where);
+      if($hapus){
+        $this->session->set_flashdata("Pesan",$this->core->alert_succes("Berhasil di Hapus"));
+        header('location:'.base_url('admin/Karyawan')); 
+      }else{
+        header('location:'.base_url('admin/Karyawan'));
+        $this->session->set_flashdata("Pesan",$this->core->alert_time("gagal upload"));
+      } 
+    }
+
     public function e_karyawan(){
-      $data['karyaw']=$this->M_alamin->select_multy();
+    $id=$this->uri->segment(4);
+    $data['karyaw']=$this->M_alamin->select_karyawan($id);
     $data['bidang']=$this->M_alamin->select('bidang');
     $data['jabatan']=$this->M_alamin->select('jabatan_karyawan');
     $this->load->view('admin/validation/e_karyawan',$data);
@@ -82,10 +95,10 @@ class Karyawan extends CI_Controller {
                   'allowed_types' => 'gif|jpg|png|jpeg'
                   );
           $this -> load -> library ('upload',$config);
-          if ($this->upload->do_upload('gambar')){
+          $this->upload->do_upload('gambar');
             $upload_data = $this -> upload -> data ();
-            $id=$this->uri->segment(5);
             $id_karyawan = $this->input->post('id_karyawan');
+            $where['NIPA_karyawan']= $id_karyawan;
             $Nipa = $this -> input -> post ('nipa_k');
             $nama_k = $this -> input -> post ('nama_k');
             $jabatan_k = $this -> input -> post ('jabatan_k');
@@ -94,7 +107,18 @@ class Karyawan extends CI_Controller {
             $TL_k = $this -> input -> post ('tl_k');
             $tempat_k = $this -> input -> post ('tempat_k');
             $foto = "gallery/Karyawan/".$upload_data['file_name'];
+            if ($upload_data['file_name'] == null) {
             $data = array(
+             'NIPA_karyawan' => $Nipa,
+             'nama_karyawan' => $nama_k,
+             'id_jabatan' => $jabatan_k,
+             'id_bidang' => $bidang_k,
+             'alamat' => $alamat_k,
+             'tanggal_lahir_karyawan' => $TL_k,
+             'tempat_lahir_karyawan' => $tempat_k);
+            } 
+            else{
+              $data = array(
              'NIPA_karyawan' => $Nipa,
              'nama_karyawan' => $nama_k,
              'id_jabatan' => $jabatan_k,
@@ -103,9 +127,9 @@ class Karyawan extends CI_Controller {
              'tanggal_lahir_karyawan' => $TL_k,
              'tempat_lahir_karyawan' => $tempat_k,
              'gambar_karyawan' => $foto);
-            $update_data = $this->db->update('karyawan',$data,$id);
-            }
-            if ($update_data) {
+            }            
+            $update_data = $this->db->update('karyawan',$data,$where);
+            if ($update_data >= 0) {
               $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
                 redirect(base_url().'admin/Karyawan');
             } else{

@@ -44,24 +44,22 @@
                                 </div>
                                 <div class="modal-body">
                                     <form class="form-horizontal form-material" method="post" action="<?php echo base_url("admin/Karyawan/aksi_edit")?>" enctype="multipart/form-data">
+                                    	<?php foreach ($karyaw->result() as $karya) { ?>
                                         <div class="form-group">
                                 				<div class="col-md-12 m-b-20">
                                 					<h6>Nama Lengkap</h6>
-                                                    <?php foreach ($karyaw->result() as $karya) { ?>
                                 					<input type="text" name="id_karyawan" value="<?php echo $karya->NIPA_karyawan; ?>" hidden>
-                                                <?php } ?>
                                                 <textarea  type="text" class="form-control" placeholder="" name="nama_k" required=""><?php echo $karya->nama_karyawan; ?></textarea></div>
                                             <div class="col-md-12 m-b-20">
                                                 <h6>Tanggal Lahir</h6>
-                                                <p><?php echo $karya->tanggal_lahir_karyawan; ?> || <span>Tanggal Lahir Lama</span></p>
-                                                <input type="date" class="form-control" placeholder="" value="<?php echo $karya->tanggal_lahir_karyawan; ?> " name="tl_k" required=""> 
-                                                </div>
+                                                <!-- <p><?php echo $karya->tanggal_lahir_karyawan; ?> || <span>Tanggal Lahir Lama</span></p> -->
+                                                <input type="date" class="form-control" placeholder="" value="<?php echo $karya->tanggal_lahir_karyawan; ?>" name="tl_k" required=""> </div>
                                             <div class="col-md-12 m-b-20">
                                             	<h6>Tempat Lahir</h6>
                                                 <textarea type="text" class="form-control" placeholder="" name="tempat_k" required=""><?php echo $karya->tempat_lahir_karyawan; ?></textarea> </div>
                                             <div class="col-md-12 m-b-20">
                                             	<h6>NIPA Karyawan</h6>
-                                                <textarea type="text" class="form-control" placeholder="" name="nipa_k" required=""><?php echo $karya->NIPA_karyawan; ?></textarea></div>
+                                                <textarea type="text" class="form-control" placeholder="" name="nipa_k" required=""><?php echo $karya->NIPA_karyawan; ?></textarea> </div>
                                             <div class="col-md-12 m-b-20">
                                                 <div class="form-group">
                                                     <h6>Jabatan</h6>
@@ -88,20 +86,20 @@
                                             </div>
                                             <div class="col-md-12 m-b-20">
                                             	<h6>Alamat Karyawan</h6>
-                                                
                                                 <textarea type="text" class="form-control" placeholder="" name="alamat_k" required=""><?php echo $karya->alamat; ?></textarea> 
                                             </div>
                                             <h6>Foto Karyawan</h6>
                                             <img style="max-height: 200px;" src="<?php echo base_url().$karya -> gambar_karyawan ?>">
                                             <div class="col-md-12 m-b-20">
                                             	<br>
-                                                <input type="file" name="gambar" required="">
+                                                <input type="file" name="gambar" >
                                             </div>
                                         </div>
                                         <div style="float: right;">
 		                                    <button type="submit" class="btn btn-primary" name="btnSimpan" value="OK">Simpan</button>
 		                                    <a href="<?php echo base_url("admin/Karyawan") ?>"><button type="button" class="btn btn-default waves-effect" data-dismiss="modal"> Batal</button></a>
                                     	</div>
+                                    <?php } ?>
                                     </form>
                                 </div>
                             </div>

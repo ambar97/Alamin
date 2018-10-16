@@ -45,7 +45,13 @@ return"
     SweetAlert.prototype.init = function() {
         
     //Basic
-        swal(\"Good Joob!\",\"$pesan\",\"success\")
+        swal({   
+            title: \"Succes !\",   
+            text: \"$pesan.\",   
+            type: \"success\",
+            timer: 2000,
+            showConfirmButton: false 
+        });
     },
     //init
     $.SweetAlert = new SweetAlert, $.SweetAlert.Constructor = SweetAlert

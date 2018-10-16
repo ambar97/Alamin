@@ -14,7 +14,7 @@
                <!-- ============================================================== -->
                <div class="row page-titles">
                    <div class="col-md-5 col-8 align-self-center">
-                       <h3 class="text-themecolor">Dashboard</h3>
+                       <h3 class="text-themecolor">Dashboard <?php echo $this->session->flashdata("Peaaaasan"); ?></h3>
                        <ol class="breadcrumb">
                            <li class="breadcrumb-item"><a href="<?php echo base_url("admin/Dashboard") ?>">Home</a></li>
                            <li class="breadcrumb-item active">Dashboard</li>
@@ -354,7 +354,7 @@
                                      </div>
                                  </div>
                                    <div class="col-lg-12">
-                                     <button style="float: right; margin-bottom: 30px; " data-toggle="modal" data-target="#responsive-modal" class="btn btn-success"> Edit</button>
+                                     <button style="float: right; margin-bottom: 30px; " data-toggle="modal" data-target="#responsive-modal" class="btn btn-success"> <?php echo $this->session->flashdata("alert"); ?> Edit</button>
                                    </div>
                                </div>
                            </div>
@@ -364,14 +364,12 @@
 </div>
 <?php $this->load->view("admin/side/footer"); ?>
 <?php $this->load->view("admin/side/js"); ?>
-
 <!-- jQuery file upload -->
    <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/js/dropify.min.js"></script>
    <script>
    $(document).ready(function() {
        // Basic
        $('.dropify').dropify();
-
        // Translated
        $('.dropify-fr').dropify({
            messages: {
@@ -381,7 +379,6 @@
                error: 'Désolé, le fichier trop volumineux'
            }
        });
-
        // Used events
        var drEvent = $('#input-file-events').dropify();
 
@@ -409,7 +406,8 @@
        })
    });
    </script>
-    <?php if ($this->session->flashdata()) { ?>
-                       <?php echo $this->session->flashdata('Pesan'); ?></div>
-                   <?php } ?>
+
+   <?php if ($this->session->flashdata()) { ?>
+                        <?php echo $this->session->flashdata('Pesan'); ?>                    
+                    <?php } ?>
 </html>
