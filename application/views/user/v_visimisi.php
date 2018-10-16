@@ -22,16 +22,22 @@
 	<div class="container">
 		<div class="col-lg-12">
 			<div class="row">
+				<?php foreach ($visimisi->result() as $vm) { ?>
 				<div class="col-lg-9">
 					<div class="post-content">
                         <h2>Visi</h2>
-                        <p>isi visi</p>
+                        <p style="font-size: 18px;"><?php echo $vm->visi; ?></p>
                       </div>
 					<div class="post-content">
                         <h2>Misi</h2>
-                        <p>isi misi</p>
+                        <p style="font-size: 18px;"><?php echo $vm->misi; ?></p>
+                      </div>
+                    <div class="post-content">
+                        <h2>Tujuan</h2>
+                        <p style="font-size: 18px;"><?php echo $vm->tujuan; ?></p>
                       </div>
 				</div>
+			<?php } ?>
 				<div class="col-lg-3">
 					<h2 style="font-weight: bold;">Detail Lainnya</h2>
 					<hr>

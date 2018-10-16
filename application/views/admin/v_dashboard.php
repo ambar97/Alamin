@@ -239,7 +239,7 @@
                        <div class="card blog-widget">
                            <div class="card-body">
                             <?php foreach ($sejarah->result() as $sejarah) { ?>
-                               <div class="blog-image"><img class="img-responsive" src="<?php echo base_url()?>gallery/Sejarah/<?php echo $sejarah->gambar_sejarah?>" /></div>
+                               <div class="blog-image"><img style="max-height: 300px;" class="img-responsive" src="<?php echo base_url().$sejarah->gambar_sejarah?>" /></div>
                                <h3><?php echo $sejarah->judul_sejarah; ?></h3>
                                <p class="m-t-20 m-b-20">
                                    <?php echo $sejarah->isi_sejarah; ?>
@@ -268,7 +268,7 @@
                                                                    <textarea name="isi_sejarah" class="form-control" id="exampleTextarea" rows="4" placeholder="Isi Sejarah"> <?php echo $sejarah->isi_sejarah; ?></textarea>
                                                                </div>
                                                                <div class="col-md-12 m-b-20">
-                                                                   <input name="img_sejarah"  type="file" id="input-file-now" required="" /><hr>
+                                                                   <input name="img_sejarah"  type="file" id="input-file-now"/><hr>
                                                                    <center><img class="col-md-8" style="max-height: 200px;" src="<?php echo base_url()?>gallery/Sejarah/<?php echo $sejarah->gambar_sejarah?>" /></center>
                                                                </div>
                                                            </div>
@@ -328,7 +328,7 @@
                        <div class="card blog-widget">
                            <div class="card-body">
                              <?php foreach ($denah->result() as $asd) { ?>
-                               <div class="blog-image"><img src="<?php echo base_url(); ?>gallery/Denah/<?php echo $asd->gambar_denah; ?>" alt="Gambar Denah Sekolah" class="img-responsive" /></div>
+                               <div class="blog-image"><img style="max-height: 700px;" src="<?php echo base_url().$asd->gambar_denah ?>" alt="Gambar Denah Sekolah" class="img-responsive" /></div>
                              <?php } ?>
                                <div class="d-flex">
                                  <div id="responsive-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">

@@ -46,7 +46,7 @@
     <div class="col-12">
         <div class="card">
                         <div class="card-body">
-                          <button type="button"><a href="<?php echo base_url('admin/Berita/t_berita'); ?>">Tambah Berita</a></button>
+                          <a href="<?php echo base_url('admin/Berita/t_berita'); ?>"><button type="button">Tambah Berita</button></a>
                                 <div class="table-responsive m-t-40">
                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
@@ -103,3 +103,6 @@
        document.location='<?php echo base_url(); ?>admin/Berita/d_berita/'+param;
    }
  </script>
+ <?php if ($this->session->flashdata()) { ?>
+                        <?php echo $this->session->flashdata('Pesan'); ?>                    
+                    <?php } ?>

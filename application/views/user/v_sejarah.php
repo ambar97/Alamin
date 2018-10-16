@@ -23,10 +23,13 @@
 		<div class="col-lg-12">
 			<div class="row">
 				<div class="col-lg-9">
+					<?php foreach ($sejarah->result() as $sejarah ) { ?>
 					<div class="post-content">
-                        <h2>Judul Sejarah</h2>
-                        <p>Isi sejarah</p>
+						<h2><?php echo $sejarah-> judul_sejarah; ?></h2>
+						<img style="max-height: 400;" class="img-fluid" src="<?php echo base_url().$sejarah -> gambar_sejarah ?>"> <hr>
+                        <p><?php echo $sejarah->isi_sejarah; ?></p>
                       </div>
+                    <?php } ?>
 				</div>
 				<div class="col-lg-3">
 					<h2 style="font-weight: bold;">Detail Lainnya</h2>

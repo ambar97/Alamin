@@ -22,31 +22,23 @@
 	<div class="container">
 		<div class="col-lg-12">
 			<div class="row">
-
+				<div class="col-lg-9">
 				<!-- Gambar -->
-				<div class="col-12 col-sm-6 col-lg-4 product">
+				<div class="row">
+					<?php foreach ($sarpras->result() as $sarpras) { ?>
+				<div class="col-12 col-sm-6 col-lg-6 product">
 					<span class="product-thumb-info">
 							<span>
-								<img alt="" class="img-fluid" src="<?php echo base_url(); ?>master/client/img/products/product-2.jpg">
+								<img style="height: 300px; width: 100%;" alt="" class="img-fluid" src="<?php echo base_url().$sarpras->gambar_sarana; ?>">
 							</span>
-						</a>
 						<span class="product-thumb-info-content">
-								<h4>Foto Judul</h4>
-							</a>
+								<h4><?php echo $sarpras->ket_sarana_prasarana; ?></h4>
 						</span>
 					</span>
+				<hr></div>
+
+			<?php } ?>
 				</div>
-				<div class="col-12 col-sm-6 col-lg-4 product">
-					<span class="product-thumb-info">
-							<span>
-								<img alt="" class="img-fluid" src="<?php echo base_url(); ?>master/client/img/products/product-2.jpg">
-							</span>
-						</a>
-						<span class="product-thumb-info-content">
-								<h4>Foto Judul</h4>
-							</a>
-						</span>
-					</span>
 				</div>
 				<div class="col-lg-3">
 					<h2 style="font-weight: bold;">Detail Lainnya</h2>
