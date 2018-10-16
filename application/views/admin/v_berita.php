@@ -48,7 +48,7 @@
                         <div class="card-body">
                           <a href="<?php echo base_url('admin/Berita/t_berita'); ?>"><button type="button">Tambah Berita</button></a>
                                 <div class="table-responsive m-t-40">
-                                    <table class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                    <table id="example" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
@@ -103,6 +103,17 @@
        document.location='<?php echo base_url(); ?>admin/Berita/d_berita/'+param;
    }
  </script>
+<<<<<<< HEAD
  <?php if ($this->session->flashdata()) { ?>
                         <?php echo $this->session->flashdata('Pesan'); ?>                    
                     <?php } ?>
+=======
+
+ <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
+
+ <script type="text/javascript">
+ $(document).ready(function() {
+  $('#example').DataTable();
+} );
+ </script>
+>>>>>>> 998481fb99d2a7b1607f785e2ffc7d289ccf356f

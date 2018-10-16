@@ -23,6 +23,9 @@
     <!-- You can change the theme colors from here -->
     <link href="<?php echo base_url() ?>master/adm/css/colors/blue.css" id="theme" rel="stylesheet">
     <link href="<?php echo base_url() ?>master/adm/assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
