@@ -29,12 +29,13 @@ class Berita extends CI_Controller {
 			$name_file=$data['file_name'];
 			$datainsert['gambar_informasi'] = $name_file;
 			$judul = $this->input->post('judul_informasi');
-			$isi = $this->input->post('judul_informasi');
+			$isi = $this->input->post('isi_informasi');
 			$now = date('y-m-d');
 			$datee['date'] = $now;
 			$foto = "gallery/Informasi/".$upload_data['file_name'];
 			$data = array('id_informasi'=>"",
 				'judul_informasi'=>$judul,
+				'date'=>$datee,
 				'isi_informasi'=>$isi,
 				'gambar_informasi'=>$foto);
 			$upload = $this->M_alamin->insert('informasi', $data);
