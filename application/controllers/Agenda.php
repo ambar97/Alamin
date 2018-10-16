@@ -5,6 +5,7 @@ class Agenda extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('user/v_agenda');
+		$data['agenda'] = $this->M_alamin->select('agenda');
+		$this->load->view('user/v_agenda',$data);
 	}
 }

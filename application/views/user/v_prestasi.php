@@ -23,63 +23,68 @@
 		<div class="col-lg-12">
 			<div class="row">
 				<div class="col-lg-9">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio">
-								<?php foreach ($prestasi->result() as $prs) { ?>
-								<div class="col-sm-9 col-lg-4 isotope-item website mb-4 mb-lg-0">
-									<div class="image-gallery-item">
-										<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" data-toggle="modal" data-target="#exampleModal">
-											<span class="thumb-info">
-												<span class="thumb-info-wrapper" >
-													<img  src="<?php echo base_url().$prs->gambar_prestasi ?>" class="img-fluid" alt="">
-													<span class="thumb-info-title">
-														<span class="thumb-info-inner"><?php echo $prs->nama_juara; ?> <?php echo $prs->nama_lomba; ?></span>
-														<span class="thumb-info-type"><?php echo $prs->nama_siswa_prestasi; ?></span>
-													</span>
-													<span class="thumb-info-action">
-														<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
-													</span>
+					<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio">
+						<?php foreach ($prestasi->result() as $prs) { ?>
+							<div class="col-sm-9 col-lg-4 isotope-item website mb-4 mb-lg-0">
+								<div class="image-gallery-item">
+									<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" data-toggle="modal" data-target="#exampleModal<?php echo($prs->id_prestasi)?>">
+										<span class="thumb-info">
+											<span class="thumb-info-wrapper" >
+												<img  src="<?php echo base_url().$prs->gambar_prestasi ?>" class="img-fluid" alt="">
+												<span class="thumb-info-title">
+													<span class="thumb-info-inner"><?php echo $prs->nama_juara; ?> <?php echo $prs->nama_lomba; ?></span>
+													<span class="thumb-info-type"><?php echo $prs->nama_siswa_prestasi; ?></span>
+												</span>
+												<span class="thumb-info-action">
+													<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
 												</span>
 											</span>
-										</a>
-									</div>
+										</span>
+									</a>
 								</div>
-							<?php } ?>
+							</div>
 
+						<?php } ?>
 
-								<!-- Modal -->
-								<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Detail Prestasi</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-													<span aria-hidden="true">&times;</span>
-												</button>
+							<!-- Modal -->
+							<div class="modal fade" id="exampleModal<?php echo($prs->id_prestasi)?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Detail Prestasi</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<div>
+												<center>
+													<img style="width: 50%" src="<?php echo base_url().$prs->gambar_prestasi ?>">
+												</center>
+												<hr>
 											</div>
-											<div class="modal-body">
-												<div>
-													<center>
-														<img style="width: 50%" src="<?php echo base_url() ?>master/client/img/projects/project.jpg">
-													</center>
-													<hr>
+											<div class="container">
+												<div class="row">
+												<div class="col-lg-5" >
+													 <p >Nama : </p>
+													<p>Juara : </p>
+													<p>Nama Lomba: </p>
+													<p>Tingkat Kejuaraan : </p>
+													<p>Nama Pembimbing : </p> 
 												</div>
-												<div class="container">
-													<div class="col-md-12">
-														<p><strong>Nama : </strong><strong>Christopher Nanda Jonathan</strong></p>
-														<p><strong>Juara : </strong><strong>Juara 1</strong></p>
-														<p><strong>Jenis Kejuaraan : </strong><strong>Kejuaraan Lomba Coli Sedunia</strong></p>
-														<p><strong>Tingkat Kejuaraan : </strong><strong>Sedunia Asia Tenggara</strong></p>
-														<p><strong>Nama Pembimbing : </strong><strong>Joni Nanda Jonathan</strong></p>
-													</div>
+												<div class="col-lg-7">
+													<p><?php echo $prs->nama_siswa_prestasi; ?></p>
+													<p><?php echo $prs->nama_juara; ?></p>
+													<p><?php echo $prs->nama_lomba; ?></p>
+													<p><?php echo $prs->nama_lingkup_prestasi; ?></p>
+													<p><?php echo $prs->nama_pembimbing_lomba; ?></p>
 												</div>
+											</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
 					</div>
 				</div>
 				<div class="col-lg-3">

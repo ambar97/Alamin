@@ -23,16 +23,16 @@
 			<div class="row">
 				<div class="col-lg-9">
 					<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio">
-						
+						<?php foreach ($galery->result() as $glr) { ?>
 						<div class="col-sm-9 col-lg-4 isotope-item website mb-4 mb-lg-0">
 							<div class="image-gallery-item">
-								<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" data-toggle="modal" data-target="#exampleModal">
+								<a href="<?php echo base_url().$glr->gambar_galeri ?>" data-toggle="modal" data-target="#exampleModal<?php echo($glr->id_galeri)?>">
 									<span class="thumb-info">
 										<span class="thumb-info-wrapper" >
-											<img  src="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="img-fluid" alt="">
+											<img  src="<?php echo base_url().$glr->gambar_galeri ?>" class="img-fluid" alt="">
 											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Foto Pembelajaran</span>
-												<span class="thumb-info-type">Pembelajaran pagi yang asik sekali</span>
+												<span class="thumb-info-inner"><?php echo $glr->judul_galeri; ?></span>
+												<span class="thumb-info-type"><?php echo  $glr->deskripsi_galeri;?></span>
 											</span>
 											<span class="thumb-info-action">
 												<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
@@ -42,9 +42,9 @@
 								</a>
 							</div>
 						</div>
-
+						
 						<!-- Modal -->
-						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal fade" id="exampleModal<?php echo($glr->id_galeri)?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div class="modal-dialog" role="document">
 								    <div class="modal-content">
 									      <div class="modal-header">
@@ -56,19 +56,20 @@
 									      <div class="modal-body">
 										       <div>
 										       	<center>
-										       		<img style="width: 50%" src="<?php echo base_url() ?>master/client/img/projects/project.jpg">
+										       		<img style="width: 50%" src="<?php echo base_url().$glr->gambar_galeri ?>">
 										       	</center>
 										       	<hr>
 										       </div>
 										       <div class="container">
 										       		<div class="col-md-12">
-										       			<p>deskripsi foto disini gan</p>
+										       			<p><?php echo  $glr->deskripsi_galeri;?></p>
 										       		</div>
 										       </div>
 									      </div>
 								    </div>
 							  </div>
 						</div>
+						<?php } ?>
 					</div>
 				</div>
 				<div class="col-lg-3">
