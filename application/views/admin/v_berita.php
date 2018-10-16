@@ -70,7 +70,7 @@
                                                 <td><?php echo $ber->date; ?></td>
                                                 <td><?php echo $ber->viewers; ?></td>
                                                 <td>
-                                                    <button type="button">Lihat</button>
+                                                    <!-- <button type="button">Lihat</button> -->
                                                     <button type="button" onclick="updatejs('<?php echo $ber->id_informasi; ?>')">Edit</button>
                                                     <button type="button" onclick="deleted('<?php echo $ber->id_informasi; ?>')">Hapus</button>
                                                 </td>
