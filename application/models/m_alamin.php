@@ -32,11 +32,6 @@ class M_alamin extends CI_Model {
     return $this->db->get_where($table,$where);
   }
 
-  // function get_model(){
-  // $query = $this->db->query('SELECT * FROM automobil ORDER BY id_automobile ASC');
-  // return $query->result();
-  // }
-
   function select_multy(){
     $this->db->select('karyawan.*, jabatan_karyawan.*, bidang.*');
           $this->db->join('jabatan_karyawan', 'jabatan_karyawan.id_jabatan = karyawan.id_jabatan');
@@ -114,23 +109,41 @@ class M_alamin extends CI_Model {
     return $data;
   }
 
-  function struktur_tatausaha(){
-    $this->db->select('karyawan.*, bidang.*, jabatan_karyawan.*');
-    $this->db->from('karyawan');
-    $this->db->join('bidang', 'bidang.id_bidang = karyawan.id_bidang');
-    $this->db->join('jabatan_karyawan', 'jabatan_karyawan.id_jabatan = karyawan.id_jabatan');
-    $where = array('karyawan.id_bidang' => 2, 'karyawan.id_jabatan' => 7);
+  function update_struktur_tu(){
+    $this->db->select('galeri_struktur.*, bidang.*');
+    $this->db->from('galeri_struktur');
+    $this->db->join('bidang', 'bidang.id_bidang = galeri_struktur.id_bidang');
+    $where = array('galeri_struktur.id_bidang' => 2);
     $this->db->where($where);
     $data = $this->db->get();
     return $data;
   }
 
-  function update_struktur(){
-    $this->db->select('galeri_struktur.*, bidang.*, jabatan_karyawan.*');
+  function update_struktur_kesiswaan(){
+    $this->db->select('galeri_struktur.*, bidang.*');
     $this->db->from('galeri_struktur');
     $this->db->join('bidang', 'bidang.id_bidang = galeri_struktur.id_bidang');
-    $this->db->join('jabatan_karyawan', 'jabatan_karyawan.id_jabatan = galeri_struktur.id_jabatan');
-    $where = array('galeri_struktur.id_bidang' => 2, 'galeri_struktur.id_jabatan' => 7);
+    $where = array('galeri_struktur.id_bidang' => 3);
+    $this->db->where($where);
+    $data = $this->db->get();
+    return $data;
+  }
+
+  function update_struktur_kurikulum(){
+    $this->db->select('galeri_struktur.*, bidang.*');
+    $this->db->from('galeri_struktur');
+    $this->db->join('bidang', 'bidang.id_bidang = galeri_struktur.id_bidang');
+    $where = array('galeri_struktur.id_bidang' => 4);
+    $this->db->where($where);
+    $data = $this->db->get();
+    return $data;
+  }
+
+  function update_struktur_sapras(){
+    $this->db->select('galeri_struktur.*, bidang.*');
+    $this->db->from('galeri_struktur');
+    $this->db->join('bidang', 'bidang.id_bidang = galeri_struktur.id_bidang');
+    $where = array('galeri_struktur.id_bidang' => 5);
     $this->db->where($where);
     $data = $this->db->get();
     return $data;

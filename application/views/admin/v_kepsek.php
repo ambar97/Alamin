@@ -38,39 +38,7 @@
             </div>
         </div>
         <div class="row">
-        	<div class="col-lg-4 col-xlg-3 col-md-5">
-                <div class="card">
-                    <div class="card-body">
-                      <?php foreach ($kepsek->result() as $k) { ?>
-                        <center class="m-t-30"> <img src="<?php echo base_url(); ?><?php echo $k->gambar_karyawan; ?>" width="250" />
-                            <h4 class="card-title m-t-10"><?php echo $k->nama_karyawan; ?></h4>
-                            <h6 class="card-subtitle"><?php echo $k->NIPA_karyawan; ?></h6>
-                          <?php } ?>
-                        </center>
-                    </div>
-                </div>
-            </div>
-		    <div class="col-lg-8 col-xlg-9 col-md-7">
-	            <div class="card">
-            		<form method="post" enctype="multipart/form-data" action="<?php echo base_url('admin/StrukturPers/editProkerKepsek'); ?>">
-		                <div class="card-body">
-                      <h3 class="card-title">Edit Program Kerja</h3>
-                      <?php foreach ($kepsek->result() as $k) { ?>
-                        <input type="text" name="id_bidangKepsek" value="<?php echo $k->id_bidang; ?>" hidden>
-                        <input type="text" name="id_jabatanKepsek" value="<?php echo $k->id_jabatan; ?>"hidden>
-                      <?php } ?>
-
-                           <textarea class="summernote" name="prokerKepsek">
-
-                           </textarea>
-		                </div>
-		                <div class="card-body">
-	                    	<button class="btn btn-success" style="float: right;">Simpan</button>
-                    </div>
-		            </form>
-	            </div>
-        	</div>
-        	<div class="col-lg-12 col-xlg-9 col-md-7">
+          <div class="col-lg-12 col-xlg-9 col-md-7">
 	            <div class="card">
                 <div class="card-body">
                   <h3>Program Kerja</h3>
@@ -80,12 +48,26 @@
                             <?php foreach ($viewKepsek->result() as $v) { ?>
                               <p><?php echo $v->isi_proker; ?></p>
                             <?php } ?>
-
 	                        </div>
 	                </div>
-	                <div class="card-body">
-                    	<button class="btn btn-danger" style="float: right;">Hapus</button>
-                  </div>
+	            </div>
+        	</div>
+		    <div class="col-lg-12 col-xlg-9 col-md-7">
+	            <div class="card">
+            		<form method="post" enctype="multipart/form-data" action="<?php echo base_url('admin/StrukturPers/editProkerKepsek'); ?>">
+		                <div class="card-body">
+                      <h3 class="card-title">Edit Program Kerja</h3>
+                      <?php foreach ($viewKepsek->result() as $k) { ?>
+                        <input type="text" name="id_bidangKepsek" value="<?php echo $k->id_bidang; ?>" hidden>
+                      <?php } ?>
+                           <textarea class="summernote" name="prokerKepsek">
+
+                           </textarea>
+		                </div>
+		                <div class="card-body">
+	                    	<button class="btn btn-success" style="float: right;">Simpan</button>
+                    </div>
+		            </form>
 	            </div>
         	</div>
 		</div>

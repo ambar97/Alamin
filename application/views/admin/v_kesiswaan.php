@@ -38,67 +38,69 @@
             </div>
         </div>
         <div class="row">
-        	<div class="col-lg-4 col-xlg-3 col-md-5">
-                <div class="card">
-                    <div class="card-body">
-                        <center class="m-t-30"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/5.jpg" width="250" />
-                            <h4 class="card-title m-t-10">Nama Kepala Waka Kesiswaan</h4>
-                            <h6 class="card-subtitle">Nipa</h6>
-                        </center>
-                    </div>
-                </div>
-            </div>
-		    <div class="col-lg-8 col-xlg-9 col-md-7">
+            <div class="col-lg-12 col-xlg-9 col-md-7">
+  	            <div class="card">
+  	                <ul class="nav nav-tabs profile-tab" role="tablist">
+  	                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#isiproker" role="tab">Program Kerja</a> </li>
+  	                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#gambarTu" role="tab">Gambar Struktur</a> </li>
+  	                </ul>
+  	                <div class="tab-content">
+  	                    <div class="tab-pane active" id="isiproker" role="tabpanel">
+                          <?php foreach ($viewKesiswaan->result() as $vk) { ?>
+                            <div class="card-body">
+  	                           <p><?php echo $vk->isi_proker; ?></p>
+  	                        </div>
+                          <?php } ?>
+
+  	                    </div>
+  	                    <div class="tab-pane" id="gambarTu" role="tabpanel">
+                          <?php foreach ($viewStruktur->result() as $vs) { ?>
+                            <div class="card-body">
+  	                           <img class="img-responsive" src="<?php echo base_url(); ?>gallery/Struktur/<?php echo $vs->gambar_struktur; ?>" alt="Gambar Struktur Kesiswaan">
+  	                        </div>
+                          <?php } ?>
+  	                    </div>
+  	                </div>
+  	            </div>
+          	</div>
+		    <div class="col-lg-12 col-xlg-9 col-md-7">
 	            <div class="card">
-            		<form>
 		                <ul class="nav nav-tabs profile-tab" role="tablist">
 		                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#proker" role="tab">Program Kerja</a> </li>
 		                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#gambar" role="tab">Gambar Struktur</a> </li>
 		                </ul>
 		                <div class="tab-content">
 		                    <div class="tab-pane active" id="proker" role="tabpanel">
+                          <form method="post" enctype="multipart/form-data" action="<?php echo base_url('admin/StrukturPers/editKesiswaan'); ?>">
 		                        <div class="card-body">
-		                           <div class="summernote" name="isi_proker">
-	                                </div>
+                              <?php foreach ($viewKesiswaan->result() as $k) { ?>
+                                <input type="text" name="id_bidangKesiswaan" value="<?php echo $k->id_bidang; ?>" hidden>
+                              <?php } ?>
+		                           <textarea class="summernote" name="isi_proker_kesiswaan">
+
+                               </textarea>
 		                        </div>
+                            <div class="card-body">
+                               <button class="btn btn-success" style="float: right;">Simpan</button>
+                           </div>
+                          </form>
 		                    </div>
 		                    <div class="tab-pane" id="gambar" role="tabpanel">
+                          <form method="post" enctype="multipart/form-data" action="<?php echo base_url('admin/StrukturPers/editStrukturKesiswaan'); ?>">
 		                        <div class="card-body">
 		                           	<h4 class="card-title">Upload Gambar Galery (+)</h4>
 	                                <small>Maksimal ukuran upload 5 Mb.</small>
-	                                <input type="file" id="input-file-now" class="dropify" name="gambar_struktur" />
-	                             </div>
+	                                <input type="file" id="input-file-now" class="dropify" name="gambar_struktur_kesiswaan" />
+	                           </div>
+                             <div class="card-body">
+         	                    	<button class="btn btn-success" style="float: right;">Simpan</button>
+         	                  </div>
+                          </form>
 		                    </div>
 		                </div>
-		                <div class="card-body">
-	                    	<button class="btn btn-success" style="float: right;">Simpan</button>
-	                    </div>
-		            </form>
 	            </div>
         	</div>
-        	<div class="col-lg-12 col-xlg-9 col-md-7">
-	            <div class="card">
-	                <ul class="nav nav-tabs profile-tab" role="tablist">
-	                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#isiproker" role="tab">Program Kerja</a> </li>
-	                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#gambarTu" role="tab">Gambar Struktur</a> </li>
-	                </ul>
-	                <div class="tab-content">
-	                    <div class="tab-pane active" id="isiproker" role="tabpanel">
-	                        <div class="card-body">
-	                           <p>isi proker</p>
-	                        </div>
-	                    </div>
-	                    <div class="tab-pane" id="gambarTu" role="tabpanel">
-	                        <div class="card-body">
-	                           <p>Gambar Struktur</p>
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="card-body">
-                    	<button class="btn btn-danger" style="float: right;">Hapus</button>
-                    </div>
-	            </div>
-        	</div>
+
 		</div>
     </div>
 </div>
