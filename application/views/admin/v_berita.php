@@ -103,11 +103,10 @@
        document.location='<?php echo base_url(); ?>admin/Berita/d_berita/'+param;
    }
  </script>
-<<<<<<< HEAD
+
  <?php if ($this->session->flashdata()) { ?>
-                        <?php echo $this->session->flashdata('Pesan'); ?>                    
+                        <?php echo $this->session->flashdata('Pesan'); ?>
                     <?php } ?>
-=======
 
  <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
 
@@ -116,4 +115,3 @@
   $('#example').DataTable();
 } );
  </script>
->>>>>>> 998481fb99d2a7b1607f785e2ffc7d289ccf356f

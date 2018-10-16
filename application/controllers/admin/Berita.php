@@ -41,7 +41,7 @@ class Berita extends CI_Controller {
 			$this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan"));
 		redirect(base_url().'admin/Berita');
 		}
-		
+
 	}
 
 	public function e_berita(){
@@ -52,7 +52,7 @@ class Berita extends CI_Controller {
 		$this->upload->do_upload('gambar_informasi');
 		$upload_data = $this -> upload -> data ();
 		$id_info = $this->input->post('id_informasi');
-		$where['id_informasi'] = $id_info; 
+		$where['id_informasi'] = $id_info;
 		$isi = $this->input->post('isi_informasi');
 		$judul = $this->input->post('judul_informasi');
 		$now = date('Y-m-d H:i:s');
@@ -78,7 +78,7 @@ class Berita extends CI_Controller {
 			$this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan"));
 		redirect(base_url().'admin/Berita');
 		}
-		
+
 	}
 
 	public function d_berita(){
@@ -94,3 +94,4 @@ class Berita extends CI_Controller {
 		header('location:'.base_url().'admin/Berita');
 	}
 }
+// asdasdasd
