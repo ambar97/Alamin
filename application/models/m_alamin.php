@@ -56,7 +56,7 @@ class M_alamin extends CI_Model {
           return $data;
   }
   function get_galery(){
-      return $this->db->query('SELECT * FROM galeri ORDER BY id_galeri DESC');
+      return $this->db->query('SELECT * FROM galeri where id_galeri != 1 && id_galeri != 2');
       return $query->result ();
   }
   function get_sejarah(){

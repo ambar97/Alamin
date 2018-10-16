@@ -23,6 +23,7 @@
 			<div class="row">
 				<div class="col-lg-9">
 					<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio">
+						
 						<div class="col-sm-9 col-lg-4 isotope-item website mb-4 mb-lg-0">
 							<div class="image-gallery-item">
 								<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" data-toggle="modal" data-target="#exampleModal">

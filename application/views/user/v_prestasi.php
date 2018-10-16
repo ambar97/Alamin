@@ -23,55 +23,62 @@
 		<div class="col-lg-12">
 			<div class="row">
 				<div class="col-lg-9">
-					<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio">
-						<div class="col-sm-9 col-lg-4 isotope-item website mb-4 mb-lg-0">
-							<div class="image-gallery-item">
-								<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" data-toggle="modal" data-target="#exampleModal">
-									<span class="thumb-info">
-										<span class="thumb-info-wrapper" >
-											<img  src="<?php echo base_url() ?>master/client/img/projects/project.jpg" class="img-fluid" alt="">
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Juara 1</span>
-												<span class="thumb-info-type">Christopher Nanda Jonathan</span>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="row image-gallery sort-destination lightbox" data-sort-id="portfolio">
+								<?php foreach ($prestasi->result() as $prs) { ?>
+								<div class="col-sm-9 col-lg-4 isotope-item website mb-4 mb-lg-0">
+									<div class="image-gallery-item">
+										<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" data-toggle="modal" data-target="#exampleModal">
+											<span class="thumb-info">
+												<span class="thumb-info-wrapper" >
+													<img  src="<?php echo base_url().$prs->gambar_prestasi ?>" class="img-fluid" alt="">
+													<span class="thumb-info-title">
+														<span class="thumb-info-inner"><?php echo $prs->nama_juara; ?> <?php echo $prs->nama_lomba; ?></span>
+														<span class="thumb-info-type"><?php echo $prs->nama_siswa_prestasi; ?></span>
+													</span>
+													<span class="thumb-info-action">
+														<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
+													</span>
+												</span>
 											</span>
-											<span class="thumb-info-action">
-												<span class="thumb-info-action-icon"><i class="fas fa-link"></i></span>
-											</span>
-										</span>
-									</span>
-								</a>
-							</div>
-						</div>
+										</a>
+									</div>
+								</div>
+							<?php } ?>
 
-						<!-- Modal -->
-						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							  <div class="modal-dialog" role="document">
-								    <div class="modal-content">
-									      <div class="modal-header">
-									        <h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Detail Prestasi</h5>
-									        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									          <span aria-hidden="true">&times;</span>
-									        </button>
-									      </div>
-									      <div class="modal-body">
-										       <div>
-										       	<center>
-										       		<img style="width: 50%" src="<?php echo base_url() ?>master/client/img/projects/project.jpg">
-										       	</center>
-										       	<hr>
-										       </div>
-										       <div class="container">
-										       		<div class="col-md-12">
-										       			<p><strong>Nama : </strong><strong>Christopher Nanda Jonathan</strong></p>
-										       			<p><strong>Juara : </strong><strong>Juara 1</strong></p>
-										       			<p><strong>Jenis Kejuaraan : </strong><strong>Kejuaraan Lomba Coli Sedunia</strong></p>
-										       			<p><strong>Tingkat Kejuaraan : </strong><strong>Sedunia Asia Tenggara</strong></p>
-										       			<p><strong>Nama Pembimbing : </strong><strong>Joni Nanda Jonathan</strong></p>
-										       		</div>
-										       </div>
-									      </div>
-								    </div>
-							  </div>
+
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Detail Prestasi</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<div>
+													<center>
+														<img style="width: 50%" src="<?php echo base_url() ?>master/client/img/projects/project.jpg">
+													</center>
+													<hr>
+												</div>
+												<div class="container">
+													<div class="col-md-12">
+														<p><strong>Nama : </strong><strong>Christopher Nanda Jonathan</strong></p>
+														<p><strong>Juara : </strong><strong>Juara 1</strong></p>
+														<p><strong>Jenis Kejuaraan : </strong><strong>Kejuaraan Lomba Coli Sedunia</strong></p>
+														<p><strong>Tingkat Kejuaraan : </strong><strong>Sedunia Asia Tenggara</strong></p>
+														<p><strong>Nama Pembimbing : </strong><strong>Joni Nanda Jonathan</strong></p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -79,21 +86,22 @@
 					<h2 style="font-weight: bold;">Detail Prestasi</h2>
 					<hr>
 					<p>dcghvhkgvtgrf</p>
-					</ul>
-					<div>
-		                <h2><strong>Polling</strong></h2>
-		                <hr>
-		                <p>Bagaimana tanggapan anda mengenai desain website kami?</p>
-		                <input type=checkbox name=c1 checked>Sangat baik<br>
-		                <input type=checkbox name=c2 >Baik<br>
-		                <input type=checkbox name=c3 >Cukup baik<br><br>
-		                <a href="#" class="btn btn-lg btn-primary">Vote</a>
-		                <a href="#" class="btn btn-lg btn-primary">View result</a><br>
-		            </div>
+				</ul>
+				<div>
+					<h2><strong>Polling</strong></h2>
+					<hr>
+					<p>Bagaimana tanggapan anda mengenai desain website kami?</p>
+					<input type=checkbox name=c1 checked>Sangat baik<br>
+					<input type=checkbox name=c2 >Baik<br>
+					<input type=checkbox name=c3 >Cukup baik<br><br>
+					<a href="#" class="btn btn-lg btn-primary">Vote</a>
+					<a href="#" class="btn btn-lg btn-primary">View result</a><br>
 				</div>
 			</div>
+
 		</div>
 	</div>
+</div>
 </section>
 
 <?php $this->load->view("user/side/footer"); ?>
