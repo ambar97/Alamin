@@ -18,6 +18,7 @@ class Berita extends CI_Controller {
 	}
 
 	public function i_berita(){
+		// die($this->input->post('isi_informasi'));
 		$config['upload_path']          = 'gallery/Informasi';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
 		$this->load->library('upload', $config);
@@ -25,24 +26,20 @@ class Berita extends CI_Controller {
 
 		if ( $this->upload->do_upload('gambar_informasi'))
 		{
-			$data = $this->upload->data();
-			$name_file=$data['file_name'];
+			$upload_data = $this->upload->data();
+			$name_file=$upload_data['file_name'];
 			$datainsert['gambar_informasi'] = $name_file;
 			$judul = $this->input->post('judul_informasi');
 			$isi = $this->input->post('isi_informasi');
 			$now = date('y-m-d');
-			// $datee['date'] = $now;
-			$foto = "gallery/Informasi/".$name_file;
-			// $dataa = array(
-			// 	'judul_informasi'=>$judul,
-			// 	'date'=>$datee,
-			// 	'isi_informasi'=>$isi,
-			// 	'gambar_informasi'=>$foto);
-			$dataa['judul_informasi'] = $judul;
-			$dataa['date'] = $now;
-			$dataa['isi_informasi'] = $isi;
-			$dataa['gambar_informasi'] = $foto;
-			$upload = $this->M_alamin->insert('informasi', $dataa);
+			$datee['date'] = $now;
+			$foto = "gallery/Informasi/".$upload_data['file_name'];
+			$data = array(
+				'judul_informasi'=>$judul,
+				'date'=>$now,
+				'isi_informasi'=>$isi,
+				'gambar_informasi'=>$foto);
+			$upload = $this->M_alamin->insert('informasi', $data);
 		}
 		if ($upload >= 0) {
 			$this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
