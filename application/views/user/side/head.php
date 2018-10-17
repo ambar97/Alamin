@@ -53,5 +53,6 @@
 
     <!-- Head Libs -->
     <script src="<?php echo base_url() ?>master/client/vendor/modernizr/modernizr.min.js"></script>
+    <link href="<?php echo base_url() ?>master/adm/assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
 
   </head>

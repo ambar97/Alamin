@@ -31,3 +31,5 @@
         <!-- Theme Initialization Files -->
         <script src="<?php echo base_url() ?>master/client/js/theme.init.js"></script>
         <script src="<?php echo base_url() ?>master/client/master/analytics/analytics.js"></script>
+        <script src="<?php echo base_url() ?>master/adm/assets/plugins/sweetalert/sweetalert.min.js"></script>
+     <script src="<?php echo base_url() ?>master/adm/assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
