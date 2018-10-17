@@ -148,4 +148,12 @@ class M_alamin extends CI_Model {
     $data = $this->db->get();
     return $data;
   }
+
+  function quote(){
+    $this->db->select('quotes.*, karyawan.*');
+    $this->db->from('quotes');
+    $this->db->join('karyawan', 'karyawan.NIPA_karyawan = quotes.karyawan_NIPA_karyawan');
+    $data = $this->db->get();
+    return $data;
+  }
 }
