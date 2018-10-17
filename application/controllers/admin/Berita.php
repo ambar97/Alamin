@@ -33,7 +33,7 @@ class Berita extends CI_Controller {
 			$now = date('y-m-d');
 			$datee['date'] = $now;
 			$foto = "gallery/Informasi/".$upload_data['file_name'];
-			$data = array('id_informasi'=>"",
+			$data = array(
 				'judul_informasi'=>$judul,
 				'isi_informasi'=>$isi,
 				'gambar_informasi'=>$foto);
