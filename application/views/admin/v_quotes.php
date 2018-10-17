@@ -1,5 +1,5 @@
 <?php $this->load->view("admin/side/head"); ?>
-<?php $this->load->view("admin/side/loader"); ?>
+<!-- <?php $this->load->view("admin/side/loader"); ?> -->
 <?php $this->load->view("admin/side/header"); ?>
 <?php $this->load->view("admin/side/sidebar"); ?>
 
@@ -34,8 +34,82 @@
                 </div>
             </div>
         </div>
+          <div class="col-sm-6">
+            <form class="" action="<?php echo base_url('admin/Quote/insert'); ?>" method="post">
+              <div class="card">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>Tambah Quote</label>
+                    <select class="form-control" name="pilih_karyawan" required>
+                      <option value="">-Pilih Status-</option>
+                      <?php foreach ($nipa->result() as $n) { ?>
+                      <option value="<?php echo $n->NIPA_karyawan; ?>">-<?php echo $n->nama_karyawan; ?></option>
+                      <?php } ?>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="isi_quote" placeholder="isi quote..." required>
+                  </div>
+                  <button type="submit" name="button">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <table id="example" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Karyawan</th>
+                            <!-- <th>Isi Berita</th> -->
+                            <th>Isi quote</th>
+                            <!-- <th>Views</th> -->
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $no = 1;
+                        foreach ($quote->result() as $ber) { ?>
+                        <tr>
+                            <td><?php echo $no++?></td>
+                            <td><?php echo $ber->NIPA_karyawan; ?></td>
+                            <!-- <td><?php echo $ber->isi_informasi; ?></td> -->
+                            <td><?php echo $ber->nama_karyawan; ?></td>
+                            <td><?php echo $ber->isi; ?></td>
+                            <td>
+                                <!-- <button type="button">Lihat</button> -->
+                                <button type="button" onclick="deleted('<?php echo $ber->id_quotes; ?>')">Hapus</button>
+                            </td>
+                        </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
 </div>
 
 <?php $this->load->view("admin/side/footer"); ?>
 <?php $this->load->view("admin/side/js"); ?>
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+ $('#example').DataTable();
+} );
+</script>
+
+<script type="text/javascript">
+function deleted(param){
+  var proc = window.confirm('Are you sure delete this data?');
+  if(proc){
+     document.location='<?php echo base_url(); ?>admin/Quote/delete/'+param;
+   }
+ }
+</script>

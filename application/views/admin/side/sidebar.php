@@ -49,7 +49,7 @@
 
                         <li class="nav-devider"></li>
                         <li class="nav-small-cap">Lain-Lain</li>
-                        <li> <a class="<?php if($this->uri->segment('2')=="Lain-Lain"){ echo "active";}?>" href="<?php echo base_url("admin/Lain-Lain") ?>" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Quotes</span></a>
+                        <li> <a class="<?php if($this->uri->segment('2')=="Lain-Lain"){ echo "active";}?>" href="<?php echo base_url("admin/Quote") ?>" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Quotes</span></a>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Sample Pages</span></a>
                         </li>
