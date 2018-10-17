@@ -1,5 +1,5 @@
 <?php $this->load->view("admin/side/head"); ?>
- <?php $this->load->view("admin/side/loader"); ?> 
+ <?php $this->load->view("admin/side/loader"); ?>
  <?php $this->load->view("admin/side/header"); ?>
  <?php $this->load->view("admin/side/sidebar"); ?>
 
@@ -53,7 +53,7 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h4 class="modal-title" id="myModalLabel">Tambah prestasi (+)</h4> 
+                                            <h4 class="modal-title" id="myModalLabel">Tambah prestasi (+)</h4>
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                         </div>
                                         <div class="modal-body">
@@ -114,7 +114,7 @@
                     <?php foreach ($prestasi->result() as $prs) { ?>
                     <!-- Column -->
                     <div class="col-lg-3">
-                       
+
                         <div class="card">
                             <img style="max-height: 230px;" class="card-img-top img-responsive" src="<?php echo base_url().$prs -> gambar_prestasi ?>" alt="Card image cap">
                             <div class="card-body">
@@ -132,7 +132,7 @@
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                         <h4 class="modal-title" id="myModalLabel">Detail Prestasi </h4> 
+                                                         <h4 class="modal-title" id="myModalLabel">Detail Prestasi </h4>
                                                         <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
                                                     </div>
                                                     <div class="modal-body">
@@ -140,7 +140,7 @@
                                                             <div class="form-group">
                                                                 <div class="col-md-12 m-b-20">
                                                                     <center><img style="max-height: 300px;" src="<?php echo base_url().$prs -> gambar_prestasi ?>"></center>
-                                                                    <hr> 
+                                                                    <hr>
                                                                     <div class="col-md-12 row">
                                                                         <div class="col-md-5">
                                                                             <p>Nama Siswa</p>
@@ -171,6 +171,7 @@
                     </div>
                     <?php } ?>
                 </div>
+</div>
 </div>
 </div>
   <?php $this->load->view("admin/side/footer"); ?>
