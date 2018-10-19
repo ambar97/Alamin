@@ -22,28 +22,23 @@
 	<div class="container">
 		<div class="col-lg-12">
 			<div class="row">
+				<?php foreach ($tampil_ekstra->result() as $tampil) { ?>
 				<div class="col-lg-12">
 					<div class="tabs tabs-vertical tabs-left">
 						<ul class="nav nav-tabs">
 							<li class="nav-item active">
-								<a class="nav-link" href="#popular11" data-toggle="tab">Popular</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#recent11" data-toggle="tab">Recent</a>
+								<a class="nav-link" href="#popular11<?php echo($tampil-> id_ekstrakurikuler)?>" data-toggle="tab"><?php echo $tampil -> nama_ekstrakurikuler; ?></a>
 							</li>
 						</ul>
 						<div class="tab-content">
-							<div id="popular11" class="tab-pane active">
-								<p>Popular</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
-							</div>
-							<div id="recent11" class="tab-pane">
-								<p>Recent</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+							<div id="popular11<?php echo($tampil-> id_ekstrakurikuler)?>" class="tab-pane active">
+								<img style="height: 400px" src="<?php echo base_url().$tampil-> gambar_ekstra ?>">
+								<p><?php echo $tampil -> keterangan_ekstrakurikuler; ?></p>
 							</div>
 						</div>
 					</div>
 				</div>
+				<?php } ?>
 			</div>
 		</div>
 	</div>

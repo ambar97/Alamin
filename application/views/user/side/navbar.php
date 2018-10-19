@@ -16,13 +16,10 @@
               <nav class="header-nav-top" >
                 <ul class="nav nav-pills">
                   <li class="nav-item d-none d-sm-block">
-                    <a class="nav-link" href="about-us.html"><i class="fas fa-angle-right"></i> Tentang Kami</a>
-                  </li>
-                  <li class="nav-item d-none d-sm-block">
                     <a class="nav-link" href="<?php echo base_url("ContactUs") ?>"><i class="fas fa-angle-right"></i> Kontak</a>
                   </li>
                   <li class="nav-item">
-                    <span class="ws-nowrap"><i class="fas fa-phone"></i> (123) 456-789</span>
+                    <span class="ws-nowrap"><i class="fas fa-phone"></i> (0331) 485-416</span>
                   </li>
                 </ul>
               </nav>
@@ -78,7 +75,7 @@
                             <a class="dropdown-item" href="<?php echo base_url('Profile/BagSekolah') ?>">Denah Sekolah</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="<?php echo base_url('Profile/Extra') ?>">Extrakuliler Siswa</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Profile/Extra') ?>">Ekstrakurikuler Siswa</a>
                           </li>
                         </ul>
                       </li>

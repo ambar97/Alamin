@@ -275,8 +275,7 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="post-content">
+                        <div class="post-content">
                         <h2><?php foreach ($berita->result() as $b) { ?>
                           <?php echo $b->judul_informasi; ?>
                         <?php } ?></h2>
@@ -284,6 +283,8 @@
                           echo $b->isi_informasi;
                         } ?></p>
                       </div>
+                      </div>
+                      
                     </article>
                   </div>
                 </div>
@@ -360,9 +361,9 @@
                         </div>
                       </div>
                       <div class="post-info">
-                        <a href="<?php echo base_url('Informasi/Berita_Detail/'); ?>"><?php echo $re->judul_informasi; ?></a>
+                        <a title="<?php echo $re-> judul_informasi; ?>" href="<?php echo base_url('Informasi/Berita_Detail/'); ?>"><?php echo substr($re-> judul_informasi,0,28); ?>...</a>
                         <div class="post-meta">
-                          <?php echo $re->date; ?>
+                          <?php echo $re-> date; ?>
                         </div>
                       </div>
                     </li>
