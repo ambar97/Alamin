@@ -12,6 +12,18 @@ class M_alamin extends CI_Model {
      return $this->db->get($table) ;
   }
 
+  public function selectlimitgallery($table){
+        $this->db->order_by('id_galeri','DESC') ;
+       $this->db->limit(3) ;
+       return $this->db->get($table) ;
+  }
+  public function selectlimitberita($table){
+      $this->db->order_by('id_informasi','DESC') ;
+      $this->db->limit(1) ;
+      $data = $this->db->get($table);
+      return $data;
+  }
+
   public function selectwhere($table,$data){
     return $this->db->get_where($table, $data);
   }
@@ -177,4 +189,15 @@ class M_alamin extends CI_Model {
     $data = $this->db->get();
     return $data;
   }
+
+  // function motto_kepsek($NIPA){
+  //   $this->db->select('quote.*, karyawan.*, bidang.*');
+  //   $this->db->from('quote');
+  //   $this->db->join('karyawan', 'quote.karyawan_NIPA_karyawan = karyawan.NIPA_karyawan');
+  //   $this->db->join('bidang', 'karyawan.id_bidang = bidang.id_bidang');
+  //   $this->db->where('quote.karyawan_NIPA_karyawan', $NIPA);
+  //   // $this->db->where('karyawan.id_bidang', )
+  //   $data = $this->db->get();
+  //   return $data;
+  // }
 }
