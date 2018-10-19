@@ -23,6 +23,11 @@ class M_alamin extends CI_Model {
       $data = $this->db->get($table);
       return $data;
   }
+  public function recent_berita($table){
+    $this->db->order_by('id_informasi', 'DESC');
+    $data = $this->db->get($table);
+    return $data;
+  }
 
   public function selectwhere($table,$data){
     return $this->db->get_where($table, $data);

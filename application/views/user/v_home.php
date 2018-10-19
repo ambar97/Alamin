@@ -349,31 +349,25 @@
                   </ul>
                 </div> -->
                 <div class="tab-pane active" id="recentPosts">
+                  <?php foreach ($recent_berita->result() as $re) { ?>
                   <ul class="simple-post-list">
                     <li>
                       <div class="post-image">
                         <div class="img-thumbnail d-block">
                           <a href="<?php echo base_url('Informasi'); ?>">
-                            <img style="width:80px;" src="<?php echo base_url(); foreach ($berita->result() as $g) {
-                              echo $g->gambar_informasi;
-                            } ?>" alt="Gambar Berita">
+                            <img style="width:80px;" src="<?php echo base_url($re->gambar_informasi);?>" alt="Gambar Berita">
                           </a>
                         </div>
                       </div>
                       <div class="post-info">
-                        <a href="<?php echo base_url('Informasi/Berita_Detail/'); ?><?php foreach ($berita->result() as $id) {
-                          echo $id->id_informasi;
-                        } ?>"><?php foreach ($berita->result() as $judul) {
-                          echo $judul->judul_informasi;
-                        } ?></a>
+                        <a href="<?php echo base_url('Informasi/Berita_Detail/'); ?>"><?php echo $re->judul_informasi; ?></a>
                         <div class="post-meta">
-                          <?php foreach ($berita->result() as $time) {
-                            echo $time->date;
-                          } ?>
+                          <?php echo $re->date; ?>
                         </div>
                       </div>
                     </li>
                   </ul>
+                  <?php } ?>
                 </div>
               </div>
               <br>
