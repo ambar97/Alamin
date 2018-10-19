@@ -75,7 +75,7 @@
                             <a class="dropdown-item" href="<?php echo base_url('Profile/BagSekolah') ?>">Denah Sekolah</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="<?php echo base_url('Profile/Extra') ?>">Extrakuliler Siswa</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Profile/Extra') ?>">Ekstrakurikuler Siswa</a>
                           </li>
                         </ul>
                       </li>
