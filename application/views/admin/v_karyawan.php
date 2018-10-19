@@ -196,7 +196,7 @@
  <?php $this->load->view("admin/side/footer"); ?>
  <?php $this->load->view("admin/side/js"); ?>
 <?php if ($this->session->flashdata()) { ?>
-                        <?php echo $this->session->flashdata('Pesan'); ?></div>                    
+                        <?php echo $this->session->flashdata('Pesan'); ?>                   
                     <?php } ?> 
 
 <script src="<?php echo base_url() ?>master/adm/assets/plugins/datatables/jquery.dataTables.min.js"></script>

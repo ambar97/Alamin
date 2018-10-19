@@ -55,7 +55,7 @@
 	                    <div class="tab-pane" id="gambarTu" role="tabpanel">
                         <?php foreach ($viewStruktur->result() as $vs) { ?>
                           <div class="card-body">
-                             <img class="img-responsive" src="<?php echo base_url(); ?>gallery/Struktur/<?php echo $vs->gambar_struktur; ?>" alt="Gambar Struktur Kurikulum">
+                             <img class="img-responsive" src="<?php echo base_url().$vs->gambar_struktur; ?>" alt="Gambar Struktur Kurikulum">
                           </div>
                         <?php } ?>
 	                    </div>
@@ -89,7 +89,8 @@
                             <div class="card-body">
                                 <h4 class="card-title">Upload Gambar Galery (+)</h4>
                                   <small>Maksimal ukuran upload 5 Mb.</small>
-                                  <input type="file" id="input-file-now" class="dropify" name="gambar_struktur_sapras" />
+                                  <?php foreach ($viewStruktur->result() as $vs) { ?>
+                                  <input type="file" id="input-file-now" class="dropify" name="gambar_struktur_sapras" data-default-file="<?php echo base_url().$vs->gambar_struktur; ?>"/> <?php } ?>
                                </div>
                                <div class="card-body">
                                 <button class="btn btn-success" style="float: right;">Simpan</button>
@@ -175,3 +176,6 @@
         })
     });
     </script>
+<?php if ($this->session->flashdata()) { ?>
+    <?php echo $this->session->flashdata('Pesan'); ?>                  
+    <?php } ?>
