@@ -11,9 +11,13 @@ class Galery extends CI_Controller {
 
 	public function index()
 	{
+    if(!$this->session->userdata('status') == 'login'){
+      redirect('LoginAdmin');
+    }else{
 		$data['galery']=$this->M_alamin->get_galery();
 		$this->load->view('admin/v_galery',$data);
 	}
+}
 
 	public function create(){
         if(isset($_POST['btnSimpan'])){

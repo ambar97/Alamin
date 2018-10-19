@@ -10,12 +10,16 @@ class Karyawan extends CI_Controller {
   }
   public function index()
   {
+    if(!$this->session->userdata('status') == 'login'){
+      redirect('LoginAdmin');
+    }else{
 
     $data['karyaw']=$this->M_alamin->select_multy();
     $data['bidang']=$this->M_alamin->select('bidang');
     $data['jabatan']=$this->M_alamin->select('jabatan_karyawan');
     $this->load->view('admin/v_karyawan',$data);
   }
+}
 
   public function t_karyawan(){
     if(isset($_POST['btnSimpan'])){

@@ -11,9 +11,13 @@ class Sarpras extends CI_Controller {
 
 	public function index()
 	{
+    if(!$this->session->userdata('status') == 'login'){
+      redirect('LoginAdmin');
+    }else{
 		$data['sarana']=$this->M_alamin->get_sarpras();
 		$this->load->view('admin/v_sarpras',$data);
 	}
+}
 
 	public function create(){
         if(isset($_POST['btnSimpan'])){

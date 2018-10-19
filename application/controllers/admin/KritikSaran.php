@@ -10,9 +10,13 @@ function __construct()
     }
 	public function index()
 	{
+    if(!$this->session->userdata('status') == 'login'){
+      redirect('LoginAdmin');
+    }else{
 		$data['kritiksaran'] = $this->M_alamin->select('kritik_saran');
 		$this->load->view('admin/v_kritik_saran',$data);
 	}
+}
 	public function hapus($id){
     $where = array('id_kritik_saran'=>$id);
     $hapus = $this -> M_alamin -> delete($where,'kritik_saran');

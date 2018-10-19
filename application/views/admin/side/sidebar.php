@@ -55,16 +55,12 @@
                         </li>
                         <li> <a class="<?php if($this->uri->segment('2')=="KritikSaran"){ echo "active";}?>" href="<?php echo base_url("admin/KritikSaran") ?>" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Kritik &amp; Saran</span></a>
                         </li>
+                        <li class="nav-small-cap">Akses</li>
+                            <li class="disabled" hidden=""> <a class="<?php if($this->uri->segment('2')=="Daftar"){ echo "active";}?>" href="<?php echo base_url("admin/Daftar") ?>" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu" >Admin</span></a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
             <!-- End Sidebar scroll-->
-            <!-- Bottom points-->
-            <!-- <div class="sidebar-footer">
-                <a href="#" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
-                <a href="#" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
-                <a href="#" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
-            </div> -->
-            <!-- End Bottom points-->
         </aside>

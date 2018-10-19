@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from wrappixel.com/demos/admin-templates/material-pro/material/pages-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jun 2018 03:16:59 GMT -->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url() ?>master/adm/assets/images/favicon.png">
-    <title>Material Pro Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="<?php echo base_url()?>master/adm/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="<?php echo base_url() ?>master/adm/css/style.css" rel="stylesheet">
-    <!-- You can change the theme colors from here -->
-    <link href="<?php echo base_url() ?>master/adm/css/colors/blue.css" id="theme" rel="stylesheet">
-</head>
-
-<body>
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
-    <div class="preloader">
-        <svg class="circular" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
-    </div>
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
-    <section id="wrapper">
-        <div class="login-register" style="background-image:url(<?php echo base_url(); ?>master/adm/assets/images/alam.png);">        
-            <div class="login-box card">
+<?php $this->load->view("admin/side/head"); ?>
+<?php $this->load->view("admin/side/loader"); ?>
+<?php $this->load->view("admin/side/header"); ?>
+<?php $this->load->view("admin/side/sidebar"); ?>
+<div class="page-wrapper">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <div class="col-md-5 col-8 align-self-center">
+                <h3 class="text-themecolor">Form Admin</h3>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?php echo base_url("admin/Dashboard") ?>">Home</a></li>
+                    <li class="breadcrumb-item active">Form Admin</li>
+                </ol>
+            </div>
+            <div class="col-md-7 col-4 align-self-center">
+                <div class="d-flex m-t-10 justify-content-end">
+                    <div class="d-flex m-r-20 m-l-10 hidden-md-down">
+                        <div class="chart-text m-r-10">
+                            <h6 class="m-b-0"><small>THIS MONTH</small></h6>
+                            <h4 class="m-t-0 text-info">$58,356</h4></div>
+                        <div class="spark-chart">
+                            <div id="monthchart"></div>
+                        </div>
+                    </div>
+                    <div class="d-flex m-r-20 m-l-10 hidden-md-down">
+                        <div class="chart-text m-r-10">
+                            <h6 class="m-b-0"><small>LAST MONTH</small></h6>
+                            <h4 class="m-t-0 text-primary">$48,356</h4></div>
+                        <div class="spark-chart">
+                            <div id="lastmonthchart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="card">
+            <div class="card-body bg-info">
+                <h4 class="text-white card-title">Tambah Admin </h4>
+            </div>
             <div class="card-body">
-                <form class="form-horizontal form-material" id="loginform" action="<?php echo base_url('RegisterAdmin/buat') ?>" method="post">
-                	<div>
-                		<center>
-                			<h3 class="box-title m-b-20"><strong>Register</strong></h3>
-                		</center>
-                	</div>
+                <div class="message-box contact-box">
+                    <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark" data-toggle="modal" data-target="#tambah_karyawan">+</button></h2>
+                    <div id="tambah_karyawan" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                     <h3 class="box-title m-b-20"><strong>Register</strong></h3>
+                                    <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-material" id="loginform" action="<?php echo base_url('admin/Daftar/buat') ?>" method="post">
+                    <div>
+                        <center>
+                            
+                        </center>
+                    </div>
                     <div class="form-group">
                         <div class="col-xs-12">
                             <input class="form-control" type="text" required="" placeholder="NIPA" name="nipa">
@@ -69,41 +83,142 @@
                     </div>
                     <div class="form-group m-b-0">
                         <div class="col-sm-12 text-center">
-                            <p>Already have an account? <a href="<?php echo base_url('LoginAdmin') ?>" class="text-info m-l-5"><b>Log In</b></a></p>
+                            
                         </div>
                     </div>
                 </form>
-                
+                                </div>
+                                
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <div class="message-widget contact-widget">
+                        <!-- Message -->
+                        <a>
+                            <div class="user-img"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                            <div class="mail-contnet">
+                                <h5>Klik tombol Tambah (+) untuk Menambahkan Data </h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        
-    </section>
-    <script src="<?php echo base_url() ?>master/adm/assets/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="<?php echo base_url() ?>master/adm/assets/plugins/popper/popper.min.js"></script>
-    <script src="<?php echo base_url() ?>master/adm/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="<?php echo base_url() ?>master/adm/js/jquery.slimscroll.js"></script>
-    <!--Wave Effects -->
-    <script src="<?php echo base_url() ?>master/adm/js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="<?php echo base_url() ?>master/adm/js/sidebarmenu.js"></script>
-    <!--stickey kit -->
-    <script src="<?php echo base_url() ?>master/adm/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="<?php echo base_url() ?>master/adm/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <!--Custom JavaScript -->
-    <script src="<?php echo base_url() ?>master/adm/js/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- Style switcher -->
-    <!-- ============================================================== -->
-    <script src="<?php echo base_url() ?>master/adm/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 
-    <?php if ($this->session->flashdata()) { ?>
-                        <?php echo $this->session->flashdata('Pesan'); ?></div>                    
-                    <?php } ?>
-</body>
+<div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Tabel Karyawan</h4>
+                        <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+                        <div class="table-responsive m-t-40">
+                            <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama Karyawan</th>
+                                        <th>Username</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                            <tbody>
 
+                            <?php 
+                            $no = 1;
+                            foreach ($admin->result() as $adm) { ?>
+                            <tr>
+                                <td><?php echo $no++?></td>
+                                <td><?php echo $adm->nama_karyawan; ?></td>
+                                <td><?php echo $adm->username_admin; ?></td>
+                                <td>
+                                    
+                                    
+                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn"  data-original-title="Ubah Data" data-toggle="tooltip"  ><i class="mdi mdi-brush" aria-hidden="true" ></i></button>
 
-<!-- Mirrored from wrappixel.com/demos/admin-templates/material-pro/material/pages-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jun 2018 03:16:59 GMT -->
+                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete" onclick="deleted('<?php echo $adm->id_admin; ?>')"><i class="mdi mdi-close" aria-hidden="true"></i></button>
+                                    
+                                </td>
+                            </tr>
+                            <?php } ?>
+                        </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+<?php $this->load->view("admin/side/footer"); ?>
+<?php $this->load->view("admin/side/js"); ?>
+<script src="<?php echo base_url() ?>master/adm/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <!-- start - This is for export functionality only -->
+    <script src="<?php echo base_url() ?>master/adm/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="<?php echo base_url() ?>master/adm/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="<?php echo base_url() ?>master/adm/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="<?php echo base_url() ?>master/adm/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="<?php echo base_url() ?>master/adm/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="<?php echo base_url() ?>master/adm/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="<?php echo base_url() ?>master/adm/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+
+ <script>
+    function deleted(param){
+   var proc = window.confirm('Are you sure delete this data?');
+   if(proc){
+      document.location='<?php echo base_url(); ?>admin/Daftar/hapus/'+param;
+    }
+  }
+    function updatejs(param){
+      document.location='<?php echo base_url(); ?>admin/Karyawan/e_karyawan/'+param;
+  }
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+        $(document).ready(function() {
+            var table = $('#example').DataTable({
+                "columnDefs": [{
+                    "visible": false,
+                    "targets": 2
+                }],
+                "order": [
+                    [2, 'asc']
+                ],
+                "displayLength": 25,
+                "drawCallback": function(settings) {
+                    var api = this.api();
+                    var rows = api.rows({
+                        page: 'current'
+                    }).nodes();
+                    var last = null;
+                    api.column(2, {
+                        page: 'current'
+                    }).data().each(function(group, i) {
+                        if (last !== group) {
+                            $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
+                            last = group;
+                        }
+                    });
+                }
+            });
+            // Order by the grouping
+            $('#example tbody').on('click', 'tr.group', function() {
+                var currentOrder = table.order()[0];
+                if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+                    table.order([2, 'desc']).draw();
+                } else {
+                    table.order([2, 'asc']).draw();
+                }
+            });
+        });
+    });
+    $('#example23').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+    </script>
+<?php if ($this->session->flashdata()) { ?>
+    <?php echo $this->session->flashdata('Pesan'); ?>                  
+    <?php } ?>
 </html>

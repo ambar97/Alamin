@@ -10,9 +10,13 @@ class Extra extends CI_Controller {
     }
 	public function index()
 	{
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('LoginAdmin');
+		}else{
 		$data['ekstra'] = $this->M_alamin->select('ekstrakurikuler');
 		$this->load->view('admin/v_extrakulikuler',$data);
 	}
+}
 
 	public function edit_view(){
 		$id=$this->uri->segment(4);

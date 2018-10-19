@@ -157,8 +157,7 @@
                                     
                                     <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn"  data-original-title="Ubah Data" data-toggle="tooltip" onclick="updatejs('<?php echo $key->NIPA_karyawan; ?>')" ><i class="mdi mdi-brush" aria-hidden="true" ></i></button>
 
-                                    <a href="<?php echo base_url('admin/Karyawan/d_karyawan/'.$key->NIPA_karyawan) ?>">
-                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete" onclick="deleted('<?php echo $key->NIPA_karyawan; ?>')"><i class="mdi mdi-close" aria-hidden="true"></i></button></a>
+                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete" onclick="deleted('<?php echo $key->NIPA_karyawan; ?>')"><i class="mdi mdi-close" aria-hidden="true"></i></button>
                                     
                                     <!-- modal view foto karyawan -->
                                     <div id="view_photo<?php echo($key->NIPA_karyawan) ?>" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

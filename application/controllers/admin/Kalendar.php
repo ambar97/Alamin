@@ -11,9 +11,13 @@ function __construct()
     }
 	public function index()
 	{
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('LoginAdmin');
+		}else{
 		$data['agenda'] = $this->M_alamin->select('agenda');
 		$this->load->view('admin/v_kalendar', $data);
 	}
+}
 
 	public function i_kalendar(){
 		$data['tanggal_agenda']=$this->input->post('tanggal_akademik');

@@ -9,10 +9,14 @@ class Quote extends CI_Controller{
   }
 
   public function index(){
+    if(!$this->session->userdata('status') == 'login'){
+      redirect('LoginAdmin');
+    }else{
     $data['nipa'] = $this->M_alamin->select('karyawan');
     $data['quote'] = $this->M_alamin->quote();
     $this->load->view('admin/v_quotes', $data);
   }
+}
 
   public function insert(){
     $data['karyawan_NIPA_karyawan'] = $this->input->post('pilih_karyawan');

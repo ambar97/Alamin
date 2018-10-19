@@ -11,7 +11,11 @@ function __construct()
     }
 	public function index()
 	{
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('LoginAdmin');
+		}else{
 		// $data['agenda'] = $this->M_alamin->select('agenda');
 		$this->load->view('admin/v_polling');
 	}
+}
 }

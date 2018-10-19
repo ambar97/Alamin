@@ -11,12 +11,15 @@ class Prestasi extends CI_Controller {
 
 	public function index()
 	{
-
+if(!$this->session->userdata('status') == 'login'){
+      redirect('LoginAdmin');
+    }else{
 		$data['prestasi']=$this->M_alamin->select_prestasi();
         $data['juara']=$this->M_alamin->select('kategori_juara');
         $data['lingkup']=$this->M_alamin->select('lingkup_prestasi');
 		$this->load->view('admin/v_prestasi',$data);
 	}
+}
 	public function t_prestasi(){
         if(isset($_POST['btnSimpan'])){
           $config = array('upload_path' => './gallery/prestasi/',

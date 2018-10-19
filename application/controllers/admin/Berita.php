@@ -10,9 +10,13 @@ class Berita extends CI_Controller {
 	}
 	public function index()
 	{
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('LoginAdmin');
+		}else{
 		$data['berita']=$this->M_alamin->select("informasi");
 		$this->load->view('admin/v_berita', $data);
 	}
+}
 	public function t_berita(){
 		$this->load->view('admin/validation/t_berita');
 	}

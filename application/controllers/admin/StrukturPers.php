@@ -9,37 +9,61 @@ class StrukturPers extends CI_Controller {
 		$this->load->model('core');
 	}
 	public function index(){
-// $this->load->view('admin/v_sarpras');
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('LoginAdmin');
+		}else{
+	$this->load->view('admin/v_sarpras');
 	}
+}
 	function Kepsek(){
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('LoginAdmin');
+		}else{
 		$data['viewKepsek'] = $this->M_alamin->selectwhere('proker', array('id_bidang'=>1));
 		$this->load->view('admin/v_kepsek', $data);
 	}
+}
 
 	function TataUsaha(){
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('LoginAdmin');
+		}else{
 		$data['viewTU'] = $this->M_alamin->selectwhere('proker', array('id_bidang'=>2));
 		$data['viewStruktur'] = $this->M_alamin->update_struktur_tu();
 
 		$this->load->view('admin/v_tata_usaha', $data);
 	}
+}
 
 	function Kesiswaan(){
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('LoginAdmin');
+		}else{
 		$data['viewKesiswaan'] = $this->M_alamin->selectwhere('proker', array('id_bidang'=>3));
 		$data['viewStruktur'] = $this->M_alamin->update_struktur_kesiswaan();
 		$this->load->view('admin/v_kesiswaan', $data);
 	}
+}
 
 	function Kurikulum(){
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('LoginAdmin');
+		}else{
 		$data['viewKurikulum'] = $this->M_alamin->selectwhere('proker', array('id_bidang'=>4));
 		$data['viewStruktur'] = $this->M_alamin->update_struktur_kurikulum();
 		$this->load->view('admin/v_kurikulum', $data);
 	}
+}
 
 	function SarprasHum(){
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('LoginAdmin');
+		}else{
 		$data['viewSapras'] = $this->M_alamin->selectwhere('proker', array('id_bidang'=>5));
 		$data['viewStruktur'] = $this->M_alamin->update_struktur_sapras();
 		$this->load->view('admin/v_sarpras_humas', $data);
 	}
+}
 
 	function editProkerKepsek(){
 		$dataBidang = $this->input->post('id_bidangKepsek');
@@ -199,19 +223,6 @@ class StrukturPers extends CI_Controller {
     		$this->session->set_flashdata("Pesan",$this->core->alert_time("Data Gagal di perbarui"));
     		header('location:'.base_url().'admin/StrukturPers/SarprasHum');
     	}
-
-		// $config['upload_path']          = 'gallery/Struktur';
-		// $config['allowed_types']        = 'gif|jpg|png';
-		// $this->load->library('upload', $config);
-		// if ( $this->upload->do_upload('gambar_struktur_sapras'))
-		// {
-		// 	$data = $this->upload->data();
-		// 	$name_file=$data['file_name'];
-		// 	$update_data['gambar_struktur'] = $name_file;
-		// 	$dataBidang = 5;
-		// 	$this->M_alamin->update('galeri_struktur', $update_data, array('id_bidang'=>$dataBidang));
-		// 	header('location:'.base_url().'admin/StrukturPers/SarprasHum');
-		// }
 	}
 
 
