@@ -38,7 +38,10 @@ class StrukturPers extends CI_Controller {
 	function editProkerKepsek(){
 		$dataBidang = $this->input->post('id_bidangKepsek');
 		$data['isi_proker'] = $this->input->post('prokerKepsek');
-		$this->M_alamin->update('proker', $data, array('id_bidang' => $dataBidang));
+		$up = $this->M_alamin->update('proker', $data, array('id_bidang' => $dataBidang));
+		if ($up >= 0) {
+			# code...
+		}
 		header('location:'.base_url().'admin/StrukturPers/Kepsek');
 	}
 
