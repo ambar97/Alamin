@@ -25,18 +25,26 @@
 				<div class="col-12 col-sm-6 col-lg-8 product">
 					<span class="product-thumb-info">
 						<span>
-							<img alt="" class="img-fluid" src="<?php echo base_url(); ?>master/client/img/products/product-2.jpg">
+							<img alt="" class="img-fluid" src="<?php echo base_url(); ?><?php foreach ($kepsek->result() as $k) {
+								echo $k->gambar_karyawan;
+							} ?>">
 						</span>
 						<span class="product-thumb-info-content">
-							<h4>Foto Judul</h4>
+							<h4><?php foreach ($kepsek->result() as $nama): ?>
+								<?php echo $nama->nama_karyawan; ?>
+							<?php endforeach; ?></h4>
 							<span class="price">
-								<span class="amount">NIPA: 002211334654</span>
+								<span class="amount">NIPA: <?php foreach ($kepsek->result() as $nipa) {
+									echo $nipa->NIPA_karyawan;
+								} ?></span>
 							</span>
 						</span>
 					</span>
 					<br>
-					<h1>Visi Misi</h1>
-					<p>Isi</p>
+					<h1>Program Kerja</h1>
+					<p><?php foreach ($proker->result() as $p) {
+						echo $p->isi_proker;
+					} ?></p>
 				</div>
 				<div class="col-lg-3">
 					<h2 style="font-weight: bold;">Detail Lainnya</h2>

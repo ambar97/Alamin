@@ -35,54 +35,6 @@
 					</span>
 					<br>
 				</div>
-				<div class="col-12 col-sm-6 col-lg-3 product">
-					<span class="product-thumb-info">
-							<span>
-								<img alt="" class="img-fluid" src="<?php echo base_url(); ?>master/client/img/products/product-2.jpg">
-							</span>
-						</a>
-						<span class="product-thumb-info-content">
-								<h4>Foto Judul</h4>
-						</span>
-					</span>
-					<br>
-				</div>
-				<div class="col-12 col-sm-6 col-lg-3 product">
-					<span class="product-thumb-info">
-							<span>
-								<img alt="" class="img-fluid" src="<?php echo base_url(); ?>master/client/img/products/product-2.jpg">
-							</span>
-						</a>
-						<span class="product-thumb-info-content">
-								<h4>Foto Judul</h4>
-						</span>
-					</span>
-					<br>
-				</div>
-				<div class="col-12 col-sm-6 col-lg-3 product">
-					<span class="product-thumb-info">
-							<span>
-								<img alt="" class="img-fluid" src="<?php echo base_url(); ?>master/client/img/products/product-2.jpg">
-							</span>
-						</a>
-						<span class="product-thumb-info-content">
-								<h4>Foto Judul</h4>
-						</span>
-					</span>
-					<br>
-				</div>
-				<div class="col-12 col-sm-6 col-lg-3 product">
-					<span class="product-thumb-info">
-							<span>
-								<img alt="" class="img-fluid" src="<?php echo base_url(); ?>master/client/img/products/product-2.jpg">
-							</span>
-						</a>
-						<span class="product-thumb-info-content">
-								<h4>Foto Judul</h4>
-						</span>
-					</span>
-					<br>
-				</div>
 				</div>
 		</div>
 		<div class="col-lg-3">

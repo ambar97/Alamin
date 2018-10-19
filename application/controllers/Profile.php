@@ -31,21 +31,32 @@ class Profile extends CI_Controller {
 		$this->load->view('user/v_extrakulikuler');
 	}
 	function KepSek(){
-		$this->load->view('user/v_kepsek');
+		$data['kepsek'] = $this->M_alamin->selectwhere('karyawan', array('id_bidang' => 1));
+		$data['proker'] = $this->M_alamin->selectwhere('proker', array('id_bidang' => 1));
+		$this->load->view('user/v_kepsek', $data);
 	}
 	function BagTu(){
-		$this->load->view('user/v_bagTU');
+		$data['struktur_tu'] = $this->M_alamin->selectwhere('galeri_struktur', array('id_bidang' => 2));
+		$data['proker'] = $this->M_alamin->selectwhere('proker', array('id_bidang' => 2));
+		$this->load->view('user/v_bagTU', $data);
 	}
 	function WakaKes(){
-		$this->load->view('user/v_wakakes');
+		$data['struktur_wakakes'] = $this->M_alamin->selectwhere('galeri_struktur', array('id_bidang' => 3));
+		$data['proker'] = $this->M_alamin->selectwhere('proker', array('id_bidang' => 3));
+		$this->load->view('user/v_wakakes', $data);
 	}
 	function WakaKur(){
-		$this->load->view('user/v_wakakur');
+		$data['struktur_wakakur'] = $this->M_alamin->selectwhere('galeri_struktur', array('id_bidang' => 4));
+		$data['proker'] = $this->M_alamin->selectwhere('proker', array('id_bidang' => 4));
+		$this->load->view('user/v_wakakur', $data);
 	}
 	function WakaSap(){
-		$this->load->view('user/v_wakasaphum');
+		$data['struktur_wakasap'] = $this->M_alamin->selectwhere('galeri_struktur', array('id_bidang' => 5));
+		$data['proker'] = $this->M_alamin->selectwhere('proker', array('id_bidang' => 5));
+		$this->load->view('user/v_wakasaphum', $data);
 	}
 	function Guru(){
-		$this->load->view('user/v_guru');
+		$data['guru'] = $this->M_alamin->selectwhere('karyawan', array('id_bidang' => 6));
+		$this->load->view('user/v_guru', $data);
 	}
 }

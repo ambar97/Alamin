@@ -25,47 +25,22 @@
 				<div class="col-12 col-sm-6 col-lg-8 product">
 					<span class="product-thumb-info">
 							<span>
-								<img alt="" class="img-fluid" src="<?php echo base_url(); ?>master/client/img/products/product-2.jpg">
+								<img alt="" class="img-fluid" src="<?php echo base_url(); ?><?php foreach ($struktur_wakakur->result() as $wk) {
+									echo $wk->gambar_struktur;
+								} ?>">
 							</span>
 						</a>
 						<span class="product-thumb-info-content">
-								<h4>Foto Judul</h4>
+								<h4>Struktur Waka Kurikulum</h4>
 						</span>
 					</span>
 					<br>
 					<div class="col-12 col-sm-6 col-lg-12 product">
 						<br>
 						<h1>Program Kerja</h1>
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>#</th>
-									<th>Penanggung Jawab</th>
-									<th>Program Kerja</th>
-									<th>asdasd</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1</td>
-									<td>asdasd</td>
-									<td>asdasd</td>
-									<td>asdasd</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>asdasd</td>
-									<td>asdasd</td>
-									<td>asdasd</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>asdasd</td>
-									<td>asdasd</td>
-									<td>asdasd</td>
-								</tr>
-							</tbody>
-						</table>
+						<p><?php foreach ($proker->result() as $p) {
+							echo $p->isi_proker;
+						} ?></p>
 					</div>
 				</div>
 				<div class="col-lg-3">
