@@ -18,6 +18,7 @@ class Berita extends CI_Controller {
 	}
 
 	public function i_berita(){
+		// die($this->input->post('isi_informasi'));
 		$config['upload_path']          = 'gallery/Informasi';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
 		$this->load->library('upload', $config);
@@ -25,16 +26,17 @@ class Berita extends CI_Controller {
 
 		if ( $this->upload->do_upload('gambar_informasi'))
 		{
-			$data = $this->upload->data();
-			$name_file=$data['file_name'];
+			$upload_data = $this->upload->data();
+			$name_file=$upload_data['file_name'];
 			$datainsert['gambar_informasi'] = $name_file;
 			$judul = $this->input->post('judul_informasi');
-			$isi = $this->input->post('judul_informasi');
+			$isi = $this->input->post('isi_informasi');
 			$now = date('y-m-d');
 			$datee['date'] = $now;
 			$foto = "gallery/Informasi/".$upload_data['file_name'];
-			$data = array('id_informasi'=>"",
+			$data = array(
 				'judul_informasi'=>$judul,
+				'date'=>$now,
 				'isi_informasi'=>$isi,
 				'gambar_informasi'=>$foto);
 			$upload = $this->M_alamin->insert('informasi', $data);
@@ -95,8 +97,14 @@ class Berita extends CI_Controller {
 	public function delete_berita(){
 		$id=$this->uri->segment(4);
 		$deletebyid=array('id_informasi'=>$id);
-		$this->M_alamin->delete($deletebyid, 'informasi');
-		header('location:'.base_url().'admin/Berita');
+		$up = $this->M_alamin->delete($deletebyid, 'informasi');
+		if ($upload >= 0) {
+			$this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di hapus"));
+		redirect(base_url().'admin/Berita');
+		}else{
+			$this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di hapus"));
+		redirect(base_url().'admin/Berita');
+		}
 	}
 }
 // asdasdasd

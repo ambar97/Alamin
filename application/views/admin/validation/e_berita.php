@@ -66,11 +66,14 @@
                                                 </div>
                                               </div>
                                               <div class="form-group">
-                                                <label>Gambar Berita</label>
-                                                <img src="<?php echo base_url(); ?>gallery/Informasi/<?php echo $d->gambar_informasi; ?>" alt="Gambar Berita">
+                                                <label>Gambar Berita</label><br>
+                                                <img style="max-height: 300px;" src="<?php echo base_url().$d->gambar_informasi; ?>" ><hr>
                                                 <input type="file" class="form-control" placeholder="Pilih Gambar" name="gambar_informasi" >
                                               </div>
-                                              <button type="submit" name="button">save</button>
+                                              <div style="float: right;" class="row">
+                                              <a href="<?php echo base_url('admin/Berita') ?>"><button  class="btn btn-default waves-effect" type="button" name="button">Cancel</button></a>
+                                               <a href=""><button  class="btn btn-success" type="submit" name="button">save</button></a>
+                                              </div>
                                         </div>
                                         </form>
                                     </div>

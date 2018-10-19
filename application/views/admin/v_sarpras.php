@@ -84,7 +84,7 @@
                             <div class="el-overlay">
                                 <ul class="el-info">
                                     <li><a class="btn default btn-outline image-popup-vertical-fit" href="<?php echo base_url().$sarpras -> gambar_sarana ?>"><i class="icon-magnifier" title="zoom"></i></a></li>
-                                    <li><a class="btn default btn-outline" href="<?php echo base_url('admin/Sarpras/hapus/'.$sarpras-> id_sarana_prasarana) ?>" title="hapus"><i class="icon-trash"></i></a></li>
+                                    <li><a class="btn default btn-outline"  title="hapus" onclick="deleted('<?php echo $sarpras->id_sarana_prasarana; ?>')"><i class="icon-trash"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -106,6 +106,12 @@
  <!-- jQuery file upload -->
     <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/js/dropify.min.js"></script>
     <script>
+         function deleted(param){
+   var proc = window.confirm('Are you sure delete this data?');
+   if(proc){
+      document.location='<?php echo base_url(); ?>admin/Sarpras/hapus/'+param;
+    }
+  }
     $(document).ready(function() {
         // Basic
         $('.dropify').dropify();
@@ -151,3 +157,6 @@
 <!-- Magnific popup JavaScript -->
 <script src="<?php echo base_url() ?>master/adm/assets/plugins/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
 <script src="<?php echo base_url() ?>master/adm/assets/plugins/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
+<?php if ($this->session->flashdata()) { ?>
+                        <?php echo $this->session->flashdata('Pesan'); ?>                   
+                    <?php } ?> 

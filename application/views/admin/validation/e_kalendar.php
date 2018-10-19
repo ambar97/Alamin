@@ -33,7 +33,11 @@
                       <input type="text" class="form-control" value="<?php echo $d->nama_kegiatan; ?>" name="kegiatan_akademik">
                     <?php } ?>
                 </div>
-                  <button type="submit">Save</button>
+                <div style="float: right;">
+                  <a href="<?php echo base_url('admin/Kalendar') ?>"><button type="button" class="btn btn-default waves-effect" type="submit" name="button">Cancel</button></a>
+                  <button  type="submit" class="btn btn-success" type="submit" name="button">Save</button>
+                </div>
+                  
             </form>
           </div>
         </div>

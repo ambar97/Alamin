@@ -64,7 +64,7 @@
                                                 <label>Gambar Berita</label>
                                                 <input type="file" class="form-control" placeholder="Pilih Gambar" name="gambar_informasi" required>
                                               </div>
-                                              <button type="submit" name="button">save</button>
+                                              <button style="float: right;" type="submit" class="btn btn-success" name="button">save</button>
                                         </div>
                                         </form>
                                     </div>

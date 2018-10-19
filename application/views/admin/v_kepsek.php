@@ -60,12 +60,10 @@
                       <?php foreach ($viewKepsek->result() as $k) { ?>
                         <input type="text" name="id_bidangKepsek" value="<?php echo $k->id_bidang; ?>" hidden>
                       <?php } ?>
-                           <textarea class="summernote" name="prokerKepsek">
-
-                           </textarea>
+                           <textarea class="summernote" name="prokerKepsek" required=""></textarea>
 		                </div>
 		                <div class="card-body">
-	                    	<button class="btn btn-success" style="float: right;">Simpan</button>
+	                    	<button value="OK" class="btn btn-success" style="float: right;">Simpan</button>
                     </div>
 		            </form>
 	            </div>
@@ -101,3 +99,6 @@
             $(".click2edit").summernote('destroy');
         }
     </script>
+<?php if ($this->session->flashdata()) { ?>
+    <?php echo $this->session->flashdata('Pesan'); ?>                  
+    <?php } ?>

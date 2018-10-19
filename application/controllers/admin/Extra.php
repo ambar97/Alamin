@@ -2,7 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Extra extends CI_Controller {
-
+	function __construct()
+    {
+        parent::__construct();
+        $this->load->model('M_alamin');
+        $this->load->model('core');
+    }
 	public function index()
 	{
 		$data['ekstra'] = $this->M_alamin->select('ekstrakurikuler');
@@ -36,13 +41,13 @@ class Extra extends CI_Controller {
 	    );
 	    $insert_data = $this->db->insert('ekstrakurikuler',$data);
 	  }
-	  if ($insert_data) {
+	  if ($insert_data >= 0) {
+	    $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
 	    redirect(base_url().'admin/Extra');
 	   } else{
-	    echo "string";
+	    $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Gagal di simpan"));
+	    redirect(base_url().'admin/Extra');
 	   }
-	}else{
-	  echo "gagal";
 	}
   }
 
@@ -69,13 +74,16 @@ class Extra extends CI_Controller {
 		    );
 		    $insert_data = $this->db->update('ekstrakurikuler',$data, $where);
 		  }
-		  if ($insert_data) {
-		    redirect(base_url().'admin/Extra');
+		  if ($insert_data >= 0) {
+		   $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di perbarui"));
+	    redirect(base_url().'admin/Extra');
 		   } else{
-		    echo "string";
+		    $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Gagal di perbarui"));
+	    redirect(base_url().'admin/Extra');
 		   }
 		}else{
-		  echo "gagal";
+		  $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Gagal di perbarui, cek ukuran gambar"));
+	    redirect(base_url().'admin/Extra');
 		}
 	}
 
@@ -84,11 +92,12 @@ class Extra extends CI_Controller {
   public function hapus($id){
     $where = array('id_ekstrakurikuler'=>$id);
     $hapus = $this -> M_alamin -> delete($where,'ekstrakurikuler');
-    if($hapus){
-    header('location:'.base_url('admin/Extra')); 
+    if($hapus >= 0){
+    $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di hapus"));
+	    redirect(base_url().'admin/Extra');
     }else{
-      header('location:'.base_url('admin/Extra'));
-      echo "gagal";
+      $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Gagal di simpan"));
+	    redirect(base_url().'admin/Extra');
     }
   }
 

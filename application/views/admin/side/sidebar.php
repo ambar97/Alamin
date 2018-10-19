@@ -49,9 +49,9 @@
 
                         <li class="nav-devider"></li>
                         <li class="nav-small-cap">Lain-Lain</li>
-                        <li> <a class="<?php if($this->uri->segment('2')=="Lain-Lain"){ echo "active";}?>" href="<?php echo base_url("admin/Lain-Lain") ?>" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Quotes</span></a>
+                        <li> <a class="<?php if($this->uri->segment('2')=="Quote"){ echo "active";}?>" href="<?php echo base_url("admin/Quote") ?>" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Quotes</span></a>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Sample Pages</span></a>
+                        <li> <a class="<?php if($this->uri->segment('2')=="Lain-Lain"){ echo "active";}?>" href="<?php echo base_url("admin/Polling") ?>" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Polling</span></a>
                         </li>
                         <li> <a class="<?php if($this->uri->segment('2')=="KritikSaran"){ echo "active";}?>" href="<?php echo base_url("admin/KritikSaran") ?>" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Kritik &amp; Saran</span></a>
                         </li>
@@ -61,10 +61,10 @@
             </div>
             <!-- End Sidebar scroll-->
             <!-- Bottom points-->
-            <div class="sidebar-footer">
-                <!-- item--><a href="#" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
-                <!-- item--><a href="#" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
-                <!-- item--><a href="#" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
-            </div>
+            <!-- <div class="sidebar-footer">
+                <a href="#" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
+                <a href="#" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
+                <a href="#" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+            </div> -->
             <!-- End Bottom points-->
         </aside>

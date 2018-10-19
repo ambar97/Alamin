@@ -41,12 +41,32 @@
                     </div>
                 </div>
 
+<div class="card">
+            <div class="card-body bg-info">
+                <h4 class="text-white card-title">Tambah Karyawan </h4>
+            </div>
+            <div class="card-body">
+                <div class="message-box contact-box">
+                    <h2 class="add-ct-btn"><a href="<?php echo base_url('admin/Berita/t_berita') ?>"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark" data-toggle="modal" data-target="#tambah_karyawan">+</button></a></h2>
+                    <div class="message-widget contact-widget">
+                                <a>
+                                    <div class="user-img"> <img src="<?php echo base_url() ?>master/adm/assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                    <div class="mail-contnet">
+                                        <h5>Klik tombol Tambah (+) untuk Menambahkan prestasi </h5></div>
+                                </a>
+                            </div>
+                </div>
+            </div>
+        </div>
+
+
 <!-- Berita -->
 <div class="row">
     <div class="col-12">
         <div class="card">
                         <div class="card-body">
-                          <a href="<?php echo base_url('admin/Berita/t_berita'); ?>"><button type="button">Tambah Berita</button></a>
+                            <h2>List Berita</h2>
+                          <!-- <a href="<?php echo base_url('admin/Berita/t_berita'); ?>"><button type="button">Tambah Berita</button></a> -->
                                 <div class="table-responsive m-t-40">
                                     <table id="example" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
@@ -55,7 +75,7 @@
                                                 <th>Nama Berita</th>
                                                 <!-- <th>Isi Berita</th> -->
                                                 <th>Tanggal Upload</th>
-                                                <!-- <th>Views</th> -->
+                                                <th>Views</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -68,11 +88,11 @@
                                                 <td><?php echo $ber->judul_informasi; ?></td>
                                                 <!-- <td><?php echo $ber->isi_informasi; ?></td> -->
                                                 <td><?php echo $ber->date; ?></td>
-                                                <!-- <td><?php echo $ber->viewers; ?></td> -->
+                                                <td><?php echo $ber->viewers; ?></td> 
                                                 <td>
                                                     <!-- <button type="button">Lihat</button> -->
-                                                    <button type="button" onclick="updatejs('<?php echo $ber->id_informasi; ?>')">Edit</button>
-                                                    <button type="button" onclick="deleted('<?php echo $ber->id_informasi; ?>')">Hapus</button>
+                                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn"  data-original-title="Ubah Data" data-toggle="tooltip" onclick="updatejs('<?php echo $ber->id_informasi; ?>')"><i class="mdi mdi-brush" aria-hidden="true" ></i></button>
+                                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete" onclick="deleted('<?php echo $ber->id_informasi; ?>')"><i class="mdi mdi-close" aria-hidden="true"></i></button>
                                                 </td>
                                             </tr>
                                             <?php } ?>
@@ -116,3 +136,6 @@
 } );
  </script>
 <!-- asdasdasdasd -->
+<?php if ($this->session->flashdata()) { ?>
+    <?php echo $this->session->flashdata('Pesan'); ?>                  
+    <?php } ?> 

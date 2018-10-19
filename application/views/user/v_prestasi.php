@@ -44,7 +44,6 @@
 								</div>
 							</div>
 
-						<?php } ?>
 
 							<!-- Modal -->
 							<div class="modal fade" id="exampleModal<?php echo($prs->id_prestasi)?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -85,6 +84,7 @@
 									</div>
 								</div>
 							</div>
+							<?php } ?>
 					</div>
 				</div>
 				<div class="col-lg-3">
