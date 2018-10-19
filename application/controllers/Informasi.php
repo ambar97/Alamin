@@ -9,6 +9,8 @@ class Informasi extends CI_Controller {
 	}
 
 	function Berita_Detail(){
-		$this->load->view('user/v_informasi_detail');
+		$id=$this->uri->segment(4);
+		$data['tampil_berita'] = $this->M_alamin->selectwhere('informasi',array('id_informasi'=>$id));
+		$this->load->view('user/v_informasi_detail',$data);
 	}
 }

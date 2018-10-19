@@ -26,7 +26,6 @@
 					<?php foreach ($berit->result() as $berita) { ?>
 					<article class="post post-medium">
 						<div class="row">
-
 							<div class="col-lg-5">
 								<div class="post-image">
 									<div class="owl-carousel owl-theme" data-plugin-options="{'items':1}">
@@ -35,33 +34,29 @@
 												<img class="img-fluid"  src="<?php echo base_url().$berita->gambar_informasi ?>" alt="">
 											</div>
 										</div>
-										<!-- <div>
-											<div class="img-thumbnail d-block">
-												<img class="img-fluid" src="<?php echo base_url(); ?>master/client/img/blog/blog-image-2.jpg" alt="">
-											</div>
-										</div> -->
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-7">
 								<div class="post-content">
-									<h2><a href=""><?php echo $berita->judul_informasi; ?></a></h2>
-									<p><?php echo substr($berita-> isi_informasi,0,45); ?></p>
+									<h3><a href="<?php echo base_url('Informasi/Berita_Detail'); ?>"><?php echo $berita -> judul_informasi ?></a></h3>
+									<p><?php echo substr($berita -> isi_informasi,0,300);?>...</p>
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col">
 								<div class="post-meta">
-									<span><i class="fas fa-calendar-alt"></i> <?php echo $berita->date; ?> </span>
-									<span><i class="fas fa-comments"></i><?php echo $berita->viewers; ?> Views</span>
+									<span><i class="fas fa-calendar-alt"></i> <?php echo date("d F Y", strtotime($berita -> date)) ?> </span>
+									<span><i class="fas fa-comments"></i><?php echo $berita-> viewers; ?> Views</span>
 									<span class="d-block d-md-inline-block float-md-right mt-3 mt-md-0"><a href="<?php echo base_url('Informasi/Berita_Detail'); ?>" class="btn btn-xs btn-primary">Read more...</a></span>
 								</div>
 							</div>
 						</div>
 					</article>
-				<?php } ?>
 					<hr>
+				<?php } ?>
+					
 				</div>
 				<div class="tabs col-lg-3">
 					<h2><strong>Berita Lainnya</strong></h2>
