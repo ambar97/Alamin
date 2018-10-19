@@ -56,7 +56,8 @@ class Profile extends CI_Controller {
 		$this->load->view('user/v_wakasaphum', $data);
 	}
 	function Guru(){
-		$data['guru'] = $this->M_alamin->selectwhere('karyawan', array('id_bidang' => 6));
+		// $data['guru'] = $this->M_alamin->selectwhere('karyawan', array('id_bidang' => 6));
+		$data['guru'] = $this->M_alamin->profil_guru();
 		$this->load->view('user/v_guru', $data);
 	}
 }

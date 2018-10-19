@@ -23,18 +23,22 @@
 		<div class="row">
 		<div class="col-lg-9">
 			<div class="row">
+				<?php foreach ($guru->result() as $g) { ?>
 				<div class="col-12 col-sm-6 col-lg-3 product">
 					<span class="product-thumb-info">
 							<span>
-								<img alt="" class="img-fluid" src="<?php echo base_url(); ?>master/client/img/products/product-2.jpg">
+								<img alt="" class="img-fluid" src="<?php echo base_url(); ?><?php echo $g->gambar_karyawan; ?>">
 							</span>
 						</a>
 						<span class="product-thumb-info-content">
-								<h4>Foto Judul</h4>
+								<h4><?php echo $g->nama_karyawan; ?></h4>
+								<p>NIPA: <?php echo $g->NIPA_karyawan; ?></p>
+								<p><?php echo $g->nama_jabatan; ?></p>
 						</span>
 					</span>
 					<br>
 				</div>
+				<?php } ?>
 				</div>
 		</div>
 		<div class="col-lg-3">
