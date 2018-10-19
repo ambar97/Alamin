@@ -30,7 +30,7 @@
 									<a href="<?php echo base_url() ?>master/client/img/projects/project.jpg" data-toggle="modal" data-target="#exampleModal<?php echo($prs->id_prestasi)?>">
 										<span class="thumb-info">
 											<span class="thumb-info-wrapper" >
-												<img  src="<?php echo base_url().$prs->gambar_prestasi ?>" class="img-fluid" alt="">
+												<img style="height: 230px;"  src="<?php echo base_url().$prs->gambar_prestasi ?>" class="img-fluid" alt="">
 												<span class="thumb-info-title">
 													<span class="thumb-info-inner"><?php echo $prs->nama_juara; ?> <?php echo $prs->nama_lomba; ?></span>
 													<span class="thumb-info-type"><?php echo $prs->nama_siswa_prestasi; ?></span>
@@ -65,7 +65,7 @@
 											<div class="container">
 												<div class="row">
 												<div class="col-lg-5" >
-													 <p >Nama : </p>
+													<p >Nama : </p>
 													<p>Juara : </p>
 													<p>Nama Lomba: </p>
 													<p>Tingkat Kejuaraan : </p>

@@ -29,7 +29,7 @@
 								<a href="<?php echo base_url().$glr->gambar_galeri ?>" data-toggle="modal" data-target="#exampleModal<?php echo($glr->id_galeri)?>">
 									<span class="thumb-info">
 										<span class="thumb-info-wrapper" >
-											<img  src="<?php echo base_url().$glr->gambar_galeri ?>" class="img-fluid" alt="">
+											<img style="height: 230px" src="<?php echo base_url().$glr->gambar_galeri ?>" class="img-fluid" alt="">
 											<span class="thumb-info-title">
 												<span class="thumb-info-inner"><?php echo $glr->judul_galeri; ?></span>
 												<span class="thumb-info-type"><?php echo  $glr->deskripsi_galeri;?></span>
@@ -42,7 +42,6 @@
 								</a>
 							</div>
 						</div>
-						
 						<!-- Modal -->
 						<div class="modal fade" id="exampleModal<?php echo($glr->id_galeri)?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div class="modal-dialog" role="document">
