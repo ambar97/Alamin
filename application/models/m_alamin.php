@@ -6,11 +6,11 @@ class M_alamin extends CI_Model {
     public function select($table){
     return $this->db->get($table);
   }
-  // public function selectlimit($table){
-  //     $this->db->order_by('id_berita','DESC') ;
-  //    $this->db->limit(3) ;
-  //    return $this->db->get($table) ;
-  // }
+  public function selectlimit($table){
+      $this->db->order_by('id_informasi','DESC') ;
+     $this->db->limit(3) ;
+     return $this->db->get($table) ;
+  }
 
   public function selectlimitgallery($table){
         $this->db->order_by('id_galeri','DESC') ;

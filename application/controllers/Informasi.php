@@ -4,17 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Informasi extends CI_Controller {
 
 	function Berita(){
-		$this->load->view('user/v_informasi');
+		$data['berit'] = $this->M_alamin->selectlimit('informasi');
+		$this->load->view('user/v_informasi',$data);
 	}
 
 	function Berita_Detail(){
-		$this->load->view('user/v_informasi_detail');
+		$id=$this->uri->segment(4);
+		$data['tampil_berita'] = $this->M_alamin->selectwhere('informasi',array('id_informasi'=>$id));
+		$this->load->view('user/v_informasi_detail',$data);
 	}
-	// function Pengumuman(){
-	// 	$this->load->view('user/v_info_peng');
-	// }
-	// function InfoKeg(){
-	// 	$this->load->view('user/v_info_keg');
-	// }
-
 }
