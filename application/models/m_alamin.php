@@ -8,7 +8,7 @@ class M_alamin extends CI_Model {
   }
   public function selectlimit($table){
       $this->db->order_by('id_informasi','DESC') ;
-     $this->db->limit(2) ;
+     $this->db->limit(3) ;
      return $this->db->get($table) ;
   }
 

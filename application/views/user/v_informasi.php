@@ -40,7 +40,7 @@
 							<div class="col-lg-7">
 								<div class="post-content">
 									<h3><a href="<?php echo base_url('Informasi/Berita_Detail'); ?>"><?php echo $berita -> judul_informasi ?></a></h3>
-									<p><?php echo substr($berita -> isi_informasi,0,300);?>...</p>
+									<p><?php echo substr($berita -> isi_informasi,0,432);?>...</p>
 								</div>
 							</div>
 						</div>
