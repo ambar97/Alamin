@@ -190,6 +190,15 @@ class M_alamin extends CI_Model {
     return $data;
   }
 
+  function quote_home(){
+    $this->db->select('quotes.*, karyawan.*, jabatan_karyawan.*');
+    $this->db->from('quotes');
+    $this->db->join('karyawan', 'karyawan.NIPA_karyawan = quotes.karyawan_NIPA_karyawan');
+    $this->db->join('jabatan_karyawan', 'jabatan_karyawan.id_jabatan = karyawan.id_jabatan');
+    $data = $this->db->get();
+    return $data;
+  }
+
   // function motto_kepsek($NIPA){
   //   $this->db->select('quote.*, karyawan.*, bidang.*');
   //   $this->db->from('quote');

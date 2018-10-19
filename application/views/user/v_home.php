@@ -219,7 +219,7 @@
                   <?php } ?>
                   <a href="<?php echo base_url('Profile/KepSek') ?>"><strong>Kepala Sekolah</strong></a>
                   <br>
-                  <strong>Motto :</strong>
+                  <!-- <strong>Motto :</strong> -->
                 </div>
                 <p style="font-size: 24px; margin-top: -40px;" >"Bangga Belajar di SD Al-Baitul Amien 02 Jember"</p>
               </div>
@@ -277,8 +277,12 @@
                         </div>
                       </div>
                       <div class="post-content">
-                        <h2>Class aptent taciti sociosqu ad litora torquent</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris. Duis molestie, purus eget placerat viverra, nisi odio gravida sapien, congue tincidunt nisl ante nec tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, massa fringilla consequat blandit, mauris ligula porta nisi, non tristique enim sapien vel nisl. Suspendisse vestibulum lobortis dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent nec tempus nibh. Donec mollis commodo metus et fringilla. Etiam venenatis, diam id adipiscing convallis, nisi eros lobortis tellus, feugiat adipiscing ante ante sit amet dolor. Vestibulum vehicula scelerisque facilisis. Sed faucibus placerat bibendum. Maecenas sollicitudin commodo justo, quis hendrerit leo consequat ac. Proin sit amet risus sapien, eget interdum dui. Proin justo sapien, varius sit amet hendrerit id, egestas quis mauris.</p>
+                        <h2><?php foreach ($berita->result() as $b) { ?>
+                          <?php echo $b->judul_informasi; ?>
+                        <?php } ?></h2>
+                        <p><?php foreach ($berita->result() as $b) {
+                          echo $b->isi_informasi;
+                        } ?></p>
                       </div>
                     </article>
                   </div>
@@ -291,11 +295,11 @@
               <h2><strong>Berita</strong></h2>
               <hr>
               <ul class="nav nav-tabs">
-                <li class="nav-item active"><a class="nav-link" href="#popularPosts" data-toggle="tab"><i class="fas fa-star"></i> Popular</a></li>
-                <li class="nav-item"><a class="nav-link" href="#recentPosts" data-toggle="tab">Recent</a></li>
+                <!-- <li class="nav-item active"><a class="nav-link" href="#popularPosts" data-toggle="tab"><i class="fas fa-star"></i> Popular</a></li> -->
+                <li class="nav-item active"><a class="nav-link" href="#recentPosts" data-toggle="tab">Recent</a></li>
               </ul>
               <div class="tab-content">
-                <div class="tab-pane active" id="popularPosts">
+                <!-- <div class="tab-pane active" id="popularPosts">
                   <ul class="simple-post-list">
                     <li>
                       <div class="post-image">
@@ -343,51 +347,29 @@
                       </div>
                     </li>
                   </ul>
-                </div>
-                <div class="tab-pane" id="recentPosts">
+                </div> -->
+                <div class="tab-pane active" id="recentPosts">
                   <ul class="simple-post-list">
                     <li>
                       <div class="post-image">
                         <div class="img-thumbnail d-block">
-                          <a href="blog-post.html">
-                            <img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-2.jpg" alt="">
+                          <a href="<?php echo base_url('Informasi'); ?>">
+                            <img style="width:80px;" src="<?php echo base_url(); foreach ($berita->result() as $g) {
+                              echo $g->gambar_informasi;
+                            } ?>" alt="Gambar Berita">
                           </a>
                         </div>
                       </div>
                       <div class="post-info">
-                        <a href="blog-post.html">Vitae Nibh Un Odiosters</a>
+                        <a href="<?php echo base_url('Informasi/Berita_Detail/'); ?><?php foreach ($berita->result() as $id) {
+                          echo $id->id_informasi;
+                        } ?>"><?php foreach ($berita->result() as $judul) {
+                          echo $judul->judul_informasi;
+                        } ?></a>
                         <div class="post-meta">
-                           Jan 10, 2017
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="post-image">
-                        <div class="img-thumbnail d-block">
-                          <a href="blog-post.html">
-                            <img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-3.jpg" alt="">
-                          </a>
-                        </div>
-                      </div>
-                      <div class="post-info">
-                        <a href="blog-post.html">Odiosters Nullam Vitae</a>
-                        <div class="post-meta">
-                           Jan 10, 2017
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="post-image">
-                        <div class="img-thumbnail d-block">
-                          <a href="blog-post.html">
-                            <img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-1.jpg" alt="">
-                          </a>
-                        </div>
-                      </div>
-                      <div class="post-info">
-                        <a href="blog-post.html">Nullam Vitae Nibh Un Odiosters</a>
-                        <div class="post-meta">
-                           Jan 10, 2017
+                          <?php foreach ($berita->result() as $time) {
+                            echo $time->date;
+                          } ?>
                         </div>
                       </div>
                     </li>
@@ -414,7 +396,7 @@
               <div>
                 <h2><strong>Kritik & Saran</strong></h2>
                 <hr>
-                <form action="<?php echo base_url(). 'index.php/ContactUs/kirim_kritiksaran_home'; ?>" method="POST" enctype="multipart/form-data">
+                <form action="<?php echo base_url('ContactUs/kirim_kritiksaran_home'); ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group row">
                       <div class="col-lg-12">
                         <input type="text" class="form-control" id="inputDefault" placeholder="Nama" name="username">
@@ -466,38 +448,26 @@
                   <h2><strong>Quotes</strong> of the day</h2>
                   <div class="row">
                     <div class="owl-carousel owl-theme mb-0" data-plugin-options="{'items': 1}">
+                      <?php foreach ($quote->result() as $q) { ?>
                       <div>
                         <div class="col">
                           <div class="testimonial testimonial-primary">
                             <blockquote>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.  Donec hendrerit vehicula est, in consequat.  Donec hendrerit vehicula est, in consequat.</p>
+                              <p>
+                                <?php echo $q->isi; ?>
+                                </p>
                             </blockquote>
                             <div class="testimonial-arrow-down"></div>
                             <div class="testimonial-author">
                               <div class="testimonial-author-thumbnail img-thumbnail">
-                                <img src="<?php echo base_url() ?>master/client/img/clients/client-1.jpg" alt="">
+                                <img src="<?php echo base_url($q->gambar_karyawan); ?>" alt="">
                               </div>
-                              <p><strong>John Smith</strong><span>CEO & Founder - Okler</span></p>
+                              <p><strong><?php echo $q->nama_karyawan; ?></strong><span><?php echo $q->nama_jabatan; ?></span></p>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div>
-                        <div class="col">
-                          <div class="testimonial testimonial-primary">
-                            <blockquote>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.</p>
-                            </blockquote>
-                            <div class="testimonial-arrow-down"></div>
-                            <div class="testimonial-author">
-                              <div class="testimonial-author-thumbnail img-thumbnail">
-                                <img src="<?php echo base_url() ?>master/client/img/clients/client-1.jpg" alt="">
-                              </div>
-                              <p><strong>John Smith</strong><span>CEO & Founder - Okler</span></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <?php } ?>
                     </div>
                   </div>
                 </div>

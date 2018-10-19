@@ -11,6 +11,7 @@ class Home extends CI_Controller {
 		$data['d_kepsek'] = $this->M_alamin->selectwhere('karyawan', array('id_bidang'=>1));
 		$data['galeri'] = $this->M_alamin->selectlimitgallery('galeri');
 		$data['berita'] = $this->M_alamin->selectlimitberita('informasi');
+		$data['quote'] = $this->M_alamin->quote_home();
 		// $data['motto_kepsek'] = $this->M_alamin->motto_kepsek($id);
 		$this->load->view('user/v_home', $data);
 	}
