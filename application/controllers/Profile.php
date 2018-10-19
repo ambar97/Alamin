@@ -28,7 +28,8 @@ class Profile extends CI_Controller {
 		$this->load->view('user/v_proker');
 	}
 	function Extra(){
-		$this->load->view('user/v_extrakulikuler');
+		$data['tampil_ekstra'] = $this->M_alamin->selectwhere('ekstrakurikuler',array('id_ekstrakurikuler'));
+		$this->load->view('user/v_extrakulikuler',$data);
 	}
 	function KepSek(){
 		$this->load->view('user/v_kepsek');
