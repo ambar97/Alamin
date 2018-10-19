@@ -15,5 +15,11 @@ class ContactUs extends CI_Controller {
 		$this->M_alamin->insert('kritik_saran', $data);
 		header('location:'.base_url().'ContactUs');
 	}
+	public function kirim_kritiksaran_home(){ 
+		$data['nama_kritik_saran']=$this->input->post('username');
+		$data['email_kritik_saran']=$this->input->post('email');
+		$data['isi_kritik_saran']=$this->input->post('isi');
+		$this->M_alamin->insert('kritik_saran', $data);
+		header('location:'.base_url().'Home');
+	}
 }
-

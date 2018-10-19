@@ -405,7 +405,7 @@
                 <input type=checkbox name=c1 checked>Sangat baik<br>
                 <input type=checkbox name=c2 >Baik<br>
                 <input type=checkbox name=c3 >Cukup baik<br><br>
-                <a href="#" class="btn btn-lg btn-primary"><button type="submit"> Vote </button></a>
+                <a href="#" class="btn btn-lg btn-primary">Vote</a>
                 <a href="#" class="btn btn-lg btn-primary">View result</a><br>
                 </form>
               </div>
@@ -413,21 +413,21 @@
               <div>
                 <h2><strong>Kritik & Saran</strong></h2>
                 <hr>
-                <form class="form-horizontal form-bordered" method="get">
+                <form action="<?php echo base_url(). 'index.php/ContactUs/kirim_kritiksaran_home'; ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group row">
                       <div class="col-lg-12">
-                        <input type="text" class="form-control" id="inputDefault" placeholder="Nama">
+                        <input type="text" class="form-control" id="inputDefault" placeholder="Nama" name="username">
                       </div>
                       <br>
                       <br>
                       <div class="col-lg-12">
-                        <input type="text" class="form-control" id="inputDefault" placeholder="Email">
+                        <input type="text" class="form-control" id="inputDefault" placeholder="Email" name="email">
                       </div>
                       <br>
                       <br>
                       <div class="col-lg-12">
-                        <textarea class="form-control" rows="4" id="textareaDefault" placeholder="Kritik & Saran"></textarea><br>
-                        <a href="#" class="btn btn-lg btn-primary">Kirim</a>  
+                        <textarea class="form-control" rows="4" id="textareaDefault" placeholder="Kritik & Saran" name="isi"></textarea><br>
+                        <button type="submit" class="btn btn-lg btn-primary">Kirim</button> 
                       </div> 
                     </div>
                 </form>
