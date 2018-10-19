@@ -54,6 +54,10 @@ class M_alamin extends CI_Model {
       return $this->db->query('SELECT * FROM galeri where id_galeri != 1 && id_galeri != 2');
       return $query->result ();
   }
+  function get_ekstra(){
+      return $this->db->query('SELECT * FROM ekstrakurikuler where id_galeri != 1 && id_galeri != 2');
+      return $query->result ();
+  }
   function get_sejarah(){
     return $this->db->query('SELECT * FROM sejarah');
       return $query->result ();
@@ -96,6 +100,15 @@ class M_alamin extends CI_Model {
           $this->db->join('kategori_juara', 'kategori_juara.id_juara= prestasi.id_juara');
           $this->db->from('prestasi');
           // $this->db->where('harga.id_harga', '1');
+          $data=$this->db->get();
+          return $data;
+  }
+  function select_ae($id){
+    $this->db->select('prestasi.*, lingkup_prestasi.*, kategori_juara.*');
+          $this->db->join('lingkup_prestasi', 'lingkup_prestasi.id_lingkup_prestasi = prestasi.id_lingkup_prestasi');
+          $this->db->join('kategori_juara', 'kategori_juara.id_juara= prestasi.id_juara');
+          $this->db->from('prestasi');
+          $this->db->where("prestasi.id_prestasi",$id);
           $data=$this->db->get();
           return $data;
   }

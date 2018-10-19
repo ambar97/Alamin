@@ -1,5 +1,5 @@
 <?php $this->load->view("admin/side/head"); ?>
-<!-- <?php $this->load->view("admin/side/loader"); ?> -->
+<?php $this->load->view("admin/side/loader"); ?>
 <?php $this->load->view("admin/side/header"); ?>
 <?php $this->load->view("admin/side/sidebar"); ?>
 
@@ -41,16 +41,17 @@
                   <div class="form-group">
                     <label>Tambah Quote</label>
                     <select class="form-control" name="pilih_karyawan" required>
-                      <option value="">-Pilih Status-</option>
+                      <option value="">-Pilih Karyawan-</option>
                       <?php foreach ($nipa->result() as $n) { ?>
                       <option value="<?php echo $n->NIPA_karyawan; ?>">-<?php echo $n->nama_karyawan; ?></option>
                       <?php } ?>
                     </select>
                   </div>
                   <div class="form-group">
-                    <input type="text" name="isi_quote" placeholder="isi quote..." required>
+                    <!-- <input type="text" name="isi_quote" placeholder="isi quote..." required> -->
+                    <textarea type="textarea" rows="4" class="form-control" placeholder="isi quote..." name="isi_quote" required=""></textarea>
                   </div>
-                  <button type="submit" name="button">Save</button>
+                  <button style="float: right;" class="btn btn-primary" type="submit" name="button">Save</button>
                 </div>
               </div>
             </form>
@@ -75,13 +76,13 @@
                         foreach ($quote->result() as $ber) { ?>
                         <tr>
                             <td><?php echo $no++?></td>
-                            <td><?php echo $ber->NIPA_karyawan; ?></td>
-                            <!-- <td><?php echo $ber->isi_informasi; ?></td> -->
                             <td><?php echo $ber->nama_karyawan; ?></td>
+                            <!-- <td><?php echo $ber->isi_informasi; ?></td> -->
+                            <!-- <td><?php echo $ber->nama_karyawan; ?></td> -->
                             <td><?php echo $ber->isi; ?></td>
                             <td>
                                 <!-- <button type="button">Lihat</button> -->
-                                <button type="button" onclick="deleted('<?php echo $ber->id_quotes; ?>')">Hapus</button>
+                                <button class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete" type="button" onclick="deleted('<?php echo $ber->id_quotes; ?>')"><i class="mdi mdi-close" aria-hidden="true"></i></button>
                             </td>
                         </tr>
                         <?php } ?>
@@ -113,3 +114,6 @@ function deleted(param){
    }
  }
 </script>
+<?php if ($this->session->flashdata()) { ?>
+    <?php echo $this->session->flashdata('Pesan'); ?>                  
+    <?php } ?>

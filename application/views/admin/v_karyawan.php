@@ -92,8 +92,11 @@
                                                 <input type="file" name="gambar">
                                             </div>
                                         </div>
-                                    <button type="submit" class="btn btn-primary" name="btnSimpan" value="OK">Simpan</button>
+                                        <div style="float: right;">
+                                    
                                     <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary" name="btnSimpan" value="OK">Simpan</button>
+                                    </div>
                                     </form>
                                 </div>
                                 
@@ -155,7 +158,7 @@
                                     <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn"  data-original-title="Ubah Data" data-toggle="tooltip" onclick="updatejs('<?php echo $key->NIPA_karyawan; ?>')" ><i class="mdi mdi-brush" aria-hidden="true" ></i></button>
 
                                     <a href="<?php echo base_url('admin/Karyawan/d_karyawan/'.$key->NIPA_karyawan) ?>">
-                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="mdi mdi-close" aria-hidden="true"></i></button></a>
+                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete" onclick="deleted('<?php echo $key->NIPA_karyawan; ?>')"><i class="mdi mdi-close" aria-hidden="true"></i></button></a>
                                     
                                     <!-- modal view foto karyawan -->
                                     <div id="view_photo<?php echo($key->NIPA_karyawan) ?>" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -207,6 +210,12 @@
     <script src="<?php echo base_url() ?>master/adm/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
 
  <script>
+    function deleted(param){
+   var proc = window.confirm('Are you sure delete this data?');
+   if(proc){
+      document.location='<?php echo base_url(); ?>admin/Karyawan/d_karyawan/'+param;
+    }
+  }
     function updatejs(param){
       document.location='<?php echo base_url(); ?>admin/Karyawan/e_karyawan/'+param;
   }

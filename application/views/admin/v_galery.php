@@ -90,7 +90,7 @@
                             <div class="el-overlay">
                                 <ul class="el-info">
                                     <li><a class="btn default btn-outline image-popup-vertical-fit" href="<?php echo base_url().$s -> gambar_galeri ?>" ><i class="icon-magnifier" title="zoom"></i></a></li>
-                                    <li><a class="btn default btn-outline" href="<?php echo base_url('admin/Galery/hapus/'.$s-> id_galeri) ?>" title="hapus"><i class="icon-trash"></i></a></li>
+                                    <li><a class="btn default btn-outline" onclick="deleted('<?php echo $s->id_galeri; ?>')" title="hapus"><i class="icon-trash"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -110,7 +110,16 @@
 
  <!-- jQuery file upload -->
     <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/js/dropify.min.js"></script>
+    <script type="text/javascript">
+       
+    </script>
     <script>
+        function deleted(param){
+   var proc = window.confirm('Are you sure delete this data?');
+   if(proc){
+      document.location='<?php echo base_url(); ?>admin/Galery/hapus/'+param;
+    }
+  }
     $(document).ready(function() {
         // Basic
         $('.dropify').dropify();

@@ -69,8 +69,7 @@
                                     <td>
                                         <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn"  data-original-title="View" data-toggle="modal" data-target="#detail<?php echo($ks-> id_kritik_saran) ?>"><i class="mdi mdi-eye" aria-hidden="true" ></i></button>
          
-                                        <a href="<?php echo base_url('admin/KritikSaran/hapus/'.$ks-> id_kritik_saran) ?>">
-                                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="mdi mdi-close" aria-hidden="true"></i></button></a>
+                                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete" onclick="deleted('<?php echo $ks->id_kritik_saran; ?>')"><i class="mdi mdi-close" aria-hidden="true"></i></button>
 
                                         <div id="detail<?php echo($ks-> id_kritik_saran) ?>" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -117,11 +116,17 @@
     <script src="<?php echo base_url() ?>master/adm/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
     <script src="<?php echo base_url() ?>master/adm/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
     <script src="<?php echo base_url() ?>master/adm/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+<script type="text/javascript">
+function deleted(param){
+  var proc = window.confirm('Are you sure delete this data?');
+  if(proc){
+     document.location='<?php echo base_url(); ?>admin/KritikSaran/hapus/'+param;
+   }
+ }
+</script>
 
  <script>
-    function updatejs(param){
-      document.location='<?php echo base_url(); ?>admin/Karyawan/e_karyawan/'+param;
-  }
+    
     $(document).ready(function() {
         $('#myTable').DataTable();
         $(document).ready(function() {
@@ -168,3 +173,6 @@
         ]
     });
     </script>
+    <?php if ($this->session->flashdata()) { ?>
+    <?php echo $this->session->flashdata('Pesan'); ?>                  
+    <?php } ?>

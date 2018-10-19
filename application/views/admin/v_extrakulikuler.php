@@ -120,7 +120,7 @@
                                     	</a>
                                 	</li>
                                     <li><a class="btn default btn-outline" href="<?php echo base_url() ?>admin/Extra/edit_view/<?php echo $eks -> id_ekstrakurikuler; ?>"><i class="icon-pencil" title="edit"></i></a></li>
-                                    <li><a class="btn default btn-outline" href="<?php echo base_url('admin/Extra/hapus/'.$eks-> id_ekstrakurikuler) ?>"><i class="icon-trash" title="hapus"></i></a></li>
+                                    <li><a class="btn default btn-outline" onclick="deleted('<?php echo $eks->id_ekstrakurikuler; ?>')"><i class="icon-trash" title="hapus"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -141,6 +141,12 @@
 <!-- jQuery file upload -->
     <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/js/dropify.min.js"></script>
     <script>
+         function deleted(param){
+   var proc = window.confirm('Are you sure delete this data?');
+   if(proc){
+      document.location='<?php echo base_url(); ?>admin/Extra/hapus/'+param;
+    }
+  }
     $(document).ready(function() {
         // Basic
         $('.dropify').dropify();
@@ -186,3 +192,6 @@
 <!-- Magnific popup JavaScript -->
 <script src="<?php echo base_url() ?>master/adm/assets/plugins/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
 <script src="<?php echo base_url() ?>master/adm/assets/plugins/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
+<?php if ($this->session->flashdata()) { ?>
+                        <?php echo $this->session->flashdata('Pesan'); ?>                   
+                    <?php } ?> 

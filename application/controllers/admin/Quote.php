@@ -17,19 +17,27 @@ class Quote extends CI_Controller{
   public function insert(){
     $data['karyawan_NIPA_karyawan'] = $this->input->post('pilih_karyawan');
     $data['isi'] = $this->input->post('isi_quote');
-    $this->M_alamin->insert('quotes', $data);
-    header('location:'.base_url().'admin/Quote/');
+    $up = $this->M_alamin->insert('quotes', $data);
+    if ($up >= 0) {
+      $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
+      header('location:'.base_url().'admin/Quote/');
+    }else{
+      $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Gagal di simpan"));
+      header('location:'.base_url().'admin/Quote/');
+    }
+    
   }
 
   public function delete(){
     $id = $this->uri->segment(4);
     $where = array('id_quotes'=>$id);
     $hapus = $this -> M_alamin -> delete($where,'quotes');
-    if($hapus){
+    if($hapus >= 0){
+      $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di hapus"));
     header('location:'.base_url().'admin/Quote/');
     }else{
+      $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Gagal di hapus"));
       header('location:'.base_url().'admin/Quote/');
-      echo "gagal";
     }
   }
 }

@@ -50,11 +50,12 @@ class Galery extends CI_Controller {
   public function hapus($id){
     $where = array('id_galeri'=>$id);
     $hapus = $this -> M_alamin -> delete($where,'galeri');
-    if($hapus){
-    header('location:'.base_url('admin/Galery')); 
+    if($hapus >= 0){
+    $this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di hapus"));
+        redirect(base_url().'admin/Galery');
     }else{
-      header('location:'.base_url('admin/Galery'));
-      echo "gagal";
+      $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di hapus"));
+        redirect(base_url().'admin/Galery');
     }
   }
 }

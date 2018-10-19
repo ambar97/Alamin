@@ -4,8 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Sarpras extends CI_Controller {
 	function __construct()
     {
-	parent::__construct();
+        parent::__construct();
         $this->load->model('M_alamin');
+        $this->load->model('core');
     }
 
 	public function index()
@@ -31,23 +32,26 @@ class Sarpras extends CI_Controller {
         );
         $insert_data = $this->db->insert('sarana_prasarana',$data);
       }
-      if ($insert_data) {
+      if ($insert_data >= 0) {
+        $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
         redirect(base_url().'admin/Sarpras');
        } else{
-        echo "string";
+        $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Gagal di simpan"));
+        redirect(base_url().'admin/Sarpras');
        }
     }else{
-      echo "gagal";
+      $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Gagal di simpan, cek ukuran foto"));
     }
   }
   public function hapus($id){
     $where = array('id_sarana_prasarana'=>$id);
     $hapus = $this -> M_alamin -> delete($where,'sarana_prasarana');
-    if($hapus){
-    header('location:'.base_url('index.php/admin/Sarpras')); 
+    if($hapus >= 0){
+    $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di hapus"));
+        redirect(base_url().'admin/Sarpras'); 
     }else{
-      header('location:'.base_url('index.php/admin/Sarpras'));
-      echo "gagal";
+      $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Gagal di hapus"));
+        redirect(base_url().'admin/Sarpras');
     }
   }
 

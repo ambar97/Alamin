@@ -96,8 +96,8 @@
                                             </div>
                                         </div>
                                         <div style="float: right;">
-		                                    <button type="submit" class="btn btn-primary" name="btnSimpan" value="OK">Simpan</button>
 		                                    <a href="<?php echo base_url("admin/Karyawan") ?>"><button type="button" class="btn btn-default waves-effect" data-dismiss="modal"> Batal</button></a>
+                                            <button type="submit" class="btn btn-primary" name="btnSimpan" value="OK">Simpan</button>
                                     	</div>
                                     <?php } ?>
                                     </form>

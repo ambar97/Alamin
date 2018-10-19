@@ -97,8 +97,14 @@ class Berita extends CI_Controller {
 	public function delete_berita(){
 		$id=$this->uri->segment(4);
 		$deletebyid=array('id_informasi'=>$id);
-		$this->M_alamin->delete($deletebyid, 'informasi');
-		header('location:'.base_url().'admin/Berita');
+		$up = $this->M_alamin->delete($deletebyid, 'informasi');
+		if ($upload >= 0) {
+			$this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di hapus"));
+		redirect(base_url().'admin/Berita');
+		}else{
+			$this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di hapus"));
+		redirect(base_url().'admin/Berita');
+		}
 	}
 }
 // asdasdasd

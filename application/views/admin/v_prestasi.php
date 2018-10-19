@@ -91,8 +91,10 @@
                                                          <input type="file" id="input-file-now" class="dropify" name="gambar" required="" />
                                                     </div>
                                                 </div>
+                                                <div style="float: right;">
                                             <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                                            <button type="submit" class="btn btn-default waves-effect" value="OK" name="btnSimpan">Save</button>
+                                            <button type="submit" class="btn btn-success" value="OK" name="btnSimpan">Save</button>
+                                            </div>
                                             </form>
                                         </div>
                                     </div>
@@ -124,11 +126,11 @@
                                 </ul>
                                 <hr>
                                 <div><center>
-                                	<button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Lihat Detail" data-toggle="modal" data-target="#view_photo"><i class="mdi mdi-eye "></i> </button>
-                                	<a href="<?php echo base_url("admin/Prestasi/e_pres") ?>"><button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Edit"><i class="mdi mdi-brush"></i></button></a>
-                                	<a href="<?php echo base_url('admin/Prestasi/hapus/'.$prs->id_prestasi) ?>"><button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Hapus"><i class="mdi mdi-close"></i> </button></a>
+                                	<button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Lihat Detail" data-toggle="modal" data-target="#view_photo<?php echo($prs->id_prestasi) ?>"><i class="mdi mdi-eye "></i> </button>
+                                	<button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Edit" onclick="updatejs('<?php echo $prs->id_prestasi; ?>')"><i class="mdi mdi-brush"></i></button>
+                                	<button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" title="Hapus" onclick="deleted('<?php echo $prs->id_prestasi; ?>')"><i class="mdi mdi-close"></i> </button>
                                     <!-- Modal -->
-                                    <div id="view_photo" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div id="view_photo<?php echo($prs->id_prestasi) ?>" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -181,7 +183,18 @@
 
     <!-- jQuery file upload -->
     <script src="<?php echo base_url() ?>master/adm/assets/plugins/dropify/dist/js/dropify.min.js"></script>
-    <script>
+    <script type="text/javascript">
+        function deleted(param){
+   var proc = window.confirm('Are you sure delete this data?');
+   if(proc){
+      document.location='<?php echo base_url(); ?>admin/Prestasi/hapus/'+param;
+    }
+  }
+        function updatejs(param){
+      document.location='<?php echo base_url(); ?>admin/Prestasi/e_pres/'+param;
+    }
+</script>
+<script type="text/javascript">
     $(document).ready(function() {
         // Basic
         $('.dropify').dropify();
@@ -223,3 +236,6 @@
         })
     });
     </script>
+<?php if ($this->session->flashdata()) { ?>
+    <?php echo $this->session->flashdata('Pesan'); ?>                  
+    <?php } ?> 
