@@ -17,6 +17,7 @@ class ContactUs extends CI_Controller {
 		$data['nama_kritik_saran']=$this->input->post('username');
 		$data['email_kritik_saran']=$this->input->post('email');
 		$data['isi_kritik_saran']=$this->input->post('isi');
+		$data['id_status_dibaca'] = 1;
 		$up = $this->M_alamin->insert('kritik_saran', $data);
 		if ($up >= 0) {
 			$this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di kirim ke admin"));

@@ -110,5 +110,5 @@
  <?php $this->load->view("user/side/footer"); ?>
 <?php $this->load->view("user/side/js"); ?>
 <?php if ($this->session->flashdata()) { ?>
-                        <?php echo $this->session->flashdata('Pesan'); ?>                    
+                        <?php echo $this->session->flashdata('Pesan'); ?>
                     <?php } ?>
