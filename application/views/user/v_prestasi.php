@@ -69,7 +69,7 @@
 													<p>Juara : </p>
 													<p>Nama Lomba: </p>
 													<p>Tingkat Kejuaraan : </p>
-													<p>Nama Pembimbing : </p> 
+													<p>Nama Pembimbing : </p>
 												</div>
 												<div class="col-lg-7">
 													<p><?php echo $prs->nama_siswa_prestasi; ?></p>
@@ -88,9 +88,9 @@
 					</div>
 				</div>
 				<div class="col-lg-3">
-					<h2 style="font-weight: bold;">Detail Prestasi</h2>
+					<h2 style="font-weight: bold;">Info Prestasi</h2>
 					<hr>
-					<p>dcghvhkgvtgrf</p>
+					<p>Kejaran akademik maupun akademik.</p>
 				</ul>
 				<div>
 					<h2><strong>Polling</strong></h2>
