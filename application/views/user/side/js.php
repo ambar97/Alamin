@@ -15,19 +15,19 @@
         <script src="<?php echo base_url() ?>master/client/vendor/owl.carousel/owl.carousel.min.js"></script>
         <script src="<?php echo base_url() ?>master/client/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
         <script src="<?php echo base_url() ?>master/client/vendor/vide/vide.min.js"></script>
-        
+
         <!-- Theme Base, Components and Settings -->
         <script src="<?php echo base_url() ?>master/client/js/theme.js"></script>
-        
+
         <!-- Current Page Vendor and Views -->
-        <script src="<?php echo base_url() ?>master/client/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>     
-        <script src="<?php echo base_url() ?>master/client/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>     
+        <script src="<?php echo base_url() ?>master/client/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+        <script src="<?php echo base_url() ?>master/client/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
         <script src="<?php echo base_url() ?>master/client/vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>      
         <script src="<?php echo base_url() ?>master/client/js/views/view.home.js"></script>
-        
+
         <!-- Theme Custom -->
         <script src="<?php echo base_url() ?>master/client/js/custom.js"></script>
-        
+
         <!-- Theme Initialization Files -->
         <script src="<?php echo base_url() ?>master/client/js/theme.init.js"></script>
         <script src="<?php echo base_url() ?>master/client/master/analytics/analytics.js"></script>

@@ -23,8 +23,9 @@
 		<div class="col-lg-12">
 			<div class="row">
 				<div class="col-lg-9">
-					<?php foreach ($berit->result() as $berita) { ?>
+
 					<article class="post post-medium">
+						<?php foreach ($berit->result() as $berita) { ?>
 						<div class="row">
 							<div class="col-lg-5">
 								<div class="post-image">
@@ -39,7 +40,7 @@
 							</div>
 							<div class="col-lg-7">
 								<div class="post-content">
-									<h3><a href="<?php echo base_url('Informasi/Berita_Detail'); ?>"><?php echo $berita -> judul_informasi ?></a></h3>
+									<h3><a href="<?php echo base_url('Informasi/Berita_Detail/'); ?><?php echo $berita->id_informasi; ?>"><?php echo $berita -> judul_informasi ?></a></h3>
 									<p><?php echo substr($berita -> isi_informasi,0,432);?>...</p>
 								</div>
 							</div>
@@ -48,121 +49,41 @@
 							<div class="col">
 								<div class="post-meta">
 									<span><i class="fas fa-calendar-alt"></i> <?php echo date("d F Y", strtotime($berita -> date)) ?> </span>
-									<span><i class="fas fa-comments"></i><?php echo $berita-> viewers; ?> Views</span>
-									<span class="d-block d-md-inline-block float-md-right mt-3 mt-md-0"><a href="<?php echo base_url('Informasi/Berita_Detail'); ?>" class="btn btn-xs btn-primary">Read more...</a></span>
+									<span class="d-block d-md-inline-block float-md-right mt-3 mt-md-0"><a href="<?php echo base_url('Informasi/Berita_Detail/'); ?><?php echo $berita->id_informasi; ?>" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal<?php echo $berita->id_informasi; ?>">Read more...</a></span>
 								</div>
 							</div>
 						</div>
+						<?php } ?>
 					</article>
 					<hr>
-				<?php } ?>
-					
 				</div>
 				<div class="tabs col-lg-3">
 					<h2><strong>Berita Lainnya</strong></h2>
 					<hr>
 					<ul class="nav nav-tabs">
-						<li class="nav-item active"><a class="nav-link" href="#popularPosts" data-toggle="tab"><i class="fas fa-star"></i> Popular</a></li>
-						<li class="nav-item"><a class="nav-link" href="#recentPosts" data-toggle="tab">Recent</a></li>
+						<li class="nav-item active"><a class="nav-link" href="#recentPosts" data-toggle="tab">Recent</a></li>
 					</ul>
 					<div class="tab-content">
-						<div class="tab-pane active" id="popularPosts">
+						<div class="tab-pane active" id="recentPosts">
+							<?php foreach ($recent_berita->result() as $re) { ?>
 							<ul class="simple-post-list">
 								<li>
 									<div class="post-image">
 										<div class="img-thumbnail d-block">
-											<a href="blog-post.html">
-												<img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-1.jpg" alt="">
+											<a href="<?php echo base_url('Informasi'); ?>">
+												<img style="width:80px;" src="<?php echo base_url($re->gambar_informasi);?>" alt="Gambar Berita">
 											</a>
 										</div>
 									</div>
 									<div class="post-info">
-										<a href="blog-post.html">Nullam Vitae Nibh Un Odiosters</a>
+										<a title="<?php echo $re-> judul_informasi; ?>" href="<?php echo base_url('Informasi/Berita_Detail/'); ?>"><?php echo substr($re-> judul_informasi,0,28); ?>...</a>
 										<div class="post-meta">
-											 Jan 10, 2017
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="post-image">
-										<div class="img-thumbnail d-block">
-											<a href="blog-post.html">
-												<img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-2.jpg" alt="">
-											</a>
-										</div>
-									</div>
-									<div class="post-info">
-										<a href="blog-post.html">Vitae Nibh Un Odiosters</a>
-										<div class="post-meta">
-											 Jan 10, 2017
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="post-image">
-										<div class="img-thumbnail d-block">
-											<a href="blog-post.html">
-												<img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-3.jpg" alt="">
-											</a>
-										</div>
-									</div>
-									<div class="post-info">
-										<a href="blog-post.html">Odiosters Nullam Vitae</a>
-										<div class="post-meta">
-											 Jan 10, 2017
+											<?php echo $re-> date; ?>
 										</div>
 									</div>
 								</li>
 							</ul>
-						</div>
-						<div class="tab-pane" id="recentPosts">
-							<ul class="simple-post-list">
-								<li>
-									<div class="post-image">
-										<div class="img-thumbnail d-block">
-											<a href="blog-post.html">
-												<img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-2.jpg" alt="">
-											</a>
-										</div>
-									</div>
-									<div class="post-info">
-										<a href="blog-post.html">Vitae Nibh Un Odiosters</a>
-										<div class="post-meta">
-											 Jan 10, 2017
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="post-image">
-										<div class="img-thumbnail d-block">
-											<a href="blog-post.html">
-												<img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-3.jpg" alt="">
-											</a>
-										</div>
-									</div>
-									<div class="post-info">
-										<a href="blog-post.html">Odiosters Nullam Vitae</a>
-										<div class="post-meta">
-											 Jan 10, 2017
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="post-image">
-										<div class="img-thumbnail d-block">
-											<a href="blog-post.html">
-												<img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-1.jpg" alt="">
-											</a>
-										</div>
-									</div>
-									<div class="post-info">
-										<a href="blog-post.html">Nullam Vitae Nibh Un Odiosters</a>
-										<div class="post-meta">
-											 Jan 10, 2017
-										</div>
-									</div>
-								</li>
-							</ul>
+							<?php } ?>
 						</div>
 					</div>
 					<br>
@@ -183,6 +104,28 @@
 		</div>
 	</div>
 </section>
+
+<?php foreach ($berit->result() as $b) { ?>
+	<div class="modal fade bd-example-modal-lg" id="modal<?php echo $b->id_informasi;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Detail Berita</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								 <div class="container">
+										<div class="col-md-12">
+											<p><?php echo $b->isi_informasi;?></p>
+										</div>
+								 </div>
+							</div>
+					</div>
+			</div>
+	</div>
+<?php } ?>
 
 <?php $this->load->view("user/side/footer"); ?>
 <?php $this->load->view("user/side/js"); ?>

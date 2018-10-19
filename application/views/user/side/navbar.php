@@ -93,12 +93,12 @@
                         </ul> -->
                       </li>
                       <li>
-                        <a class="<?php if($this->uri->segment('1')=="Informasi"){ echo "active";}?>" href="<?php echo base_url('Informasi/Berita') ?>">
+                        <a class="<?php if($this->uri->segment('1')=="Informasi"){ echo "active";}?>" href="<?php echo base_url('Informasi/berita') ?>">
                           Informasi
                         </a>
                         <!-- <ul class="dropdown-menu">
                           <li>
-                            <a class="dropdown-item" href="<?php echo base_url('Informasi/Berita') ?>">Berita</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Informasi/berita') ?>">Berita</a>
                           </li>
                           <li>
                             <a class="dropdown-item" href="<?php echo base_url('Informasi/Pengumuman') ?>">Pengumuman</a>
