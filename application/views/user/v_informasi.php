@@ -23,9 +23,8 @@
 		<div class="col-lg-12">
 			<div class="row">
 				<div class="col-lg-9">
-
+					<?php foreach ($berit->result() as $berita) { ?>
 					<article class="post post-medium">
-						<?php foreach ($berit->result() as $berita) { ?>
 						<div class="row">
 							<div class="col-lg-5">
 								<div class="post-image">
@@ -53,9 +52,9 @@
 								</div>
 							</div>
 						</div>
-						<?php } ?>
 					</article>
 					<hr>
+					<?php } ?>
 				</div>
 				<div class="tabs col-lg-3">
 					<h2><strong>Berita Lainnya</strong></h2>
@@ -107,23 +106,23 @@
 
 <?php foreach ($berit->result() as $b) { ?>
 	<div class="modal fade bd-example-modal-lg" id="modal<?php echo $b->id_informasi;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Detail Berita</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Detail Berita</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					 <div class="container">
+							<div class="col-md-12">
+								<p><?php echo $b->isi_informasi;?></p>
 							</div>
-							<div class="modal-body">
-								 <div class="container">
-										<div class="col-md-12">
-											<p><?php echo $b->isi_informasi;?></p>
-										</div>
-								 </div>
-							</div>
-					</div>
+					 </div>
+				</div>
 			</div>
+		</div>
 	</div>
 <?php } ?>
 
