@@ -39,7 +39,7 @@
 							</div>
 							<div class="col-lg-7">
 								<div class="post-content">
-									<h3><a href="<?php echo base_url('Informasi/Berita_Detail/'); ?><?php echo $berita->id_informasi; ?>"><?php echo $berita -> judul_informasi ?></a></h3>
+									<h3><?php echo $berita -> judul_informasi ?></h3>
 									<p><?php echo substr($berita -> isi_informasi,0,432);?>...</p>
 								</div>
 							</div>
@@ -57,7 +57,7 @@
 					<?php } ?>
 				</div>
 				<div class="tabs col-lg-3">
-					<h2><strong>Berita Lainnya</strong></h2>
+					<!-- <h2><strong>Berita Lainnya</strong></h2>
 					<hr>
 					<ul class="nav nav-tabs">
 						<li class="nav-item active"><a class="nav-link" href="#recentPosts" data-toggle="tab">Recent</a></li>
@@ -75,7 +75,7 @@
 										</div>
 									</div>
 									<div class="post-info">
-										<a title="<?php echo $re-> judul_informasi; ?>" href="<?php echo base_url('Informasi/Berita_Detail/'); ?>"><?php echo substr($re-> judul_informasi,0,28); ?>...</a>
+										<a title="<?php echo $re-> judul_informasi; ?>" href="<?php echo base_url('Informasi/Berita_Detail/'); ?><?php echo $berita->id_informasi; ?>"><?php echo substr($re-> judul_informasi,0,28); ?>...</a>
 										<div class="post-meta">
 											<?php echo $re-> date; ?>
 										</div>
@@ -85,7 +85,7 @@
 							<?php } ?>
 						</div>
 					</div>
-					<br>
+					<br> -->
 					<!-- Polling -->
 					<div>
 						<h2><strong>Polling</strong></h2>
