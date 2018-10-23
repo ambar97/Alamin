@@ -296,59 +296,9 @@
               <h2><strong>Berita</strong></h2>
               <hr>
               <ul class="nav nav-tabs">
-                <!-- <li class="nav-item active"><a class="nav-link" href="#popularPosts" data-toggle="tab"><i class="fas fa-star"></i> Popular</a></li> -->
                 <li class="nav-item active"><a class="nav-link" href="#recentPosts" data-toggle="tab">Recent</a></li>
               </ul>
               <div class="tab-content">
-                <!-- <div class="tab-pane active" id="popularPosts">
-                  <ul class="simple-post-list">
-                    <li>
-                      <div class="post-image">
-                        <div class="img-thumbnail d-block">
-                          <a href="blog-post.html">
-                            <img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-1.jpg" alt="">
-                          </a>
-                        </div>
-                      </div>
-                      <div class="post-info">
-                        <a href="blog-post.html">Nullam Vitae Nibh Un Odiosters</a>
-                        <div class="post-meta">
-                           Jan 10, 2017
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="post-image">
-                        <div class="img-thumbnail d-block">
-                          <a href="blog-post.html">
-                            <img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-2.jpg" alt="">
-                          </a>
-                        </div>
-                      </div>
-                      <div class="post-info">
-                        <a href="blog-post.html">Vitae Nibh Un Odiosters</a>
-                        <div class="post-meta">
-                           Jan 10, 2017
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="post-image">
-                        <div class="img-thumbnail d-block">
-                          <a href="blog-post.html">
-                            <img src="<?php echo base_url() ?>master/client/img/blog/blog-thumb-3.jpg" alt="">
-                          </a>
-                        </div>
-                      </div>
-                      <div class="post-info">
-                        <a href="blog-post.html">Odiosters Nullam Vitae</a>
-                        <div class="post-meta">
-                           Jan 10, 2017
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div> -->
                 <div class="tab-pane active" id="recentPosts">
                   <?php foreach ($recent_berita->result() as $re) { ?>
                   <ul class="simple-post-list">

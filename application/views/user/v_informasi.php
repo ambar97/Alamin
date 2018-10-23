@@ -39,7 +39,7 @@
 							</div>
 							<div class="col-lg-7">
 								<div class="post-content">
-									<h3><a href="<?php echo base_url('Informasi/Berita_Detail/'); ?><?php echo $berita->id_informasi; ?>"><?php echo $berita -> judul_informasi ?></a></h3>
+									<h3><a href="<?php echo base_url() ?>Informasi/detail/<?php echo $berita->id_informasi ?>"><?php echo $berita -> judul_informasi ?></a></h3>
 									<p><?php echo substr($berita -> isi_informasi,0,432);?>...</p>
 								</div>
 							</div>
@@ -48,7 +48,7 @@
 							<div class="col">
 								<div class="post-meta">
 									<span><i class="fas fa-calendar-alt"></i> <?php echo date("d F Y", strtotime($berita -> date)) ?> </span>
-									<span class="d-block d-md-inline-block float-md-right mt-3 mt-md-0"><a href="<?php echo base_url('Informasi/Berita_Detail/'); ?><?php echo $berita->id_informasi; ?>" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal<?php echo $berita->id_informasi; ?>">Read more...</a></span>
+									<span class="d-block d-md-inline-block float-md-right mt-3 mt-md-0"><a href="<?php echo base_url() ?>Informasi/detail/<?php echo $berita->id_informasi ?>" class="btn btn-xs btn-primary" > Read more...</a></span>
 								</div>
 							</div>
 						</div>
@@ -75,7 +75,7 @@
 										</div>
 									</div>
 									<div class="post-info">
-										<a title="<?php echo $re-> judul_informasi; ?>" href="<?php echo base_url('Informasi/Berita_Detail/'); ?>"><?php echo substr($re-> judul_informasi,0,28); ?>...</a>
+										<a title="<?php echo $re-> judul_informasi; ?>" href="<?php echo base_url('Informasi/Berita_Detail/'); ?>"><?php echo substr($re-> judul_informasi,0,20); ?>...</a>
 										<div class="post-meta">
 											<?php echo $re-> date; ?>
 										</div>
@@ -128,3 +128,8 @@
 
 <?php $this->load->view("user/side/footer"); ?>
 <?php $this->load->view("user/side/js"); ?>
+<script type="text/javascript">
+	function updatejs(param){
+      document.location='<?php echo base_url(); ?>Informasi/Berita_Detail/'+param;
+  }
+</script>
