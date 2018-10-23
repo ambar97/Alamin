@@ -276,13 +276,22 @@
                           </div>
                         </div>
                         <div class="post-content">
-                        <h2><?php foreach ($berita->result() as $b) { ?>
+                          <?php foreach ($berita->result() as $b) { ?>
+                        <h2><a href="<?php echo base_url() ?>Informasi/detail/<?php echo $b->id_informasi ?>">
                           <?php echo $b->judul_informasi; ?>
-                        <?php } ?></h2>
+                        </a></h2><?php } ?>
                         <p><?php foreach ($berita->result() as $b) {
-                          echo $b->isi_informasi;
-                        } ?></p>
+                          echo  substr($b-> isi_informasi,0,900) ;
+                        } ?>...</p>
+                        <div>
+                          <?php foreach ($berita->result() as $b) { ?>
+                          <span class="d-block d-md-inline-block float-md-right mt-3 mt-md-0"><a href="<?php echo base_url() ?>Informasi/detail/<?php echo $b->id_informasi ?>" class="btn btn-xs btn-primary" > Read more...</a></span>
+                        <?php } ?>
+                        </div>
                       </div>
+                      <br>
+                      <hr>
+                      <h2>Channel Youtube</h2>
                       </div>
                       
                     </article>
@@ -389,7 +398,7 @@
             <div class="container">
               <div class="row">
 
-                <div class="col-lg-6">
+                <div class="col-lg-">
                   <h2><strong>Quotes</strong> of the day</h2>
                   <div class="row">
                     <div class="owl-carousel owl-theme mb-0" data-plugin-options="{'items': 1}">

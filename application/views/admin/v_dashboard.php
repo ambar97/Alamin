@@ -269,7 +269,7 @@
                                                                </div>
                                                                <div class="col-md-12 m-b-20">
                                                                    <input name="img_sejarah"  type="file" id="input-file-now"/><hr>
-                                                                   <center><img class="col-md-8" style="max-height: 200px;" src="<?php echo base_url()?>gallery/Sejarah/<?php echo $sejarah->gambar_sejarah?>" /></center>
+                                                                   <center><img class="col-md-8" style="max-height: 200px;" src="<?php echo base_url().$sejarah->gambar_sejarah?>" /></center>
                                                                </div>
                                                            </div>
                                                            <div class="modal-footer">

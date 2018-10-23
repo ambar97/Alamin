@@ -29,14 +29,12 @@
 							<span>
 								<img alt="" class="img-fluid" src="<?php echo base_url(); ?><?php echo $g->gambar_karyawan; ?>">
 							</span>
-						</a>
 						<span class="product-thumb-info-content">
-								<h4><?php echo $g->nama_karyawan; ?></h4>
-								<p>NIPA: <?php echo $g->NIPA_karyawan; ?></p>
+								<h6><?php echo $g->nama_karyawan; ?></h6>
+								NIPA: <?php echo $g->NIPA_karyawan; ?>
 								<p><?php echo $g->nama_jabatan; ?></p>
 						</span>
 					</span>
-					<br>
 				</div>
 				<?php } ?>
 				</div>
