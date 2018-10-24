@@ -48,11 +48,11 @@ class Karyawan extends CI_Controller {
           'gambar_karyawan' => $foto);
         $insert_data = $this->db->insert('karyawan',$data);
       }
-      if ($insert_data) {
+      if ($insert_data >= 0) {
         $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
         redirect(base_url().'admin/Karyawan');
       } else{
-        $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Berhasil di simpan"));
+        $this->session->set_flashdata("Pesan",$this->core->alert_time("Data gagal di simpan"));
         redirect(base_url().'admin/Karyawan');
       }
     }else{

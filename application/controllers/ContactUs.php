@@ -24,6 +24,7 @@ class ContactUs extends CI_Controller {
 		header('location:'.base_url().'ContactUs');
 		}else{
 			$this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di kirim, cek isi dan koneksi anda"));
+			header('location:'.base_url().'ContactUs');
 		}
 
 	}
@@ -32,7 +33,13 @@ class ContactUs extends CI_Controller {
 		$data['email_kritik_saran']=$this->input->post('email');
 		$data['isi_kritik_saran']=$this->input->post('isi');
 		$data['id_status_dibaca'] = 1;
-		$this->M_alamin->insert('kritik_saran', $data);
+		$up = $this->M_alamin->insert('kritik_saran', $data);
+		if ($up >= 0) {
+			$this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di kirim ke admin"));
 		header('location:'.base_url().'Home');
+		}else{
+			$this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di kirim, cek isi dan koneksi anda"));
+			header('location:'.base_url().'Home');
+		}
 	}
 }
