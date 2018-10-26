@@ -320,7 +320,7 @@
                         </div>
                       </div>
                       <div class="post-info">
-                        <a title="<?php echo $re-> judul_informasi; ?>" href="<?php echo base_url('Informasi/Berita_Detail/'); ?>"><?php echo substr($re-> judul_informasi,0,28); ?>...</a>
+                        <a title="<?php echo $re-> judul_informasi; ?>" href="<?php echo base_url() ?>Informasi/detail/<?php echo $re->id_informasi ?>"><?php echo substr($re-> judul_informasi,0,28); ?>...</a>
                         <div class="post-meta">
                           <?php echo $re-> date; ?>
                         </div>
@@ -398,7 +398,7 @@
             <div class="container">
               <div class="row">
 
-                <div class="col-lg-">
+                <div class="col-lg-6">
                   <h2><strong>Quotes</strong> of the day</h2>
                   <div class="row">
                     <div class="owl-carousel owl-theme mb-0" data-plugin-options="{'items': 1}">

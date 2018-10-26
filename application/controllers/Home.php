@@ -16,4 +16,7 @@ class Home extends CI_Controller {
 		// $data['motto_kepsek'] = $this->M_alamin->motto_kepsek($id);
 		$this->load->view('user/v_home', $data);
 	}
+	function insertPolling(){
+		
+	}
 }
