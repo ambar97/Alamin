@@ -79,7 +79,7 @@
                             <td><?php echo $ber->nama_karyawan; ?></td>
                             <!-- <td><?php echo $ber->isi_informasi; ?></td> -->
                             <!-- <td><?php echo $ber->nama_karyawan; ?></td> -->
-                            <td><?php echo $ber->isi; ?></td>
+                            <td><?php echo substr($ber->isi,0,28); ?>..</td>
                             <td>
                                 <!-- <button type="button">Lihat</button> -->
                                 <button class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete" type="button" onclick="deleted('<?php echo $ber->id_quotes; ?>')"><i class="mdi mdi-close" aria-hidden="true"></i></button>
