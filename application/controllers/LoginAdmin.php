@@ -22,9 +22,10 @@ function __construct()
 		);
 		
 		$cek = $this->M_alamin->cek_login("admin",$where)->num_rows();
+		$cek1 = $this->M_alamin->cek_login("admin",$where)->row();
 		if($cek > 0){
 			$data_session = array(
-				'nama' => $username,
+				'id' => $cek1->id_admin,
 				'status' => "login"
 				);
  			

@@ -82,6 +82,14 @@ class M_alamin extends CI_Model {
           $data=$this->db->get();
           return $data;
   }
+  function data_admin($id){
+    $this->db->select('admin.*, karyawan.*');
+          $this->db->join('karyawan', 'karyawan.NIPA_karyawan = admin.karyawan_NIPA_karyawan');
+          $this->db->from('admin');
+          $this->db->where('admin.id_admin', $id);
+          $data=$this->db->get();
+          return $data;
+  }
   function get_galery(){
       return $this->db->query('SELECT * FROM galeri where id_galeri != 1 && id_galeri != 2');
       return $query->result ();

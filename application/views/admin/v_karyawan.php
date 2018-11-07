@@ -150,7 +150,7 @@
                                 <td><?php echo $key->NIPA_karyawan; ?></td>
                                 <td><?php echo $key->nama_jabatan; ?></td>
                                 <td><?php echo $key->nama_bidang; ?></td>
-                                <td><?php echo $key->alamat; ?></td>
+                                <td><?php echo substr($key -> alamat,0,20);?>...</td>
                                 <td>
                                     <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline vier-row-btn"  data-original-title="View" data-toggle="modal" data-target="#view_photo<?php echo($key->NIPA_karyawan) ?>"><i class="mdi mdi-eye" aria-hidden="true" ></i></button>
                                     

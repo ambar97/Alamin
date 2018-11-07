@@ -18,4 +18,7 @@ function __construct()
 		$this->load->view('admin/v_polling');
 	}
 }
+
+
+
 }

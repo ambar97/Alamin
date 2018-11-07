@@ -1,3 +1,5 @@
+<?php $this->load->model('M_alamin'); ?>
+
  <header class="topbar">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <!-- ============================================================== -->
@@ -138,19 +140,21 @@
                             <div class="dropdown-menu dropdown-menu-right scale-up">
                                 <ul class="dropdown-user">
                                     <li>
+                                        <?php 
+                                                $dat = $this->M_alamin->data_admin($this->session->userdata('id'))->row(); ?>
                                         <div class="dw-user-box">
-                                            <div class="u-img"><img src="<?php echo base_url() ?>master/adm/assets/images/users/1.jpg" alt="user"></div>
-                                            <!-- <div class="u-text">
-                                                <h4>Steave Jobs</h4>
-                                                <p class="text-muted">varun@gmail.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div> -->
+                                            <div class="u-img"><img src="<?php echo base_url().$dat->gambar_karyawan ?>" alt="user"></div>
+                                            <div class="u-text">
+                                                <h4><?php echo $dat->nama_karyawan; ?></h4>
+                                                <p class="text-muted"><?php echo $dat->NIPA_karyawan; ?></p></div>
                                         </div>
                                     </li>
-                                    <!-- <li role="separator" class="divider"></li>
-                                    <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
-                                     -->
-                                    <!-- <li role="separator" class="divider"></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="<?php echo base_url("admin/Profile") ?>"><i class="ti-user"></i> My Profile</a></li>
+                                    
+                                    <li role="separator" class="divider"></li>
                                     <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
-                                    <li role="separator" class="divider"></li> -->
+                                    <li role="separator" class="divider"></li>
                                     <li><a href="<?php echo base_url('LoginAdmin/logout'); ?>"><i class="fa fa-power-off"></i> Logout</a></li>
                                 </ul>
                             </div>
