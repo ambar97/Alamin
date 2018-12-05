@@ -1,5 +1,0 @@
-Senin, 1 Oktober
-Perancangan database dan revisi desain halaman client
-
-Selasa, 2 Oktober
-Perancangan database, revisi desain halaman client dan perancangan halaman admin

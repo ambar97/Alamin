@@ -133,11 +133,11 @@ class Karyawan extends CI_Controller {
         'gambar_karyawan' => $foto);
     }            
     $update_data = $this->db->update('karyawan',$data,$where);
-    if ($update_data >= 0) {
-      $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
+    if ($update_data > = 0) {
+      $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di Perbarui"));
       redirect(base_url().'admin/Karyawan');
     } else{
-      $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Berhasil di simpan"));
+      $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Berhasil di Perbarui"));
       redirect(base_url().'admin/Karyawan');
     }
   }
