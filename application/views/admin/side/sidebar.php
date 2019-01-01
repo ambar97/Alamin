@@ -14,7 +14,7 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="nav-small-cap">Main</li>
-                        <li class="<?php if($this->uri->segment('2')=="Dashboard"){ echo "active";}?>"> <a class="" href="<?php echo base_url("admin/Dashboard") ?>" ><i class="mdi mdi-view-dashboard"></i><span >Dashboard </span></a>
+                        <li class="<?php if($this->uri->segment('1')=="Home#satu"){ echo "active";}?>"> <a class="" href="<?php echo base_url("admin/Dashboard") ?>" ><i class="mdi mdi-view-dashboard"></i><span >Dashboard </span></a>
                         </li>
                         <li class="<?php if($this->uri->segment('2')=="Prestasi"){ echo "active";}?>"> <a class="" href="<?php echo base_url("admin/Prestasi") ?>" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">Prestasi</span></a>
                         </li>
